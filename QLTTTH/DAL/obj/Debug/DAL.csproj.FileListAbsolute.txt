@@ -1,0 +1,9 @@
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DAL\bin\Debug\DAL.dll
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DAL\bin\Debug\DAL.pdb
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DAL\bin\Debug\DTO.dll
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DAL\bin\Debug\DTO.pdb
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DAL\obj\Debug\DAL.dll
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DAL\obj\Debug\DAL.pdb

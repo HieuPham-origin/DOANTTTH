@@ -1,0 +1,11 @@
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\BUS\bin\Debug\BUS.dll
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\BUS\bin\Debug\BUS.pdb
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\BUS\bin\Debug\DAL.dll
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\BUS\bin\Debug\DTO.dll
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\BUS\bin\Debug\DAL.pdb
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\BUS\bin\Debug\DTO.pdb
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\BUS\obj\Debug\BUS.dll
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\BUS\obj\Debug\BUS.pdb

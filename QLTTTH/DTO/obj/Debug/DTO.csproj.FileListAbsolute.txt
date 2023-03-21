@@ -1,0 +1,6 @@
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DTO\bin\Debug\DTO.dll
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DTO\bin\Debug\DTO.pdb
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DTO\obj\Debug\DTO.dll
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DTO\obj\Debug\DTO.pdb
