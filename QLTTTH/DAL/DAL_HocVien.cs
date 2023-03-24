@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using static DTO.DTO_HocVien;
 using System.Data;
-
+using DTO;
 namespace DAL
 {
     public class DAL_HocVien : DBConnect
@@ -19,16 +19,26 @@ namespace DAL
             return dtHocVien;
         }
 
-        public static void Main()
+        public bool addHocVien(DTO_HocVien hv)
         {
-            DAL_HocVien a = new DAL_HocVien();
-            foreach (DataRow dataRow in a.getHocVien().Rows)
-            {
-                foreach (var item in dataRow.ItemArray)
-                {
-                    Console.WriteLine(item);
-                }
+            try {
+                conn.Open();
+
+
             }
+            catch (Exception e)
+            {
+                
+            }
+            finally
+            {
+                // Dong ket noi
+                conn.Close();
+            }
+
+            return false;
         }
+
+
     }
 }

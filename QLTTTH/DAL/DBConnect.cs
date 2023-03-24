@@ -9,6 +9,7 @@ namespace DAL
 {
     public class DBConnect
     {
-        protected SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\TTTH.mdf;Integrated Security=True");
+        //protected SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Trungtamtinhoc.mdf;Integrated Security=True");
+        protected SqlConnection conn = new SqlConnection("initial catalog = TTTH; data source = PhuHoang; integrated security = true");
     }
 }
