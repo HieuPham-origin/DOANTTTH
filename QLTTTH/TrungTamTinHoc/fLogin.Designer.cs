@@ -33,15 +33,17 @@ namespace TrungTamTinHoc
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_HidePass = new FontAwesome.Sharp.IconButton();
+            this.btn_ShowPass = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -53,7 +55,7 @@ namespace TrungTamTinHoc
             this.lblClose.AutoSize = true;
             this.lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClose.ForeColor = System.Drawing.Color.White;
-            this.lblClose.Location = new System.Drawing.Point(372, 0);
+            this.lblClose.Location = new System.Drawing.Point(357, 9);
             this.lblClose.Name = "lblClose";
             this.lblClose.Size = new System.Drawing.Size(27, 25);
             this.lblClose.TabIndex = 1;
@@ -69,6 +71,8 @@ namespace TrungTamTinHoc
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_ShowPass);
+            this.panel1.Controls.Add(this.btn_HidePass);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label5);
@@ -97,6 +101,18 @@ namespace TrungTamTinHoc
             this.button1.TabIndex = 12;
             this.button1.Text = "Đăng nhập";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::TrungTamTinHoc.Properties.Resources.password;
+            this.pictureBox3.Location = new System.Drawing.Point(25, 214);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(59, 39);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
             // 
             // label5
             // 
@@ -120,6 +136,8 @@ namespace TrungTamTinHoc
             this.txtPassword.Size = new System.Drawing.Size(267, 19);
             this.txtPassword.TabIndex = 9;
             this.txtPassword.Text = "Mật khẩu";
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // label1
             // 
@@ -143,38 +161,8 @@ namespace TrungTamTinHoc
             this.txtUser.Size = new System.Drawing.Size(267, 19);
             this.txtUser.TabIndex = 6;
             this.txtUser.Text = "Tên đăng nhập";
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(92, 78);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(222, 2);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(122, 40);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 31);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Đăng nhập";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::TrungTamTinHoc.Properties.Resources.password;
-            this.pictureBox3.Location = new System.Drawing.Point(25, 214);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(59, 39);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
+            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
+            this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
             // pictureBox2
             // 
@@ -186,6 +174,27 @@ namespace TrungTamTinHoc
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(112, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(221, 2);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(123, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(155, 31);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Đăng nhập";
             // 
             // pictureBox1
             // 
@@ -199,6 +208,45 @@ namespace TrungTamTinHoc
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // btn_HidePass
+            // 
+            this.btn_HidePass.BackColor = System.Drawing.Color.Indigo;
+            this.btn_HidePass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_HidePass.FlatAppearance.BorderSize = 0;
+            this.btn_HidePass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HidePass.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_HidePass.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_HidePass.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            this.btn_HidePass.IconColor = System.Drawing.Color.White;
+            this.btn_HidePass.IconSize = 20;
+            this.btn_HidePass.Location = new System.Drawing.Point(318, 218);
+            this.btn_HidePass.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_HidePass.Name = "btn_HidePass";
+            this.btn_HidePass.Rotation = 0D;
+            this.btn_HidePass.Size = new System.Drawing.Size(34, 34);
+            this.btn_HidePass.TabIndex = 13;
+            this.btn_HidePass.UseVisualStyleBackColor = false;
+            // 
+            // btn_ShowPass
+            // 
+            this.btn_ShowPass.BackColor = System.Drawing.Color.Indigo;
+            this.btn_ShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_ShowPass.FlatAppearance.BorderSize = 0;
+            this.btn_ShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ShowPass.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_ShowPass.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_ShowPass.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btn_ShowPass.IconColor = System.Drawing.Color.White;
+            this.btn_ShowPass.IconSize = 20;
+            this.btn_ShowPass.Location = new System.Drawing.Point(318, 218);
+            this.btn_ShowPass.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_ShowPass.Name = "btn_ShowPass";
+            this.btn_ShowPass.Rotation = 0D;
+            this.btn_ShowPass.Size = new System.Drawing.Size(34, 34);
+            this.btn_ShowPass.TabIndex = 14;
+            this.btn_ShowPass.UseVisualStyleBackColor = false;
+            this.btn_ShowPass.Visible = false;
             // 
             // fLogin
             // 
@@ -240,5 +288,7 @@ namespace TrungTamTinHoc
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button1;
+        private FontAwesome.Sharp.IconButton btn_ShowPass;
+        private FontAwesome.Sharp.IconButton btn_HidePass;
     }
 }

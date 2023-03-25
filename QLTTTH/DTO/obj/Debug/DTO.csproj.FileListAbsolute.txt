@@ -4,3 +4,9 @@ D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DTO\obj\Debug\DTO.csproj
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DTO\obj\Debug\DTO.dll
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\Lasted\DTO\obj\Debug\DTO.pdb
+C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\DTO\bin\Debug\DTO.dll
+C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\DTO\bin\Debug\DTO.pdb
+C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.dll
+C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.pdb
