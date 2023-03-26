@@ -120,28 +120,39 @@ namespace TrungTamTinHoc
         private void iconButtonHome_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
+            panelInfo.BringToFront();
+
         }
 
         private void iconButtonHV_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
+            OpenChildForm(new FormsChildAdmin.fQLHocVien());
+            panelInfo.BringToFront();
         }
 
         private void iconButtonGV_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
+            OpenChildForm(new FormsChildAdmin.fQLGiangVien());
+            panelInfo.BringToFront();
 
         }
 
         private void iconButtonKH_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
+            OpenChildForm(new FormsChildAdmin.fQLKhoaHoc());
+
+            panelInfo.BringToFront();
 
         }
 
         private void iconButtonSta_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
+            OpenChildForm(new FormsChildAdmin.fBaoCao());
+            panelInfo.BringToFront();
 
         }
 

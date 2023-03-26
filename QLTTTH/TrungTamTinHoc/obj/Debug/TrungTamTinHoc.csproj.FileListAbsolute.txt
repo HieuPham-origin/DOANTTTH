@@ -59,7 +59,10 @@ D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.csproj.CopyComplete
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.exe
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.pdb
-D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.Forms.fHocVien.resources
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.fGiangVien.resources
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.fAdmin.resources
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.fHocVienAccess.resources
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fBaoCao.resources
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLHocVien.resources
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fGhiDanh.resources
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLGiangVien.resources

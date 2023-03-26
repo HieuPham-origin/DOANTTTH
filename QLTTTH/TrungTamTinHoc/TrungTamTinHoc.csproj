@@ -40,6 +40,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -80,6 +81,36 @@
     <Compile Include="fAdmin.Designer.cs">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsChildAdmin\fGhiDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fGhiDanh.Designer.cs">
+      <DependentUpon>fGhiDanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fBaoCao.Designer.cs">
+      <DependentUpon>fBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fQLGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fQLGiangVien.Designer.cs">
+      <DependentUpon>fQLGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fQLHocVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fQLHocVien.Designer.cs">
+      <DependentUpon>fQLHocVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fQLKhoaHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fQLKhoaHoc.Designer.cs">
+      <DependentUpon>fQLKhoaHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fGiangVien.resx">
@@ -93,6 +124,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildAdmin\fGhiDanh.resx">
+      <DependentUpon>fGhiDanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildAdmin\fBaoCao.resx">
+      <DependentUpon>fBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildAdmin\fQLGiangVien.resx">
+      <DependentUpon>fQLGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildAdmin\fQLHocVien.resx">
+      <DependentUpon>fQLHocVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,7 +180,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="FormsChildAdmin\" />
     <Folder Include="FormsChildGiangVien\" />
     <Folder Include="FormsChildHocVien\" />
   </ItemGroup>
