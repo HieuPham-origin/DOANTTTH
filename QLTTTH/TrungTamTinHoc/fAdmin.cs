@@ -25,7 +25,7 @@ namespace TrungTamTinHoc
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
-            currBtn = iconButtonHome;
+            currBtn = btn_Trangchu;
             panelMenu.Controls.Add(leftBorderBtn);
             ActivateButton(currBtn, colorActive);
             this.Text = string.Empty;
@@ -174,6 +174,17 @@ namespace TrungTamTinHoc
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            fLogin login = new fLogin();
+            
+            this.Close();
+
+            login.ShowDialog();
+        }
+
+        
 
 
 

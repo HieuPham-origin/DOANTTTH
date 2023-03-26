@@ -56,6 +56,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGiangVien.Designer.cs">
+      <DependentUpon>fGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHocVienAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHocVienAccess.Designer.cs">
+      <DependentUpon>fHocVienAccess.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +82,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fGiangVien.resx">
+      <DependentUpon>fGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHocVienAccess.resx">
+      <DependentUpon>fHocVienAccess.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +135,11 @@
       <Project>{83855adb-583e-4c9a-9c2c-615af7893d8f}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FormsChildAdmin\" />
+    <Folder Include="FormsChildGiangVien\" />
+    <Folder Include="FormsChildHocVien\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

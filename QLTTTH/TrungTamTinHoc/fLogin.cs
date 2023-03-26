@@ -72,7 +72,7 @@ namespace TrungTamTinHoc
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_Dangnhap_Click(object sender, EventArgs e)
         {
             BUS_TaiKhoan tk = new BUS_TaiKhoan();
 
