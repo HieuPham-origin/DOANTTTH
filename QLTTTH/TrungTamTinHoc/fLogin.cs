@@ -76,13 +76,24 @@ namespace TrungTamTinHoc
         {
             BUS_TaiKhoan tk = new BUS_TaiKhoan();
 
-            if (tk.checkLogin(txtUser.Text, txtPassword.Text))
+            if (tk.checkLogin(txtUser.Text, txtPassword.Text, 0))
             {
-                MessageBox.Show("Thành công");
+                fAdmin admin = new fAdmin();
+                admin.Show();
+            }
+            else if(tk.checkLogin(txtUser.Text, txtPassword.Text, 1))
+            {
+                fGiangVien gv = new fGiangVien();
+                gv.Show();
+            }
+            else if(tk.checkLogin(txtUser.Text, txtPassword.Text, 2))
+            {
+                fHocVienAccess hv = new fHocVienAccess();
+                hv.Show();
             }
             else
             {
-                MessageBox.Show("Thất bại");
+                MessageBox.Show("Đăng nhập thất bại");
             }
         }
     }

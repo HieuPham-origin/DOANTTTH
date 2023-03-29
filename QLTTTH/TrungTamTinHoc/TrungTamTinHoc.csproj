@@ -81,11 +81,18 @@
     <Compile Include="fAdmin.Designer.cs">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsChildAdmin\fAddGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fAddGV.Designer.cs">
+      <DependentUpon>fAddGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsChildAdmin\fGhiDanh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsChildAdmin\fGhiDanh.Designer.cs">
+    <Compile Include="FormsChildAdmin\.Designer.cs">
       <DependentUpon>fGhiDanh.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormsChildAdmin\fBaoCao.cs">
       <SubType>Form</SubType>
@@ -124,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildAdmin\fAddGV.resx">
+      <DependentUpon>fAddGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsChildAdmin\fGhiDanh.resx">
       <DependentUpon>fGhiDanh.cs</DependentUpon>

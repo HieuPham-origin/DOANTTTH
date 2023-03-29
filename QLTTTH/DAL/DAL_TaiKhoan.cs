@@ -19,23 +19,24 @@ namespace DAL
         }
 
 
-        public bool checkLogin(string username, string pass) 
+        public bool checkLogin(string username, string pass, int type) 
         {
 
             conn.Open();
-            string query = "SELECT COUNT(*) FROM Tai_Khoan WHERE username=@usernameAND pass=@pass";
+            string query = "SELECT COUNT(*) FROM Tai_Khoan WHERE TaiKhoan=@username AND pass=@pass AND loai=@loai";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@pass", pass);
+            cmd.Parameters.AddWithValue("@loai", type);
             int count = (int)cmd.ExecuteScalar();
-
-            if(count > 0)
+            conn.Close();
+            if (count > 0)
             {
                 return true;
             }
 
             return false;
-
+            
 
         }
     }

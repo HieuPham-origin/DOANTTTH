@@ -9,9 +9,9 @@ namespace BUS
     public class BUS_TaiKhoan
     {
         private DAL_TaiKhoan dal = new DAL_TaiKhoan();
-        public bool checkLogin(string username, string pass)
+        public bool checkLogin(string username, string pass, int type)
         {
-            return dal.checkLogin(username, pass);
+            return dal.checkLogin(username, pass, type);
         }
     }
 }

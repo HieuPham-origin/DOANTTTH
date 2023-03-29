@@ -29,19 +29,22 @@ namespace TrungTamTinHoc.FormsChildAdmin
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_Ghidanh = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.btn_Ghidanh = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.btn_XoaHV = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_HocVien = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_HocVien)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,6 +56,34 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1057, 100);
             this.panel1.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(290, 35);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "DANH SÁCH HỌC VIÊN";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_Ghidanh
+            // 
+            this.btn_Ghidanh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Ghidanh.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_Ghidanh.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btn_Ghidanh.IconColor = System.Drawing.Color.Black;
+            this.btn_Ghidanh.IconSize = 16;
+            this.btn_Ghidanh.Location = new System.Drawing.Point(919, 29);
+            this.btn_Ghidanh.Name = "btn_Ghidanh";
+            this.btn_Ghidanh.Rotation = 0D;
+            this.btn_Ghidanh.Size = new System.Drawing.Size(126, 48);
+            this.btn_Ghidanh.TabIndex = 0;
+            this.btn_Ghidanh.Text = "Ghi danh";
+            this.btn_Ghidanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Ghidanh.UseVisualStyleBackColor = true;
+            this.btn_Ghidanh.Click += new System.EventHandler(this.btn_Ghidanh_Click);
             // 
             // groupBox1
             // 
@@ -85,30 +116,13 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = true;
             // 
-            // btn_Ghidanh
-            // 
-            this.btn_Ghidanh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Ghidanh.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Ghidanh.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btn_Ghidanh.IconColor = System.Drawing.Color.Black;
-            this.btn_Ghidanh.IconSize = 16;
-            this.btn_Ghidanh.Location = new System.Drawing.Point(919, 29);
-            this.btn_Ghidanh.Name = "btn_Ghidanh";
-            this.btn_Ghidanh.Rotation = 0D;
-            this.btn_Ghidanh.Size = new System.Drawing.Size(126, 48);
-            this.btn_Ghidanh.TabIndex = 0;
-            this.btn_Ghidanh.Text = "Ghi danh";
-            this.btn_Ghidanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Ghidanh.UseVisualStyleBackColor = true;
-            this.btn_Ghidanh.Click += new System.EventHandler(this.btn_Ghidanh_Click);
-            // 
             // iconButton3
             // 
             this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconSize = 16;
-            this.iconButton3.Location = new System.Drawing.Point(586, 26);
+            this.iconButton3.Location = new System.Drawing.Point(707, 26);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Rotation = 0D;
             this.iconButton3.Size = new System.Drawing.Size(126, 48);
@@ -123,7 +137,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_XoaHV.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.btn_XoaHV.IconColor = System.Drawing.Color.Black;
             this.btn_XoaHV.IconSize = 16;
-            this.btn_XoaHV.Location = new System.Drawing.Point(157, 26);
+            this.btn_XoaHV.Location = new System.Drawing.Point(12, 26);
             this.btn_XoaHV.Name = "btn_XoaHV";
             this.btn_XoaHV.Rotation = 0D;
             this.btn_XoaHV.Size = new System.Drawing.Size(126, 48);
@@ -138,7 +152,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconSize = 16;
-            this.iconButton2.Location = new System.Drawing.Point(442, 26);
+            this.iconButton2.Location = new System.Drawing.Point(491, 26);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Rotation = 0D;
             this.iconButton2.Size = new System.Drawing.Size(126, 48);
@@ -153,7 +167,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconSize = 16;
-            this.iconButton1.Location = new System.Drawing.Point(299, 26);
+            this.iconButton1.Location = new System.Drawing.Point(225, 26);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Rotation = 0D;
             this.iconButton1.Size = new System.Drawing.Size(126, 48);
@@ -162,34 +176,56 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // dgv_HocVien
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(290, 35);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "DANH SÁCH HỌC VIÊN";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 189);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1057, 389);
-            this.dataGridView1.TabIndex = 18;
+            this.dgv_HocVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_HocVien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_HocVien.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgv_HocVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_HocVien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_HocVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HocVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_HocVien.ColumnHeadersHeight = 30;
+            this.dgv_HocVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_HocVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_HocVien.EnableHeadersVisualStyles = false;
+            this.dgv_HocVien.GridColor = System.Drawing.Color.SteelBlue;
+            this.dgv_HocVien.Location = new System.Drawing.Point(0, 189);
+            this.dgv_HocVien.Name = "dgv_HocVien";
+            this.dgv_HocVien.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HocVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_HocVien.RowHeadersVisible = false;
+            this.dgv_HocVien.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_HocVien.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_HocVien.RowTemplate.Height = 24;
+            this.dgv_HocVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_HocVien.Size = new System.Drawing.Size(1057, 389);
+            this.dgv_HocVien.TabIndex = 18;
             // 
             // fQLHocVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 578);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_HocVien);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "fQLHocVien";
@@ -197,7 +233,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_HocVien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,6 +248,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private FontAwesome.Sharp.IconButton btn_XoaHV;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_HocVien;
     }
 }

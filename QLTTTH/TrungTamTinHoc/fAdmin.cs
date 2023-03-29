@@ -188,14 +188,13 @@ namespace TrungTamTinHoc
 
         private void btn_Logout_Click(object sender, EventArgs e)
         {
-            fLogin login = new fLogin();
-            
-            this.Close();
+            fLogin nForm = new fLogin();
+            this.Hide();
+            nForm.Show();
 
-            login.ShowDialog();
         }
 
-        
+
 
 
 

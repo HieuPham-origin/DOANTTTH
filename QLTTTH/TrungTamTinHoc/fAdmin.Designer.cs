@@ -349,6 +349,7 @@ namespace TrungTamTinHoc
             // panelInfo
             // 
             this.panelInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelInfo.BackColor = System.Drawing.Color.MediumPurple;
             this.panelInfo.Controls.Add(this.btn_Logout);
             this.panelInfo.Controls.Add(this.btn_hdsd);
             this.panelInfo.Controls.Add(this.btn_SeeInfo);

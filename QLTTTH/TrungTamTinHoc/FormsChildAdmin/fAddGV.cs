@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace TrungTamTinHoc.FormsChildAdmin
 {
-    public partial class fQLGiangVien : Form
+    public partial class fAddGV : Form
     {
-        public fQLGiangVien()
+        public fAddGV()
         {
             InitializeComponent();
-        }
-
-        private void btn_ThemGV_Click(object sender, EventArgs e)
-        {
-            fAddGV addGV = new fAddGV();
-            addGV.Show();
         }
     }
 }
