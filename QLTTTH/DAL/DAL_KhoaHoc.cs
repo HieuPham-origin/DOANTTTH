@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using static DTO.DTO_KhoaHoc;
+using static DTO.DTO_LopHoc;
 using System.Data;
 namespace DAL
 {

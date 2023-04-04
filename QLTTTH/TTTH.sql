@@ -35,10 +35,17 @@ CREATE TABLE Phong_hoc
 
 CREATE TABLE Ca_hoc
 (
+<<<<<<< HEAD
 	  Ma_ca INT NOT NULL IDENTITY (1,1),
 	  Buoi nvarchar(50) NOT NULL,
 	  GioHoc nvarchar(50) NOT NULL,	
 	  CONSTRAINT pk_MaCa PRIMARY KEY (Ma_ca)
+=======
+  Ma_ca INT NOT NULL IDENTITY (1,1),
+  Buoi varchar(50) NOT NULL,
+  GioHoc varchar(50) NOT NULL,	
+  CONSTRAINT pk_MaCa PRIMARY KEY (Ma_ca)
+>>>>>>> d15b0e54587e1afbc64849dd990ffa0bff3c2eed
 );
 CREATE TABLE Giang_vien
 (
