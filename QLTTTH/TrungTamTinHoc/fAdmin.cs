@@ -189,39 +189,9 @@ namespace TrungTamTinHoc
         private void btn_Logout_Click(object sender, EventArgs e)
         {
             fLogin nForm = new fLogin();
-            this.Hide();
+            this.Close();
             nForm.Show();
-
         }
-
-
-
-
-
-
-
-
-
-        /*private void iconButtonSetting_MouseClick(object sender, MouseEventArgs e)
-        {
-            panelInfo.Show();
-        }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         //Structs
 
 

@@ -32,17 +32,17 @@ namespace TrungTamTinHoc
             this.lblClose = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_ShowPass = new FontAwesome.Sharp.IconButton();
+            this.btn_HidePass = new FontAwesome.Sharp.IconButton();
             this.btn_Dangnhap = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_ShowPass = new FontAwesome.Sharp.IconButton();
-            this.btn_HidePass = new FontAwesome.Sharp.IconButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -60,6 +60,7 @@ namespace TrungTamTinHoc
             this.lblClose.Size = new System.Drawing.Size(27, 25);
             this.lblClose.TabIndex = 1;
             this.lblClose.Text = "X";
+            this.lblClose.Click += new System.EventHandler(this.lblClose_Click_1);
             // 
             // label2
             // 
@@ -91,6 +92,46 @@ namespace TrungTamTinHoc
             this.panel1.Size = new System.Drawing.Size(396, 476);
             this.panel1.TabIndex = 3;
             // 
+            // btn_ShowPass
+            // 
+            this.btn_ShowPass.BackColor = System.Drawing.Color.Indigo;
+            this.btn_ShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_ShowPass.FlatAppearance.BorderSize = 0;
+            this.btn_ShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ShowPass.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_ShowPass.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_ShowPass.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btn_ShowPass.IconColor = System.Drawing.Color.White;
+            this.btn_ShowPass.IconSize = 20;
+            this.btn_ShowPass.Location = new System.Drawing.Point(318, 218);
+            this.btn_ShowPass.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_ShowPass.Name = "btn_ShowPass";
+            this.btn_ShowPass.Rotation = 0D;
+            this.btn_ShowPass.Size = new System.Drawing.Size(34, 34);
+            this.btn_ShowPass.TabIndex = 14;
+            this.btn_ShowPass.UseVisualStyleBackColor = false;
+            this.btn_ShowPass.Click += new System.EventHandler(this.btn_ShowPass_Click);
+            // 
+            // btn_HidePass
+            // 
+            this.btn_HidePass.BackColor = System.Drawing.Color.Indigo;
+            this.btn_HidePass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_HidePass.FlatAppearance.BorderSize = 0;
+            this.btn_HidePass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HidePass.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_HidePass.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_HidePass.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            this.btn_HidePass.IconColor = System.Drawing.Color.White;
+            this.btn_HidePass.IconSize = 20;
+            this.btn_HidePass.Location = new System.Drawing.Point(318, 218);
+            this.btn_HidePass.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_HidePass.Name = "btn_HidePass";
+            this.btn_HidePass.Rotation = 0D;
+            this.btn_HidePass.Size = new System.Drawing.Size(34, 34);
+            this.btn_HidePass.TabIndex = 13;
+            this.btn_HidePass.UseVisualStyleBackColor = false;
+            this.btn_HidePass.Click += new System.EventHandler(this.btn_HidePass_Click);
+            // 
             // btn_Dangnhap
             // 
             this.btn_Dangnhap.BackColor = System.Drawing.Color.Indigo;
@@ -104,6 +145,17 @@ namespace TrungTamTinHoc
             this.btn_Dangnhap.Text = "Đăng nhập";
             this.btn_Dangnhap.UseVisualStyleBackColor = false;
             this.btn_Dangnhap.Click += new System.EventHandler(this.btn_Dangnhap_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::TrungTamTinHoc.Properties.Resources.password;
+            this.pictureBox3.Location = new System.Drawing.Point(25, 214);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(59, 39);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
             // 
             // label5
             // 
@@ -155,11 +207,22 @@ namespace TrungTamTinHoc
             this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
             this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::TrungTamTinHoc.Properties.Resources.background_left;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 143);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 39);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(112, 79);
+            this.label4.Location = new System.Drawing.Point(86, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(221, 2);
             this.label4.TabIndex = 3;
@@ -175,67 +238,6 @@ namespace TrungTamTinHoc
             this.label3.Size = new System.Drawing.Size(156, 37);
             this.label3.TabIndex = 2;
             this.label3.Text = "Đăng nhập";
-            // 
-            // btn_ShowPass
-            // 
-            this.btn_ShowPass.BackColor = System.Drawing.Color.Indigo;
-            this.btn_ShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_ShowPass.FlatAppearance.BorderSize = 0;
-            this.btn_ShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ShowPass.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_ShowPass.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_ShowPass.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.btn_ShowPass.IconColor = System.Drawing.Color.White;
-            this.btn_ShowPass.IconSize = 20;
-            this.btn_ShowPass.Location = new System.Drawing.Point(318, 218);
-            this.btn_ShowPass.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_ShowPass.Name = "btn_ShowPass";
-            this.btn_ShowPass.Rotation = 0D;
-            this.btn_ShowPass.Size = new System.Drawing.Size(34, 34);
-            this.btn_ShowPass.TabIndex = 14;
-            this.btn_ShowPass.UseVisualStyleBackColor = false;
-            this.btn_ShowPass.Visible = false;
-            // 
-            // btn_HidePass
-            // 
-            this.btn_HidePass.BackColor = System.Drawing.Color.Indigo;
-            this.btn_HidePass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_HidePass.FlatAppearance.BorderSize = 0;
-            this.btn_HidePass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HidePass.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_HidePass.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_HidePass.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
-            this.btn_HidePass.IconColor = System.Drawing.Color.White;
-            this.btn_HidePass.IconSize = 20;
-            this.btn_HidePass.Location = new System.Drawing.Point(318, 218);
-            this.btn_HidePass.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_HidePass.Name = "btn_HidePass";
-            this.btn_HidePass.Rotation = 0D;
-            this.btn_HidePass.Size = new System.Drawing.Size(34, 34);
-            this.btn_HidePass.TabIndex = 13;
-            this.btn_HidePass.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::TrungTamTinHoc.Properties.Resources.password;
-            this.pictureBox3.Location = new System.Drawing.Point(25, 214);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(59, 39);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::TrungTamTinHoc.Properties.Resources.background_left;
-            this.pictureBox2.Location = new System.Drawing.Point(25, 143);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 39);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 

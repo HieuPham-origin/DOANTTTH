@@ -13,6 +13,8 @@ namespace TrungTamTinHoc
 {
     public partial class fLogin : Form
     {
+        bool visible = false;
+
         public fLogin()
         {
             InitializeComponent();
@@ -80,21 +82,52 @@ namespace TrungTamTinHoc
             {
                 fAdmin admin = new fAdmin();
                 admin.Show();
+                this.Hide();
             }
             else if(tk.checkLogin(txtUser.Text, txtPassword.Text, 1))
             {
                 fGiangVien gv = new fGiangVien();
                 gv.Show();
+                this.Hide();
             }
             else if(tk.checkLogin(txtUser.Text, txtPassword.Text, 2))
             {
                 fHocVienAccess hv = new fHocVienAccess();
                 hv.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Đăng nhập thất bại");
             }
+        }
+
+        private void btn_ShowPass_Click(object sender, EventArgs e)
+        {
+            if (!visible)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+                btn_ShowPass.Visible = false;
+                btn_HidePass.Visible = true;
+                visible = true;
+            }
+        }
+
+        private void btn_HidePass_Click(object sender, EventArgs e)
+        {
+            if (visible)
+            {
+                txtPassword.UseSystemPasswordChar = true;
+                btn_ShowPass.Visible = true;
+                btn_HidePass.Visible = false;
+                visible = false;
+            }
+               
+        }
+
+        private void lblClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

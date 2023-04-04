@@ -118,6 +118,12 @@
     <Compile Include="FormsChildAdmin\fQLKhoaHoc.Designer.cs">
       <DependentUpon>fQLKhoaHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsChildHocVien\ThongtinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildHocVien\ThongtinCaNhan.Designer.cs">
+      <DependentUpon>ThongtinCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fGiangVien.resx">
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsChildAdmin\fQLHocVien.resx">
       <DependentUpon>fQLHocVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildHocVien\ThongtinCaNhan.resx">
+      <DependentUpon>ThongtinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -191,7 +200,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FormsChildGiangVien\" />
-    <Folder Include="FormsChildHocVien\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
