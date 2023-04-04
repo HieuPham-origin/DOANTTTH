@@ -31,13 +31,14 @@ CREATE TABLE Phong_hoc
   CONSTRAINT pk_maPH PRIMARY KEY (Ma_PH)
 );
 
+
+
 CREATE TABLE Ca_hoc
 (
-  Ma_ca INT NOT NULL IDENTITY (1,1),
-  Buoi INT NOT NULL,
-  Gio_bat_dau DATE NOT NULL,
-  Gio_ket_thuc DATE NOT NULL,
-  CONSTRAINT pk_MaCa PRIMARY KEY (Ma_ca)
+	  Ma_ca INT NOT NULL IDENTITY (1,1),
+	  Buoi nvarchar(50) NOT NULL,
+	  GioHoc nvarchar(50) NOT NULL,	
+	  CONSTRAINT pk_MaCa PRIMARY KEY (Ma_ca)
 );
 CREATE TABLE Giang_vien
 (
@@ -48,43 +49,66 @@ CREATE TABLE Giang_vien
 	Que_quan NVARCHAR(25) NOT NULL,
 	CONSTRAINT pk_MaGV PRIMARY KEY (Ma_GV),
 );
+
 CREATE TABLE Khoa_hoc
 (
-	Ma_KH INT NOT NULL IDENTITY (1,1),
+	Ma_KH INT  NOT NULL IDENTITY (1,1),
 	Ten_KH NVARCHAR(50) NOT NULL,
+	Hoc_phi INT NOT NULL,
+	CONSTRAINT pk_Ma_KH PRIMARY KEY (Ma_KH)
+)
+
+CREATE TABLE Lop_hoc
+(
+	Ma_LH INT NOT NULL IDENTITY (1,1),
+	Ten_LH NVARCHAR(50) NOT NULL,
+	Ma_KH INT NOT NULL,
 	Ma_PH INT NOT NULL,
 	Ma_ca INT NOT NULL,
 	Ma_GV varchar(20)	NOT NULL,
 	Ngay_bat_dau DATE NOT NULL,
 	Ngay_ket_thuc DATE NOT NULL,
 	Dang_mo BIT,
-	Hoc_phi INT NOT NULL,
 	So_buoi INT NOT NULL,
 	Soluong INT NOT NULL,
 
-	CONSTRAINT pk_MaKH PRIMARY KEY (Ma_KH),
+	CONSTRAINT pk_MaLH PRIMARY KEY (Ma_LH),
 	FOREIGN KEY (Ma_PH) REFERENCES Phong_hoc(Ma_PH),
 	FOREIGN KEY (Ma_ca) REFERENCES Ca_hoc(Ma_ca),
-	FOREIGN KEY (Ma_GV) REFERENCES Giang_vien(Ma_GV)
+	FOREIGN KEY (Ma_GV) REFERENCES Giang_vien(Ma_GV),
+	FOREIGN KEY (Ma_KH) REFERENCES Khoa_hoc(Ma_KH)
 );
+
+
+
 CREATE TABLE Hoa_don
 (
 	Ma_hd INT NOT NULL IDENTITY (1,1),
 	Ten_hd NVARCHAR(10) NOT NULL,
-	Ma_KH INT NOT NULL,
 	Ngay_lap DATE DEFAULT getdate() NOT NULL,
 	CONSTRAINT pk_MaHD PRIMARY KEY (Ma_hd),
-	FOREIGN KEY (Ma_KH) REFERENCES Khoa_hoc(Ma_KH)
-
 );
+
+CREATE TABLE Chi_tietHD
+(
+	Ma_hd INT NOT NULL,
+	Ma_KH INT  NOT NULL,
+	CONSTRAINT pk_CTHD PRIMARY KEY (Ma_hd, Ma_KH),
+	FOREIGN KEY (Ma_hd) REFERENCES Hoa_don(Ma_hd),
+	FOREIGN KEY (Ma_KH) REFERENCES Khoa_hoc(Ma_KH),
+)
+
+
+
+
 CREATE TABLE chi_tiet
 (
 	Ngay_Dang_Ky DATE NOT NULL,
 	Ma_HV varchar(20) NOT NULL,
-	Ma_KH INT NOT NULL,
-	PRIMARY KEY (Ma_HV, Ma_KH),
+	Ma_LH INT NOT NULL,
+	PRIMARY KEY (Ma_HV, Ma_LH),
 	FOREIGN KEY (Ma_HV) REFERENCES Hoc_vien(Ma_HV),
-	FOREIGN KEY (Ma_KH) REFERENCES Khoa_hoc(Ma_KH)
+	FOREIGN KEY (Ma_LH) REFERENCES Lop_hoc(Ma_LH)
 );
 go
 
@@ -241,9 +265,8 @@ go
 CREATE PROCEDURE dbo.CaHoc_CRUD
 	@StatementType VARCHAR(10),
 	@Ma_ca INT = NULL,
-	@Buoi INT = NULL,
-	@Gio_bat_dau DATE = NULL,
-	@Gio_ket_thuc DATE = NULL
+	@Buoi VARCHAR = NULL,
+	@GioHoc VARCHAR = NULL
 	AS
 	BEGIN
 	SET NOCOUNT ON;
@@ -255,15 +278,14 @@ CREATE PROCEDURE dbo.CaHoc_CRUD
 	END
 	ELSE IF (@StatementType = 'INSERT')
 	BEGIN
-		INSERT INTO dbo.Ca_hoc (Buoi, Gio_bat_dau, Gio_ket_thuc)
-		VALUES (@Buoi, @Gio_bat_dau, @Gio_ket_thuc)
+		INSERT INTO dbo.Ca_hoc (Buoi, GioHoc)
+		VALUES (@Buoi, @GioHoc)
 	END
 	ELSE IF (@StatementType = 'UPDATE')
 	BEGIN
 		UPDATE dbo.Ca_hoc
 		SET Buoi = @Buoi,
-		Gio_bat_dau = @Gio_bat_dau,
-		Gio_ket_thuc = @Gio_ket_thuc
+		GioHoc = @GioHoc
 		WHERE Ma_ca = @Ma_ca
 	END
 	ELSE IF (@StatementType = 'DELETE')
@@ -313,17 +335,17 @@ END
 
 
 go
-CREATE PROCEDURE dbo.KhoaHoc_CRUD
+CREATE PROCEDURE dbo.LopHoc_CRUD
 	@StatementType VARCHAR(10),
+	@Ma_LH INT = NULL,
+	@Ten_LH NVARCHAR(50) = NULL,
 	@Ma_KH INT = NULL,
-	@Ten_KH NVARCHAR(50) = NULL,
 	@Ma_PH INT = NULL,
 	@Ma_ca INT = NULL,
 	@Ma_GV VARCHAR(20) = NULL,
 	@Ngay_bat_dau DATE = NULL,
 	@Ngay_ket_thuc DATE = NULL,
 	@Dang_mo BIT = NULL,
-	@Hoc_phi INT = NULL,
 	@So_buoi INT = NULL,
 	@Soluong INT = NULL
 	AS
@@ -332,25 +354,25 @@ CREATE PROCEDURE dbo.KhoaHoc_CRUD
 	IF (@StatementType = 'SELECT')
 	BEGIN
 		SELECT *
-		FROM dbo.Khoa_hoc
-		WHERE Ma_KH = @Ma_KH
+		FROM dbo.Lop_hoc
+		WHERE Ma_LH = @Ma_LH
 	END
 	ELSE IF (@StatementType = 'INSERT')
 	BEGIN
-		INSERT INTO dbo.Khoa_hoc (Ten_KH, Ma_PH, Ma_ca, Ma_GV, Ngay_bat_dau, Ngay_ket_thuc, Dang_mo, Hoc_phi, So_buoi, Soluong)
-		VALUES (@Ten_KH, @Ma_PH, @Ma_ca, @Ma_GV, @Ngay_bat_dau, @Ngay_ket_thuc, @Dang_mo, @Hoc_phi, @So_buoi, @Soluong)
+		INSERT INTO dbo.Lop_hoc (Ten_LH, Ma_KH, Ma_PH, Ma_ca, Ma_GV, Ngay_bat_dau, Ngay_ket_thuc, Dang_mo, So_buoi, Soluong)
+		VALUES (@Ten_LH,@Ma_KH, @Ma_PH, @Ma_ca, @Ma_GV, @Ngay_bat_dau, @Ngay_ket_thuc, @Dang_mo,@So_buoi, @Soluong)
 	END
 	ELSE IF (@StatementType = 'UPDATE')
 	BEGIN
-		UPDATE dbo.Khoa_hoc
-		SET Ten_KH = @Ten_KH,
+		UPDATE dbo.Lop_hoc
+		SET Ten_LH = @Ten_LH,
+		Ma_KH = @Ma_KH,
 		Ma_PH = @Ma_PH,
 		Ma_ca = @Ma_ca,
 		Ma_GV = @Ma_GV,
 		Ngay_bat_dau = @Ngay_bat_dau,
 		Ngay_ket_thuc = @Ngay_ket_thuc,
 		Dang_mo = @Dang_mo,
-		Hoc_phi = @Hoc_phi,
 		So_buoi = @So_buoi,
 		Soluong = @Soluong
 		WHERE Ma_KH = @Ma_KH
@@ -363,13 +385,11 @@ CREATE PROCEDURE dbo.KhoaHoc_CRUD
 END
 
 
-
 go
 CREATE PROCEDURE dbo.HoaDon_CRUD
 	@StatementType VARCHAR(10),
 	@Ma_hd INT = NULL,
 	@Ten_hd NVARCHAR(10) = NULL,
-	@Ma_KH INT = NULL,
 	@Ngay_lap DATE = NULL
 	AS
 	BEGIN
@@ -382,14 +402,13 @@ CREATE PROCEDURE dbo.HoaDon_CRUD
 	END
 	ELSE IF (@StatementType = 'INSERT')
 	BEGIN
-		INSERT INTO dbo.Hoa_don (Ten_hd, Ma_KH, Ngay_lap)
-		VALUES (@Ten_hd, @Ma_KH, COALESCE(@ngay_lap, GETDATE()))
+		INSERT INTO dbo.Hoa_don (Ten_hd, Ngay_lap)
+		VALUES (@Ten_hd, COALESCE(@ngay_lap, GETDATE()))
 	END
 	ELSE IF (@StatementType = 'UPDATE')
 	BEGIN
 		UPDATE dbo.Hoa_don
 		SET Ten_hd = @Ten_hd,
-		Ma_KH = @Ma_KH,
 		Ngay_lap = @Ngay_lap
 		WHERE Ma_hd = @Ma_hd
 	END
@@ -406,7 +425,7 @@ CREATE PROCEDURE dbo.ChiTiet_CRUD
 	@StatementType VARCHAR(10),
 	@Ngay_Dang_Ky DATE = NULL,
 	@Ma_HV varchar(20) = NULL,
-	@Ma_KH INT = NULL
+	@Ma_LH INT = NULL
 	AS
 	BEGIN
 	SET NOCOUNT ON;
@@ -414,22 +433,26 @@ CREATE PROCEDURE dbo.ChiTiet_CRUD
 	BEGIN
 		SELECT *
 		FROM dbo.chi_tiet
-		WHERE Ma_HV = @Ma_HV AND Ma_KH = @Ma_KH
+		WHERE Ma_HV = @Ma_HV AND Ma_LH = @Ma_LH
 	END
 	ELSE IF (@StatementType = 'INSERT')
 	BEGIN
-		INSERT INTO dbo.chi_tiet (Ngay_Dang_Ky, Ma_HV, Ma_KH)
-		VALUES (@Ngay_Dang_Ky, @Ma_HV, @Ma_KH)
+		INSERT INTO dbo.chi_tiet (Ngay_Dang_Ky, Ma_HV, Ma_LH)
+		VALUES (@Ngay_Dang_Ky, @Ma_HV, @Ma_LH)
 	END
 	ELSE IF (@StatementType = 'UPDATE')
 	BEGIN
 		UPDATE dbo.chi_tiet
 		SET Ngay_Dang_Ky = @Ngay_Dang_Ky
-		WHERE Ma_HV = @Ma_HV AND Ma_KH = @Ma_KH
+		WHERE Ma_HV = @Ma_HV AND Ma_LH = @Ma_LH
 	END
 	ELSE IF (@StatementType = 'DELETE')
 	BEGIN
 		DELETE FROM dbo.chi_tiet
-		WHERE Ma_HV = @Ma_HV AND Ma_KH = @Ma_KH
+		WHERE Ma_HV = @Ma_HV AND Ma_LH = @Ma_LH
 	END
 END
+
+
+--exec dbo.HocVien_CRUD 'INSERT', NULL, 'Phu', '2003/5/7', 'HCM', '1234567'
+

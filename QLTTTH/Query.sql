@@ -1,0 +1,31 @@
+﻿use TTTH
+go
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'Lập trình C# căn bản', 5000000);
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'Lập trình Java căn bản', 5000000);
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'Cấu trúc dữ liệu và giải thuật', 4000000);
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'Hệ cơ sở dữ liệu', 4000000);
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'Machine Learning', 8000000);
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'Lập trình Flutter', 5000000);
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'Deep Learning', 5000000);
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'MOS 1', 2000000);
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'MOS 2', 2000000);
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'Lập trình Mạng', 3000000);
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'Thiết kế website', 3000000);
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'Lập trình ứng dụng di động', 3000000);
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'Nhập môn lập trình', 3500000);
+INSERT INTO Khoa_hoc (Ten_KH, Hoc_phi) VALUES (N'Trí tuệ nhân tạo', 3000000);
+INSERT INTO Ca_hoc (Buoi, GioHoc) VALUES (N'Sáng', '7:00 - 9:00');
+INSERT INTO Ca_hoc (Buoi, GioHoc) VALUES (N'Sáng', '9:00 - 11:00');
+INSERT INTO Ca_hoc (Buoi, GioHoc) VALUES (N'Chiều', '14:00 - 16:00');
+INSERT INTO Ca_hoc (Buoi, GioHoc) VALUES (N'Chiều', '16:00 - 18:00');
+INSERT INTO Ca_hoc (Buoi, GioHoc) VALUES (N'Tối', '18:00 - 20:00');
+INSERT INTO Phong_hoc (Ten_PH) VALUES (N'Phòng 1');
+INSERT INTO Phong_hoc (Ten_PH) VALUES (N'Phòng 2');
+INSERT INTO Phong_hoc (Ten_PH) VALUES (N'Phòng 3');
+INSERT INTO Phong_hoc (Ten_PH) VALUES (N'Phòng 4');
+INSERT INTO Phong_hoc (Ten_PH) VALUES (N'Phòng 5');
+INSERT INTO Phong_hoc (Ten_PH) VALUES (N'Phòng 6');
+INSERT INTO Phong_hoc (Ten_PH) VALUES (N'Phòng 7');
+INSERT INTO Phong_hoc (Ten_PH) VALUES (N'Phòng 8');
+INSERT INTO Phong_hoc (Ten_PH) VALUES (N'Phòng 9');
+INSERT INTO Phong_hoc (Ten_PH) VALUES (N'Phòng 10');

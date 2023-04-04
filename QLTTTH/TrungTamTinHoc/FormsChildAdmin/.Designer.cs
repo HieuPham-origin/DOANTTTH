@@ -30,6 +30,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dp_Date = new System.Windows.Forms.DateTimePicker();
+            this.txt_SDT = new System.Windows.Forms.TextBox();
+            this.txt_DiaChi = new System.Windows.Forms.TextBox();
+            this.txt_Name = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,16 +41,14 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.label5 = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.txt_Name = new System.Windows.Forms.TextBox();
-            this.txt_DiaChi = new System.Windows.Forms.TextBox();
-            this.txt_SDT = new System.Windows.Forms.TextBox();
-            this.dp_Date = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,6 +70,34 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin học viên";
+            // 
+            // dp_Date
+            // 
+            this.dp_Date.Location = new System.Drawing.Point(140, 103);
+            this.dp_Date.Name = "dp_Date";
+            this.dp_Date.Size = new System.Drawing.Size(244, 22);
+            this.dp_Date.TabIndex = 12;
+            // 
+            // txt_SDT
+            // 
+            this.txt_SDT.Location = new System.Drawing.Point(140, 230);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.Size = new System.Drawing.Size(244, 22);
+            this.txt_SDT.TabIndex = 11;
+            // 
+            // txt_DiaChi
+            // 
+            this.txt_DiaChi.Location = new System.Drawing.Point(140, 166);
+            this.txt_DiaChi.Name = "txt_DiaChi";
+            this.txt_DiaChi.Size = new System.Drawing.Size(244, 22);
+            this.txt_DiaChi.TabIndex = 10;
+            // 
+            // txt_Name
+            // 
+            this.txt_Name.Location = new System.Drawing.Point(140, 46);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(244, 22);
+            this.txt_Name.TabIndex = 8;
             // 
             // label4
             // 
@@ -142,36 +172,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.iconButton1.Text = "Xác nhận";
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
-            // txt_Name
-            // 
-            this.txt_Name.Location = new System.Drawing.Point(140, 46);
-            this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(244, 22);
-            this.txt_Name.TabIndex = 8;
-            // 
-            // txt_DiaChi
-            // 
-            this.txt_DiaChi.Location = new System.Drawing.Point(140, 166);
-            this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.Size = new System.Drawing.Size(244, 22);
-            this.txt_DiaChi.TabIndex = 10;
-            // 
-            // txt_SDT
-            // 
-            this.txt_SDT.Location = new System.Drawing.Point(140, 230);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.Size = new System.Drawing.Size(244, 22);
-            this.txt_SDT.TabIndex = 11;
-            // 
-            // dp_Date
-            // 
-            this.dp_Date.Location = new System.Drawing.Point(140, 103);
-            this.dp_Date.Name = "dp_Date";
-            this.dp_Date.Size = new System.Drawing.Size(244, 22);
-            this.dp_Date.TabIndex = 12;
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.iconButton4);
             this.groupBox2.Controls.Add(this.iconButton3);
             this.groupBox2.Controls.Add(this.dataGridView1);
@@ -184,14 +188,43 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Đăng ký khóa học";
             // 
-            // label6
+            // iconButton4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 17);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Chọn khóa học";
+            this.iconButton4.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton4.IconColor = System.Drawing.Color.Black;
+            this.iconButton4.IconSize = 16;
+            this.iconButton4.Location = new System.Drawing.Point(275, 56);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Rotation = 0D;
+            this.iconButton4.Size = new System.Drawing.Size(85, 37);
+            this.iconButton4.TabIndex = 6;
+            this.iconButton4.Text = "Xóa";
+            this.iconButton4.UseVisualStyleBackColor = true;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconSize = 16;
+            this.iconButton3.Location = new System.Drawing.Point(366, 56);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Rotation = 0D;
+            this.iconButton3.Size = new System.Drawing.Size(85, 37);
+            this.iconButton3.TabIndex = 5;
+            this.iconButton3.Text = "Thêm";
+            this.iconButton3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 108);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(445, 208);
+            this.dataGridView1.TabIndex = 4;
             // 
             // comboBox1
             // 
@@ -201,43 +234,31 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.comboBox1.Size = new System.Drawing.Size(113, 24);
             this.comboBox1.TabIndex = 3;
             // 
-            // dataGridView1
+            // label6
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 74);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(445, 242);
-            this.dataGridView1.TabIndex = 4;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 41);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 17);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Chọn khóa học";
             // 
-            // iconButton3
+            // label7
             // 
-            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconSize = 16;
-            this.iconButton3.Location = new System.Drawing.Point(366, 31);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Rotation = 0D;
-            this.iconButton3.Size = new System.Drawing.Size(85, 37);
-            this.iconButton3.TabIndex = 5;
-            this.iconButton3.Text = "Thêm";
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 76);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 17);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Chọn lớp học";
             // 
-            // iconButton4
+            // comboBox2
             // 
-            this.iconButton4.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton4.IconColor = System.Drawing.Color.Black;
-            this.iconButton4.IconSize = 16;
-            this.iconButton4.Location = new System.Drawing.Point(275, 31);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Rotation = 0D;
-            this.iconButton4.Size = new System.Drawing.Size(85, 37);
-            this.iconButton4.TabIndex = 6;
-            this.iconButton4.Text = "Xóa";
-            this.iconButton4.UseVisualStyleBackColor = true;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(138, 73);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(113, 24);
+            this.comboBox2.TabIndex = 8;
             // 
             // fGhiDanh
             // 
@@ -281,5 +302,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label7;
     }
 }
