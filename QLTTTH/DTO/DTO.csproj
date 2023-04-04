@@ -43,10 +43,12 @@
   <ItemGroup>
     <Compile Include="DTO_ChiTietDangKy.cs" />
     <Compile Include="DTO_CaHoc.cs" />
+    <Compile Include="DTO_ChiTietHoaDon.cs" />
     <Compile Include="DTO_GiangVien.cs" />
     <Compile Include="DTO_HoaDon.cs" />
     <Compile Include="DTO_HocVien.cs" />
     <Compile Include="DTO_KhoaHoc.cs" />
+    <Compile Include="DTO_LopHoc.cs" />
     <Compile Include="DTO_PhongHoc.cs" />
     <Compile Include="DTO_TaiKhoan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
