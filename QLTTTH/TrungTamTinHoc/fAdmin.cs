@@ -18,7 +18,8 @@ namespace TrungTamTinHoc
         bool visible = false;
         private IconButton currBtn;
         private Panel leftBorderBtn;
-        private Form currChildForm;
+        private Form currChildForm = null;
+
         //Constructor
         public fAdmin()
         {
@@ -96,9 +97,11 @@ namespace TrungTamTinHoc
 
         //events
 
-        private void iconButtonExit_Click(object sender, EventArgs e)
+        private void btn_Thoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ActivateButton(sender, colorActive);
+            OpenChildForm(new FormsChildAdmin.fHoaDon());
+            panelInfo.BringToFront();
         }
 
         private void iconButtonSetting_MouseClick(object sender, MouseEventArgs e)
@@ -119,6 +122,10 @@ namespace TrungTamTinHoc
 
         private void iconButtonHome_Click(object sender, EventArgs e)
         {
+            if (currChildForm != null)
+            {
+                currChildForm.Hide();
+            }
             ActivateButton(sender, colorActive);
             panelInfo.BringToFront();
 
@@ -191,6 +198,11 @@ namespace TrungTamTinHoc
             fLogin nForm = new fLogin();
             this.Close();
             nForm.Show();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
         //Structs
 

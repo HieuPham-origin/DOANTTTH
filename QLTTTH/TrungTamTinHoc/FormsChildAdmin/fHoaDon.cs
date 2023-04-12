@@ -10,13 +10,18 @@ using System.Windows.Forms;
 
 namespace TrungTamTinHoc.FormsChildAdmin
 {
-    public partial class fGhiDanh : Form
+    public partial class fHoaDon : Form
     {
-        public fGhiDanh()
+        public fHoaDon()
         {
             InitializeComponent();
         }
 
-       
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        
     }
 }

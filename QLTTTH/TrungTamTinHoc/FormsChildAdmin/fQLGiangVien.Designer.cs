@@ -37,11 +37,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.btn_XoaGV = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_ThemGV = new FontAwesome.Sharp.IconButton();
             this.dgv_GiangVien = new System.Windows.Forms.DataGridView();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_GiangVien)).BeginInit();
@@ -87,7 +87,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconSize = 16;
-            this.iconButton3.Location = new System.Drawing.Point(534, 35);
+            this.iconButton3.Location = new System.Drawing.Point(538, 35);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Rotation = 0D;
             this.iconButton3.Size = new System.Drawing.Size(148, 48);
@@ -123,7 +123,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconSize = 16;
-            this.iconButton2.Location = new System.Drawing.Point(349, 35);
+            this.iconButton2.Location = new System.Drawing.Point(381, 35);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Rotation = 0D;
             this.iconButton2.Size = new System.Drawing.Size(134, 48);
@@ -131,24 +131,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.iconButton2.Text = "Lưu";
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconSize = 16;
-            this.iconButton1.Location = new System.Drawing.Point(167, 35);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(148, 48);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.Text = "Chỉnh sửa";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -232,6 +214,24 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.dgv_GiangVien.Size = new System.Drawing.Size(879, 349);
             this.dgv_GiangVien.TabIndex = 24;
             // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconSize = 16;
+            this.iconButton1.Location = new System.Drawing.Point(195, 35);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Rotation = 0D;
+            this.iconButton1.Size = new System.Drawing.Size(148, 48);
+            this.iconButton1.TabIndex = 2;
+            this.iconButton1.Text = "Chỉnh sửa";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
             // fQLGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -256,10 +256,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton btn_XoaGV;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btn_ThemGV;
         private System.Windows.Forms.DataGridView dgv_GiangVien;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

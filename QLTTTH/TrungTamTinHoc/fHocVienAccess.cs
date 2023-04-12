@@ -132,5 +132,6 @@ namespace TrungTamTinHoc
             fLogin newLogin = new fLogin();
             newLogin.Show();
         }
+
     }
 }

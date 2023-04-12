@@ -66,5 +66,7 @@ D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLHocVien.resources
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fGhiDanh.resources
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLGiangVien.resources
-D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fAddGV.resources
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildHocVien.ThongtinCaNhan.resources
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fHoaDon.resources
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fThemGiangVien.resources
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fChonKhoaHoc.resources

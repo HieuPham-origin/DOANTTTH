@@ -10,3 +10,9 @@ C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\DTO\obj\Deb
 C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.dll
 C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.pdb
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\DTO\bin\Debug\DTO.dll
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\DTO\bin\Debug\DTO.pdb
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.dll
+D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.pdb

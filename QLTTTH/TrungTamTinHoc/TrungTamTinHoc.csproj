@@ -81,11 +81,17 @@
     <Compile Include="fAdmin.Designer.cs">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsChildAdmin\fAddGV.cs">
+    <Compile Include="FormsChildAdmin\fThemGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsChildAdmin\fAddGV.Designer.cs">
-      <DependentUpon>fAddGV.cs</DependentUpon>
+    <Compile Include="FormsChildAdmin\fThemGiangVien.Designer.cs">
+      <DependentUpon>fThemGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fChonKhoaHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fChonKhoaHoc.Designer.cs">
+      <DependentUpon>fChonKhoaHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsChildAdmin\fGhiDanh.cs">
       <SubType>Form</SubType>
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="FormsChildAdmin\fBaoCao.Designer.cs">
       <DependentUpon>fBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fHoaDon.Designer.cs">
+      <DependentUpon>fHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsChildAdmin\fQLGiangVien.cs">
       <SubType>Form</SubType>
@@ -138,14 +150,20 @@
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsChildAdmin\fAddGV.resx">
-      <DependentUpon>fAddGV.cs</DependentUpon>
+    <EmbeddedResource Include="FormsChildAdmin\fThemGiangVien.resx">
+      <DependentUpon>fThemGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildAdmin\fChonKhoaHoc.resx">
+      <DependentUpon>fChonKhoaHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsChildAdmin\fGhiDanh.resx">
       <DependentUpon>fGhiDanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsChildAdmin\fBaoCao.resx">
       <DependentUpon>fBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildAdmin\fHoaDon.resx">
+      <DependentUpon>fHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsChildAdmin\fQLGiangVien.resx">
       <DependentUpon>fQLGiangVien.cs</DependentUpon>
@@ -186,6 +204,7 @@
     <Content Include="Resources\calendarWhite.png" />
     <Content Include="Resources\login-img.jpg" />
     <Content Include="Resources\logo_ttth.png" />
+    <None Include="Resources\menu.png" />
     <Content Include="Resources\password.png" />
   </ItemGroup>
   <ItemGroup>

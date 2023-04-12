@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace TrungTamTinHoc.FormsChildAdmin
 {
-    public partial class fGhiDanh : Form
+    public partial class fThemGiangVien : Form
     {
-        public fGhiDanh()
+        public fThemGiangVien()
         {
             InitializeComponent();
         }
-
-       
     }
 }

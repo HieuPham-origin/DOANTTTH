@@ -70,7 +70,7 @@ namespace TrungTamTinHoc
             // 
             // panelTitle
             // 
-            this.panelTitle.BackColor = System.Drawing.Color.MediumPurple;
+            this.panelTitle.BackColor = System.Drawing.Color.RoyalBlue;
             this.panelTitle.Controls.Add(this.btn_Dangxuat);
             this.panelTitle.Controls.Add(this.btn_Maximize);
             this.panelTitle.Controls.Add(btn_Minimize);
@@ -157,6 +157,7 @@ namespace TrungTamTinHoc
             // 
             // panelNav
             // 
+            this.panelNav.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panelNav.Controls.Add(this.btn_HdSudung);
             this.panelNav.Controls.Add(this.btn_Xemdiem);
             this.panelNav.Controls.Add(this.btn_DangKiKH);
@@ -172,7 +173,9 @@ namespace TrungTamTinHoc
             // 
             // btn_HdSudung
             // 
+            this.btn_HdSudung.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_HdSudung.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_HdSudung.FlatAppearance.BorderSize = 0;
             this.btn_HdSudung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_HdSudung.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btn_HdSudung.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -193,7 +196,9 @@ namespace TrungTamTinHoc
             // 
             // btn_Xemdiem
             // 
+            this.btn_Xemdiem.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_Xemdiem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Xemdiem.FlatAppearance.BorderSize = 0;
             this.btn_Xemdiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xemdiem.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btn_Xemdiem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,7 +219,9 @@ namespace TrungTamTinHoc
             // 
             // btn_DangKiKH
             // 
+            this.btn_DangKiKH.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_DangKiKH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_DangKiKH.FlatAppearance.BorderSize = 0;
             this.btn_DangKiKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DangKiKH.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btn_DangKiKH.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -235,7 +242,9 @@ namespace TrungTamTinHoc
             // 
             // btn_Xemlichhoc
             // 
+            this.btn_Xemlichhoc.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_Xemlichhoc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Xemlichhoc.FlatAppearance.BorderSize = 0;
             this.btn_Xemlichhoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xemlichhoc.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btn_Xemlichhoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -256,7 +265,9 @@ namespace TrungTamTinHoc
             // 
             // btn_KhoaHoc
             // 
+            this.btn_KhoaHoc.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_KhoaHoc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_KhoaHoc.FlatAppearance.BorderSize = 0;
             this.btn_KhoaHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_KhoaHoc.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btn_KhoaHoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,8 +288,9 @@ namespace TrungTamTinHoc
             // 
             // btn_Thongtincanhan
             // 
-            this.btn_Thongtincanhan.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Thongtincanhan.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_Thongtincanhan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Thongtincanhan.FlatAppearance.BorderSize = 0;
             this.btn_Thongtincanhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Thongtincanhan.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btn_Thongtincanhan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -294,11 +306,12 @@ namespace TrungTamTinHoc
             this.btn_Thongtincanhan.TabIndex = 1;
             this.btn_Thongtincanhan.Text = "Thông tin cá nhân";
             this.btn_Thongtincanhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Thongtincanhan.UseVisualStyleBackColor = false;
+            this.btn_Thongtincanhan.UseVisualStyleBackColor = true;
             this.btn_Thongtincanhan.Click += new System.EventHandler(this.btn_Thongtincanhan_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";

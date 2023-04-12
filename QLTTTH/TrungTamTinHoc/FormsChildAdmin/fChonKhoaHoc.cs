@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TrungTamTinHoc.FormsChildAdmin
 {
-    public partial class fAddGV : Form
+    public partial class fChonKhoaHoc : Form
     {
-        public fAddGV()
+        public fChonKhoaHoc()
         {
             InitializeComponent();
+        }
+
+        private void hpTextBox1__TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

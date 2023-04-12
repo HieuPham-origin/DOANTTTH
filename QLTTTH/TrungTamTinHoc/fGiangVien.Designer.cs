@@ -32,16 +32,16 @@ namespace TrungTamTinHoc
             FontAwesome.Sharp.IconButton btn_Minimize;
             this.panelNav = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelTitle = new System.Windows.Forms.Panel();
+            this.lbTitle = new System.Windows.Forms.Label();
+            this.btn_Dangxuat = new FontAwesome.Sharp.IconButton();
+            this.btn_Maximize = new FontAwesome.Sharp.IconButton();
+            this.btn_Exit = new FontAwesome.Sharp.IconButton();
+            this.iconCurrChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.btn_Huongdansd = new FontAwesome.Sharp.IconButton();
             this.btn_Xemlichhoc = new FontAwesome.Sharp.IconButton();
             this.btn_KhoaHoc = new FontAwesome.Sharp.IconButton();
             this.btn_Thongtincanhan = new FontAwesome.Sharp.IconButton();
-            this.panelTitle = new System.Windows.Forms.Panel();
-            this.btn_Dangxuat = new FontAwesome.Sharp.IconButton();
-            this.btn_Maximize = new FontAwesome.Sharp.IconButton();
-            this.lbTitle = new System.Windows.Forms.Label();
-            this.btn_Exit = new FontAwesome.Sharp.IconButton();
-            this.iconCurrChildForm = new FontAwesome.Sharp.IconPictureBox();
             btn_Minimize = new FontAwesome.Sharp.IconButton();
             this.panelNav.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -50,6 +50,7 @@ namespace TrungTamTinHoc
             // 
             // panelNav
             // 
+            this.panelNav.BackColor = System.Drawing.Color.RoyalBlue;
             this.panelNav.Controls.Add(this.btn_Huongdansd);
             this.panelNav.Controls.Add(this.btn_Xemlichhoc);
             this.panelNav.Controls.Add(this.btn_KhoaHoc);
@@ -63,87 +64,16 @@ namespace TrungTamTinHoc
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(187, 148);
             this.panel1.TabIndex = 0;
             // 
-            // btn_Huongdansd
-            // 
-            this.btn_Huongdansd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Huongdansd.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Huongdansd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Huongdansd.IconChar = FontAwesome.Sharp.IconChar.Info;
-            this.btn_Huongdansd.IconColor = System.Drawing.Color.Black;
-            this.btn_Huongdansd.IconSize = 20;
-            this.btn_Huongdansd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Huongdansd.Location = new System.Drawing.Point(0, 298);
-            this.btn_Huongdansd.Name = "btn_Huongdansd";
-            this.btn_Huongdansd.Rotation = 0D;
-            this.btn_Huongdansd.Size = new System.Drawing.Size(187, 50);
-            this.btn_Huongdansd.TabIndex = 7;
-            this.btn_Huongdansd.Text = "Hướng dẫn sử dụng";
-            this.btn_Huongdansd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Huongdansd.UseVisualStyleBackColor = true;
-            // 
-            // btn_Xemlichhoc
-            // 
-            this.btn_Xemlichhoc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Xemlichhoc.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Xemlichhoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xemlichhoc.IconChar = FontAwesome.Sharp.IconChar.Calendar;
-            this.btn_Xemlichhoc.IconColor = System.Drawing.Color.Black;
-            this.btn_Xemlichhoc.IconSize = 20;
-            this.btn_Xemlichhoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Xemlichhoc.Location = new System.Drawing.Point(0, 248);
-            this.btn_Xemlichhoc.Name = "btn_Xemlichhoc";
-            this.btn_Xemlichhoc.Rotation = 0D;
-            this.btn_Xemlichhoc.Size = new System.Drawing.Size(187, 50);
-            this.btn_Xemlichhoc.TabIndex = 4;
-            this.btn_Xemlichhoc.Text = "Lịch giảng dạy";
-            this.btn_Xemlichhoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Xemlichhoc.UseVisualStyleBackColor = true;
-            // 
-            // btn_KhoaHoc
-            // 
-            this.btn_KhoaHoc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_KhoaHoc.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_KhoaHoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_KhoaHoc.IconChar = FontAwesome.Sharp.IconChar.Book;
-            this.btn_KhoaHoc.IconColor = System.Drawing.Color.Black;
-            this.btn_KhoaHoc.IconSize = 20;
-            this.btn_KhoaHoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_KhoaHoc.Location = new System.Drawing.Point(0, 198);
-            this.btn_KhoaHoc.Name = "btn_KhoaHoc";
-            this.btn_KhoaHoc.Rotation = 0D;
-            this.btn_KhoaHoc.Size = new System.Drawing.Size(187, 50);
-            this.btn_KhoaHoc.TabIndex = 2;
-            this.btn_KhoaHoc.Text = "Thông tin khóa học";
-            this.btn_KhoaHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_KhoaHoc.UseVisualStyleBackColor = true;
-            // 
-            // btn_Thongtincanhan
-            // 
-            this.btn_Thongtincanhan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Thongtincanhan.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Thongtincanhan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Thongtincanhan.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.btn_Thongtincanhan.IconColor = System.Drawing.Color.Black;
-            this.btn_Thongtincanhan.IconSize = 20;
-            this.btn_Thongtincanhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Thongtincanhan.Location = new System.Drawing.Point(0, 148);
-            this.btn_Thongtincanhan.Name = "btn_Thongtincanhan";
-            this.btn_Thongtincanhan.Rotation = 0D;
-            this.btn_Thongtincanhan.Size = new System.Drawing.Size(187, 50);
-            this.btn_Thongtincanhan.TabIndex = 1;
-            this.btn_Thongtincanhan.Text = "Thông tin cá nhân";
-            this.btn_Thongtincanhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Thongtincanhan.UseVisualStyleBackColor = true;
-            // 
             // panelTitle
             // 
-            this.panelTitle.BackColor = System.Drawing.Color.MediumPurple;
+            this.panelTitle.BackColor = System.Drawing.Color.RoyalBlue;
             this.panelTitle.Controls.Add(this.btn_Dangxuat);
             this.panelTitle.Controls.Add(this.btn_Maximize);
             this.panelTitle.Controls.Add(btn_Minimize);
@@ -156,6 +86,17 @@ namespace TrungTamTinHoc
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(826, 73);
             this.panelTitle.TabIndex = 5;
+            // 
+            // lbTitle
+            // 
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.Location = new System.Drawing.Point(53, 25);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(115, 30);
+            this.lbTitle.TabIndex = 4;
+            this.lbTitle.Text = "Trang chủ";
+            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_Dangxuat
             // 
@@ -205,17 +146,6 @@ namespace TrungTamTinHoc
             btn_Minimize.TabIndex = 7;
             btn_Minimize.UseVisualStyleBackColor = true;
             // 
-            // lbTitle
-            // 
-            this.lbTitle.AutoSize = true;
-            this.lbTitle.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(53, 25);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(115, 30);
-            this.lbTitle.TabIndex = 4;
-            this.lbTitle.Text = "Trang chủ";
-            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btn_Exit
             // 
             this.btn_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -243,6 +173,94 @@ namespace TrungTamTinHoc
             this.iconCurrChildForm.Size = new System.Drawing.Size(32, 32);
             this.iconCurrChildForm.TabIndex = 3;
             this.iconCurrChildForm.TabStop = false;
+            // 
+            // btn_Huongdansd
+            // 
+            this.btn_Huongdansd.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_Huongdansd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Huongdansd.FlatAppearance.BorderSize = 0;
+            this.btn_Huongdansd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Huongdansd.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_Huongdansd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Huongdansd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Huongdansd.IconChar = FontAwesome.Sharp.IconChar.Info;
+            this.btn_Huongdansd.IconColor = System.Drawing.Color.White;
+            this.btn_Huongdansd.IconSize = 20;
+            this.btn_Huongdansd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Huongdansd.Location = new System.Drawing.Point(0, 298);
+            this.btn_Huongdansd.Name = "btn_Huongdansd";
+            this.btn_Huongdansd.Rotation = 0D;
+            this.btn_Huongdansd.Size = new System.Drawing.Size(187, 50);
+            this.btn_Huongdansd.TabIndex = 7;
+            this.btn_Huongdansd.Text = "Hướng dẫn sử dụng";
+            this.btn_Huongdansd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Huongdansd.UseVisualStyleBackColor = false;
+            // 
+            // btn_Xemlichhoc
+            // 
+            this.btn_Xemlichhoc.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_Xemlichhoc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Xemlichhoc.FlatAppearance.BorderSize = 0;
+            this.btn_Xemlichhoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Xemlichhoc.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_Xemlichhoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Xemlichhoc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Xemlichhoc.IconChar = FontAwesome.Sharp.IconChar.Calendar;
+            this.btn_Xemlichhoc.IconColor = System.Drawing.Color.White;
+            this.btn_Xemlichhoc.IconSize = 20;
+            this.btn_Xemlichhoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Xemlichhoc.Location = new System.Drawing.Point(0, 248);
+            this.btn_Xemlichhoc.Name = "btn_Xemlichhoc";
+            this.btn_Xemlichhoc.Rotation = 0D;
+            this.btn_Xemlichhoc.Size = new System.Drawing.Size(187, 50);
+            this.btn_Xemlichhoc.TabIndex = 4;
+            this.btn_Xemlichhoc.Text = "Lịch giảng dạy";
+            this.btn_Xemlichhoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Xemlichhoc.UseVisualStyleBackColor = false;
+            // 
+            // btn_KhoaHoc
+            // 
+            this.btn_KhoaHoc.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_KhoaHoc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_KhoaHoc.FlatAppearance.BorderSize = 0;
+            this.btn_KhoaHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_KhoaHoc.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_KhoaHoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_KhoaHoc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_KhoaHoc.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btn_KhoaHoc.IconColor = System.Drawing.Color.White;
+            this.btn_KhoaHoc.IconSize = 20;
+            this.btn_KhoaHoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_KhoaHoc.Location = new System.Drawing.Point(0, 198);
+            this.btn_KhoaHoc.Name = "btn_KhoaHoc";
+            this.btn_KhoaHoc.Rotation = 0D;
+            this.btn_KhoaHoc.Size = new System.Drawing.Size(187, 50);
+            this.btn_KhoaHoc.TabIndex = 2;
+            this.btn_KhoaHoc.Text = "Thông tin khóa học";
+            this.btn_KhoaHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_KhoaHoc.UseVisualStyleBackColor = false;
+            // 
+            // btn_Thongtincanhan
+            // 
+            this.btn_Thongtincanhan.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_Thongtincanhan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Thongtincanhan.FlatAppearance.BorderSize = 0;
+            this.btn_Thongtincanhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Thongtincanhan.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_Thongtincanhan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Thongtincanhan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Thongtincanhan.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btn_Thongtincanhan.IconColor = System.Drawing.Color.White;
+            this.btn_Thongtincanhan.IconSize = 20;
+            this.btn_Thongtincanhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Thongtincanhan.Location = new System.Drawing.Point(0, 148);
+            this.btn_Thongtincanhan.Name = "btn_Thongtincanhan";
+            this.btn_Thongtincanhan.Rotation = 0D;
+            this.btn_Thongtincanhan.Size = new System.Drawing.Size(187, 50);
+            this.btn_Thongtincanhan.TabIndex = 1;
+            this.btn_Thongtincanhan.Text = "Thông tin cá nhân";
+            this.btn_Thongtincanhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Thongtincanhan.UseVisualStyleBackColor = false;
             // 
             // fGiangVien
             // 

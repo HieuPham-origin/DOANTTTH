@@ -19,7 +19,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void btn_ThemGV_Click(object sender, EventArgs e)
         {
-            fAddGV addGV = new fAddGV();
+            fThemGiangVien addGV = new fThemGiangVien();
             addGV.Show();
         }
     }
