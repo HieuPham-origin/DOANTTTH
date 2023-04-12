@@ -261,7 +261,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 374);
+            this.ClientSize = new System.Drawing.Size(498, 374);
             this.Controls.Add(this.btn_Luu);
             this.Controls.Add(this.btn_Them);
             this.Controls.Add(this.btn_Huy);
