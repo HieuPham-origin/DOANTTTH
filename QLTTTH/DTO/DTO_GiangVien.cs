@@ -8,26 +8,27 @@ namespace DTO
 {
     public class DTO_GiangVien
     {
-        private string Ma_GV;
-        private string Ten_GV;
-        private DateTime Nam_sinh;
+        private string ma_GV;
+        private string ten_GV;
+        private DateTime nam_sinh;
         private string sdt;
-        private string Que_quan;
+        private string que_quan;
 
         public DTO_GiangVien() { }
+
         public DTO_GiangVien(string ma_GV, string ten_GV, DateTime nam_sinh, string sdt, string que_quan)
         {
-            Ma_GV = ma_GV;
-            Ten_GV = ten_GV;
-            Nam_sinh = nam_sinh;
-            this.sdt = sdt;
-            Que_quan = que_quan;
+            this.Ma_GV = ma_GV;
+            this.Ten_GV = ten_GV;
+            this.Nam_sinh = nam_sinh;
+            this.Sdt = sdt;
+            this.Que_quan = que_quan;
         }
 
-        public string Ma_GV1 { get => Ma_GV; set => Ma_GV = value; }
-        public string Ten_GV1 { get => Ten_GV; set => Ten_GV = value; }
-        public DateTime Nam_sinh1 { get => Nam_sinh; set => Nam_sinh = value; }
+        public string Ma_GV { get => ma_GV; set => ma_GV = value; }
+        public string Ten_GV { get => ten_GV; set => ten_GV = value; }
+        public DateTime Nam_sinh { get => nam_sinh; set => nam_sinh = value; }
         public string Sdt { get => sdt; set => sdt = value; }
-        public string Que_quan1 { get => Que_quan; set => Que_quan = value; }
+        public string Que_quan { get => que_quan; set => que_quan = value; }
     }
 }

@@ -21,24 +21,70 @@ namespace DAL
 
         public bool addHocVien(DTO_HocVien hv)
         {
-            try {
-                conn.Open();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("dbo.HocVien_CRUD", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@StatementType", "INSERT");
+            cmd.Parameters.AddWithValue("@Ma_HV", null);
+            cmd.Parameters.AddWithValue("@Ten_HV", hv.Ten_HV);
+            cmd.Parameters.AddWithValue("@Nam_sinh", hv.Nam_sinh);
+            cmd.Parameters.AddWithValue("@Dia_chi", hv.Dia_chi);
+            cmd.Parameters.AddWithValue("@sdt", hv.Sdt);
 
-
-            }
-            catch (Exception e)
+            int i = cmd.ExecuteNonQuery();
+            if (i != 0)
             {
-                
-            }
-            finally
-            {
-                // Dong ket noi
                 conn.Close();
+                return true;
             }
-
+            conn.Close();
             return false;
         }
 
 
+        public bool suaHocVien(DTO_HocVien hv)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("dbo.HocVien_CRUD", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@StatementType", "UPDATE");
+            cmd.Parameters.AddWithValue("@Ma_HV", hv.Ma_HV);
+            cmd.Parameters.AddWithValue("@Ten_HV", hv.Ten_HV);
+            cmd.Parameters.AddWithValue("@Nam_sinh", hv.Nam_sinh);
+            cmd.Parameters.AddWithValue("@Dia_chi", hv.Dia_chi);
+            cmd.Parameters.AddWithValue("@sdt", hv.Sdt);
+
+            int i = cmd.ExecuteNonQuery();
+            if (i != 0)
+            {
+                conn.Close();
+                return true;
+            }
+            conn.Close();
+            return false;
+        }
+
+
+        public bool xoaHocVien(DTO_HocVien hv)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("dbo.HocVien_CRUD", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@StatementType", "DELETE");
+            cmd.Parameters.AddWithValue("@Ma_HV", hv.Ma_HV);
+            cmd.Parameters.AddWithValue("@Ten_HV", hv.Ten_HV);
+            cmd.Parameters.AddWithValue("@Nam_sinh", hv.Nam_sinh);
+            cmd.Parameters.AddWithValue("@Dia_chi", hv.Dia_chi);
+            cmd.Parameters.AddWithValue("@sdt", hv.Sdt);
+
+            int i = cmd.ExecuteNonQuery();
+            if (i != 0)
+            {
+                conn.Close();
+                return true;
+            }
+            conn.Close();
+            return false;
+        }
     }
 }

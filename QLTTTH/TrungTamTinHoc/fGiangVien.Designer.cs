@@ -37,19 +37,19 @@ namespace TrungTamTinHoc
             this.btn_Class = new FontAwesome.Sharp.IconButton();
             this.btn_Information = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.btn_Dangxuat = new FontAwesome.Sharp.IconButton();
             this.btn_Maximize = new FontAwesome.Sharp.IconButton();
             this.lbTitle = new System.Windows.Forms.Label();
             this.btn_Exit = new FontAwesome.Sharp.IconButton();
             this.iconCurrChildForm = new FontAwesome.Sharp.IconPictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             btn_Minimize = new FontAwesome.Sharp.IconButton();
             this.panelNav.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Minimize
@@ -61,11 +61,11 @@ namespace TrungTamTinHoc
             btn_Minimize.IconChar = FontAwesome.Sharp.IconChar.MinusSquare;
             btn_Minimize.IconColor = System.Drawing.Color.White;
             btn_Minimize.IconSize = 16;
-            btn_Minimize.Location = new System.Drawing.Point(762, 0);
+            btn_Minimize.Location = new System.Drawing.Point(846, 0);
             btn_Minimize.Margin = new System.Windows.Forms.Padding(0);
             btn_Minimize.Name = "btn_Minimize";
             btn_Minimize.Rotation = 0D;
-            btn_Minimize.Size = new System.Drawing.Size(24, 23);
+            btn_Minimize.Size = new System.Drawing.Size(27, 29);
             btn_Minimize.TabIndex = 7;
             btn_Minimize.UseVisualStyleBackColor = true;
             // 
@@ -80,8 +80,9 @@ namespace TrungTamTinHoc
             this.panelNav.Controls.Add(this.panel1);
             this.panelNav.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelNav.Location = new System.Drawing.Point(0, 0);
+            this.panelNav.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(179, 588);
+            this.panelNav.Size = new System.Drawing.Size(213, 735);
             this.panelNav.TabIndex = 1;
             // 
             // iconButton1
@@ -97,10 +98,11 @@ namespace TrungTamTinHoc
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconSize = 20;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 348);
+            this.iconButton1.Location = new System.Drawing.Point(0, 433);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(179, 50);
+            this.iconButton1.Size = new System.Drawing.Size(213, 62);
             this.iconButton1.TabIndex = 8;
             this.iconButton1.Text = "Thông tin cá nhân";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -119,10 +121,11 @@ namespace TrungTamTinHoc
             this.btn_Instruction.IconColor = System.Drawing.Color.White;
             this.btn_Instruction.IconSize = 20;
             this.btn_Instruction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Instruction.Location = new System.Drawing.Point(0, 298);
+            this.btn_Instruction.Location = new System.Drawing.Point(0, 371);
+            this.btn_Instruction.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Instruction.Name = "btn_Instruction";
             this.btn_Instruction.Rotation = 0D;
-            this.btn_Instruction.Size = new System.Drawing.Size(179, 50);
+            this.btn_Instruction.Size = new System.Drawing.Size(213, 62);
             this.btn_Instruction.TabIndex = 7;
             this.btn_Instruction.Text = "Hướng dẫn sử dụng";
             this.btn_Instruction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -141,10 +144,11 @@ namespace TrungTamTinHoc
             this.btn_Schedule.IconColor = System.Drawing.Color.White;
             this.btn_Schedule.IconSize = 20;
             this.btn_Schedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Schedule.Location = new System.Drawing.Point(0, 248);
+            this.btn_Schedule.Location = new System.Drawing.Point(0, 309);
+            this.btn_Schedule.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Schedule.Name = "btn_Schedule";
             this.btn_Schedule.Rotation = 0D;
-            this.btn_Schedule.Size = new System.Drawing.Size(179, 50);
+            this.btn_Schedule.Size = new System.Drawing.Size(213, 62);
             this.btn_Schedule.TabIndex = 4;
             this.btn_Schedule.Text = "Lịch giảng dạy";
             this.btn_Schedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -163,10 +167,11 @@ namespace TrungTamTinHoc
             this.btn_Class.IconColor = System.Drawing.Color.White;
             this.btn_Class.IconSize = 20;
             this.btn_Class.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Class.Location = new System.Drawing.Point(0, 198);
+            this.btn_Class.Location = new System.Drawing.Point(0, 247);
+            this.btn_Class.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Class.Name = "btn_Class";
             this.btn_Class.Rotation = 0D;
-            this.btn_Class.Size = new System.Drawing.Size(179, 50);
+            this.btn_Class.Size = new System.Drawing.Size(213, 62);
             this.btn_Class.TabIndex = 2;
             this.btn_Class.Text = "Xem lớp học";
             this.btn_Class.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -185,10 +190,11 @@ namespace TrungTamTinHoc
             this.btn_Information.IconColor = System.Drawing.Color.White;
             this.btn_Information.IconSize = 20;
             this.btn_Information.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Information.Location = new System.Drawing.Point(0, 148);
+            this.btn_Information.Location = new System.Drawing.Point(0, 185);
+            this.btn_Information.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Information.Name = "btn_Information";
             this.btn_Information.Rotation = 0D;
-            this.btn_Information.Size = new System.Drawing.Size(179, 50);
+            this.btn_Information.Size = new System.Drawing.Size(213, 62);
             this.btn_Information.TabIndex = 1;
             this.btn_Information.Text = "Thông tin cá nhân";
             this.btn_Information.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -200,9 +206,21 @@ namespace TrungTamTinHoc
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(179, 148);
+            this.panel1.Size = new System.Drawing.Size(213, 185);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TrungTamTinHoc.Properties.Resources.TTTH_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(201, 192);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panelTitle
             // 
@@ -215,9 +233,10 @@ namespace TrungTamTinHoc
             this.panelTitle.Controls.Add(this.iconCurrChildForm);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.ForeColor = System.Drawing.Color.White;
-            this.panelTitle.Location = new System.Drawing.Point(179, 0);
+            this.panelTitle.Location = new System.Drawing.Point(213, 0);
+            this.panelTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(834, 77);
+            this.panelTitle.Size = new System.Drawing.Size(927, 96);
             this.panelTitle.TabIndex = 5;
             // 
             // btn_Dangxuat
@@ -230,10 +249,11 @@ namespace TrungTamTinHoc
             this.btn_Dangxuat.IconChar = FontAwesome.Sharp.IconChar.ShareSquare;
             this.btn_Dangxuat.IconColor = System.Drawing.Color.White;
             this.btn_Dangxuat.IconSize = 25;
-            this.btn_Dangxuat.Location = new System.Drawing.Point(784, 26);
+            this.btn_Dangxuat.Location = new System.Drawing.Point(871, 32);
+            this.btn_Dangxuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Dangxuat.Name = "btn_Dangxuat";
             this.btn_Dangxuat.Rotation = 0D;
-            this.btn_Dangxuat.Size = new System.Drawing.Size(50, 50);
+            this.btn_Dangxuat.Size = new System.Drawing.Size(56, 62);
             this.btn_Dangxuat.TabIndex = 8;
             this.btn_Dangxuat.UseVisualStyleBackColor = false;
             // 
@@ -246,11 +266,11 @@ namespace TrungTamTinHoc
             this.btn_Maximize.IconChar = FontAwesome.Sharp.IconChar.Expand;
             this.btn_Maximize.IconColor = System.Drawing.Color.White;
             this.btn_Maximize.IconSize = 16;
-            this.btn_Maximize.Location = new System.Drawing.Point(786, 0);
+            this.btn_Maximize.Location = new System.Drawing.Point(873, 0);
             this.btn_Maximize.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Maximize.Name = "btn_Maximize";
             this.btn_Maximize.Rotation = 0D;
-            this.btn_Maximize.Size = new System.Drawing.Size(24, 23);
+            this.btn_Maximize.Size = new System.Drawing.Size(27, 29);
             this.btn_Maximize.TabIndex = 6;
             this.btn_Maximize.UseVisualStyleBackColor = true;
             // 
@@ -258,9 +278,9 @@ namespace TrungTamTinHoc
             // 
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(64, 32);
+            this.lbTitle.Location = new System.Drawing.Point(72, 40);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(115, 30);
+            this.lbTitle.Size = new System.Drawing.Size(135, 36);
             this.lbTitle.TabIndex = 4;
             this.lbTitle.Text = "Trang chủ";
             this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -274,11 +294,11 @@ namespace TrungTamTinHoc
             this.btn_Exit.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.btn_Exit.IconColor = System.Drawing.Color.White;
             this.btn_Exit.IconSize = 16;
-            this.btn_Exit.Location = new System.Drawing.Point(810, 0);
+            this.btn_Exit.Location = new System.Drawing.Point(900, 0);
             this.btn_Exit.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Rotation = 0D;
-            this.btn_Exit.Size = new System.Drawing.Size(24, 23);
+            this.btn_Exit.Size = new System.Drawing.Size(27, 29);
             this.btn_Exit.TabIndex = 5;
             this.btn_Exit.UseVisualStyleBackColor = true;
             // 
@@ -287,37 +307,30 @@ namespace TrungTamTinHoc
             this.iconCurrChildForm.BackColor = System.Drawing.Color.RoyalBlue;
             this.iconCurrChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconCurrChildForm.IconColor = System.Drawing.Color.White;
-            this.iconCurrChildForm.Location = new System.Drawing.Point(26, 32);
+            this.iconCurrChildForm.IconSize = 36;
+            this.iconCurrChildForm.Location = new System.Drawing.Point(29, 40);
+            this.iconCurrChildForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.iconCurrChildForm.Name = "iconCurrChildForm";
-            this.iconCurrChildForm.Size = new System.Drawing.Size(32, 32);
+            this.iconCurrChildForm.Size = new System.Drawing.Size(36, 40);
             this.iconCurrChildForm.TabIndex = 3;
             this.iconCurrChildForm.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TrungTamTinHoc.Properties.Resources.TTTH_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 154);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // fGiangVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1013, 588);
+            this.ClientSize = new System.Drawing.Size(1140, 735);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelNav);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fGiangVien";
             this.Text = "fGiangVien";
             this.panelNav.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

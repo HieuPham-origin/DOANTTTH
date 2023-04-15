@@ -31,3 +31,14 @@ D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\BUS\obj\Debug\B
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.dll
 D:\Student\HK4\Software_Techniques\DOAN_Lythuyet\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.pdb
+C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\bin\Debug\BUS.dll
+C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\bin\Debug\BUS.pdb
+C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\bin\Debug\DAL.dll
+C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\bin\Debug\DTO.dll
+C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\bin\Debug\DAL.pdb
+C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\bin\Debug\DTO.pdb
+C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.dll
+C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.pdb

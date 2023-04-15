@@ -8,48 +8,47 @@ namespace DTO
 {
     public class DTO_LopHoc
     {
-        private int Ma_LH;
-        private string Ten_LH;
-        private int Ma_KH;
-        private int Ma_PH;
-        private int Ma_ca;
-        private string Ma_GV;
-        private DateTime Ngay_bat_dau;
-        private DateTime Ngay_ket_thuc;
-        private bool Dang_Mo;
-        private int So_buoi;
-        private int Soluong;
+        private int ma_LH;
+        private string ten_LH;
+        private int ma_KH;
+        private int ma_PH;
+        private int ma_ca;
+        private string ma_GV;
+        private DateTime ngay_bat_dau;
+        private DateTime ngay_ket_thuc;
+        private bool dang_Mo;
+        private int so_buoi;
+        private int soluong;
         public DTO_LopHoc()
         {
 
         }
 
-        
         public DTO_LopHoc(int ma_LH, string ten_LH, int ma_KH, int ma_PH, int ma_ca, string ma_GV, DateTime ngay_bat_dau, DateTime ngay_ket_thuc, bool dang_Mo, int so_buoi, int soluong)
         {
-            Ma_LH1 = ma_LH;
-            Ten_LH1 = ten_LH;
-            Ma_KH1 = ma_KH;
-            Ma_PH1 = ma_PH;
-            Ma_ca1 = ma_ca;
-            Ma_GV1 = ma_GV;
-            Ngay_bat_dau1 = ngay_bat_dau;
-            Ngay_ket_thuc1 = ngay_ket_thuc;
-            Dang_Mo1 = dang_Mo;
-            So_buoi1 = so_buoi;
-            Soluong1 = soluong;
+            this.Ma_LH = ma_LH;
+            this.Ten_LH = ten_LH;
+            this.Ma_KH = ma_KH;
+            this.Ma_PH = ma_PH;
+            this.Ma_ca = ma_ca;
+            this.Ma_GV = ma_GV;
+            this.Ngay_bat_dau = ngay_bat_dau;
+            this.Ngay_ket_thuc = ngay_ket_thuc;
+            this.Dang_Mo = dang_Mo;
+            this.So_buoi = so_buoi;
+            this.Soluong = soluong;
         }
 
-        public int Ma_LH1 { get => Ma_LH; set => Ma_LH = value; }
-        public string Ten_LH1 { get => Ten_LH; set => Ten_LH = value; }
-        public int Ma_KH1 { get => Ma_KH; set => Ma_KH = value; }
-        public int Ma_PH1 { get => Ma_PH; set => Ma_PH = value; }
-        public int Ma_ca1 { get => Ma_ca; set => Ma_ca = value; }
-        public string Ma_GV1 { get => Ma_GV; set => Ma_GV = value; }
-        public DateTime Ngay_bat_dau1 { get => Ngay_bat_dau; set => Ngay_bat_dau = value; }
-        public DateTime Ngay_ket_thuc1 { get => Ngay_ket_thuc; set => Ngay_ket_thuc = value; }
-        public bool Dang_Mo1 { get => Dang_Mo; set => Dang_Mo = value; }
-        public int So_buoi1 { get => So_buoi; set => So_buoi = value; }
-        public int Soluong1 { get => Soluong; set => Soluong = value; }
+        public int Ma_LH { get => ma_LH; set => ma_LH = value; }
+        public string Ten_LH { get => ten_LH; set => ten_LH = value; }
+        public int Ma_KH { get => ma_KH; set => ma_KH = value; }
+        public int Ma_PH { get => ma_PH; set => ma_PH = value; }
+        public int Ma_ca { get => ma_ca; set => ma_ca = value; }
+        public string Ma_GV { get => ma_GV; set => ma_GV = value; }
+        public DateTime Ngay_bat_dau { get => ngay_bat_dau; set => ngay_bat_dau = value; }
+        public DateTime Ngay_ket_thuc { get => ngay_ket_thuc; set => ngay_ket_thuc = value; }
+        public bool Dang_Mo { get => dang_Mo; set => dang_Mo = value; }
+        public int So_buoi { get => so_buoi; set => so_buoi = value; }
+        public int Soluong { get => soluong; set => soluong = value; }
     }
 }

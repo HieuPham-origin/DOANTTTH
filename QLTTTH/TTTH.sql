@@ -35,17 +35,10 @@ CREATE TABLE Phong_hoc
 
 CREATE TABLE Ca_hoc
 (
-<<<<<<< HEAD
 	  Ma_ca INT NOT NULL IDENTITY (1,1),
 	  Buoi nvarchar(50) NOT NULL,
 	  GioHoc nvarchar(50) NOT NULL,	
 	  CONSTRAINT pk_MaCa PRIMARY KEY (Ma_ca)
-=======
-  Ma_ca INT NOT NULL IDENTITY (1,1),
-  Buoi varchar(50) NOT NULL,
-  GioHoc varchar(50) NOT NULL,	
-  CONSTRAINT pk_MaCa PRIMARY KEY (Ma_ca)
->>>>>>> d15b0e54587e1afbc64849dd990ffa0bff3c2eed
 );
 CREATE TABLE Giang_vien
 (
@@ -91,9 +84,9 @@ CREATE TABLE Lop_hoc
 CREATE TABLE Hoa_don
 (
 	Ma_hd INT NOT NULL IDENTITY (1,1),
-	Ten_hd NVARCHAR(10) NOT NULL,
-	Ngay_lap DATE DEFAULT getdate() NOT NULL,
-	CONSTRAINT pk_MaHD PRIMARY KEY (Ma_hd),
+	Ngay_lap DATE DEFAULT getdate(),
+	Tong_tien INT NOT NULL,
+	CONSTRAINT pk_MaHD PRIMARY KEY (Ma_hd)
 );
 
 CREATE TABLE Chi_tietHD
@@ -132,7 +125,7 @@ BEGIN
     SELECT inserted.Ma_HV, inserted.sdt, 2
     FROM inserted
     LEFT JOIN Tai_Khoan ON inserted.Ma_HV = Tai_Khoan.TaiKhoan
-    WHERE Tai_Khoan.TaiKhoan IS NULL;
+    WHERE Tai_Khoan.TaiKhoan IS NULL;	
 END;
 go
 
@@ -149,9 +142,27 @@ BEGIN
     WHERE Tai_Khoan.TaiKhoan IS NULL;
 END;
 go
+--EXEC dbo.GiangVien_CRUD 'INSERT', NULL, 'Phu', '2003-07-05', '123', 'HCM'
+
+CREATE TRIGGER trg_DeleteTaiKhoan
+ON Giang_vien
+AFTER DELETE
+AS
+BEGIN
+    DELETE FROM Tai_Khoan
+    WHERE TaiKhoan IN (SELECT Ma_GV FROM deleted)
+END
 
 
-
+go
+CREATE TRIGGER trg_DeleteTaiKhoan_HV
+ON Hoc_vien
+AFTER DELETE
+AS
+BEGIN
+    DELETE FROM Tai_Khoan
+    WHERE TaiKhoan IN (SELECT Ma_HV FROM deleted)
+END
 
 go
 create function dbo.auto_mHV()
@@ -396,8 +407,8 @@ go
 CREATE PROCEDURE dbo.HoaDon_CRUD
 	@StatementType VARCHAR(10),
 	@Ma_hd INT = NULL,
-	@Ten_hd NVARCHAR(10) = NULL,
-	@Ngay_lap DATE = NULL
+	@Ngay_lap DATE = NULL,
+	@Tong_tien INT = NULL
 	AS
 	BEGIN
 	SET NOCOUNT ON;
@@ -409,20 +420,46 @@ CREATE PROCEDURE dbo.HoaDon_CRUD
 	END
 	ELSE IF (@StatementType = 'INSERT')
 	BEGIN
-		INSERT INTO dbo.Hoa_don (Ten_hd, Ngay_lap)
-		VALUES (@Ten_hd, COALESCE(@ngay_lap, GETDATE()))
+		INSERT INTO dbo.Hoa_don (Ngay_lap, Tong_tien)
+		VALUES (ISNULL(@Ngay_lap, GETDATE()), @Tong_tien)
 	END
 	ELSE IF (@StatementType = 'UPDATE')
 	BEGIN
 		UPDATE dbo.Hoa_don
-		SET Ten_hd = @Ten_hd,
-		Ngay_lap = @Ngay_lap
+		SET Ngay_lap = ISNULL(@Ngay_lap, Ngay_lap),
+		Tong_tien = @Tong_tien
 		WHERE Ma_hd = @Ma_hd
 	END
 	ELSE IF (@StatementType = 'DELETE')
 	BEGIN
 		DELETE FROM dbo.Hoa_don
 		WHERE Ma_hd = @Ma_hd
+	END
+END
+
+go
+CREATE PROCEDURE dbo.Chitiet_hd_CRUD
+	@StatementType VARCHAR(10),
+	@Ma_hd INT,
+	@Ma_KH INT
+	AS
+	BEGIN
+	SET NOCOUNT ON;
+	IF (@StatementType = 'SELECT')
+	BEGIN
+		SELECT *
+		FROM dbo.Chi_tietHD
+		WHERE Ma_hd = @Ma_hd AND Ma_KH = @Ma_KH
+	END
+	ELSE IF (@StatementType = 'INSERT')
+	BEGIN
+		INSERT INTO dbo.Chi_tietHD (Ma_hd, Ma_KH)
+		VALUES (@Ma_hd, @Ma_KH)
+	END
+	ELSE IF (@StatementType = 'DELETE')
+	BEGIN
+		DELETE FROM dbo.Chi_tietHD
+		WHERE Ma_hd = @Ma_hd AND Ma_KH = @Ma_KH
 	END
 END
 
@@ -463,3 +500,4 @@ END
 
 --exec dbo.HocVien_CRUD 'INSERT', NULL, 'Phu', '2003/5/7', 'HCM', '1234567'
 
+insert into Tai_Khoan values('admin', '123', 0)

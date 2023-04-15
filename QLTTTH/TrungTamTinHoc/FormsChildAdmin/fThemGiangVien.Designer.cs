@@ -30,12 +30,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.hpDateTimePicker1 = new ToolsBox.RJControls.HPDateTimePicker();
-            this.hpTextBox4 = new ToolsBox.RJControls.HPTextBox();
-            this.hpTextBox3 = new ToolsBox.RJControls.HPTextBox();
-            this.hpTextBox2 = new ToolsBox.RJControls.HPTextBox();
-            this.hpTextBox1 = new ToolsBox.RJControls.HPTextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.date_dob = new ToolsBox.RJControls.HPDateTimePicker();
+            this.txt_home = new ToolsBox.RJControls.HPTextBox();
+            this.txt_phone = new ToolsBox.RJControls.HPTextBox();
+            this.txt_name = new ToolsBox.RJControls.HPTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,19 +46,17 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.hpDateTimePicker1);
-            this.groupBox1.Controls.Add(this.hpTextBox4);
-            this.groupBox1.Controls.Add(this.hpTextBox3);
-            this.groupBox1.Controls.Add(this.hpTextBox2);
-            this.groupBox1.Controls.Add(this.hpTextBox1);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.date_dob);
+            this.groupBox1.Controls.Add(this.txt_home);
+            this.groupBox1.Controls.Add(this.txt_phone);
+            this.groupBox1.Controls.Add(this.txt_name);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 28);
+            this.groupBox1.Location = new System.Drawing.Point(12, 49);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -69,115 +65,86 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin giảng viên";
             // 
-            // hpDateTimePicker1
+            // date_dob
             // 
-            this.hpDateTimePicker1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.hpDateTimePicker1.BorderSize = 0;
-            this.hpDateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.hpDateTimePicker1.Location = new System.Drawing.Point(161, 100);
-            this.hpDateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.hpDateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.hpDateTimePicker1.Name = "hpDateTimePicker1";
-            this.hpDateTimePicker1.Size = new System.Drawing.Size(264, 35);
-            this.hpDateTimePicker1.SkinColor = System.Drawing.Color.RoyalBlue;
-            this.hpDateTimePicker1.TabIndex = 9;
-            this.hpDateTimePicker1.TextColor = System.Drawing.Color.White;
+            this.date_dob.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.date_dob.BorderSize = 0;
+            this.date_dob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.date_dob.Location = new System.Drawing.Point(161, 100);
+            this.date_dob.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.date_dob.MinimumSize = new System.Drawing.Size(4, 35);
+            this.date_dob.Name = "date_dob";
+            this.date_dob.Size = new System.Drawing.Size(264, 35);
+            this.date_dob.SkinColor = System.Drawing.Color.RoyalBlue;
+            this.date_dob.TabIndex = 9;
+            this.date_dob.TextColor = System.Drawing.Color.White;
             // 
-            // hpTextBox4
+            // txt_home
             // 
-            this.hpTextBox4.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.hpTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.hpTextBox4.BorderRadius = 0;
-            this.hpTextBox4.BorderSize = 2;
-            this.hpTextBox4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hpTextBox4.Location = new System.Drawing.Point(161, 283);
-            this.hpTextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.hpTextBox4.Multiline = false;
-            this.hpTextBox4.Name = "hpTextBox4";
-            this.hpTextBox4.Padding = new System.Windows.Forms.Padding(7, 9, 7, 9);
-            this.hpTextBox4.PasswordChar = false;
-            this.hpTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.hpTextBox4.PlaceholderText = "";
-            this.hpTextBox4.Size = new System.Drawing.Size(264, 42);
-            this.hpTextBox4.TabIndex = 8;
-            this.hpTextBox4.Texts = "";
-            this.hpTextBox4.UnderlinedStyle = false;
+            this.txt_home.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txt_home.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_home.BorderRadius = 0;
+            this.txt_home.BorderSize = 2;
+            this.txt_home.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_home.Location = new System.Drawing.Point(161, 215);
+            this.txt_home.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_home.Multiline = false;
+            this.txt_home.Name = "txt_home";
+            this.txt_home.Padding = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.txt_home.PasswordChar = false;
+            this.txt_home.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_home.PlaceholderText = "";
+            this.txt_home.Size = new System.Drawing.Size(264, 49);
+            this.txt_home.TabIndex = 7;
+            this.txt_home.Texts = "";
+            this.txt_home.UnderlinedStyle = false;
             // 
-            // hpTextBox3
+            // txt_phone
             // 
-            this.hpTextBox3.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.hpTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.hpTextBox3.BorderRadius = 0;
-            this.hpTextBox3.BorderSize = 2;
-            this.hpTextBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hpTextBox3.Location = new System.Drawing.Point(161, 215);
-            this.hpTextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.hpTextBox3.Multiline = false;
-            this.hpTextBox3.Name = "hpTextBox3";
-            this.hpTextBox3.Padding = new System.Windows.Forms.Padding(7, 9, 7, 9);
-            this.hpTextBox3.PasswordChar = false;
-            this.hpTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.hpTextBox3.PlaceholderText = "";
-            this.hpTextBox3.Size = new System.Drawing.Size(264, 42);
-            this.hpTextBox3.TabIndex = 7;
-            this.hpTextBox3.Texts = "";
-            this.hpTextBox3.UnderlinedStyle = false;
+            this.txt_phone.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txt_phone.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_phone.BorderRadius = 0;
+            this.txt_phone.BorderSize = 2;
+            this.txt_phone.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_phone.Location = new System.Drawing.Point(161, 152);
+            this.txt_phone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_phone.Multiline = false;
+            this.txt_phone.Name = "txt_phone";
+            this.txt_phone.Padding = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.txt_phone.PasswordChar = false;
+            this.txt_phone.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_phone.PlaceholderText = "";
+            this.txt_phone.Size = new System.Drawing.Size(264, 49);
+            this.txt_phone.TabIndex = 6;
+            this.txt_phone.Texts = "";
+            this.txt_phone.UnderlinedStyle = false;
             // 
-            // hpTextBox2
+            // txt_name
             // 
-            this.hpTextBox2.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.hpTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.hpTextBox2.BorderRadius = 0;
-            this.hpTextBox2.BorderSize = 2;
-            this.hpTextBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hpTextBox2.Location = new System.Drawing.Point(161, 152);
-            this.hpTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.hpTextBox2.Multiline = false;
-            this.hpTextBox2.Name = "hpTextBox2";
-            this.hpTextBox2.Padding = new System.Windows.Forms.Padding(7, 9, 7, 9);
-            this.hpTextBox2.PasswordChar = false;
-            this.hpTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.hpTextBox2.PlaceholderText = "";
-            this.hpTextBox2.Size = new System.Drawing.Size(264, 42);
-            this.hpTextBox2.TabIndex = 6;
-            this.hpTextBox2.Texts = "";
-            this.hpTextBox2.UnderlinedStyle = false;
-            // 
-            // hpTextBox1
-            // 
-            this.hpTextBox1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.hpTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.hpTextBox1.BorderRadius = 0;
-            this.hpTextBox1.BorderSize = 2;
-            this.hpTextBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hpTextBox1.Location = new System.Drawing.Point(161, 38);
-            this.hpTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.hpTextBox1.Multiline = false;
-            this.hpTextBox1.Name = "hpTextBox1";
-            this.hpTextBox1.Padding = new System.Windows.Forms.Padding(7, 9, 7, 9);
-            this.hpTextBox1.PasswordChar = false;
-            this.hpTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.hpTextBox1.PlaceholderText = "";
-            this.hpTextBox1.Size = new System.Drawing.Size(264, 42);
-            this.hpTextBox1.TabIndex = 5;
-            this.hpTextBox1.Texts = "";
-            this.hpTextBox1.UnderlinedStyle = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 291);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Học vấn";
+            this.txt_name.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txt_name.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_name.BorderRadius = 0;
+            this.txt_name.BorderSize = 2;
+            this.txt_name.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name.Location = new System.Drawing.Point(161, 38);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_name.Multiline = false;
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Padding = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.txt_name.PasswordChar = false;
+            this.txt_name.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name.PlaceholderText = "";
+            this.txt_name.Size = new System.Drawing.Size(264, 49);
+            this.txt_name.TabIndex = 5;
+            this.txt_name.Texts = "";
+            this.txt_name.UnderlinedStyle = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(19, 226);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 20);
+            this.label4.Size = new System.Drawing.Size(94, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Quê quán";
             // 
@@ -186,7 +153,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(19, 164);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 20);
+            this.label3.Size = new System.Drawing.Size(122, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Số điện thoại";
             // 
@@ -195,7 +162,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.Size = new System.Drawing.Size(94, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ngày sinh";
             // 
@@ -204,7 +171,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(19, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.Size = new System.Drawing.Size(69, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Họ tên";
             // 
@@ -245,6 +212,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Them.Text = "Thêm mới";
             this.btn_Them.TextColor = System.Drawing.Color.White;
             this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btn_Luu
             // 
@@ -267,7 +235,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             // fThemGiangVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(498, 468);
@@ -289,16 +257,14 @@ namespace TrungTamTinHoc.FormsChildAdmin
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private ToolsBox.RJControls.HPDateTimePicker hpDateTimePicker1;
-        private ToolsBox.RJControls.HPTextBox hpTextBox4;
-        private ToolsBox.RJControls.HPTextBox hpTextBox3;
-        private ToolsBox.RJControls.HPTextBox hpTextBox2;
-        private ToolsBox.RJControls.HPTextBox hpTextBox1;
+        private ToolsBox.RJControls.HPDateTimePicker date_dob;
+        private ToolsBox.RJControls.HPTextBox txt_home;
+        private ToolsBox.RJControls.HPTextBox txt_phone;
+        private ToolsBox.RJControls.HPTextBox txt_name;
         private TTTH.RJControls.HPButton btn_Huy;
         private TTTH.RJControls.HPButton btn_Them;
         private TTTH.RJControls.HPButton btn_Luu;
