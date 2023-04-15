@@ -83,9 +83,29 @@ namespace TrungTamTinHoc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_ttth {
+        internal static System.Drawing.Bitmap logo_TTTH__2_ {
             get {
-                object obj = ResourceManager.GetObject("logo_ttth", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_TTTH (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_TTTH__3_ {
+            get {
+                object obj = ResourceManager.GetObject("logo_TTTH (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_TTTH__4_ {
+            get {
+                object obj = ResourceManager.GetObject("logo_TTTH (4)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +126,16 @@ namespace TrungTamTinHoc.Properties {
         internal static System.Drawing.Bitmap password {
             get {
                 object obj = ResourceManager.GetObject("password", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TTTH_logo {
+            get {
+                object obj = ResourceManager.GetObject("TTTH_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

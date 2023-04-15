@@ -19,7 +19,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void btn_Ghidanh_Click(object sender, EventArgs e)
         {
-            fGhiDanh ghidanh = new fGhiDanh();
+            fThemHocVien ghidanh = new fThemHocVien();
             ghidanh.Show();
         }
     }

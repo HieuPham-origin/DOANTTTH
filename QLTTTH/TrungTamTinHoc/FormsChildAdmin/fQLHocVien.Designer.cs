@@ -29,19 +29,20 @@ namespace TrungTamTinHoc.FormsChildAdmin
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_Ghidanh = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.btn_XoaHV = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.dgv_HocVien = new System.Windows.Forms.DataGridView();
+            this.lb_Search = new System.Windows.Forms.Label();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.btn_Ghidanh = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btn_XoaHV = new FontAwesome.Sharp.IconButton();
+            this.btn_Search = new FontAwesome.Sharp.IconButton();
+            this.hpTextBox1 = new ToolsBox.RJControls.HPTextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HocVien)).BeginInit();
@@ -49,18 +50,22 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Controls.Add(this.btn_Search);
+            this.panel1.Controls.Add(this.lb_Search);
+            this.panel1.Controls.Add(this.hpTextBox1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btn_Ghidanh);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1057, 100);
+            this.panel1.Size = new System.Drawing.Size(911, 100);
             this.panel1.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(25, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(290, 35);
@@ -68,113 +73,23 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.label2.Text = "DANH SÁCH HỌC VIÊN";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_Ghidanh
-            // 
-            this.btn_Ghidanh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Ghidanh.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Ghidanh.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btn_Ghidanh.IconColor = System.Drawing.Color.Black;
-            this.btn_Ghidanh.IconSize = 16;
-            this.btn_Ghidanh.Location = new System.Drawing.Point(919, 29);
-            this.btn_Ghidanh.Name = "btn_Ghidanh";
-            this.btn_Ghidanh.Rotation = 0D;
-            this.btn_Ghidanh.Size = new System.Drawing.Size(126, 48);
-            this.btn_Ghidanh.TabIndex = 0;
-            this.btn_Ghidanh.Text = "Ghi danh";
-            this.btn_Ghidanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Ghidanh.UseVisualStyleBackColor = true;
-            this.btn_Ghidanh.Click += new System.EventHandler(this.btn_Ghidanh_Click);
-            // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.RoyalBlue;
             this.groupBox1.Controls.Add(this.iconButton4);
-            this.groupBox1.Controls.Add(this.iconButton3);
-            this.groupBox1.Controls.Add(this.btn_XoaHV);
-            this.groupBox1.Controls.Add(this.iconButton2);
+            this.groupBox1.Controls.Add(this.btn_Ghidanh);
             this.groupBox1.Controls.Add(this.iconButton1);
+            this.groupBox1.Controls.Add(this.btn_XoaHV);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(0, 100);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1057, 89);
+            this.groupBox1.Size = new System.Drawing.Size(911, 109);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
-            // 
-            // iconButton4
-            // 
-            this.iconButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton4.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Print;
-            this.iconButton4.IconColor = System.Drawing.Color.Black;
-            this.iconButton4.IconSize = 16;
-            this.iconButton4.Location = new System.Drawing.Point(919, 26);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Rotation = 0D;
-            this.iconButton4.Size = new System.Drawing.Size(126, 48);
-            this.iconButton4.TabIndex = 4;
-            this.iconButton4.Text = "In danh sách";
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = true;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconSize = 16;
-            this.iconButton3.Location = new System.Drawing.Point(707, 26);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Rotation = 0D;
-            this.iconButton3.Size = new System.Drawing.Size(126, 48);
-            this.iconButton3.TabIndex = 4;
-            this.iconButton3.Text = "Hủy";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
-            // 
-            // btn_XoaHV
-            // 
-            this.btn_XoaHV.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_XoaHV.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            this.btn_XoaHV.IconColor = System.Drawing.Color.Black;
-            this.btn_XoaHV.IconSize = 16;
-            this.btn_XoaHV.Location = new System.Drawing.Point(12, 26);
-            this.btn_XoaHV.Name = "btn_XoaHV";
-            this.btn_XoaHV.Rotation = 0D;
-            this.btn_XoaHV.Size = new System.Drawing.Size(126, 48);
-            this.btn_XoaHV.TabIndex = 1;
-            this.btn_XoaHV.Text = "Xóa học viên";
-            this.btn_XoaHV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_XoaHV.UseVisualStyleBackColor = true;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconSize = 16;
-            this.iconButton2.Location = new System.Drawing.Point(491, 26);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(126, 48);
-            this.iconButton2.TabIndex = 3;
-            this.iconButton2.Text = "Lưu";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconSize = 16;
-            this.iconButton1.Location = new System.Drawing.Point(225, 26);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(126, 48);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.Text = "Chỉnh sửa";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // dgv_HocVien
             // 
@@ -184,47 +99,166 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.dgv_HocVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_HocVien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_HocVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_HocVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HocVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_HocVien.ColumnHeadersHeight = 30;
             this.dgv_HocVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_HocVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_HocVien.EnableHeadersVisualStyles = false;
             this.dgv_HocVien.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgv_HocVien.Location = new System.Drawing.Point(0, 189);
+            this.dgv_HocVien.Location = new System.Drawing.Point(0, 209);
             this.dgv_HocVien.Name = "dgv_HocVien";
             this.dgv_HocVien.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_HocVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HocVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_HocVien.RowHeadersVisible = false;
             this.dgv_HocVien.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_HocVien.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_HocVien.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_HocVien.RowTemplate.Height = 24;
             this.dgv_HocVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_HocVien.Size = new System.Drawing.Size(1057, 389);
+            this.dgv_HocVien.Size = new System.Drawing.Size(911, 369);
             this.dgv_HocVien.TabIndex = 18;
+            // 
+            // lb_Search
+            // 
+            this.lb_Search.AutoSize = true;
+            this.lb_Search.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Search.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_Search.Location = new System.Drawing.Point(471, 34);
+            this.lb_Search.Name = "lb_Search";
+            this.lb_Search.Size = new System.Drawing.Size(91, 28);
+            this.lb_Search.TabIndex = 6;
+            this.lb_Search.Text = "Tìm kiếm";
+            // 
+            // iconButton4
+            // 
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.iconButton4.IconColor = System.Drawing.Color.White;
+            this.iconButton4.IconSize = 16;
+            this.iconButton4.Location = new System.Drawing.Point(712, 41);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Rotation = 0D;
+            this.iconButton4.Size = new System.Drawing.Size(172, 48);
+            this.iconButton4.TabIndex = 4;
+            this.iconButton4.Text = "In danh sách";
+            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton4.UseVisualStyleBackColor = true;
+            // 
+            // btn_Ghidanh
+            // 
+            this.btn_Ghidanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Ghidanh.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_Ghidanh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Ghidanh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Ghidanh.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btn_Ghidanh.IconColor = System.Drawing.Color.White;
+            this.btn_Ghidanh.IconSize = 16;
+            this.btn_Ghidanh.Location = new System.Drawing.Point(31, 41);
+            this.btn_Ghidanh.Name = "btn_Ghidanh";
+            this.btn_Ghidanh.Rotation = 0D;
+            this.btn_Ghidanh.Size = new System.Drawing.Size(172, 48);
+            this.btn_Ghidanh.TabIndex = 0;
+            this.btn_Ghidanh.Text = "Ghi danh";
+            this.btn_Ghidanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Ghidanh.UseVisualStyleBackColor = true;
+            this.btn_Ghidanh.Click += new System.EventHandler(this.btn_Ghidanh_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconSize = 16;
+            this.iconButton1.Location = new System.Drawing.Point(259, 41);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Rotation = 0D;
+            this.iconButton1.Size = new System.Drawing.Size(172, 48);
+            this.iconButton1.TabIndex = 2;
+            this.iconButton1.Text = "Chỉnh sửa";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // btn_XoaHV
+            // 
+            this.btn_XoaHV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_XoaHV.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_XoaHV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XoaHV.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_XoaHV.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.btn_XoaHV.IconColor = System.Drawing.Color.White;
+            this.btn_XoaHV.IconSize = 16;
+            this.btn_XoaHV.Location = new System.Drawing.Point(486, 41);
+            this.btn_XoaHV.Name = "btn_XoaHV";
+            this.btn_XoaHV.Rotation = 0D;
+            this.btn_XoaHV.Size = new System.Drawing.Size(172, 48);
+            this.btn_XoaHV.TabIndex = 1;
+            this.btn_XoaHV.Text = "Xóa học viên";
+            this.btn_XoaHV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_XoaHV.UseVisualStyleBackColor = true;
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.FlatAppearance.BorderSize = 0;
+            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Search.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_Search.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btn_Search.IconColor = System.Drawing.Color.White;
+            this.btn_Search.IconSize = 27;
+            this.btn_Search.Location = new System.Drawing.Point(824, 34);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Rotation = 0D;
+            this.btn_Search.Size = new System.Drawing.Size(40, 37);
+            this.btn_Search.TabIndex = 7;
+            this.btn_Search.UseVisualStyleBackColor = true;
+            // 
+            // hpTextBox1
+            // 
+            this.hpTextBox1.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.hpTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.hpTextBox1.BorderRadius = 0;
+            this.hpTextBox1.BorderSize = 2;
+            this.hpTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hpTextBox1.Location = new System.Drawing.Point(578, 34);
+            this.hpTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.hpTextBox1.Multiline = false;
+            this.hpTextBox1.Name = "hpTextBox1";
+            this.hpTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.hpTextBox1.PasswordChar = false;
+            this.hpTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.hpTextBox1.PlaceholderText = "";
+            this.hpTextBox1.Size = new System.Drawing.Size(223, 35);
+            this.hpTextBox1.TabIndex = 5;
+            this.hpTextBox1.Texts = "";
+            this.hpTextBox1.UnderlinedStyle = true;
             // 
             // fQLHocVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 578);
+            this.ClientSize = new System.Drawing.Size(911, 578);
             this.Controls.Add(this.dgv_HocVien);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
@@ -244,10 +278,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private FontAwesome.Sharp.IconButton btn_Ghidanh;
         private System.Windows.Forms.GroupBox groupBox1;
         private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton btn_XoaHV;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.DataGridView dgv_HocVien;
+        private FontAwesome.Sharp.IconButton btn_Search;
+        private System.Windows.Forms.Label lb_Search;
+        private ToolsBox.RJControls.HPTextBox hpTextBox1;
     }
 }

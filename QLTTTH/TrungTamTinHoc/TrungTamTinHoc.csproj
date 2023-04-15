@@ -93,13 +93,6 @@
     <Compile Include="FormsChildAdmin\fChonKhoaHoc.Designer.cs">
       <DependentUpon>fChonKhoaHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsChildAdmin\fGhiDanh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormsChildAdmin\.Designer.cs">
-      <DependentUpon>fGhiDanh.cs</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormsChildAdmin\fBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +123,12 @@
     <Compile Include="FormsChildAdmin\fQLKhoaHoc.Designer.cs">
       <DependentUpon>fQLKhoaHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsChildAdmin\fThemHocVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fThemHocVien.Designer.cs">
+      <DependentUpon>fThemHocVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsChildHocVien\ThongtinCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,14 +149,14 @@
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildAdmin\fQLKhoaHoc.resx">
+      <DependentUpon>fQLKhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsChildAdmin\fThemGiangVien.resx">
       <DependentUpon>fThemGiangVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsChildAdmin\fChonKhoaHoc.resx">
       <DependentUpon>fChonKhoaHoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormsChildAdmin\fGhiDanh.resx">
-      <DependentUpon>fGhiDanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsChildAdmin\fBaoCao.resx">
       <DependentUpon>fBaoCao.cs</DependentUpon>
@@ -170,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsChildAdmin\fQLHocVien.resx">
       <DependentUpon>fQLHocVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildAdmin\fThemHocVien.resx">
+      <DependentUpon>fThemHocVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsChildHocVien\ThongtinCaNhan.resx">
       <DependentUpon>ThongtinCaNhan.cs</DependentUpon>
@@ -203,6 +205,11 @@
     <Content Include="Resources\calendarDark.png" />
     <Content Include="Resources\calendarWhite.png" />
     <Content Include="Resources\login-img.jpg" />
+    <None Include="Resources\TTTH_logo.png" />
+    <None Include="Resources\logo_TTTH %282%29.png" />
+    <None Include="Resources\logo-TTTH.png" />
+    <None Include="Resources\logo_TTTH %283%29.png" />
+    <None Include="Resources\logo_TTTH %284%29.png" />
     <Content Include="Resources\logo_ttth.png" />
     <None Include="Resources\menu.png" />
     <Content Include="Resources\password.png" />
