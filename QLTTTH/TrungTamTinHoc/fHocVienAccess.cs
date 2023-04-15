@@ -31,7 +31,7 @@ namespace TrungTamTinHoc
         }
 
 
-        public static Color colorActive = Color.FromArgb(172, 126, 241);
+        public static Color colorActive = Color.RoyalBlue;
 
         //methods
         private void ActivateButton(object senderBTN, Color color)
@@ -40,8 +40,8 @@ namespace TrungTamTinHoc
             {
                 DisableButton();
                 currBtn = (IconButton)senderBTN;
-                currBtn.BackColor = Color.FromArgb(37, 36, 81);
-                currBtn.ForeColor = color;
+                currBtn.BackColor = Color.RoyalBlue;
+                currBtn.ForeColor = Color.White;
                 currBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currBtn.IconColor = color;
                 currBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
@@ -64,7 +64,7 @@ namespace TrungTamTinHoc
         {
             if (currBtn != null)
             {
-                currBtn.BackColor = Color.SlateBlue;
+                currBtn.BackColor = Color.RoyalBlue;
                 currBtn.ForeColor = Color.White;
                 currBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currBtn.IconColor = Color.White;

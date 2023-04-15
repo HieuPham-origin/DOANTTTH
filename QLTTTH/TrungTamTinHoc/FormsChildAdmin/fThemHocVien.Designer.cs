@@ -77,7 +77,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Add.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Add.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btn_Add.IconColor = System.Drawing.Color.White;
             this.btn_Add.IconSize = 16;
@@ -95,7 +95,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Delete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Delete.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Delete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Delete.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Delete.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.btn_Delete.IconColor = System.Drawing.Color.White;
             this.btn_Delete.IconSize = 16;
@@ -149,10 +149,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(19, 110);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 23);
+            this.label7.Size = new System.Drawing.Size(100, 20);
             this.label7.TabIndex = 7;
             this.label7.Text = "Chọn lớp học";
             // 
@@ -169,10 +169,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(16, 53);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 23);
+            this.label6.Size = new System.Drawing.Size(112, 20);
             this.label6.TabIndex = 2;
             this.label6.Text = "Chọn khóa học";
             // 
@@ -212,7 +212,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Confirm.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Confirm.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Confirm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Confirm.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Confirm.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.btn_Confirm.IconColor = System.Drawing.Color.White;
             this.btn_Confirm.IconSize = 16;
@@ -230,7 +230,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Cancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancel.IconChar = FontAwesome.Sharp.IconChar.StickerMule;
             this.btn_Cancel.IconColor = System.Drawing.Color.White;
             this.btn_Cancel.IconSize = 16;
@@ -322,40 +322,40 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(23, 251);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 23);
+            this.label4.Size = new System.Drawing.Size(99, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Số điện thoại";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(23, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 23);
+            this.label3.Size = new System.Drawing.Size(56, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Địa chỉ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 23);
+            this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ngày sinh";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(21, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 23);
+            this.label1.Size = new System.Drawing.Size(75, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Họ và tên";
             // 
@@ -363,6 +363,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1017, 446);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label5);

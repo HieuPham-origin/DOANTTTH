@@ -34,15 +34,15 @@ namespace TrungTamTinHoc.FormsChildAdmin
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_GiangVien = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lb_Search = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btn_InGV = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btn_ThemGV = new FontAwesome.Sharp.IconButton();
             this.btn_XoaGV = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Search = new FontAwesome.Sharp.IconButton();
+            this.lb_Search = new System.Windows.Forms.Label();
             this.hpTextBox1 = new ToolsBox.RJControls.HPTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_GiangVien)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -100,7 +100,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.groupBox1.Controls.Add(this.btn_ThemGV);
             this.groupBox1.Controls.Add(this.btn_XoaGV);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(0, 100);
             this.groupBox1.Name = "groupBox1";
@@ -108,42 +108,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel1.Controls.Add(this.btn_Search);
-            this.panel1.Controls.Add(this.lb_Search);
-            this.panel1.Controls.Add(this.hpTextBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(901, 100);
-            this.panel1.TabIndex = 26;
-            // 
-            // lb_Search
-            // 
-            this.lb_Search.AutoSize = true;
-            this.lb_Search.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Search.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_Search.Location = new System.Drawing.Point(466, 38);
-            this.lb_Search.Name = "lb_Search";
-            this.lb_Search.Size = new System.Drawing.Size(91, 28);
-            this.lb_Search.TabIndex = 3;
-            this.lb_Search.Text = "Tìm kiếm";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(25, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(304, 35);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "DANH SÁCH KHÓA HỌC";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_InGV
             // 
@@ -153,7 +117,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_InGV.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btn_InGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_InGV.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_InGV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_InGV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_InGV.IconChar = FontAwesome.Sharp.IconChar.Print;
             this.btn_InGV.IconColor = System.Drawing.Color.White;
             this.btn_InGV.IconSize = 16;
@@ -174,7 +138,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.iconButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconSize = 16;
@@ -195,7 +159,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_ThemGV.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_ThemGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ThemGV.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_ThemGV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThemGV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThemGV.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_ThemGV.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
             this.btn_ThemGV.IconColor = System.Drawing.Color.White;
@@ -216,7 +180,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_XoaGV.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btn_XoaGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_XoaGV.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_XoaGV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XoaGV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XoaGV.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.btn_XoaGV.IconColor = System.Drawing.Color.White;
             this.btn_XoaGV.IconSize = 16;
@@ -229,6 +193,19 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_XoaGV.Text = "Xóa khóa học";
             this.btn_XoaGV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_XoaGV.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Controls.Add(this.btn_Search);
+            this.panel1.Controls.Add(this.lb_Search);
+            this.panel1.Controls.Add(this.hpTextBox1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(901, 100);
+            this.panel1.TabIndex = 26;
             // 
             // btn_Search
             // 
@@ -245,14 +222,25 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Search.TabIndex = 4;
             this.btn_Search.UseVisualStyleBackColor = true;
             // 
+            // lb_Search
+            // 
+            this.lb_Search.AutoSize = true;
+            this.lb_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Search.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_Search.Location = new System.Drawing.Point(466, 38);
+            this.lb_Search.Name = "lb_Search";
+            this.lb_Search.Size = new System.Drawing.Size(97, 28);
+            this.lb_Search.TabIndex = 3;
+            this.lb_Search.Text = "Tìm kiếm";
+            // 
             // hpTextBox1
             // 
             this.hpTextBox1.BorderColor = System.Drawing.Color.DodgerBlue;
             this.hpTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
             this.hpTextBox1.BorderRadius = 0;
             this.hpTextBox1.BorderSize = 2;
-            this.hpTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hpTextBox1.Location = new System.Drawing.Point(573, 38);
+            this.hpTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hpTextBox1.Location = new System.Drawing.Point(579, 36);
             this.hpTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.hpTextBox1.Multiline = false;
             this.hpTextBox1.Name = "hpTextBox1";
@@ -260,10 +248,22 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.hpTextBox1.PasswordChar = false;
             this.hpTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.hpTextBox1.PlaceholderText = "";
-            this.hpTextBox1.Size = new System.Drawing.Size(223, 35);
+            this.hpTextBox1.Size = new System.Drawing.Size(223, 39);
             this.hpTextBox1.TabIndex = 2;
             this.hpTextBox1.Texts = "";
             this.hpTextBox1.UnderlinedStyle = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(25, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(304, 35);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "DANH SÁCH KHÓA HỌC";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fQLKhoaHoc
             // 
