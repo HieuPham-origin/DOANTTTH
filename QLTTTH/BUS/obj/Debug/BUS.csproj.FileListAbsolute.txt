@@ -42,3 +42,14 @@ C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CoreCompil
 C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.dll
 C:\Programming\C#\DoAn\clone\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.pdb
+D:\Student\DOANTTTH\QLTTTH\BUS\bin\Debug\BUS.dll
+D:\Student\DOANTTTH\QLTTTH\BUS\bin\Debug\BUS.pdb
+D:\Student\DOANTTTH\QLTTTH\BUS\bin\Debug\DAL.dll
+D:\Student\DOANTTTH\QLTTTH\BUS\bin\Debug\DTO.dll
+D:\Student\DOANTTTH\QLTTTH\BUS\bin\Debug\DAL.pdb
+D:\Student\DOANTTTH\QLTTTH\BUS\bin\Debug\DTO.pdb
+D:\Student\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\Student\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Student\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\Student\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.dll
+D:\Student\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.pdb

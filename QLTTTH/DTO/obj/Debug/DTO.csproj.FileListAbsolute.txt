@@ -22,3 +22,9 @@ C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.csproj.AssemblyR
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.dll
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.pdb
+D:\Student\DOANTTTH\QLTTTH\DTO\bin\Debug\DTO.dll
+D:\Student\DOANTTTH\QLTTTH\DTO\bin\Debug\DTO.pdb
+D:\Student\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Student\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Student\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.dll
+D:\Student\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.pdb

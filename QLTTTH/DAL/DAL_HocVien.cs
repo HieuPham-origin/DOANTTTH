@@ -7,6 +7,8 @@ using System.Data.SqlClient;
 using static DTO.DTO_HocVien;
 using System.Data;
 using DTO;
+using System.Windows.Forms;
+
 namespace DAL
 {
     public class DAL_HocVien : DBConnect
@@ -19,7 +21,7 @@ namespace DAL
             return dtHocVien;
         }
 
-        public bool addHocVien(DTO_HocVien hv)
+        public bool themHocVien(DTO_HocVien hv)
         {
             conn.Open();
             SqlCommand cmd = new SqlCommand("dbo.HocVien_CRUD", conn);
@@ -85,6 +87,19 @@ namespace DAL
             }
             conn.Close();
             return false;
+        }
+
+        public void bindGridView(DataGridView dataGridView)
+        {
+            conn.Open();
+            string query = "SELECT * from Hoc_vien";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataAdapter dv = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dv.Fill(dt);
+
+            dataGridView.DataSource = dt;
+            conn.Close();
         }
     }
 }

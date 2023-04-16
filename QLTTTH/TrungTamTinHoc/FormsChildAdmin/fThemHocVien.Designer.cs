@@ -41,10 +41,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_Confirm = new FontAwesome.Sharp.IconButton();
             this.btn_Cancel = new FontAwesome.Sharp.IconButton();
-            this.hpTextBox3 = new ToolsBox.RJControls.HPTextBox();
-            this.hpTextBox2 = new ToolsBox.RJControls.HPTextBox();
-            this.hpTextBox1 = new ToolsBox.RJControls.HPTextBox();
-            this.hpDateTimePicker1 = new ToolsBox.RJControls.HPDateTimePicker();
+            this.txt_phone = new ToolsBox.RJControls.HPTextBox();
+            this.txt_home = new ToolsBox.RJControls.HPTextBox();
+            this.txt_name = new ToolsBox.RJControls.HPTextBox();
+            this.date_dob = new ToolsBox.RJControls.HPDateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Add.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btn_Add.IconColor = System.Drawing.Color.White;
             this.btn_Add.IconSize = 16;
-            this.btn_Add.Location = new System.Drawing.Point(272, 155);
+            this.btn_Add.Location = new System.Drawing.Point(289, 155);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Rotation = 0D;
             this.btn_Add.Size = new System.Drawing.Size(113, 44);
@@ -99,7 +99,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Delete.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.btn_Delete.IconColor = System.Drawing.Color.White;
             this.btn_Delete.IconSize = 16;
-            this.btn_Delete.Location = new System.Drawing.Point(107, 155);
+            this.btn_Delete.Location = new System.Drawing.Point(93, 155);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Rotation = 0D;
             this.btn_Delete.Size = new System.Drawing.Size(113, 44);
@@ -119,11 +119,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.hpComboBox1.IconColor = System.Drawing.Color.RoyalBlue;
             this.hpComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.hpComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.hpComboBox1.Location = new System.Drawing.Point(167, 110);
+            this.hpComboBox1.Location = new System.Drawing.Point(167, 101);
             this.hpComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
             this.hpComboBox1.Name = "hpComboBox1";
             this.hpComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.hpComboBox1.Size = new System.Drawing.Size(297, 30);
+            this.hpComboBox1.Size = new System.Drawing.Size(297, 35);
             this.hpComboBox1.TabIndex = 15;
             this.hpComboBox1.Texts = "";
             // 
@@ -138,11 +138,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.hpComboBox2.IconColor = System.Drawing.Color.RoyalBlue;
             this.hpComboBox2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.hpComboBox2.ListTextColor = System.Drawing.Color.DimGray;
-            this.hpComboBox2.Location = new System.Drawing.Point(167, 53);
+            this.hpComboBox2.Location = new System.Drawing.Point(167, 48);
             this.hpComboBox2.MinimumSize = new System.Drawing.Size(200, 30);
             this.hpComboBox2.Name = "hpComboBox2";
             this.hpComboBox2.Padding = new System.Windows.Forms.Padding(1);
-            this.hpComboBox2.Size = new System.Drawing.Size(297, 30);
+            this.hpComboBox2.Size = new System.Drawing.Size(297, 35);
             this.hpComboBox2.TabIndex = 16;
             this.hpComboBox2.Texts = "";
             // 
@@ -190,10 +190,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.groupBox1.Controls.Add(this.btn_Confirm);
             this.groupBox1.Controls.Add(this.btn_Cancel);
-            this.groupBox1.Controls.Add(this.hpTextBox3);
-            this.groupBox1.Controls.Add(this.hpTextBox2);
-            this.groupBox1.Controls.Add(this.hpTextBox1);
-            this.groupBox1.Controls.Add(this.hpDateTimePicker1);
+            this.groupBox1.Controls.Add(this.txt_phone);
+            this.groupBox1.Controls.Add(this.txt_home);
+            this.groupBox1.Controls.Add(this.txt_name);
+            this.groupBox1.Controls.Add(this.date_dob);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -224,6 +224,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Confirm.Text = "Xác nhận";
             this.btn_Confirm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Confirm.UseVisualStyleBackColor = true;
+            this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
             // 
             // btn_Cancel
             // 
@@ -243,87 +244,87 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
-            // hpTextBox3
+            // txt_phone
             // 
-            this.hpTextBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.hpTextBox3.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.hpTextBox3.BorderFocusColor = System.Drawing.Color.RoyalBlue;
-            this.hpTextBox3.BorderRadius = 0;
-            this.hpTextBox3.BorderSize = 2;
-            this.hpTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hpTextBox3.Location = new System.Drawing.Point(153, 239);
-            this.hpTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.hpTextBox3.Multiline = false;
-            this.hpTextBox3.Name = "hpTextBox3";
-            this.hpTextBox3.Padding = new System.Windows.Forms.Padding(7);
-            this.hpTextBox3.PasswordChar = false;
-            this.hpTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.hpTextBox3.PlaceholderText = "";
-            this.hpTextBox3.Size = new System.Drawing.Size(284, 35);
-            this.hpTextBox3.TabIndex = 15;
-            this.hpTextBox3.Texts = "";
-            this.hpTextBox3.UnderlinedStyle = false;
+            this.txt_phone.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txt_phone.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txt_phone.BorderFocusColor = System.Drawing.Color.RoyalBlue;
+            this.txt_phone.BorderRadius = 0;
+            this.txt_phone.BorderSize = 2;
+            this.txt_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_phone.Location = new System.Drawing.Point(154, 225);
+            this.txt_phone.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_phone.Multiline = false;
+            this.txt_phone.Name = "txt_phone";
+            this.txt_phone.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_phone.PasswordChar = false;
+            this.txt_phone.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_phone.PlaceholderText = "";
+            this.txt_phone.Size = new System.Drawing.Size(284, 35);
+            this.txt_phone.TabIndex = 15;
+            this.txt_phone.Texts = "";
+            this.txt_phone.UnderlinedStyle = false;
             // 
-            // hpTextBox2
+            // txt_home
             // 
-            this.hpTextBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.hpTextBox2.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.hpTextBox2.BorderFocusColor = System.Drawing.Color.RoyalBlue;
-            this.hpTextBox2.BorderRadius = 0;
-            this.hpTextBox2.BorderSize = 2;
-            this.hpTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hpTextBox2.Location = new System.Drawing.Point(152, 171);
-            this.hpTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.hpTextBox2.Multiline = false;
-            this.hpTextBox2.Name = "hpTextBox2";
-            this.hpTextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.hpTextBox2.PasswordChar = false;
-            this.hpTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.hpTextBox2.PlaceholderText = "Nhập địa chỉ";
-            this.hpTextBox2.Size = new System.Drawing.Size(285, 35);
-            this.hpTextBox2.TabIndex = 14;
-            this.hpTextBox2.Texts = "";
-            this.hpTextBox2.UnderlinedStyle = false;
+            this.txt_home.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txt_home.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txt_home.BorderFocusColor = System.Drawing.Color.RoyalBlue;
+            this.txt_home.BorderRadius = 0;
+            this.txt_home.BorderSize = 2;
+            this.txt_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_home.Location = new System.Drawing.Point(155, 164);
+            this.txt_home.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_home.Multiline = false;
+            this.txt_home.Name = "txt_home";
+            this.txt_home.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_home.PasswordChar = false;
+            this.txt_home.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_home.PlaceholderText = "";
+            this.txt_home.Size = new System.Drawing.Size(284, 35);
+            this.txt_home.TabIndex = 14;
+            this.txt_home.Texts = "";
+            this.txt_home.UnderlinedStyle = false;
             // 
-            // hpTextBox1
+            // txt_name
             // 
-            this.hpTextBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.hpTextBox1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.hpTextBox1.BorderFocusColor = System.Drawing.Color.RoyalBlue;
-            this.hpTextBox1.BorderRadius = 0;
-            this.hpTextBox1.BorderSize = 2;
-            this.hpTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hpTextBox1.Location = new System.Drawing.Point(154, 41);
-            this.hpTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.hpTextBox1.Multiline = false;
-            this.hpTextBox1.Name = "hpTextBox1";
-            this.hpTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.hpTextBox1.PasswordChar = false;
-            this.hpTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.hpTextBox1.PlaceholderText = "";
-            this.hpTextBox1.Size = new System.Drawing.Size(284, 35);
-            this.hpTextBox1.TabIndex = 13;
-            this.hpTextBox1.Texts = "";
-            this.hpTextBox1.UnderlinedStyle = false;
+            this.txt_name.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txt_name.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txt_name.BorderFocusColor = System.Drawing.Color.RoyalBlue;
+            this.txt_name.BorderRadius = 0;
+            this.txt_name.BorderSize = 2;
+            this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name.Location = new System.Drawing.Point(155, 48);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name.Multiline = false;
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_name.PasswordChar = false;
+            this.txt_name.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name.PlaceholderText = "";
+            this.txt_name.Size = new System.Drawing.Size(284, 35);
+            this.txt_name.TabIndex = 13;
+            this.txt_name.Texts = "";
+            this.txt_name.UnderlinedStyle = false;
             // 
-            // hpDateTimePicker1
+            // date_dob
             // 
-            this.hpDateTimePicker1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.hpDateTimePicker1.BorderSize = 0;
-            this.hpDateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.hpDateTimePicker1.Location = new System.Drawing.Point(153, 113);
-            this.hpDateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.hpDateTimePicker1.Name = "hpDateTimePicker1";
-            this.hpDateTimePicker1.Size = new System.Drawing.Size(285, 35);
-            this.hpDateTimePicker1.SkinColor = System.Drawing.Color.DodgerBlue;
-            this.hpDateTimePicker1.TabIndex = 12;
-            this.hpDateTimePicker1.TextColor = System.Drawing.Color.White;
+            this.date_dob.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.date_dob.BorderSize = 0;
+            this.date_dob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.date_dob.Location = new System.Drawing.Point(154, 101);
+            this.date_dob.MinimumSize = new System.Drawing.Size(4, 35);
+            this.date_dob.Name = "date_dob";
+            this.date_dob.Size = new System.Drawing.Size(285, 35);
+            this.date_dob.SkinColor = System.Drawing.Color.DodgerBlue;
+            this.date_dob.TabIndex = 12;
+            this.date_dob.TextColor = System.Drawing.Color.White;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 251);
+            this.label4.Location = new System.Drawing.Point(23, 225);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 20);
             this.label4.TabIndex = 7;
@@ -333,7 +334,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 183);
+            this.label3.Location = new System.Drawing.Point(23, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 20);
             this.label3.TabIndex = 4;
@@ -343,7 +344,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 120);
+            this.label2.Location = new System.Drawing.Point(23, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 2;
@@ -353,7 +354,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 53);
+            this.label1.Location = new System.Drawing.Point(23, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 20);
             this.label1.TabIndex = 1;
@@ -394,10 +395,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private System.Windows.Forms.GroupBox groupBox1;
         private FontAwesome.Sharp.IconButton btn_Confirm;
         private FontAwesome.Sharp.IconButton btn_Cancel;
-        private ToolsBox.RJControls.HPTextBox hpTextBox3;
-        private ToolsBox.RJControls.HPTextBox hpTextBox2;
-        private ToolsBox.RJControls.HPTextBox hpTextBox1;
-        private ToolsBox.RJControls.HPDateTimePicker hpDateTimePicker1;
+        private ToolsBox.RJControls.HPTextBox txt_phone;
+        private ToolsBox.RJControls.HPTextBox txt_home;
+        private ToolsBox.RJControls.HPTextBox txt_name;
+        private ToolsBox.RJControls.HPDateTimePicker date_dob;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
