@@ -28,7 +28,6 @@ namespace BUS
             return dHocVien.xoaHocVien(hv);
         }
 
-
         public void bindGridView(DataGridView dataGridView)
         {
             dHocVien.bindGridView(dataGridView);

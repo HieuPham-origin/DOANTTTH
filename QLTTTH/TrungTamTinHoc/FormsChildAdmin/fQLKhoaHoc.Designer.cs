@@ -29,178 +29,34 @@ namespace TrungTamTinHoc.FormsChildAdmin
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgv_GiangVien = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_InGV = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.btn_ThemGV = new FontAwesome.Sharp.IconButton();
-            this.btn_XoaGV = new FontAwesome.Sharp.IconButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Search = new FontAwesome.Sharp.IconButton();
-            this.lb_Search = new System.Windows.Forms.Label();
-            this.hpTextBox1 = new ToolsBox.RJControls.HPTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_GiangVien)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.txt_Search = new ToolsBox.RJControls.HPTextBox();
+            this.lb_Search = new System.Windows.Forms.Label();
+            this.dgv_KhoaHoc = new System.Windows.Forms.DataGridView();
+            this.btn_Xoa = new FontAwesome.Sharp.IconButton();
+            this.btn_Them = new FontAwesome.Sharp.IconButton();
+            this.txt_name = new ToolsBox.RJControls.HPTextBox();
+            this.txt_fee = new ToolsBox.RJControls.HPTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_KhoaHoc)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dgv_GiangVien
-            // 
-            this.dgv_GiangVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv_GiangVien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_GiangVien.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgv_GiangVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_GiangVien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_GiangVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_GiangVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_GiangVien.ColumnHeadersHeight = 30;
-            this.dgv_GiangVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_GiangVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_GiangVien.EnableHeadersVisualStyles = false;
-            this.dgv_GiangVien.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgv_GiangVien.Location = new System.Drawing.Point(0, 215);
-            this.dgv_GiangVien.Name = "dgv_GiangVien";
-            this.dgv_GiangVien.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_GiangVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgv_GiangVien.RowHeadersVisible = false;
-            this.dgv_GiangVien.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_GiangVien.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_GiangVien.RowTemplate.Height = 24;
-            this.dgv_GiangVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_GiangVien.Size = new System.Drawing.Size(901, 235);
-            this.dgv_GiangVien.TabIndex = 27;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.groupBox1.Controls.Add(this.btn_InGV);
-            this.groupBox1.Controls.Add(this.iconButton1);
-            this.groupBox1.Controls.Add(this.btn_ThemGV);
-            this.groupBox1.Controls.Add(this.btn_XoaGV);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(0, 100);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(901, 115);
-            this.groupBox1.TabIndex = 25;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chức năng";
-            // 
-            // btn_InGV
-            // 
-            this.btn_InGV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btn_InGV.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_InGV.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_InGV.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btn_InGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_InGV.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_InGV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_InGV.IconChar = FontAwesome.Sharp.IconChar.Print;
-            this.btn_InGV.IconColor = System.Drawing.Color.White;
-            this.btn_InGV.IconSize = 16;
-            this.btn_InGV.Location = new System.Drawing.Point(714, 46);
-            this.btn_InGV.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_InGV.Name = "btn_InGV";
-            this.btn_InGV.Rotation = 0D;
-            this.btn_InGV.Size = new System.Drawing.Size(156, 48);
-            this.btn_InGV.TabIndex = 4;
-            this.btn_InGV.Text = "In danh sách";
-            this.btn_InGV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_InGV.UseVisualStyleBackColor = false;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.iconButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconSize = 16;
-            this.iconButton1.Location = new System.Drawing.Point(503, 46);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(156, 48);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.Text = "Chỉnh sửa";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // btn_ThemGV
-            // 
-            this.btn_ThemGV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ThemGV.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_ThemGV.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_ThemGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ThemGV.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_ThemGV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThemGV.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_ThemGV.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btn_ThemGV.IconColor = System.Drawing.Color.White;
-            this.btn_ThemGV.IconSize = 16;
-            this.btn_ThemGV.Location = new System.Drawing.Point(53, 46);
-            this.btn_ThemGV.Name = "btn_ThemGV";
-            this.btn_ThemGV.Rotation = 0D;
-            this.btn_ThemGV.Size = new System.Drawing.Size(156, 48);
-            this.btn_ThemGV.TabIndex = 0;
-            this.btn_ThemGV.Text = "Thêm khóa học";
-            this.btn_ThemGV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ThemGV.UseVisualStyleBackColor = false;
-            // 
-            // btn_XoaGV
-            // 
-            this.btn_XoaGV.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_XoaGV.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_XoaGV.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btn_XoaGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_XoaGV.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_XoaGV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_XoaGV.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            this.btn_XoaGV.IconColor = System.Drawing.Color.White;
-            this.btn_XoaGV.IconSize = 16;
-            this.btn_XoaGV.Location = new System.Drawing.Point(281, 46);
-            this.btn_XoaGV.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_XoaGV.Name = "btn_XoaGV";
-            this.btn_XoaGV.Rotation = 0D;
-            this.btn_XoaGV.Size = new System.Drawing.Size(156, 48);
-            this.btn_XoaGV.TabIndex = 1;
-            this.btn_XoaGV.Text = "Xóa khóa học";
-            this.btn_XoaGV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_XoaGV.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.btn_Search);
-            this.panel1.Controls.Add(this.lb_Search);
-            this.panel1.Controls.Add(this.hpTextBox1);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txt_Search);
+            this.panel1.Controls.Add(this.lb_Search);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -215,43 +71,13 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Search.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btn_Search.IconColor = System.Drawing.Color.White;
             this.btn_Search.IconSize = 27;
-            this.btn_Search.Location = new System.Drawing.Point(819, 38);
+            this.btn_Search.Location = new System.Drawing.Point(831, 30);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Rotation = 0D;
             this.btn_Search.Size = new System.Drawing.Size(40, 37);
             this.btn_Search.TabIndex = 4;
             this.btn_Search.UseVisualStyleBackColor = true;
-            // 
-            // lb_Search
-            // 
-            this.lb_Search.AutoSize = true;
-            this.lb_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Search.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_Search.Location = new System.Drawing.Point(466, 38);
-            this.lb_Search.Name = "lb_Search";
-            this.lb_Search.Size = new System.Drawing.Size(97, 28);
-            this.lb_Search.TabIndex = 3;
-            this.lb_Search.Text = "Tìm kiếm";
-            // 
-            // hpTextBox1
-            // 
-            this.hpTextBox1.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.hpTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.hpTextBox1.BorderRadius = 0;
-            this.hpTextBox1.BorderSize = 2;
-            this.hpTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hpTextBox1.Location = new System.Drawing.Point(579, 36);
-            this.hpTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.hpTextBox1.Multiline = false;
-            this.hpTextBox1.Name = "hpTextBox1";
-            this.hpTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.hpTextBox1.PasswordChar = false;
-            this.hpTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.hpTextBox1.PlaceholderText = "";
-            this.hpTextBox1.Size = new System.Drawing.Size(223, 39);
-            this.hpTextBox1.TabIndex = 2;
-            this.hpTextBox1.Texts = "";
-            this.hpTextBox1.UnderlinedStyle = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // label2
             // 
@@ -265,36 +91,239 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.label2.Text = "DANH SÁCH KHÓA HỌC";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txt_Search
+            // 
+            this.txt_Search.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txt_Search.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_Search.BorderRadius = 0;
+            this.txt_Search.BorderSize = 2;
+            this.txt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Search.Location = new System.Drawing.Point(601, 27);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Search.Multiline = false;
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_Search.PasswordChar = false;
+            this.txt_Search.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_Search.PlaceholderText = "";
+            this.txt_Search.Size = new System.Drawing.Size(223, 39);
+            this.txt_Search.TabIndex = 2;
+            this.txt_Search.Texts = "";
+            this.txt_Search.UnderlinedStyle = true;
+            // 
+            // lb_Search
+            // 
+            this.lb_Search.AutoSize = true;
+            this.lb_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Search.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_Search.Location = new System.Drawing.Point(514, 35);
+            this.lb_Search.Name = "lb_Search";
+            this.lb_Search.Size = new System.Drawing.Size(80, 23);
+            this.lb_Search.TabIndex = 3;
+            this.lb_Search.Text = "Tìm kiếm";
+            // 
+            // dgv_KhoaHoc
+            // 
+            this.dgv_KhoaHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_KhoaHoc.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgv_KhoaHoc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_KhoaHoc.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_KhoaHoc.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_KhoaHoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgv_KhoaHoc.ColumnHeadersHeight = 30;
+            this.dgv_KhoaHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_KhoaHoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_KhoaHoc.EnableHeadersVisualStyles = false;
+            this.dgv_KhoaHoc.GridColor = System.Drawing.Color.SteelBlue;
+            this.dgv_KhoaHoc.Location = new System.Drawing.Point(0, 248);
+            this.dgv_KhoaHoc.Name = "dgv_KhoaHoc";
+            this.dgv_KhoaHoc.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_KhoaHoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgv_KhoaHoc.RowHeadersVisible = false;
+            this.dgv_KhoaHoc.RowHeadersWidth = 51;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_KhoaHoc.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgv_KhoaHoc.RowTemplate.Height = 24;
+            this.dgv_KhoaHoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_KhoaHoc.Size = new System.Drawing.Size(901, 202);
+            this.dgv_KhoaHoc.TabIndex = 29;
+            this.dgv_KhoaHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_KhoaHoc_CellClick);
+            this.dgv_KhoaHoc.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_KhoaHoc_CellEndEdit);
+            // 
+            // btn_Xoa
+            // 
+            this.btn_Xoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Xoa.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_Xoa.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_Xoa.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Xoa.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Xoa.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.btn_Xoa.IconColor = System.Drawing.Color.White;
+            this.btn_Xoa.IconSize = 16;
+            this.btn_Xoa.Location = new System.Drawing.Point(641, 88);
+            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.Rotation = 0D;
+            this.btn_Xoa.Size = new System.Drawing.Size(141, 48);
+            this.btn_Xoa.TabIndex = 1;
+            this.btn_Xoa.Text = "Xóa khóa học";
+            this.btn_Xoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Xoa.UseVisualStyleBackColor = false;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
+            // 
+            // btn_Them
+            // 
+            this.btn_Them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Them.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_Them.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Them.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_Them.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Them.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Them.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btn_Them.IconColor = System.Drawing.Color.White;
+            this.btn_Them.IconSize = 16;
+            this.btn_Them.Location = new System.Drawing.Point(641, 33);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Rotation = 0D;
+            this.btn_Them.Size = new System.Drawing.Size(141, 48);
+            this.btn_Them.TabIndex = 0;
+            this.btn_Them.Text = "Thêm khóa học";
+            this.btn_Them.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
+            // 
+            // txt_name
+            // 
+            this.txt_name.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txt_name.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_name.BorderRadius = 0;
+            this.txt_name.BorderSize = 2;
+            this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name.Location = new System.Drawing.Point(238, 34);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name.Multiline = false;
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_name.PasswordChar = false;
+            this.txt_name.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name.PlaceholderText = "";
+            this.txt_name.Size = new System.Drawing.Size(368, 39);
+            this.txt_name.TabIndex = 3;
+            this.txt_name.Texts = "";
+            this.txt_name.UnderlinedStyle = true;
+            // 
+            // txt_fee
+            // 
+            this.txt_fee.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txt_fee.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_fee.BorderRadius = 0;
+            this.txt_fee.BorderSize = 2;
+            this.txt_fee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_fee.Location = new System.Drawing.Point(238, 88);
+            this.txt_fee.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_fee.Multiline = false;
+            this.txt_fee.Name = "txt_fee";
+            this.txt_fee.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_fee.PasswordChar = false;
+            this.txt_fee.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_fee.PlaceholderText = "";
+            this.txt_fee.Size = new System.Drawing.Size(368, 39);
+            this.txt_fee.TabIndex = 5;
+            this.txt_fee.Texts = "";
+            this.txt_fee.UnderlinedStyle = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(93, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 23);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Tên khóa học";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(93, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 23);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Học phí";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txt_fee);
+            this.groupBox1.Controls.Add(this.txt_name);
+            this.groupBox1.Controls.Add(this.btn_Them);
+            this.groupBox1.Controls.Add(this.btn_Xoa);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Location = new System.Drawing.Point(0, 100);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(901, 148);
+            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chức năng";
+            // 
             // fQLKhoaHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 450);
-            this.Controls.Add(this.dgv_GiangVien);
+            this.Controls.Add(this.dgv_KhoaHoc);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "fQLKhoaHoc";
             this.Text = "fQLKH";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_GiangVien)).EndInit();
-            this.groupBox1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.fQLKhoaHoc_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_KhoaHoc)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgv_GiangVien;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private FontAwesome.Sharp.IconButton btn_InGV;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton btn_ThemGV;
-        private FontAwesome.Sharp.IconButton btn_XoaGV;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btn_Search;
         private System.Windows.Forms.Label lb_Search;
         private System.Windows.Forms.Label label2;
-        private ToolsBox.RJControls.HPTextBox hpTextBox1;
+        private ToolsBox.RJControls.HPTextBox txt_Search;
+        private System.Windows.Forms.DataGridView dgv_KhoaHoc;
+        private FontAwesome.Sharp.IconButton btn_Xoa;
+        private FontAwesome.Sharp.IconButton btn_Them;
+        private ToolsBox.RJControls.HPTextBox txt_name;
+        private ToolsBox.RJControls.HPTextBox txt_fee;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

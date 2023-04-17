@@ -44,7 +44,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
                 if (bGV.xoaGiangVien(selectedGV))
                 {
                     MessageBox.Show("Xóa thành công");
-                    bGV.xoaGiangVien(selectedGV);
                     dgv_GiangVien.Rows.RemoveAt(dgv_GiangVien.CurrentRow.Index);
                 }
                 else

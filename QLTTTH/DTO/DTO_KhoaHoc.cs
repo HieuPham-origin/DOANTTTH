@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class DTO_KhoaHoc
+    public class DTO_KhoaHoc
     {
-        private int Ma_KH;
-        private string Ten_KH;
-        private int Hoc_phi;
+        private int ma_KH;
+        private string ten_KH;
+        private int hoc_phi;
 
         public DTO_KhoaHoc(int ma_KH, string ten_KH, int hoc_phi)
         {
-            Ma_KH1 = ma_KH;
-            Ten_KH1 = ten_KH;
-            Hoc_phi1 = hoc_phi;
+            this.ma_KH = ma_KH;
+            this.ten_KH = ten_KH;
+            this.hoc_phi = hoc_phi;
         }
 
-        public int Ma_KH1 { get => Ma_KH; set => Ma_KH = value; }
-        public string Ten_KH1 { get => Ten_KH; set => Ten_KH = value; }
-        public int Hoc_phi1 { get => Hoc_phi; set => Hoc_phi = value; }
+        public int Ma_KH { get => ma_KH; set => ma_KH = value; }
+        public string Ten_KH { get => ten_KH; set => ten_KH = value; }
+        public int Hoc_phi { get => hoc_phi; set => hoc_phi = value; }
     }
 }

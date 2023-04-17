@@ -20,17 +20,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
             InitializeComponent();
         }
 
-        public void DisableLuuButton()
-        {
-            btn_Luu.Enabled = false;
-        }
-
-
-        public void DisableThemButton()
-        {
-            btn_Them.Enabled = false;
-        }
-
         private void btn_Them_Click(object sender, EventArgs e)
         {
             DTO_GiangVien newGV = new DTO_GiangVien(null, txt_name.Texts, date_dob.Value, txt_phone.Texts, txt_home.Texts);
