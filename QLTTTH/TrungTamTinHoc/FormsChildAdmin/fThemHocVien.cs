@@ -23,7 +23,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            DTO_HocVien newHV = new DTO_HocVien(null, txt_name.Texts, date_dob.Value, txt_phone.Texts, txt_home.Texts);
+            DTO_HocVien newHV = new DTO_HocVien(null, txt_name.Texts, date_dob.Value, txt_home.Texts, txt_phone.Texts);
             if (bHV.themHocVien(newHV))
             {
                 MessageBox.Show("Thêm thành công");

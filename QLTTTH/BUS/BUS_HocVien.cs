@@ -33,5 +33,10 @@ namespace BUS
         {
             dHocVien.bindGridView(dataGridView);
         }
+
+        public void bindGridViewbySearch(DataGridView gridView, string name)
+        {
+            dHocVien.bindGridViewbySearch(gridView, name);
+        }
     }
 }

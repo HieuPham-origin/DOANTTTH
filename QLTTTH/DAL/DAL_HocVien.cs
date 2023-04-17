@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using static DTO.DTO_HocVien;
 using System.Data;
 using DTO;
 using System.Windows.Forms;
@@ -97,7 +96,19 @@ namespace DAL
             SqlDataAdapter dv = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             dv.Fill(dt);
+            dataGridView.DataSource = dt;
+            conn.Close();
+        }
 
+        public void bindGridViewbySearch(DataGridView dataGridView, string name)
+        {
+            conn.Open();
+            string query = "SELECT * from Hoc_vien where Ma_HV LIKE '%' + @name + '%' or Ten_HV LIKE '%' + @name + '%' or sdt LIKE '%' + @name + '%'";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@name", name);
+            SqlDataAdapter dv = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dv.Fill(dt);
             dataGridView.DataSource = dt;
             conn.Close();
         }

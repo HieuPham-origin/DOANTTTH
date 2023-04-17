@@ -34,6 +34,9 @@ namespace BUS
             dGiangVien.bindGridView(dataGridView);
         }
 
-
+        public void bindGridViewbySearch(DataGridView gridView, string name)
+        {
+            dGiangVien.bindGridViewbySearch(gridView, name);
+        }
     }
 }

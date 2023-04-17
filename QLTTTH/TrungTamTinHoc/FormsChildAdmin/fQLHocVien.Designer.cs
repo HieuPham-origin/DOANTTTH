@@ -29,14 +29,14 @@ namespace TrungTamTinHoc.FormsChildAdmin
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_Search = new FontAwesome.Sharp.IconButton();
+            this.btn_TimKiem = new FontAwesome.Sharp.IconButton();
             this.lb_Search = new System.Windows.Forms.Label();
-            this.txt_Search = new ToolsBox.RJControls.HPTextBox();
+            this.txt_TimKiem = new ToolsBox.RJControls.HPTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_Ghidanh = new FontAwesome.Sharp.IconButton();
             this.btn_XoaHV = new FontAwesome.Sharp.IconButton();
@@ -69,20 +69,21 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.label2.Text = "DANH SÁCH HỌC VIÊN";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_Search
+            // btn_TimKiem
             // 
-            this.btn_Search.FlatAppearance.BorderSize = 0;
-            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Search.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btn_Search.IconColor = System.Drawing.Color.White;
-            this.btn_Search.IconSize = 27;
-            this.btn_Search.Location = new System.Drawing.Point(691, 48);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Rotation = 0D;
-            this.btn_Search.Size = new System.Drawing.Size(40, 37);
-            this.btn_Search.TabIndex = 7;
-            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.FlatAppearance.BorderSize = 0;
+            this.btn_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TimKiem.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_TimKiem.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btn_TimKiem.IconColor = System.Drawing.Color.White;
+            this.btn_TimKiem.IconSize = 27;
+            this.btn_TimKiem.Location = new System.Drawing.Point(691, 48);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Rotation = 0D;
+            this.btn_TimKiem.Size = new System.Drawing.Size(40, 37);
+            this.btn_TimKiem.TabIndex = 7;
+            this.btn_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
             // lb_Search
             // 
@@ -95,35 +96,35 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.lb_Search.TabIndex = 6;
             this.lb_Search.Text = "Tìm kiếm";
             // 
-            // txt_Search
+            // txt_TimKiem
             // 
-            this.txt_Search.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txt_Search.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txt_Search.BorderRadius = 0;
-            this.txt_Search.BorderSize = 2;
-            this.txt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Search.Location = new System.Drawing.Point(438, 48);
-            this.txt_Search.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Search.Multiline = false;
-            this.txt_Search.Name = "txt_Search";
-            this.txt_Search.Padding = new System.Windows.Forms.Padding(7);
-            this.txt_Search.PasswordChar = false;
-            this.txt_Search.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_Search.PlaceholderText = "";
-            this.txt_Search.Size = new System.Drawing.Size(246, 35);
-            this.txt_Search.TabIndex = 5;
-            this.txt_Search.Texts = "";
-            this.txt_Search.UnderlinedStyle = true;
+            this.txt_TimKiem.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txt_TimKiem.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_TimKiem.BorderRadius = 0;
+            this.txt_TimKiem.BorderSize = 2;
+            this.txt_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TimKiem.Location = new System.Drawing.Point(438, 48);
+            this.txt_TimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiem.Multiline = false;
+            this.txt_TimKiem.Name = "txt_TimKiem";
+            this.txt_TimKiem.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_TimKiem.PasswordChar = false;
+            this.txt_TimKiem.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_TimKiem.PlaceholderText = "";
+            this.txt_TimKiem.Size = new System.Drawing.Size(246, 35);
+            this.txt_TimKiem.TabIndex = 5;
+            this.txt_TimKiem.Texts = "";
+            this.txt_TimKiem.UnderlinedStyle = true;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.groupBox1.Controls.Add(this.btn_Search);
+            this.groupBox1.Controls.Add(this.btn_TimKiem);
             this.groupBox1.Controls.Add(this.btn_Ghidanh);
             this.groupBox1.Controls.Add(this.btn_XoaHV);
             this.groupBox1.Controls.Add(this.btn_Print);
             this.groupBox1.Controls.Add(this.lb_Search);
-            this.groupBox1.Controls.Add(this.txt_Search);
+            this.groupBox1.Controls.Add(this.txt_TimKiem);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -193,20 +194,19 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             // dgv_HocVien
             // 
-            this.dgv_HocVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv_HocVien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_HocVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_HocVien.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgv_HocVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_HocVien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_HocVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_HocVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HocVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_HocVien.ColumnHeadersHeight = 30;
             this.dgv_HocVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_HocVien.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -215,21 +215,21 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.dgv_HocVien.Location = new System.Drawing.Point(0, 209);
             this.dgv_HocVien.Name = "dgv_HocVien";
             this.dgv_HocVien.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_HocVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HocVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_HocVien.RowHeadersVisible = false;
             this.dgv_HocVien.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_HocVien.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_HocVien.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_HocVien.RowTemplate.Height = 24;
             this.dgv_HocVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_HocVien.Size = new System.Drawing.Size(911, 369);
@@ -265,8 +265,8 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private FontAwesome.Sharp.IconButton btn_Print;
         private FontAwesome.Sharp.IconButton btn_XoaHV;
         private System.Windows.Forms.DataGridView dgv_HocVien;
-        private FontAwesome.Sharp.IconButton btn_Search;
+        private FontAwesome.Sharp.IconButton btn_TimKiem;
         private System.Windows.Forms.Label lb_Search;
-        private ToolsBox.RJControls.HPTextBox txt_Search;
+        private ToolsBox.RJControls.HPTextBox txt_TimKiem;
     }
 }

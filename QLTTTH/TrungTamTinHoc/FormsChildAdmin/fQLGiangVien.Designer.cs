@@ -33,10 +33,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_Search = new FontAwesome.Sharp.IconButton();
+            this.btn_TimKiem = new FontAwesome.Sharp.IconButton();
             this.btn_InGV = new FontAwesome.Sharp.IconButton();
-            this.lb_Search = new System.Windows.Forms.Label();
-            this.hpTextBox1 = new ToolsBox.RJControls.HPTextBox();
+            this.lb_TimKiem = new System.Windows.Forms.Label();
+            this.txt_TimKiem = new ToolsBox.RJControls.HPTextBox();
             this.btn_ThemGV = new FontAwesome.Sharp.IconButton();
             this.btn_XoaGV = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -51,10 +51,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.groupBox1.AutoSize = true;
             this.groupBox1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.groupBox1.Controls.Add(this.btn_Search);
+            this.groupBox1.Controls.Add(this.btn_TimKiem);
             this.groupBox1.Controls.Add(this.btn_InGV);
-            this.groupBox1.Controls.Add(this.lb_Search);
-            this.groupBox1.Controls.Add(this.hpTextBox1);
+            this.groupBox1.Controls.Add(this.lb_TimKiem);
+            this.groupBox1.Controls.Add(this.txt_TimKiem);
             this.groupBox1.Controls.Add(this.btn_ThemGV);
             this.groupBox1.Controls.Add(this.btn_XoaGV);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -67,21 +67,22 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
             // 
-            // btn_Search
+            // btn_TimKiem
             // 
-            this.btn_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btn_Search.FlatAppearance.BorderSize = 0;
-            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Search.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btn_Search.IconColor = System.Drawing.Color.White;
-            this.btn_Search.IconSize = 27;
-            this.btn_Search.Location = new System.Drawing.Point(728, 47);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Rotation = 0D;
-            this.btn_Search.Size = new System.Drawing.Size(40, 49);
-            this.btn_Search.TabIndex = 4;
-            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btn_TimKiem.FlatAppearance.BorderSize = 0;
+            this.btn_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TimKiem.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_TimKiem.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btn_TimKiem.IconColor = System.Drawing.Color.White;
+            this.btn_TimKiem.IconSize = 27;
+            this.btn_TimKiem.Location = new System.Drawing.Point(728, 47);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Rotation = 0D;
+            this.btn_TimKiem.Size = new System.Drawing.Size(40, 49);
+            this.btn_TimKiem.TabIndex = 4;
+            this.btn_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
             // btn_InGV
             // 
@@ -105,41 +106,41 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_InGV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_InGV.UseVisualStyleBackColor = false;
             // 
-            // lb_Search
+            // lb_TimKiem
             // 
-            this.lb_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lb_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_Search.AutoSize = true;
-            this.lb_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Search.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_Search.Location = new System.Drawing.Point(385, 58);
-            this.lb_Search.Name = "lb_Search";
-            this.lb_Search.Size = new System.Drawing.Size(80, 23);
-            this.lb_Search.TabIndex = 3;
-            this.lb_Search.Text = "Tìm kiếm";
+            this.lb_TimKiem.AutoSize = true;
+            this.lb_TimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_TimKiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_TimKiem.Location = new System.Drawing.Point(385, 58);
+            this.lb_TimKiem.Name = "lb_TimKiem";
+            this.lb_TimKiem.Size = new System.Drawing.Size(80, 23);
+            this.lb_TimKiem.TabIndex = 3;
+            this.lb_TimKiem.Text = "Tìm kiếm";
             // 
-            // hpTextBox1
+            // txt_TimKiem
             // 
-            this.hpTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txt_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.hpTextBox1.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.hpTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.hpTextBox1.BorderRadius = 0;
-            this.hpTextBox1.BorderSize = 2;
-            this.hpTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hpTextBox1.Location = new System.Drawing.Point(477, 53);
-            this.hpTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.hpTextBox1.Multiline = false;
-            this.hpTextBox1.Name = "hpTextBox1";
-            this.hpTextBox1.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.hpTextBox1.PasswordChar = false;
-            this.hpTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.hpTextBox1.PlaceholderText = "";
-            this.hpTextBox1.Size = new System.Drawing.Size(231, 35);
-            this.hpTextBox1.TabIndex = 2;
-            this.hpTextBox1.Texts = "";
-            this.hpTextBox1.UnderlinedStyle = true;
+            this.txt_TimKiem.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txt_TimKiem.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_TimKiem.BorderRadius = 0;
+            this.txt_TimKiem.BorderSize = 2;
+            this.txt_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TimKiem.Location = new System.Drawing.Point(477, 53);
+            this.txt_TimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiem.Multiline = false;
+            this.txt_TimKiem.Name = "txt_TimKiem";
+            this.txt_TimKiem.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_TimKiem.PasswordChar = false;
+            this.txt_TimKiem.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_TimKiem.PlaceholderText = "";
+            this.txt_TimKiem.Size = new System.Drawing.Size(231, 35);
+            this.txt_TimKiem.TabIndex = 2;
+            this.txt_TimKiem.Texts = "";
+            this.txt_TimKiem.UnderlinedStyle = true;
             // 
             // btn_ThemGV
             // 
@@ -279,8 +280,8 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btn_ThemGV;
         private System.Windows.Forms.DataGridView dgv_GiangVien;
-        private System.Windows.Forms.Label lb_Search;
-        private FontAwesome.Sharp.IconButton btn_Search;
-        private ToolsBox.RJControls.HPTextBox hpTextBox1;
+        private System.Windows.Forms.Label lb_TimKiem;
+        private FontAwesome.Sharp.IconButton btn_TimKiem;
+        private ToolsBox.RJControls.HPTextBox txt_TimKiem;
     }
 }

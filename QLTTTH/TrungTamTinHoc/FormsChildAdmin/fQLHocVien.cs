@@ -31,7 +31,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private void fQLHocVien_Load(object sender, EventArgs e)
         {
             bHV.bindGridView(dgv_HocVien);
-            dgv_HocVien.Columns[0].HeaderText = "Mã GV";
+            dgv_HocVien.Columns[0].HeaderText = "Mã Học Viên";
             dgv_HocVien.Columns[1].HeaderText = "Họ và tên";
             dgv_HocVien.Columns[2].HeaderText = "Ngày sinh";
             dgv_HocVien.Columns[3].HeaderText = "Địa chỉ";
@@ -72,10 +72,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private void dgv_HocVien_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             string maHV = dgv_HocVien.Rows[e.RowIndex].Cells["Ma_HV"].Value.ToString();
-            string tenHV = dgv_HocVien.Rows[e.RowIndex].Cells["Ten_GV"].Value.ToString();
+            string tenHV = dgv_HocVien.Rows[e.RowIndex].Cells["Ten_HV"].Value.ToString();
             DateTime namSinh = Convert.ToDateTime(dgv_HocVien.Rows[e.RowIndex].Cells["Nam_sinh"].Value);
-            string sdt = dgv_HocVien.Rows[e.RowIndex].Cells["sdt"].Value.ToString();
             string diaChi = dgv_HocVien.Rows[e.RowIndex].Cells["Dia_chi"].Value.ToString();
+            string sdt = dgv_HocVien.Rows[e.RowIndex].Cells["sdt"].Value.ToString();
 
             DTO_HocVien newHV = new DTO_HocVien(maHV, tenHV, namSinh, diaChi, sdt);
             bHV.suaHocVien(newHV);
@@ -84,6 +84,9 @@ namespace TrungTamTinHoc.FormsChildAdmin
             dgv_HocVien.Refresh();
         }
 
-        
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            bHV.bindGridViewbySearch(dgv_HocVien, txt_TimKiem.Texts);
+        }
     }
 }

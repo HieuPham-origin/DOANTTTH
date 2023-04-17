@@ -83,5 +83,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // Refresh the DataGridView to show the updated data
             dgv_GiangVien.Refresh();
         }
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            bGV.bindGridViewbySearch(dgv_GiangVien, txt_TimKiem.Texts);
+        }
     }
 }
