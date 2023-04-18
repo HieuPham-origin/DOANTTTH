@@ -8,18 +8,16 @@ namespace DTO
 {
     public class DTO_PhongHoc
     {
-        private int Ma_PH;
-        private string Ten_PH;
-
-        public DTO_PhongHoc() { }
+        private int ma_PH;
+        private string ten_PH;
 
         public DTO_PhongHoc(int ma_PH, string ten_PH)
         {
-            Ma_PH = ma_PH;
-            Ten_PH = ten_PH;
+            this.ma_PH = ma_PH;
+            this.ten_PH = ten_PH;
         }
 
-        public int Ma_PH1 { get => Ma_PH; set => Ma_PH = value; }
-        public string Ten_PH1 { get => Ten_PH; set => Ten_PH = value; }
+        public int Ma_PH { get => ma_PH; set => ma_PH = value; }
+        public string Ten_PH { get => ten_PH; set => ten_PH = value; }
     }
 }

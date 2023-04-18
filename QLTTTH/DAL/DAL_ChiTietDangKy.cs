@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class DAL_ChiTietDangKy
+    public class DAL_ChiTietDangKy
     {
     }
 }

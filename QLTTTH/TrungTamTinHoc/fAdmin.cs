@@ -97,10 +97,10 @@ namespace TrungTamTinHoc
 
         //events
 
-        private void btn_Thoat_Click(object sender, EventArgs e)
+        private void btn_HoaDon_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
-            OpenChildForm(new FormsChildAdmin.fHoaDon());
+            OpenChildForm(new FormsChildAdmin.fQLHoaDon());
             panelInfo.BringToFront();
         }
 
@@ -120,7 +120,7 @@ namespace TrungTamTinHoc
 
         }
 
-        private void iconButtonHome_Click(object sender, EventArgs e)
+        private void btn_TrangChu_Click(object sender, EventArgs e)
         {
             if (currChildForm != null)
             {
@@ -131,14 +131,14 @@ namespace TrungTamTinHoc
 
         }
 
-        private void iconButtonHV_Click(object sender, EventArgs e)
+        private void btn_HocVien_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
             OpenChildForm(new FormsChildAdmin.fQLHocVien());
             panelInfo.BringToFront();
         }
 
-        private void iconButtonGV_Click(object sender, EventArgs e)
+        private void btn_GiangVien_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
             OpenChildForm(new FormsChildAdmin.fQLGiangVien());
@@ -146,7 +146,7 @@ namespace TrungTamTinHoc
 
         }
 
-        private void iconButtonKH_Click(object sender, EventArgs e)
+        private void btn_KhoaHoc_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
             OpenChildForm(new FormsChildAdmin.fQLKhoaHoc());
@@ -155,7 +155,7 @@ namespace TrungTamTinHoc
 
         }
 
-        private void iconButtonSta_Click(object sender, EventArgs e)
+        private void btn_BaoCao_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
             OpenChildForm(new FormsChildAdmin.fBaoCao());
@@ -200,7 +200,7 @@ namespace TrungTamTinHoc
             nForm.Show();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void btn_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }

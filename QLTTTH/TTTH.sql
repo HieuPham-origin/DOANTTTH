@@ -84,6 +84,7 @@ CREATE TABLE Lop_hoc
 CREATE TABLE Hoa_don
 (
 	Ma_hd INT NOT NULL IDENTITY (1,1),
+	Nguoi_dong_tien NVARCHAR(50),
 	Ngay_lap DATE DEFAULT getdate(),
 	Tong_tien INT NOT NULL,
 	CONSTRAINT pk_MaHD PRIMARY KEY (Ma_hd)
@@ -114,6 +115,38 @@ go
 
 
 --Trigger tu add vao taikhoan sau khi insert Hoc vien
+
+CREATE TRIGGER tr_GiangVien_Update
+ON Giang_vien
+AFTER UPDATE
+AS
+BEGIN
+    IF UPDATE(sdt)
+    BEGIN
+        UPDATE Tai_Khoan
+        SET pass = i.sdt
+        FROM inserted i
+        WHERE Tai_Khoan.loai = 1 AND Tai_Khoan.TaiKhoan = i.Ma_GV
+    END
+END
+
+go
+CREATE TRIGGER tr_HocVien_Update
+ON Hoc_vien
+AFTER UPDATE
+AS
+BEGIN
+    IF UPDATE(sdt)
+    BEGIN
+        UPDATE Tai_Khoan
+        SET pass = i.sdt
+        FROM inserted i
+        WHERE Tai_Khoan.loai = 2 AND Tai_Khoan.TaiKhoan = i.Ma_HV
+    END
+END
+
+
+
 
 go 
 CREATE TRIGGER trg_InsertTaiKhoanForNewStudent
@@ -407,10 +440,11 @@ go
 CREATE PROCEDURE dbo.HoaDon_CRUD
 	@StatementType VARCHAR(10),
 	@Ma_hd INT = NULL,
+	@Nguoi_dong_tien NVARCHAR(50) = NULL,
 	@Ngay_lap DATE = NULL,
 	@Tong_tien INT = NULL
-	AS
-	BEGIN
+AS
+BEGIN
 	SET NOCOUNT ON;
 	IF (@StatementType = 'SELECT')
 	BEGIN
@@ -420,14 +454,15 @@ CREATE PROCEDURE dbo.HoaDon_CRUD
 	END
 	ELSE IF (@StatementType = 'INSERT')
 	BEGIN
-		INSERT INTO dbo.Hoa_don (Ngay_lap, Tong_tien)
-		VALUES (ISNULL(@Ngay_lap, GETDATE()), @Tong_tien)
+		INSERT INTO dbo.Hoa_don (Nguoi_dong_tien, Ngay_lap, Tong_tien)
+		VALUES (@Nguoi_dong_tien, COALESCE(@Ngay_lap, GETDATE()), @Tong_tien)
 	END
 	ELSE IF (@StatementType = 'UPDATE')
 	BEGIN
 		UPDATE dbo.Hoa_don
-		SET Ngay_lap = ISNULL(@Ngay_lap, Ngay_lap),
-		Tong_tien = @Tong_tien
+		SET Nguoi_dong_tien = @Nguoi_dong_tien,
+			Ngay_lap = COALESCE(@Ngay_lap, Ngay_lap),
+			Tong_tien = @Tong_tien
 		WHERE Ma_hd = @Ma_hd
 	END
 	ELSE IF (@StatementType = 'DELETE')

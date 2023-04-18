@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using DTO;
 namespace DAL
 {
-    class DAL_HoaDon : DBConnect
+    public class DAL_HoaDon : DBConnect
     {
 
         public DataTable getHoaDon()
@@ -20,6 +20,24 @@ namespace DAL
             return dtHoaDon;
         }
 
+        public bool themHoaDon(DTO_HoaDon hd)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("dbo.HoaDon_CRUD", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@StatementType", "INSERT");
+            cmd.Parameters.AddWithValue("@Ma_hd", null);
+            cmd.Parameters.AddWithValue("@Ngay_lap", hd.Ngay_lap);
+            cmd.Parameters.AddWithValue("@Tong_tien", hd.Tong_tien);
+            int i = cmd.ExecuteNonQuery();
+            if (i != 0)
+            {
+                conn.Close();
+                return true;
+            }
+            conn.Close();
+            return false;
+        }
         public void bindGridView(DataGridView dataGridView)
         {
             conn.Open();
@@ -33,24 +51,13 @@ namespace DAL
             conn.Close();
         }
 
-        public bool themHoaDon(DTO_HoaDon hd)
+        public int getCurrentMaHoaDon()
         {
             conn.Open();
-            SqlCommand cmd = new SqlCommand("dbo.HoaDon_CRUD", conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@StatementType", "INSERT");
-            cmd.Parameters.AddWithValue("@Ma_hd", null);
-            cmd.Parameters.AddWithValue("@Ngay_lap", hd.Ma_hd);
-            cmd.Parameters.AddWithValue("@Tong_tien", hd.Ngay_lap);
-            cmd.Parameters.AddWithValue("@Tong_tien", hd.Tong_tien);
-            int i = cmd.ExecuteNonQuery();
-            if (i != 0)
-            {
-                conn.Close();
-                return true;
-            }
+            SqlCommand cmd = new SqlCommand("SELECT MAX(Ma_hd) FROM Hoa_don", conn);
+            int currentMaHoaDon = Convert.ToInt32(cmd.ExecuteScalar());
             conn.Close();
-            return false;
+            return currentMaHoaDon;
         }
 
     }

@@ -31,8 +31,8 @@ namespace TrungTamTinHoc
         {
             FontAwesome.Sharp.IconButton iconMinimize;
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btn_Thoat = new FontAwesome.Sharp.IconButton();
+            this.btn_HoaDon = new FontAwesome.Sharp.IconButton();
             this.btn_Baocao = new FontAwesome.Sharp.IconButton();
             this.btn_Khoahoc = new FontAwesome.Sharp.IconButton();
             this.btn_Giangvien = new FontAwesome.Sharp.IconButton();
@@ -83,8 +83,8 @@ namespace TrungTamTinHoc
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panelMenu.Controls.Add(this.iconButton1);
             this.panelMenu.Controls.Add(this.btn_Thoat);
+            this.panelMenu.Controls.Add(this.btn_HoaDon);
             this.panelMenu.Controls.Add(this.btn_Baocao);
             this.panelMenu.Controls.Add(this.btn_Khoahoc);
             this.panelMenu.Controls.Add(this.btn_Giangvien);
@@ -97,29 +97,6 @@ namespace TrungTamTinHoc
             this.panelMenu.Size = new System.Drawing.Size(134, 632);
             this.panelMenu.TabIndex = 0;
             // 
-            // iconButton1
-            // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.iconButton1.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 450);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(134, 60);
-            this.iconButton1.TabIndex = 8;
-            this.iconButton1.Text = "Thoát";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
             // btn_Thoat
             // 
             this.btn_Thoat.Dock = System.Windows.Forms.DockStyle.Top;
@@ -128,20 +105,43 @@ namespace TrungTamTinHoc
             this.btn_Thoat.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btn_Thoat.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Thoat.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
+            this.btn_Thoat.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
             this.btn_Thoat.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_Thoat.IconSize = 30;
             this.btn_Thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Thoat.Location = new System.Drawing.Point(0, 390);
+            this.btn_Thoat.Location = new System.Drawing.Point(0, 450);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Rotation = 0D;
             this.btn_Thoat.Size = new System.Drawing.Size(134, 60);
-            this.btn_Thoat.TabIndex = 7;
-            this.btn_Thoat.Text = "Hóa đơn";
+            this.btn_Thoat.TabIndex = 8;
+            this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Thoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            // 
+            // btn_HoaDon
+            // 
+            this.btn_HoaDon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_HoaDon.FlatAppearance.BorderSize = 0;
+            this.btn_HoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoaDon.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_HoaDon.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HoaDon.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_HoaDon.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
+            this.btn_HoaDon.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_HoaDon.IconSize = 30;
+            this.btn_HoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_HoaDon.Location = new System.Drawing.Point(0, 390);
+            this.btn_HoaDon.Name = "btn_HoaDon";
+            this.btn_HoaDon.Rotation = 0D;
+            this.btn_HoaDon.Size = new System.Drawing.Size(134, 60);
+            this.btn_HoaDon.TabIndex = 7;
+            this.btn_HoaDon.Text = "Hóa đơn";
+            this.btn_HoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_HoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_HoaDon.UseVisualStyleBackColor = true;
+            this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click);
             // 
             // btn_Baocao
             // 
@@ -164,7 +164,7 @@ namespace TrungTamTinHoc
             this.btn_Baocao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Baocao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Baocao.UseVisualStyleBackColor = true;
-            this.btn_Baocao.Click += new System.EventHandler(this.iconButtonSta_Click);
+            this.btn_Baocao.Click += new System.EventHandler(this.btn_BaoCao_Click);
             // 
             // btn_Khoahoc
             // 
@@ -187,7 +187,7 @@ namespace TrungTamTinHoc
             this.btn_Khoahoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Khoahoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Khoahoc.UseVisualStyleBackColor = true;
-            this.btn_Khoahoc.Click += new System.EventHandler(this.iconButtonKH_Click);
+            this.btn_Khoahoc.Click += new System.EventHandler(this.btn_KhoaHoc_Click);
             // 
             // btn_Giangvien
             // 
@@ -210,7 +210,7 @@ namespace TrungTamTinHoc
             this.btn_Giangvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Giangvien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Giangvien.UseVisualStyleBackColor = true;
-            this.btn_Giangvien.Click += new System.EventHandler(this.iconButtonGV_Click);
+            this.btn_Giangvien.Click += new System.EventHandler(this.btn_GiangVien_Click);
             // 
             // btn_Hocvien
             // 
@@ -233,7 +233,7 @@ namespace TrungTamTinHoc
             this.btn_Hocvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Hocvien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Hocvien.UseVisualStyleBackColor = true;
-            this.btn_Hocvien.Click += new System.EventHandler(this.iconButtonHV_Click);
+            this.btn_Hocvien.Click += new System.EventHandler(this.btn_HocVien_Click);
             // 
             // btn_Trangchu
             // 
@@ -256,7 +256,7 @@ namespace TrungTamTinHoc
             this.btn_Trangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Trangchu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Trangchu.UseVisualStyleBackColor = true;
-            this.btn_Trangchu.Click += new System.EventHandler(this.iconButtonHome_Click);
+            this.btn_Trangchu.Click += new System.EventHandler(this.btn_TrangChu_Click);
             // 
             // panelLogo
             // 
@@ -486,7 +486,7 @@ namespace TrungTamTinHoc
         private System.Windows.Forms.Panel panelTitle;
         private FontAwesome.Sharp.IconButton btn_Baocao;
         private FontAwesome.Sharp.IconButton btn_Caidat;
-        private FontAwesome.Sharp.IconButton btn_Thoat;
+        private FontAwesome.Sharp.IconButton btn_HoaDon;
         private System.Windows.Forms.Panel panelInfo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconCurrChildForm;
@@ -496,7 +496,7 @@ namespace TrungTamTinHoc
         private FontAwesome.Sharp.IconButton iconExit;
         private FontAwesome.Sharp.IconButton btn_Logout;
         private FontAwesome.Sharp.IconButton btn_hdsd;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btn_Thoat;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

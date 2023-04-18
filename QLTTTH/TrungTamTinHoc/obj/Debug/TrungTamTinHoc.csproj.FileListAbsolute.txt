@@ -135,3 +135,4 @@ D:\Student\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.csproj.CoreCo
 D:\Student\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.csproj.CopyComplete
 D:\Student\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.exe
 D:\Student\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.pdb
+D:\Student\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLHoaDon.resources

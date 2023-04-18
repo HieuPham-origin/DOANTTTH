@@ -8,21 +8,22 @@ namespace DTO
 {
     public class DTO_CaHoc
     {
-        private int Ma_ca;
-        private int Buoi;
-        private string GioHoc;
+        private int ma_ca;
+        private int buoi;
+        private string gio_Hoc;
 
 
         public DTO_CaHoc() { }
-        public DTO_CaHoc(int ma_ca, int buoi, string gioHoc)
+
+        public DTO_CaHoc(int ma_ca, int buoi, string gio_Hoc)
         {
-            Ma_ca1 = ma_ca;
-            Buoi1 = buoi;
-            GioHoc1 = gioHoc;
+            this.ma_ca = ma_ca;
+            this.buoi = buoi;
+            this.gio_Hoc = gio_Hoc;
         }
 
-        public int Ma_ca1 { get => Ma_ca; set => Ma_ca = value; }
-        public int Buoi1 { get => Buoi; set => Buoi = value; }
-        public string GioHoc1 { get => GioHoc; set => GioHoc = value; }
+        public int Ma_ca { get => ma_ca; set => ma_ca = value; }
+        public int Buoi { get => buoi; set => buoi = value; }
+        public string Gio_Hoc { get => gio_Hoc; set => gio_Hoc = value; }
     }
 }

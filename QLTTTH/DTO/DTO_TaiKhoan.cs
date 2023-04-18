@@ -8,7 +8,7 @@ namespace DTO
 {
     public class DTO_TaiKhoan
     {
-        private string TaiKhoan;
+        private string taiKhoan;
         private string pass;
         private int loai;
 
@@ -16,12 +16,12 @@ namespace DTO
 
         public DTO_TaiKhoan(string taiKhoan, string pass, int loai)
         {
-            TaiKhoan = taiKhoan;
+            this.taiKhoan = taiKhoan;
             this.pass = pass;
             this.loai = loai;
         }
 
-        public string TaiKhoan1 { get => TaiKhoan; set => TaiKhoan = value; }
+        public string TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
         public string Pass { get => pass; set => pass = value; }
         public int Loai { get => loai; set => loai = value; }
     }
