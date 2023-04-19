@@ -53,3 +53,14 @@ D:\Student\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 D:\Student\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\Student\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.dll
 D:\Student\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.pdb
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\bin\Debug\BUS.dll
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\bin\Debug\BUS.pdb
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\bin\Debug\DAL.dll
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\bin\Debug\DTO.dll
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\bin\Debug\DAL.pdb
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\bin\Debug\DTO.pdb
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.dll
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.pdb

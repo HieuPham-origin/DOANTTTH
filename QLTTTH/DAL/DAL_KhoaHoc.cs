@@ -80,6 +80,19 @@ namespace DAL
             conn.Close();
         }
 
+        public void bindGridViewById(DataGridView dataGridView, int id)
+        {
+            conn.Open();
+            string query = "SELECT * from Khoa_hoc where Ma_KH = @id";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            SqlDataAdapter dv = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dv.Fill(dt);
+            dataGridView.DataSource = dt;
+            conn.Close();
+        }
+
         public void bindGridViewbySearch(DataGridView dataGridView, string name)
         {
             conn.Open();
@@ -92,5 +105,63 @@ namespace DAL
             dataGridView.DataSource = dt;
             conn.Close();
         }
+
+        public int getIdByName(string name)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Ma_KH FROM Khoa_hoc WHERE Ten_KH = @name", conn);
+            cmd.Parameters.AddWithValue("@name", name);
+            SqlDataReader reader = cmd.ExecuteReader();
+            int id = -1;
+            if (reader.Read())
+            {
+                id = Convert.ToInt32(reader["Ma_KH"]);
+            }
+            conn.Close();
+            return id;
+        }
+
+        public string getNameById(int id)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Ten_KH FROM Khoa_hoc WHERE  Ma_KH = @id", conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            SqlDataReader reader = cmd.ExecuteReader();
+            string name = "";
+            if (reader.Read())
+            {
+                name = reader["Ten_KH"].ToString();
+            }
+            conn.Close();
+            return name;
+        }
+
+        public int getFeeById(int id)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Hoc_phi FROM Khoa_hoc WHERE  Ma_KH = @id", conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            SqlDataReader reader = cmd.ExecuteReader();
+            int fee = -1;
+            if (reader.Read())
+            {
+                fee = Convert.ToInt32(reader["Hoc_phi"]);
+            }
+            conn.Close();
+            return fee;
+        }
+
+        public void bindComboBox(ComboBox cbx)
+        {
+            conn.Open();
+            SqlCommand command = new SqlCommand("SELECT Ten_KH FROM Khoa_Hoc", conn);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                cbx.Items.Add(reader.GetString(0));
+            }
+            conn.Close();
+        }
+
     }
 }

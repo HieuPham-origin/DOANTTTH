@@ -37,5 +37,32 @@ namespace BUS
         {
             dKhoaHoc.bindGridViewbySearch(gridView, name);
         }
+
+        public int getIdByName(string name)
+        {
+            return dKhoaHoc.getIdByName(name);
+        }
+
+        public string getNameById(int id)
+        {
+            return dKhoaHoc.getNameById(id);
+        }
+
+        public void bindGridViewById(DataGridView dataGridView, int id)
+        {
+            dKhoaHoc.bindGridViewById(dataGridView, id);
+        }
+
+
+
+        public int getFeeById(int id)
+        {
+            return dKhoaHoc.getFeeById(id);
+        }
+
+        public void bindComboBox(ComboBox cbx)
+        {
+            dKhoaHoc.bindComboBox(cbx);
+        }
     }
 }

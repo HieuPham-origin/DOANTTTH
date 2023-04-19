@@ -17,6 +17,11 @@ namespace BUS
             return dHoaDon.themHoaDon(hd);
         }
 
+        public bool suaHoaDon(DTO_HoaDon hd)
+        {
+            return dHoaDon.suaHoaDon(hd);
+        }
+
         public void bindGridView(DataGridView dataGridView)
         {
             dHoaDon.bindGridView(dataGridView);
@@ -25,6 +30,11 @@ namespace BUS
         public int getCurrentMaHoaDon()
         {
             return dHoaDon.getCurrentMaHoaDon();
+        }
+
+        public void bindGridViewById(DataGridView dataGridView, int id)
+        {
+            dHoaDon.bindGridViewById(dataGridView,id);
         }
     }
 }

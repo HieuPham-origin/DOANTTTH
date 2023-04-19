@@ -27,6 +27,7 @@ namespace DAL
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@StatementType", "INSERT");
             cmd.Parameters.AddWithValue("@Ma_hd", null);
+            cmd.Parameters.AddWithValue("@Nguoi_dong_tien", hd.Nguoi_dong_tien);
             cmd.Parameters.AddWithValue("@Ngay_lap", hd.Ngay_lap);
             cmd.Parameters.AddWithValue("@Tong_tien", hd.Tong_tien);
             int i = cmd.ExecuteNonQuery();
@@ -38,6 +39,28 @@ namespace DAL
             conn.Close();
             return false;
         }
+
+
+        public bool suaHoaDon(DTO_HoaDon hd)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("dbo.HoaDon_CRUD", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@StatementType", "UPDATE");
+            cmd.Parameters.AddWithValue("@Ma_hd", hd.Ma_hd);
+            cmd.Parameters.AddWithValue("@Nguoi_dong_tien", hd.Nguoi_dong_tien);
+            cmd.Parameters.AddWithValue("@Ngay_lap", hd.Ngay_lap);
+            cmd.Parameters.AddWithValue("@Tong_tien", hd.Tong_tien);
+            int i = cmd.ExecuteNonQuery();
+            if (i != 0)
+            {
+                conn.Close();
+                return true;
+            }
+            conn.Close();
+            return false;
+        }
+
         public void bindGridView(DataGridView dataGridView)
         {
             conn.Open();
@@ -59,6 +82,20 @@ namespace DAL
             conn.Close();
             return currentMaHoaDon;
         }
+
+        public void bindGridViewById(DataGridView dataGridView, int id)
+        {
+            conn.Open();
+            string query = "SELECT * from Hoa_don where Ma_hd = @id";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            SqlDataAdapter dv = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dv.Fill(dt);
+            dataGridView.DataSource = dt;
+            conn.Close();
+        }
+
 
     }
 }

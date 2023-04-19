@@ -78,6 +78,11 @@ namespace DAL
             {
                 cbx.Items.Add(reader.GetString(0));
             }
+            conn.Close();
         }
+
+
+
+        
     }
 }

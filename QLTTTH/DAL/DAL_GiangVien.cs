@@ -52,7 +52,7 @@ namespace DAL
             cmd.Parameters.AddWithValue("@Ten_GV", gv.Ten_GV);
             cmd.Parameters.AddWithValue("@Nam_sinh", gv.Nam_sinh);
             cmd.Parameters.AddWithValue("@sdt", gv.Sdt);
-            cmd.Parameters.AddWithValue("@Que_quan", gv.Sdt);
+            cmd.Parameters.AddWithValue("@Que_quan", gv.Que_quan);
 
             int i = cmd.ExecuteNonQuery();
             if (i != 0)

@@ -15,7 +15,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
     public partial class fThemHocVien : Form
     {
         BUS_HocVien bHV = new BUS_HocVien();
-
+        BUS_KhoaHoc bKH = new BUS_KhoaHoc();
         public fThemHocVien()
         {
             InitializeComponent();
@@ -37,6 +37,9 @@ namespace TrungTamTinHoc.FormsChildAdmin
             }
         }
 
-        
+        private void fThemHocVien_Load(object sender, EventArgs e)
+        {
+            bKH.bindComboBox(cbx_KhoaHoc);
+        }
     }
 }

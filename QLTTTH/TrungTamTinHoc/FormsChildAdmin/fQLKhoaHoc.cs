@@ -23,16 +23,24 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            DTO_KhoaHoc newKH = new DTO_KhoaHoc(0, txt_name.Texts, Convert.ToInt32(txt_fee.Texts));
-            if (bKH.themKhoaHoc(newKH))
+            if (txt_name.Texts != "" && txt_fee.Texts != "")
             {
-                MessageBox.Show("Thêm thành công");
-                this.fQLKhoaHoc_Load(sender, e);
+                DTO_KhoaHoc newKH = new DTO_KhoaHoc(0, txt_name.Texts, Convert.ToInt32(txt_fee.Texts));
+                if (bKH.themKhoaHoc(newKH))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    this.fQLKhoaHoc_Load(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại");
+                }
             }
             else
             {
-                MessageBox.Show("Thêm thất bại");
+                MessageBox.Show("Chưa nhập đủ thông tin");
             }
+
         }
 
         private void fQLKhoaHoc_Load(object sender, EventArgs e)
@@ -48,24 +56,51 @@ namespace TrungTamTinHoc.FormsChildAdmin
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgv_KhoaHoc.Rows[e.RowIndex];
-                selectedKH = new DTO_KhoaHoc(
-                    Convert.ToInt32(row.Cells[0].Value.ToString()),
-                    row.Cells[1].Value.ToString(),
-                    Convert.ToInt32(row.Cells[2].Value.ToString()));
+
+                // Kiểm tra cột rỗng
+                int id = 0;
+                if (row.Cells[0].Value != null)
+                    int.TryParse(row.Cells[0].Value.ToString(), out id);
+
+                string tenKH = "";
+                if (row.Cells[1].Value != null)
+                    tenKH = row.Cells[1].Value.ToString();
+
+                int soHV = 0;
+                if (row.Cells[2].Value != null)
+                    int.TryParse(row.Cells[2].Value.ToString(), out soHV);
+
+                selectedKH = new DTO_KhoaHoc(id, tenKH, soHV);
             }
         }
 
+
         private void dgv_KhoaHoc_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            int maKH = Convert.ToInt32(dgv_KhoaHoc.Rows[e.RowIndex].Cells["Ma_KH"].Value.ToString());
-            string tenKH = dgv_KhoaHoc.Rows[e.RowIndex].Cells["Ten_KH"].Value.ToString();
-            int hocPhi = Convert.ToInt32(dgv_KhoaHoc.Rows[e.RowIndex].Cells["Hoc_phi"].Value.ToString());
-            DTO_KhoaHoc newKH = new DTO_KhoaHoc(maKH, tenKH, hocPhi);
-            bKH.suaKhoaHoc(newKH);
+            // Kiểm tra rỗng
+            if (!dgv_KhoaHoc.Rows[e.RowIndex].Cells[e.ColumnIndex].EditedFormattedValue.ToString().Equals(""))
+            {
 
-            // Refresh the DataGridView to show the updated data
-            dgv_KhoaHoc.Refresh();
+                int maKH = 0;
+                int.TryParse(dgv_KhoaHoc.Rows[e.RowIndex].Cells["Ma_KH"].Value.ToString(), out maKH);
+
+                string tenKH = "";
+                if (dgv_KhoaHoc.Rows[e.RowIndex].Cells["Ten_KH"].Value != null)
+                    tenKH = dgv_KhoaHoc.Rows[e.RowIndex].Cells["Ten_KH"].Value.ToString();
+
+                int hocPhi = 0;
+                int.TryParse(dgv_KhoaHoc.Rows[e.RowIndex].Cells["Hoc_phi"].Value.ToString(), out hocPhi);
+
+                DTO_KhoaHoc newKH = new DTO_KhoaHoc(maKH, tenKH, hocPhi);
+
+                // Cập nhật
+                bKH.suaKhoaHoc(newKH);
+
+                // Refresh
+                dgv_KhoaHoc.Refresh();
+            }
         }
+
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
