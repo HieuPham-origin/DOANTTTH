@@ -52,3 +52,12 @@ D:\Student\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\Student\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Student\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.dll
 D:\Student\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.pdb
+D:\Student\soft\DOANTTTH\QLTTTH\DAL\bin\Debug\DAL.dll
+D:\Student\soft\DOANTTTH\QLTTTH\DAL\bin\Debug\DAL.pdb
+D:\Student\soft\DOANTTTH\QLTTTH\DAL\bin\Debug\DTO.dll
+D:\Student\soft\DOANTTTH\QLTTTH\DAL\bin\Debug\DTO.pdb
+D:\Student\soft\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Student\soft\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Student\soft\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Student\soft\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.dll
+D:\Student\soft\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.pdb

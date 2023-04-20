@@ -92,7 +92,7 @@ namespace TrungTamTinHoc
             }
             else if(tk.checkLogin(txtUser.Text, txtPassword.Text, 2))
             {
-                fHocVienAccess hv = new fHocVienAccess();
+                fHocVien hv = new fHocVien();
                 hv.Show();
                 this.Hide();
             }

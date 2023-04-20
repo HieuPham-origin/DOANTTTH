@@ -64,3 +64,14 @@ C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CoreCompi
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.dll
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.pdb
+D:\Student\soft\DOANTTTH\QLTTTH\BUS\bin\Debug\BUS.dll
+D:\Student\soft\DOANTTTH\QLTTTH\BUS\bin\Debug\BUS.pdb
+D:\Student\soft\DOANTTTH\QLTTTH\BUS\bin\Debug\DAL.dll
+D:\Student\soft\DOANTTTH\QLTTTH\BUS\bin\Debug\DTO.dll
+D:\Student\soft\DOANTTTH\QLTTTH\BUS\bin\Debug\DAL.pdb
+D:\Student\soft\DOANTTTH\QLTTTH\BUS\bin\Debug\DTO.pdb
+D:\Student\soft\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\Student\soft\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Student\soft\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\Student\soft\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.dll
+D:\Student\soft\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.pdb

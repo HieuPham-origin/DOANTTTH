@@ -53,8 +53,6 @@ namespace BUS
             dKhoaHoc.bindGridViewById(dataGridView, id);
         }
 
-
-
         public int getFeeById(int id)
         {
             return dKhoaHoc.getFeeById(id);

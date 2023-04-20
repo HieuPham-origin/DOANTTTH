@@ -63,11 +63,11 @@
     <Compile Include="fGiangVien.Designer.cs">
       <DependentUpon>fGiangVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="fHocVienAccess.cs">
+    <Compile Include="fHocVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fHocVienAccess.Designer.cs">
-      <DependentUpon>fHocVienAccess.cs</DependentUpon>
+    <Compile Include="fHocVien.Designer.cs">
+      <DependentUpon>fHocVien.cs</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -80,6 +80,12 @@
     </Compile>
     <Compile Include="fAdmin.Designer.cs">
       <DependentUpon>fAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fQLLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildAdmin\fQLLopHoc.Designer.cs">
+      <DependentUpon>fQLLopHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsChildAdmin\fQLHoaDon.cs">
       <SubType>Form</SubType>
@@ -135,25 +141,64 @@
     <Compile Include="FormsChildAdmin\fThemHocVien.Designer.cs">
       <DependentUpon>fThemHocVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsChildHocVien\ThongtinCaNhan.cs">
+    <Compile Include="FormsChildAdmin\fThemLopHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsChildHocVien\ThongtinCaNhan.Designer.cs">
-      <DependentUpon>ThongtinCaNhan.cs</DependentUpon>
+    <Compile Include="FormsChildAdmin\fThemLopHoc.Designer.cs">
+      <DependentUpon>fThemLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsChildGiangVien\fLichDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildGiangVien\fLichDay.Designer.cs">
+      <DependentUpon>fLichDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsChildGiangVien\fLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildGiangVien\fLopHoc.Designer.cs">
+      <DependentUpon>fLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsChildGiangVien\fThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildGiangVien\fThongTinCaNhan.Designer.cs">
+      <DependentUpon>fThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsChildHocVien\fThoiKhoaBieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildHocVien\fThoiKhoaBieu.Designer.cs">
+      <DependentUpon>fThoiKhoaBieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsChildHocVien\fThongtinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildHocVien\fThongtinCaNhan.Designer.cs">
+      <DependentUpon>fThongtinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsChildHocVien\fXemKhoaHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsChildHocVien\fXemKhoaHoc.Designer.cs">
+      <DependentUpon>fXemKhoaHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fGiangVien.resx">
       <DependentUpon>fGiangVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fHocVienAccess.resx">
-      <DependentUpon>fHocVienAccess.cs</DependentUpon>
+    <EmbeddedResource Include="fHocVien.resx">
+      <DependentUpon>fHocVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildAdmin\fQLLopHoc.resx">
+      <DependentUpon>fQLLopHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsChildAdmin\fQLHoaDon.resx">
       <DependentUpon>fQLHoaDon.cs</DependentUpon>
@@ -182,8 +227,23 @@
     <EmbeddedResource Include="FormsChildAdmin\fThemHocVien.resx">
       <DependentUpon>fThemHocVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsChildHocVien\ThongtinCaNhan.resx">
-      <DependentUpon>ThongtinCaNhan.cs</DependentUpon>
+    <EmbeddedResource Include="FormsChildAdmin\fThemLopHoc.resx">
+      <DependentUpon>fThemLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildGiangVien\fLichDay.resx">
+      <DependentUpon>fLichDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildGiangVien\fLopHoc.resx">
+      <DependentUpon>fLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildGiangVien\fThongTinCaNhan.resx">
+      <DependentUpon>fThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildHocVien\fThongtinCaNhan.resx">
+      <DependentUpon>fThongtinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsChildHocVien\fXemKhoaHoc.resx">
+      <DependentUpon>fXemKhoaHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -233,8 +293,6 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="FormsChildGiangVien\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

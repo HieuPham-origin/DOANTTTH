@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TrungTamTinHoc.FormsChildHocVien
+namespace TrungTamTinHoc.FormsChildGiangVien
 {
-    public partial class ThongtinCaNhan : Form
+    public partial class fThongTinCaNhan : Form
     {
-        public ThongtinCaNhan()
+        public fThongTinCaNhan()
         {
             InitializeComponent();
         }

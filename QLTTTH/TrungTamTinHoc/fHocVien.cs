@@ -5,20 +5,22 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TrungTamTinHoc
 {
-    public partial class fHocVienAccess : Form
+    public partial class fHocVien : Form
     {
         //Fields
+        bool visible = false;
         private IconButton currBtn;
         private Panel leftBorderBtn;
         private Form currChildForm;
         //Constructor
-        public fHocVienAccess()
+        public fHocVien()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -90,41 +92,6 @@ namespace TrungTamTinHoc
             childForm.Show();
         }
 
-        private void btn_Thongtincanhan_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, colorActive);
-            OpenChildForm(new FormsChildHocVien.ThongtinCaNhan());
-        }
-
-        private void btn_KhoaHoc_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, colorActive);
-
-        }
-
-        private void btn_Xemlichhoc_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, colorActive);
-
-        }
-
-        private void btn_DangKiKH_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, colorActive);
-
-        }
-
-        private void btn_Xemdiem_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, colorActive);
-
-        }
-
-        private void btn_HdSudung_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, colorActive);
-
-        }
 
         private void btn_Dangxuat_Click(object sender, EventArgs e)
         {
@@ -133,5 +100,89 @@ namespace TrungTamTinHoc
             newLogin.Show();
         }
 
+        private void btn_Minimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_Maximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_Caidat_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!visible)
+            {
+                panelInfo.Visible = true;
+                visible = true;
+            }
+            else
+            {
+                panelInfo.Visible = false;
+                visible = false;
+            }
+        }
+
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+
+        private void btn_Trangchu_Click(object sender, EventArgs e)
+        {
+            if (currChildForm != null)
+            {
+                currChildForm.Hide();
+            }
+            ActivateButton(sender, colorActive);
+            panelInfo.BringToFront();
+        }
+
+        private void btn_Thongtincanhan_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, colorActive);
+            OpenChildForm(new FormsChildHocVien.fThongtinCaNhan());
+            panelInfo.BringToFront();
+        }
+
+        private void btn_ThoiKhoaBieu_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, colorActive);
+            OpenChildForm(new FormsChildHocVien.fThoiKhoaBieu());
+            panelInfo.BringToFront();
+        }
+
+        private void btn_Result_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btn_XemKhoaHoc_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, colorActive);
+            OpenChildForm(new FormsChildHocVien.fXemKhoaHoc());
+            panelInfo.BringToFront();
+        }
+
+        private void btn_Instruction_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
