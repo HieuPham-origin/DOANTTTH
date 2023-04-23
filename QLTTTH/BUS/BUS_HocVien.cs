@@ -43,5 +43,10 @@ namespace BUS
         {
             dHocVien.bindLHComboBoxByKH(cbx, ten_kh);
         }
+
+        public string getLatestMaHV()
+        {
+            return dHocVien.getLatestMaHV();
+        }
     }
 }

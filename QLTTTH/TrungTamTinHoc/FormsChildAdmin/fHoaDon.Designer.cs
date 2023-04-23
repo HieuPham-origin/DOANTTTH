@@ -29,9 +29,9 @@ namespace TrungTamTinHoc.FormsChildAdmin
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv_KhoaHoc = new System.Windows.Forms.DataGridView();
             this.col_MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,11 +59,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.groupBox2.Controls.Add(this.dgv_KhoaHoc);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(14, 419);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Location = new System.Drawing.Point(9, 272);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(631, 294);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox2.Size = new System.Drawing.Size(421, 191);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khóa học đăng ký";
@@ -75,14 +75,14 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.dgv_KhoaHoc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_KhoaHoc.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_KhoaHoc.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_KhoaHoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_KhoaHoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_KhoaHoc.ColumnHeadersHeight = 30;
             this.dgv_KhoaHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_KhoaHoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -92,28 +92,28 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.dgv_KhoaHoc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_KhoaHoc.EnableHeadersVisualStyles = false;
             this.dgv_KhoaHoc.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgv_KhoaHoc.Location = new System.Drawing.Point(3, 36);
-            this.dgv_KhoaHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgv_KhoaHoc.Location = new System.Drawing.Point(2, 25);
+            this.dgv_KhoaHoc.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgv_KhoaHoc.Name = "dgv_KhoaHoc";
             this.dgv_KhoaHoc.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_KhoaHoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_KhoaHoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_KhoaHoc.RowHeadersVisible = false;
             this.dgv_KhoaHoc.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_KhoaHoc.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_KhoaHoc.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_KhoaHoc.RowTemplate.Height = 24;
             this.dgv_KhoaHoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_KhoaHoc.Size = new System.Drawing.Size(625, 254);
+            this.dgv_KhoaHoc.Size = new System.Drawing.Size(417, 163);
             this.dgv_KhoaHoc.TabIndex = 30;
             // 
             // col_MaKH
@@ -139,9 +139,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(246, 32);
+            this.label1.Location = new System.Drawing.Point(164, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 32);
+            this.label1.Size = new System.Drawing.Size(122, 21);
             this.label1.TabIndex = 16;
             this.label1.Text = "TẠO HÓA ĐƠN";
             // 
@@ -156,11 +157,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.groupBox1.Controls.Add(this.txt_TenKhach);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(14, 90);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Location = new System.Drawing.Point(9, 58);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(631, 321);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox1.Size = new System.Drawing.Size(421, 209);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
@@ -168,10 +169,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // cbx_KhoaHoc
             // 
             this.cbx_KhoaHoc.FormattingEnabled = true;
-            this.cbx_KhoaHoc.Location = new System.Drawing.Point(228, 203);
-            this.cbx_KhoaHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbx_KhoaHoc.Location = new System.Drawing.Point(152, 132);
+            this.cbx_KhoaHoc.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cbx_KhoaHoc.Name = "cbx_KhoaHoc";
-            this.cbx_KhoaHoc.Size = new System.Drawing.Size(281, 28);
+            this.cbx_KhoaHoc.Size = new System.Drawing.Size(189, 21);
             this.cbx_KhoaHoc.TabIndex = 8;
             // 
             // btn_Xoa
@@ -185,14 +186,15 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.ForeColor = System.Drawing.Color.White;
-            this.btn_Xoa.Location = new System.Drawing.Point(120, 264);
-            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Xoa.Location = new System.Drawing.Point(80, 172);
+            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(169, 50);
+            this.btn_Xoa.Size = new System.Drawing.Size(113, 32);
             this.btn_Xoa.TabIndex = 7;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.TextColor = System.Drawing.Color.White;
             this.btn_Xoa.UseVisualStyleBackColor = false;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Them
             // 
@@ -205,10 +207,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Them.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.ForeColor = System.Drawing.Color.White;
-            this.btn_Them.Location = new System.Drawing.Point(340, 264);
-            this.btn_Them.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Them.Location = new System.Drawing.Point(227, 172);
+            this.btn_Them.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(169, 50);
+            this.btn_Them.Size = new System.Drawing.Size(113, 32);
             this.btn_Them.TabIndex = 6;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.TextColor = System.Drawing.Color.White;
@@ -218,9 +220,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(98, 206);
+            this.label4.Location = new System.Drawing.Point(65, 134);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 20);
+            this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Chọn khóa học";
             // 
@@ -231,15 +234,14 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.txt_TongTien.BorderRadius = 0;
             this.txt_TongTien.BorderSize = 2;
             this.txt_TongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TongTien.Location = new System.Drawing.Point(220, 126);
-            this.txt_TongTien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_TongTien.Location = new System.Drawing.Point(147, 82);
             this.txt_TongTien.Multiline = false;
             this.txt_TongTien.Name = "txt_TongTien";
-            this.txt_TongTien.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.txt_TongTien.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txt_TongTien.PasswordChar = false;
             this.txt_TongTien.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_TongTien.PlaceholderText = "";
-            this.txt_TongTien.Size = new System.Drawing.Size(299, 43);
+            this.txt_TongTien.Size = new System.Drawing.Size(199, 29);
             this.txt_TongTien.TabIndex = 3;
             this.txt_TongTien.Texts = "";
             this.txt_TongTien.UnderlinedStyle = true;
@@ -247,9 +249,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 138);
+            this.label3.Location = new System.Drawing.Point(65, 90);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Số tiền";
             // 
@@ -260,15 +263,14 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.txt_TenKhach.BorderRadius = 0;
             this.txt_TenKhach.BorderSize = 2;
             this.txt_TenKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenKhach.Location = new System.Drawing.Point(220, 49);
-            this.txt_TenKhach.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_TenKhach.Location = new System.Drawing.Point(147, 32);
             this.txt_TenKhach.Multiline = false;
             this.txt_TenKhach.Name = "txt_TenKhach";
-            this.txt_TenKhach.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.txt_TenKhach.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txt_TenKhach.PasswordChar = false;
             this.txt_TenKhach.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_TenKhach.PlaceholderText = "";
-            this.txt_TenKhach.Size = new System.Drawing.Size(299, 43);
+            this.txt_TenKhach.Size = new System.Drawing.Size(199, 29);
             this.txt_TenKhach.TabIndex = 1;
             this.txt_TenKhach.Texts = "";
             this.txt_TenKhach.UnderlinedStyle = true;
@@ -276,9 +278,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(98, 60);
+            this.label2.Location = new System.Drawing.Point(65, 39);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Họ và tên";
             // 
@@ -293,10 +296,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Huy.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Huy.ForeColor = System.Drawing.Color.White;
-            this.btn_Huy.Location = new System.Drawing.Point(99, 760);
-            this.btn_Huy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Huy.Location = new System.Drawing.Point(66, 494);
+            this.btn_Huy.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Huy.Name = "btn_Huy";
-            this.btn_Huy.Size = new System.Drawing.Size(169, 50);
+            this.btn_Huy.Size = new System.Drawing.Size(113, 32);
             this.btn_Huy.TabIndex = 1;
             this.btn_Huy.Text = "Hủy";
             this.btn_Huy.TextColor = System.Drawing.Color.White;
@@ -313,10 +316,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Xacnhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xacnhan.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xacnhan.ForeColor = System.Drawing.Color.White;
-            this.btn_Xacnhan.Location = new System.Drawing.Point(364, 760);
-            this.btn_Xacnhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Xacnhan.Location = new System.Drawing.Point(243, 494);
+            this.btn_Xacnhan.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Xacnhan.Name = "btn_Xacnhan";
-            this.btn_Xacnhan.Size = new System.Drawing.Size(169, 50);
+            this.btn_Xacnhan.Size = new System.Drawing.Size(113, 32);
             this.btn_Xacnhan.TabIndex = 2;
             this.btn_Xacnhan.Text = "Thêm hóa đơn";
             this.btn_Xacnhan.TextColor = System.Drawing.Color.White;
@@ -325,16 +328,16 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             // fHoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(656, 831);
+            this.ClientSize = new System.Drawing.Size(437, 540);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btn_Xacnhan);
             this.Controls.Add(this.btn_Huy);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "fHoaDon";
             this.Text = "Hóa đơn";
             this.Load += new System.EventHandler(this.fHoaDon_Load);

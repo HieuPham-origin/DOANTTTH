@@ -22,6 +22,11 @@ namespace BUS
             return dHoaDon.suaHoaDon(hd);
         }
 
+        public bool xoaHoaDon(DTO_HoaDon hd)
+        {
+            return dHoaDon.xoaHoaDon(hd);
+        }
+
         public void bindGridView(DataGridView dataGridView)
         {
             dHoaDon.bindGridView(dataGridView);

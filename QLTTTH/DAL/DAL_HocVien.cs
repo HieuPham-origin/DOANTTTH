@@ -137,5 +137,26 @@ namespace DAL
             conn.Close();
         }
 
+
+        public string getLatestMaHV()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT MAX(CAST(SUBSTRING(Ma_HV, 3, LEN(Ma_HV) - 2) AS INT)) FROM Hoc_vien", conn);
+            conn.Open();
+            string latestMaHV = cmd.ExecuteScalar()?.ToString();
+            conn.Close();
+
+            if (latestMaHV == "")
+            {
+                latestMaHV = "HV000";
+            }
+            else
+            {
+                int latestMaHVNum = int.Parse(latestMaHV);
+                latestMaHV = string.Format("HV{0:D3}", latestMaHVNum);
+            }
+
+            return latestMaHV;
+        }
+
     }
 }

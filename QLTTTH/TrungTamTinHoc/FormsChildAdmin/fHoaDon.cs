@@ -15,6 +15,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
     {
         BUS_ChiTietHoaDon bCTHD = new BUS_ChiTietHoaDon();
         BUS_KhoaHoc bKH = new BUS_KhoaHoc();
+        BUS_HoaDon bHD = new BUS_HoaDon();
         private int hdID;
         private string ndt = "";
         private int tongTien = 0;
@@ -35,21 +36,32 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            DTO_ChiTietHoaDon cthd = new DTO_ChiTietHoaDon(hdID, bKH.getIdByName(cbx_KhoaHoc.SelectedItem.ToString()));
-            if (bCTHD.themChiTietHoaDon(cthd))
+            if(cbx_KhoaHoc.SelectedItem != null)
             {
-
-                DataGridViewRow row = dgv_KhoaHoc.Rows[dgv_KhoaHoc.Rows.Add()]; 
-                row.Cells["col_MaKH"].Value = cthd.Ma_KH; 
-                row.Cells["col_tenKH"].Value = bKH.getNameById(cthd.Ma_KH);
-                row.Cells["col_hocPhi"].Value = bKH.getFeeById(cthd.Ma_KH);
-                tongTien += bKH.getFeeById(cthd.Ma_KH);
-                txt_TongTien.Texts = tongTien.ToString();
+                DTO_ChiTietHoaDon cthd = new DTO_ChiTietHoaDon(hdID, bKH.getIdByName(cbx_KhoaHoc.SelectedItem.ToString()));
+                if (bCTHD.themChiTietHoaDon(cthd))
+                { 
+                    DataGridViewRow row = dgv_KhoaHoc.Rows[dgv_KhoaHoc.Rows.Add()];
+                    row.Cells["col_MaKH"].Value = cthd.Ma_KH;
+                    row.Cells["col_tenKH"].Value = bKH.getNameById(cthd.Ma_KH);
+                    row.Cells["col_hocPhi"].Value = bKH.getFeeById(cthd.Ma_KH);
+                    tongTien += bKH.getFeeById(cthd.Ma_KH);
+                    txt_TongTien.Texts = tongTien.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại");
+                }
             }
             else
             {
-                MessageBox.Show("Thêm thất bại");
+                DTO_HoaDon deleteHD = new DTO_HoaDon(hdID, "", DateTime.Today, 0);
+                bHD.xoaHoaDon(deleteHD);
+                MessageBox.Show("Chưa nhập đủ thông tin");
+                this.Close();
+
             }
+           
         }
 
         private void btn_Xacnhan_Click(object sender, EventArgs e)
@@ -59,5 +71,9 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.Close();
         }
 
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

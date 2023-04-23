@@ -61,6 +61,26 @@ namespace DAL
             return false;
         }
 
+        public bool xoaHoaDon(DTO_HoaDon hd)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("dbo.HoaDon_CRUD", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@StatementType", "DELETE");
+            cmd.Parameters.AddWithValue("@Ma_hd", hd.Ma_hd);
+            cmd.Parameters.AddWithValue("@Nguoi_dong_tien", hd.Nguoi_dong_tien);
+            cmd.Parameters.AddWithValue("@Ngay_lap", hd.Ngay_lap);
+            cmd.Parameters.AddWithValue("@Tong_tien", hd.Tong_tien);
+            int i = cmd.ExecuteNonQuery();
+            if (i != 0)
+            {
+                conn.Close();
+                return true;
+            }
+            conn.Close();
+            return false;
+        }
+
         public void bindGridView(DataGridView dataGridView)
         {
             conn.Open();

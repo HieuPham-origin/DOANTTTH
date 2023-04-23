@@ -170,6 +170,20 @@ BEGIN
     LEFT JOIN Tai_Khoan ON inserted.Ma_GV = Tai_Khoan.TaiKhoan
     WHERE Tai_Khoan.TaiKhoan IS NULL;
 END;
+
+go
+CREATE TRIGGER tr_chi_tiet_insert
+ON chi_tiet
+AFTER INSERT
+AS
+BEGIN
+  UPDATE Lop_hoc
+  SET Soluong = Soluong + 1
+  FROM Lop_hoc lh
+  INNER JOIN inserted i ON lh.Ma_LH = i.Ma_LH;
+END
+
+
 go
 --EXEC dbo.GiangVien_CRUD 'INSERT', NULL, 'Phu', '2003-07-05', '123', 'HCM'
 

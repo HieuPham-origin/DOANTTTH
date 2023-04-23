@@ -16,6 +16,8 @@ namespace TrungTamTinHoc.FormsChildAdmin
     {
         BUS_HocVien bHV = new BUS_HocVien();
         BUS_KhoaHoc bKH = new BUS_KhoaHoc();
+        BUS_ChiTietDangKy bCTDK = new BUS_ChiTietDangKy();
+        BUS_LopHoc bLH = new BUS_LopHoc();
         public fThemHocVien()
         {
             InitializeComponent();
@@ -39,13 +41,36 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+
+            string selectedValue = cbx_LopHoc.SelectedItem.ToString();
+            string[] parts = selectedValue.Split(new[] { ',', ']' }, StringSplitOptions.RemoveEmptyEntries);
+            string tenLH = parts[1].Trim();
+
+            DTO_ChiTietDangKy newCTDK = new DTO_ChiTietDangKy(DateTime.Today, bHV.getLatestMaHV(), bLH.getMaLHFromTenLH(tenLH));
+
+            if (bCTDK.themChiTietDangKy(newCTDK))
+            {
+                DataGridViewRow row = dgv_ChiTiet.Rows[dgv_ChiTiet.Rows.Add()];
+                row.Cells["col_MaHV"].Value = newCTDK.Ma_HV;
+                row.Cells["col_tenLH"].Value = bLH.getNameById(newCTDK.Ma_LH);
+                row.Cells["col_ngayDK"].Value = newCTDK.Ngay_Dang_Ky;
+            }
+            else
+            {
+                MessageBox.Show("Ghi danh thất bại");
+            }
+
+        }
+
+        private void btn_addHV_Click(object sender, EventArgs e)
+        {
             DTO_HocVien newHV = new DTO_HocVien(null, txt_name.Texts, date_dob.Value, txt_home.Texts, txt_phone.Texts);
+
             if (bHV.themHocVien(newHV))
             {
+
                 MessageBox.Show("Thêm thành công");
-                this.Close(); // close the current form
-                fQLHocVien reload = new fQLHocVien();
-                reload.Refresh(); // reload the fQLHocVien form
+            
             }
             else
             {

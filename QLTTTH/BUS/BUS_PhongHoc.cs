@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    class BUS_PhongHoc
+    public class BUS_PhongHoc
     {
     }
 }

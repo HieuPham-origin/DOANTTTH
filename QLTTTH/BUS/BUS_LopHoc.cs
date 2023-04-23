@@ -51,6 +51,19 @@ namespace BUS
             return dLH.xoaLopHoc(lh);
         }
 
+        public int getMaLHFromTenLH(string tenLH)
+        {
+            return dLH.getMaLHFromTenLH(tenLH);
+        }
 
+        public string getNameById(int id)
+        {
+            return dLH.getNameById(id);
+        }
+
+        public void bindGridView(DataGridView dataGridView)
+        {
+            dLH.bindGridView(dataGridView);
+        }
     }
 }

@@ -21,6 +21,19 @@ namespace DAL
         }
 
 
+        public void bindGridView(DataGridView dataGridView)
+        {
+            conn.Open();
+            string query = "SELECT * from Lop_Hoc";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataAdapter dv = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dv.Fill(dt);
+
+            dataGridView.DataSource = dt;
+            conn.Close();
+        }
+
         public void bindKHComboBox(ComboBox cbx)
         {
             conn.Open();
@@ -180,6 +193,32 @@ namespace DAL
             }
             conn.Close();
             return false;
+        }
+
+        public int getMaLHFromTenLH(string tenLH)
+        {
+            conn.Open();
+            SqlCommand command = new SqlCommand("SELECT Ma_LH FROM Lop_hoc WHERE Ten_LH = @TenLH", conn);
+            command.Parameters.AddWithValue("@TenLH", tenLH);
+            int maLH = (int)command.ExecuteScalar();
+            conn.Close();
+            return maLH;
+        }
+
+
+        public string getNameById(int id)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Ten_LH FROM Lop_hoc WHERE  Ma_LH = @id", conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            SqlDataReader reader = cmd.ExecuteReader();
+            string name = "";
+            if (reader.Read())
+            {
+                name = reader["Ten_LH"].ToString();
+            }
+            conn.Close();
+            return name;
         }
 
 

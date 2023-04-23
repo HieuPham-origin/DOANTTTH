@@ -29,13 +29,15 @@ namespace TrungTamTinHoc.FormsChildAdmin
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbx_LopHoc = new System.Windows.Forms.ComboBox();
             this.cbx_KhoaHoc = new System.Windows.Forms.ComboBox();
             this.btn_Add = new FontAwesome.Sharp.IconButton();
             this.btn_Delete = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -49,27 +51,32 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_addHV = new FontAwesome.Sharp.IconButton();
+            this.dgv_ChiTiet = new System.Windows.Forms.DataGridView();
+            this.col_MaHV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_tenLH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_ngayDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChiTiet)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.dgv_ChiTiet);
             this.groupBox2.Controls.Add(this.cbx_LopHoc);
             this.groupBox2.Controls.Add(this.cbx_KhoaHoc);
             this.groupBox2.Controls.Add(this.btn_Add);
             this.groupBox2.Controls.Add(this.btn_Delete);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(580, 74);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Location = new System.Drawing.Point(387, 48);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(542, 469);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox2.Size = new System.Drawing.Size(361, 305);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Đăng ký khóa học";
@@ -77,17 +84,19 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // cbx_LopHoc
             // 
             this.cbx_LopHoc.FormattingEnabled = true;
-            this.cbx_LopHoc.Location = new System.Drawing.Point(197, 131);
+            this.cbx_LopHoc.Location = new System.Drawing.Point(131, 85);
+            this.cbx_LopHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbx_LopHoc.Name = "cbx_LopHoc";
-            this.cbx_LopHoc.Size = new System.Drawing.Size(255, 38);
+            this.cbx_LopHoc.Size = new System.Drawing.Size(171, 27);
             this.cbx_LopHoc.TabIndex = 20;
             // 
             // cbx_KhoaHoc
             // 
             this.cbx_KhoaHoc.FormattingEnabled = true;
-            this.cbx_KhoaHoc.Location = new System.Drawing.Point(197, 60);
+            this.cbx_KhoaHoc.Location = new System.Drawing.Point(131, 39);
+            this.cbx_KhoaHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbx_KhoaHoc.Name = "cbx_KhoaHoc";
-            this.cbx_KhoaHoc.Size = new System.Drawing.Size(255, 38);
+            this.cbx_KhoaHoc.Size = new System.Drawing.Size(171, 27);
             this.cbx_KhoaHoc.TabIndex = 19;
             this.cbx_KhoaHoc.SelectedIndexChanged += new System.EventHandler(this.cbx_KhoaHoc_SelectedIndexChanged);
             // 
@@ -100,11 +109,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Add.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btn_Add.IconColor = System.Drawing.Color.White;
             this.btn_Add.IconSize = 16;
-            this.btn_Add.Location = new System.Drawing.Point(325, 194);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Add.Location = new System.Drawing.Point(217, 126);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Rotation = 0D;
-            this.btn_Add.Size = new System.Drawing.Size(127, 55);
+            this.btn_Add.Size = new System.Drawing.Size(85, 36);
             this.btn_Add.TabIndex = 18;
             this.btn_Add.Text = "Thêm";
             this.btn_Add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -120,11 +129,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Delete.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.btn_Delete.IconColor = System.Drawing.Color.White;
             this.btn_Delete.IconSize = 16;
-            this.btn_Delete.Location = new System.Drawing.Point(105, 194);
-            this.btn_Delete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Delete.Location = new System.Drawing.Point(70, 126);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Rotation = 0D;
-            this.btn_Delete.Size = new System.Drawing.Size(127, 55);
+            this.btn_Delete.Size = new System.Drawing.Size(85, 36);
             this.btn_Delete.TabIndex = 17;
             this.btn_Delete.Text = "Xóa";
             this.btn_Delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -134,30 +143,21 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(21, 138);
+            this.label7.Location = new System.Drawing.Point(14, 90);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 25);
+            this.label7.Size = new System.Drawing.Size(78, 15);
             this.label7.TabIndex = 7;
             this.label7.Text = "Chọn lớp học";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 256);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(529, 205);
-            this.dataGridView1.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 66);
+            this.label6.Location = new System.Drawing.Point(12, 43);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 25);
+            this.label6.Size = new System.Drawing.Size(87, 15);
             this.label6.TabIndex = 2;
             this.label6.Text = "Chọn khóa học";
             // 
@@ -165,16 +165,16 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(503, 9);
+            this.label5.Location = new System.Drawing.Point(335, 6);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 20);
+            this.label5.Size = new System.Drawing.Size(96, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "PHIẾU GHI DANH";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_Confirm);
-            this.groupBox1.Controls.Add(this.btn_Cancel);
+            this.groupBox1.Controls.Add(this.btn_addHV);
             this.groupBox1.Controls.Add(this.txt_phone);
             this.groupBox1.Controls.Add(this.txt_home);
             this.groupBox1.Controls.Add(this.txt_name);
@@ -185,11 +185,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(8, 74);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Location = new System.Drawing.Point(5, 48);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(544, 469);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox1.Size = new System.Drawing.Size(363, 305);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin học viên";
@@ -203,11 +203,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Confirm.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.btn_Confirm.IconColor = System.Drawing.Color.White;
             this.btn_Confirm.IconSize = 16;
-            this.btn_Confirm.Location = new System.Drawing.Point(328, 392);
-            this.btn_Confirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Confirm.Location = new System.Drawing.Point(663, 389);
+            this.btn_Confirm.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Rotation = 0D;
-            this.btn_Confirm.Size = new System.Drawing.Size(127, 55);
+            this.btn_Confirm.Size = new System.Drawing.Size(85, 36);
             this.btn_Confirm.TabIndex = 21;
             this.btn_Confirm.Text = "Xác nhận";
             this.btn_Confirm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -223,11 +223,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Cancel.IconChar = FontAwesome.Sharp.IconChar.StickerMule;
             this.btn_Cancel.IconColor = System.Drawing.Color.White;
             this.btn_Cancel.IconSize = 16;
-            this.btn_Cancel.Location = new System.Drawing.Point(116, 392);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Cancel.Location = new System.Drawing.Point(552, 389);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Rotation = 0D;
-            this.btn_Cancel.Size = new System.Drawing.Size(127, 55);
+            this.btn_Cancel.Size = new System.Drawing.Size(85, 36);
             this.btn_Cancel.TabIndex = 19;
             this.btn_Cancel.Text = "Hủy";
             this.btn_Cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -241,15 +241,14 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.txt_phone.BorderRadius = 0;
             this.txt_phone.BorderSize = 2;
             this.txt_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_phone.Location = new System.Drawing.Point(173, 281);
-            this.txt_phone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_phone.Location = new System.Drawing.Point(115, 183);
             this.txt_phone.Multiline = false;
             this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.txt_phone.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txt_phone.PasswordChar = false;
             this.txt_phone.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_phone.PlaceholderText = "";
-            this.txt_phone.Size = new System.Drawing.Size(320, 43);
+            this.txt_phone.Size = new System.Drawing.Size(213, 29);
             this.txt_phone.TabIndex = 15;
             this.txt_phone.Texts = "";
             this.txt_phone.UnderlinedStyle = false;
@@ -262,15 +261,14 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.txt_home.BorderRadius = 0;
             this.txt_home.BorderSize = 2;
             this.txt_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_home.Location = new System.Drawing.Point(174, 205);
-            this.txt_home.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_home.Location = new System.Drawing.Point(116, 133);
             this.txt_home.Multiline = false;
             this.txt_home.Name = "txt_home";
-            this.txt_home.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.txt_home.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txt_home.PasswordChar = false;
             this.txt_home.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_home.PlaceholderText = "";
-            this.txt_home.Size = new System.Drawing.Size(320, 43);
+            this.txt_home.Size = new System.Drawing.Size(213, 29);
             this.txt_home.TabIndex = 14;
             this.txt_home.Texts = "";
             this.txt_home.UnderlinedStyle = false;
@@ -283,15 +281,14 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.txt_name.BorderRadius = 0;
             this.txt_name.BorderSize = 2;
             this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name.Location = new System.Drawing.Point(174, 60);
-            this.txt_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_name.Location = new System.Drawing.Point(116, 39);
             this.txt_name.Multiline = false;
             this.txt_name.Name = "txt_name";
-            this.txt_name.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.txt_name.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txt_name.PasswordChar = false;
             this.txt_name.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_name.PlaceholderText = "";
-            this.txt_name.Size = new System.Drawing.Size(320, 43);
+            this.txt_name.Size = new System.Drawing.Size(213, 29);
             this.txt_name.TabIndex = 13;
             this.txt_name.Texts = "";
             this.txt_name.UnderlinedStyle = false;
@@ -301,11 +298,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.date_dob.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.date_dob.BorderSize = 0;
             this.date_dob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.date_dob.Location = new System.Drawing.Point(173, 126);
-            this.date_dob.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.date_dob.Location = new System.Drawing.Point(115, 82);
+            this.date_dob.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.date_dob.MinimumSize = new System.Drawing.Size(4, 35);
             this.date_dob.Name = "date_dob";
-            this.date_dob.Size = new System.Drawing.Size(320, 35);
+            this.date_dob.Size = new System.Drawing.Size(215, 35);
             this.date_dob.SkinColor = System.Drawing.Color.DodgerBlue;
             this.date_dob.TabIndex = 12;
             this.date_dob.TextColor = System.Drawing.Color.White;
@@ -314,9 +311,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 281);
+            this.label4.Location = new System.Drawing.Point(17, 183);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 25);
+            this.label4.Size = new System.Drawing.Size(77, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "Số điện thoại";
             // 
@@ -324,9 +322,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 209);
+            this.label3.Location = new System.Drawing.Point(17, 136);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 25);
+            this.label3.Size = new System.Drawing.Size(44, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Địa chỉ";
             // 
@@ -334,9 +333,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 138);
+            this.label2.Location = new System.Drawing.Point(17, 90);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 25);
+            this.label2.Size = new System.Drawing.Size(60, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ngày sinh";
             // 
@@ -344,30 +344,119 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 66);
+            this.label1.Location = new System.Drawing.Point(17, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 25);
+            this.label1.Size = new System.Drawing.Size(58, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Họ và tên";
             // 
+            // btn_addHV
+            // 
+            this.btn_addHV.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_addHV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addHV.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_addHV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addHV.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btn_addHV.IconColor = System.Drawing.Color.White;
+            this.btn_addHV.IconSize = 16;
+            this.btn_addHV.Location = new System.Drawing.Point(105, 248);
+            this.btn_addHV.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_addHV.Name = "btn_addHV";
+            this.btn_addHV.Rotation = 0D;
+            this.btn_addHV.Size = new System.Drawing.Size(146, 36);
+            this.btn_addHV.TabIndex = 22;
+            this.btn_addHV.Text = "Thêm học viên";
+            this.btn_addHV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_addHV.UseVisualStyleBackColor = true;
+            this.btn_addHV.Click += new System.EventHandler(this.btn_addHV_Click);
+            // 
+            // dgv_ChiTiet
+            // 
+            this.dgv_ChiTiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_ChiTiet.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgv_ChiTiet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_ChiTiet.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_ChiTiet.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ChiTiet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_ChiTiet.ColumnHeadersHeight = 30;
+            this.dgv_ChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_ChiTiet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_MaHV,
+            this.col_tenLH,
+            this.col_ngayDK});
+            this.dgv_ChiTiet.EnableHeadersVisualStyles = false;
+            this.dgv_ChiTiet.GridColor = System.Drawing.Color.SteelBlue;
+            this.dgv_ChiTiet.Location = new System.Drawing.Point(0, 168);
+            this.dgv_ChiTiet.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dgv_ChiTiet.Name = "dgv_ChiTiet";
+            this.dgv_ChiTiet.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ChiTiet.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_ChiTiet.RowHeadersVisible = false;
+            this.dgv_ChiTiet.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_ChiTiet.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_ChiTiet.RowTemplate.Height = 24;
+            this.dgv_ChiTiet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_ChiTiet.Size = new System.Drawing.Size(359, 137);
+            this.dgv_ChiTiet.TabIndex = 31;
+            // 
+            // col_MaHV
+            // 
+            this.col_MaHV.HeaderText = "Mã HV";
+            this.col_MaHV.MinimumWidth = 8;
+            this.col_MaHV.Name = "col_MaHV";
+            // 
+            // col_tenLH
+            // 
+            this.col_tenLH.HeaderText = "Lớp học";
+            this.col_tenLH.MinimumWidth = 8;
+            this.col_tenLH.Name = "col_tenLH";
+            // 
+            // col_ngayDK
+            // 
+            this.col_ngayDK.HeaderText = "Ngày đăng ký";
+            this.col_ngayDK.MinimumWidth = 8;
+            this.col_ngayDK.Name = "col_ngayDK";
+            this.col_ngayDK.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // fThemHocVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(1144, 558);
+            this.ClientSize = new System.Drawing.Size(763, 502);
+            this.Controls.Add(this.btn_Confirm);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Controls.Add(this.btn_Cancel);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "fThemHocVien";
             this.Text = "fThemHocVien";
             this.Load += new System.EventHandler(this.fThemHocVien_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChiTiet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,7 +468,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private FontAwesome.Sharp.IconButton btn_Add;
         private FontAwesome.Sharp.IconButton btn_Delete;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -395,5 +483,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbx_LopHoc;
         private System.Windows.Forms.ComboBox cbx_KhoaHoc;
+        private FontAwesome.Sharp.IconButton btn_addHV;
+        private System.Windows.Forms.DataGridView dgv_ChiTiet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_MaHV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_tenLH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_ngayDK;
     }
 }
