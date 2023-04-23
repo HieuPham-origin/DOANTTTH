@@ -202,7 +202,9 @@ namespace TrungTamTinHoc
 
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ActivateButton(sender, colorActive);
+            OpenChildForm(new FormsChildAdmin.fQLLopHoc());
+            panelInfo.BringToFront();
         }
         //Structs
 

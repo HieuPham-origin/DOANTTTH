@@ -37,5 +37,11 @@ namespace BUS
         {
             dHocVien.bindGridViewbySearch(gridView, name);
         }
+
+
+        public void bindLHComboBoxByKH(ComboBox cbx, string ten_kh)
+        {
+            dHocVien.bindLHComboBoxByKH(cbx, ten_kh);
+        }
     }
 }

@@ -79,8 +79,6 @@ CREATE TABLE Lop_hoc
 	FOREIGN KEY (Ma_KH) REFERENCES Khoa_hoc(Ma_KH)
 );
 
-
-
 CREATE TABLE Hoa_don
 (
 	Ma_hd INT NOT NULL IDENTITY (1,1),
@@ -98,8 +96,6 @@ CREATE TABLE Chi_tietHD
 	FOREIGN KEY (Ma_hd) REFERENCES Hoa_don(Ma_hd),
 	FOREIGN KEY (Ma_KH) REFERENCES Khoa_hoc(Ma_KH),
 )
-
-
 
 
 CREATE TABLE chi_tiet

@@ -112,5 +112,30 @@ namespace DAL
             dataGridView.DataSource = dt;
             conn.Close();
         }
+
+
+        public void bindLHComboBoxByKH(ComboBox cbx, string ten_kh)
+        {
+            conn.Open();
+            // Get the Ma_KH based on the name of the Khoa Hoc
+            SqlCommand command1 = new SqlCommand("SELECT Ma_KH FROM Khoa_hoc WHERE Ten_KH=@ten_kh", conn);
+            command1.Parameters.AddWithValue("@ten_kh", ten_kh);
+            int ma_kh = (int)command1.ExecuteScalar();
+
+            // Query the Lop_hoc table based on the retrieved Ma_KH
+            SqlCommand command2 = new SqlCommand("SELECT Ma_LH, Ten_LH FROM Lop_hoc WHERE Ma_KH=@ma_kh", conn);
+            command2.Parameters.AddWithValue("@ma_kh", ma_kh);
+            SqlDataReader reader = command2.ExecuteReader();
+            Dictionary<int, string> items = new Dictionary<int, string>();
+            while (reader.Read())
+            {
+                items.Add(reader.GetInt32(0), reader.GetString(1));
+            }
+            cbx.DataSource = new BindingSource(items, null);
+            cbx.DisplayMember = "Value";
+            cbx.ValueMember = "Key";
+            conn.Close();
+        }
+
     }
 }

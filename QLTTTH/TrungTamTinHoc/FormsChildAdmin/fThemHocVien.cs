@@ -23,23 +23,34 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void fThemHocVien_Load(object sender, EventArgs e)
+        {
+            bKH.bindComboBox(cbx_KhoaHoc);
+        }
+
+        private void cbx_KhoaHoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string ten_kh = cbx_KhoaHoc.SelectedItem.ToString();
+            bHV.bindLHComboBoxByKH(cbx_LopHoc, ten_kh);
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
             DTO_HocVien newHV = new DTO_HocVien(null, txt_name.Texts, date_dob.Value, txt_home.Texts, txt_phone.Texts);
             if (bHV.themHocVien(newHV))
             {
                 MessageBox.Show("Thêm thành công");
                 this.Close(); // close the current form
                 fQLHocVien reload = new fQLHocVien();
-                reload.Refresh(); // reload the fQLGiangVien form
+                reload.Refresh(); // reload the fQLHocVien form
             }
             else
             {
                 MessageBox.Show("Thêm thất bại");
             }
-        }
-
-        private void fThemHocVien_Load(object sender, EventArgs e)
-        {
-            bKH.bindComboBox(cbx_KhoaHoc);
         }
     }
 }

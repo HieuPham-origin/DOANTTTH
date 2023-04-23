@@ -16,5 +16,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
         {
             InitializeComponent();
         }
+
+        private void btn_ThemLopHoc_Click(object sender, EventArgs e)
+        {
+            fThemLopHoc lophoc = new fThemLopHoc();
+            lophoc.Show();
+        }
     }
 }

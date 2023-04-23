@@ -8,14 +8,29 @@ using DAL;
 using DTO;
 namespace BUS
 {   
-    class BUS_LopHoc
+    public class BUS_LopHoc
     {
         DAL_LopHoc dLH = new DAL_LopHoc();
 
 
-        public void bindComboBox(ComboBox cbx)
+        public void bindKHComboBox(ComboBox cbx)
         {
-            dLH.bindComboBox(cbx);
+            dLH.bindKHComboBox(cbx);
+        }
+
+        public void bindCHComboBox(ComboBox cbx)
+        {
+            dLH.bindCHComboBox(cbx);
+        }
+
+        public void bindPHComboBox(ComboBox cbx)
+        {
+            dLH.bindPHComboBox(cbx);
+        }
+
+        public void bindGVComboBox(ComboBox cbx)
+        {
+            dLH.bindGVComboBox(cbx);
         }
 
 

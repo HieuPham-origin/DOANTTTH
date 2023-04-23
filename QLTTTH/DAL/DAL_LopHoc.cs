@@ -20,23 +20,84 @@ namespace DAL
             return dtKhoaHoc;
         }
 
-        
-        public void bindComboBox(ComboBox cbx)
+
+        public void bindKHComboBox(ComboBox cbx)
         {
             conn.Open();
-            SqlCommand command = new SqlCommand("SELECT Ten_KH FROM Khoa_Hoc", conn);
+            SqlCommand command = new SqlCommand("SELECT Ma_KH, Ten_KH FROM Khoa_Hoc", conn);
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                cbx.Items.Add(reader.GetString(0));
+                cbx.Items.Add(new KeyValuePair<int, string>(reader.GetInt32(0), reader.GetString(1)));
             }
+            cbx.DisplayMember = "Value";
+            cbx.ValueMember = "Key";
             conn.Close();
         }
 
 
-        public bool themLopHoc(DTO_LopHoc lh)
+        public void bindCHComboBox(ComboBox cbx)
         {
             conn.Open();
+            SqlCommand command = new SqlCommand("SELECT Ma_ca FROM Ca_hoc", conn);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                cbx.Items.Add(Convert.ToInt32(reader["Ma_ca"]));
+            }
+            conn.Close();
+        }
+
+        public void bindPHComboBox(ComboBox cbx)
+        {
+            conn.Open();
+            SqlCommand command = new SqlCommand("SELECT Ma_PH, Ten_PH FROM Phong_hoc", conn);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                cbx.Items.Add(new KeyValuePair<int, string>(reader.GetInt32(0), reader.GetString(1)));
+            }
+            cbx.ValueMember = "Key";
+            cbx.DisplayMember = "Value";
+            conn.Close();
+        }
+
+        public void bindGVComboBox(ComboBox cbx)
+        {
+            conn.Open();
+            SqlCommand command = new SqlCommand("SELECT Ma_GV, Ten_GV FROM Giang_vien", conn);
+            SqlDataReader reader = command.ExecuteReader();
+            Dictionary<string, string> items = new Dictionary<string, string>();
+            while (reader.Read())
+            {
+                string maGV = reader.GetString(0);
+                string tenGV = reader.GetString(1);
+                items.Add(maGV, tenGV);
+            }
+            cbx.DataSource = new BindingSource(items, null);
+            cbx.DisplayMember = "Value";
+            cbx.ValueMember = "Key";
+            conn.Close();
+        }
+
+
+
+
+        public bool themLopHoc(DTO_LopHoc lh)
+        {
+            // kiem tra trung ma_ca va ma_ph
+            SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM Lop_hoc WHERE Ma_ph=@Ma_ph AND Ma_ca=@Ma_ca", conn);
+            checkCmd.Parameters.AddWithValue("@Ma_ph", lh.Ma_PH);
+            checkCmd.Parameters.AddWithValue("@Ma_ca", lh.Ma_ca);
+            conn.Open();
+            int count = (int)checkCmd.ExecuteScalar();
+            conn.Close();
+
+            // tra ve false neu da trung ma_ca va ma_ph
+            if (count > 0)
+                return false;
+
+            // Them lop hoc
             SqlCommand cmd = new SqlCommand("dbo.LopHoc_CRUD", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@StatementType", "INSERT");
@@ -52,15 +113,16 @@ namespace DAL
             cmd.Parameters.AddWithValue("@So_buoi", lh.So_buoi);
             cmd.Parameters.AddWithValue("@Soluong", lh.Soluong);
 
+            conn.Open();
             int i = cmd.ExecuteNonQuery();
-            if (i != 0)
-            {
-                conn.Close();
-                return true;
-            }
             conn.Close();
+
+            if (i != 0)
+                return true;
+
             return false;
         }
+
 
 
         public bool suaLopHoc(DTO_LopHoc lh)
@@ -119,5 +181,7 @@ namespace DAL
             conn.Close();
             return false;
         }
+
+
     }
 }

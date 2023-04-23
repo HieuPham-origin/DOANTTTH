@@ -137,7 +137,6 @@ D:\Student\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.pdb
 D:\Student\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLHoaDon.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.csproj.AssemblyReference.cache
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.fGiangVien.resources
-C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.fHocVienAccess.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.fLogin.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.fAdmin.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLHoaDon.resources
@@ -149,7 +148,6 @@ C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamT
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLGiangVien.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLHocVien.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fThemHocVien.resources
-C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildHocVien.ThongtinCaNhan.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.Properties.Resources.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.csproj.GenerateResource.cache
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.csproj.CoreCompileInputs.cache
@@ -226,3 +224,11 @@ C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTin
 C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildGiangVien.fThongTinCaNhan.resources
 C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildHocVien.fThongtinCaNhan.resources
 C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildHocVien.fXemKhoaHoc.resources
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.fHocVien.resources
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLLopHoc.resources
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fThemLopHoc.resources
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildGiangVien.fLichDay.resources
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildGiangVien.fLopHoc.resources
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildGiangVien.fThongTinCaNhan.resources
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildHocVien.fThongtinCaNhan.resources
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildHocVien.fXemKhoaHoc.resources

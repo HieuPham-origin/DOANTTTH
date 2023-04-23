@@ -30,6 +30,8 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbx_LopHoc = new System.Windows.Forms.ComboBox();
+            this.cbx_KhoaHoc = new System.Windows.Forms.ComboBox();
             this.btn_Add = new FontAwesome.Sharp.IconButton();
             this.btn_Delete = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbx_KhoaHoc = new System.Windows.Forms.ComboBox();
-            this.cbx_LopHoc = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -74,6 +74,23 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Đăng ký khóa học";
             // 
+            // cbx_LopHoc
+            // 
+            this.cbx_LopHoc.FormattingEnabled = true;
+            this.cbx_LopHoc.Location = new System.Drawing.Point(197, 131);
+            this.cbx_LopHoc.Name = "cbx_LopHoc";
+            this.cbx_LopHoc.Size = new System.Drawing.Size(255, 38);
+            this.cbx_LopHoc.TabIndex = 20;
+            // 
+            // cbx_KhoaHoc
+            // 
+            this.cbx_KhoaHoc.FormattingEnabled = true;
+            this.cbx_KhoaHoc.Location = new System.Drawing.Point(197, 60);
+            this.cbx_KhoaHoc.Name = "cbx_KhoaHoc";
+            this.cbx_KhoaHoc.Size = new System.Drawing.Size(255, 38);
+            this.cbx_KhoaHoc.TabIndex = 19;
+            this.cbx_KhoaHoc.SelectedIndexChanged += new System.EventHandler(this.cbx_KhoaHoc_SelectedIndexChanged);
+            // 
             // btn_Add
             // 
             this.btn_Add.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -92,6 +109,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Add.Text = "Thêm";
             this.btn_Add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Delete
             // 
@@ -147,7 +165,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(140, 12);
+            this.label5.Location = new System.Drawing.Point(503, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 20);
             this.label5.TabIndex = 6;
@@ -331,22 +349,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.label1.Size = new System.Drawing.Size(92, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Họ và tên";
-            // 
-            // cbx_KhoaHoc
-            // 
-            this.cbx_KhoaHoc.FormattingEnabled = true;
-            this.cbx_KhoaHoc.Location = new System.Drawing.Point(197, 60);
-            this.cbx_KhoaHoc.Name = "cbx_KhoaHoc";
-            this.cbx_KhoaHoc.Size = new System.Drawing.Size(255, 38);
-            this.cbx_KhoaHoc.TabIndex = 19;
-            // 
-            // cbx_LopHoc
-            // 
-            this.cbx_LopHoc.FormattingEnabled = true;
-            this.cbx_LopHoc.Location = new System.Drawing.Point(197, 131);
-            this.cbx_LopHoc.Name = "cbx_LopHoc";
-            this.cbx_LopHoc.Size = new System.Drawing.Size(255, 38);
-            this.cbx_LopHoc.TabIndex = 20;
             // 
             // fThemHocVien
             // 
