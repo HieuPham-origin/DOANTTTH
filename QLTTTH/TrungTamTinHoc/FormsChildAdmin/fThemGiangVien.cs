@@ -63,5 +63,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
                 }
             }
         }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

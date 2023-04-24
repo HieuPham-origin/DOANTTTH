@@ -162,9 +162,10 @@ namespace TrungTamTinHoc
             panelInfo.BringToFront();
         }
 
-        private void btn_HuongDanSD_Click(object sender, EventArgs e)
+        private void btn_DoiMatKhau_Click(object sender, EventArgs e)
         {
-
+            fDoiMatKhau dmk = new fDoiMatKhau();
+            dmk.Show();
         }
     }
 }

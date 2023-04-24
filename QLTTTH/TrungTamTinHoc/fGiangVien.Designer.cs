@@ -73,6 +73,7 @@ namespace TrungTamTinHoc
             btn_Minimize.Size = new System.Drawing.Size(24, 23);
             btn_Minimize.TabIndex = 7;
             btn_Minimize.UseVisualStyleBackColor = true;
+            btn_Minimize.Click += new System.EventHandler(this.btn_Minimize_Click);
             // 
             // panelDesktop
             // 
@@ -115,6 +116,7 @@ namespace TrungTamTinHoc
             this.btn_Dangxuat.Text = "Đăng xuất";
             this.btn_Dangxuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Dangxuat.UseVisualStyleBackColor = false;
+            this.btn_Dangxuat.Click += new System.EventHandler(this.btn_Dangxuat_Click);
             // 
             // btn_DoiMatKhau
             // 
@@ -137,6 +139,7 @@ namespace TrungTamTinHoc
             this.btn_DoiMatKhau.Text = "Đổi mật khẩu";
             this.btn_DoiMatKhau.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_DoiMatKhau.UseVisualStyleBackColor = false;
+            this.btn_DoiMatKhau.Click += new System.EventHandler(this.btn_DoiMatKhau_Click);
             // 
             // panelTitle
             // 
@@ -170,6 +173,7 @@ namespace TrungTamTinHoc
             this.btn_Maximize.Size = new System.Drawing.Size(32, 32);
             this.btn_Maximize.TabIndex = 6;
             this.btn_Maximize.UseVisualStyleBackColor = true;
+            this.btn_Maximize.Click += new System.EventHandler(this.btn_Maximize_Click);
             // 
             // btn_Caidat
             // 
@@ -188,6 +192,7 @@ namespace TrungTamTinHoc
             this.btn_Caidat.Size = new System.Drawing.Size(135, 106);
             this.btn_Caidat.TabIndex = 8;
             this.btn_Caidat.UseVisualStyleBackColor = false;
+            this.btn_Caidat.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_Caidat_MouseClick);
             // 
             // lbTitle
             // 
@@ -216,6 +221,7 @@ namespace TrungTamTinHoc
             this.btn_Exit.Size = new System.Drawing.Size(24, 23);
             this.btn_Exit.TabIndex = 5;
             this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // iconCurrChildForm
             // 
@@ -286,6 +292,7 @@ namespace TrungTamTinHoc
             this.btn_LichDay.Text = "Lịch giảng dạy";
             this.btn_LichDay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_LichDay.UseVisualStyleBackColor = false;
+            this.btn_LichDay.Click += new System.EventHandler(this.btn_LichDay_Click);
             // 
             // btn_LopHoc
             // 
@@ -308,6 +315,7 @@ namespace TrungTamTinHoc
             this.btn_LopHoc.Text = "Xem lớp học";
             this.btn_LopHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_LopHoc.UseVisualStyleBackColor = false;
+            this.btn_LopHoc.Click += new System.EventHandler(this.btn_LopHoc_Click);
             // 
             // btn_Thongtincanhan
             // 
@@ -330,6 +338,7 @@ namespace TrungTamTinHoc
             this.btn_Thongtincanhan.Text = "Thông tin cá nhân";
             this.btn_Thongtincanhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Thongtincanhan.UseVisualStyleBackColor = false;
+            this.btn_Thongtincanhan.Click += new System.EventHandler(this.btn_Thongtincanhan_Click);
             // 
             // panel1
             // 

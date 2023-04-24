@@ -191,7 +191,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Cancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Cancel.IconChar = FontAwesome.Sharp.IconChar.StickerMule;
+            this.btn_Cancel.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
             this.btn_Cancel.IconColor = System.Drawing.Color.White;
             this.btn_Cancel.IconSize = 16;
             this.btn_Cancel.Location = new System.Drawing.Point(364, 268);
@@ -203,6 +203,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Cancel.Text = "Hủy";
             this.btn_Cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // label8
             // 
@@ -266,7 +267,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.date_BatDau.BorderSize = 0;
             this.date_BatDau.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_BatDau.Location = new System.Drawing.Point(673, 98);
-            this.date_BatDau.MinimumSize = new System.Drawing.Size(0, 35);
+            this.date_BatDau.MinimumSize = new System.Drawing.Size(4, 35);
             this.date_BatDau.Name = "date_BatDau";
             this.date_BatDau.Size = new System.Drawing.Size(285, 35);
             this.date_BatDau.SkinColor = System.Drawing.Color.MediumSlateBlue;
@@ -280,7 +281,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.date_KetThuc.CalendarFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_KetThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.date_KetThuc.Location = new System.Drawing.Point(673, 153);
-            this.date_KetThuc.MinimumSize = new System.Drawing.Size(0, 35);
+            this.date_KetThuc.MinimumSize = new System.Drawing.Size(4, 35);
             this.date_KetThuc.Name = "date_KetThuc";
             this.date_KetThuc.Size = new System.Drawing.Size(285, 35);
             this.date_KetThuc.SkinColor = System.Drawing.Color.MediumSlateBlue;

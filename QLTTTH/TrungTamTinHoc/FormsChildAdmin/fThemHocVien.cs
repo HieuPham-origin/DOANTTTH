@@ -58,6 +58,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             else
             {
                 MessageBox.Show("Ghi danh thất bại");
+                this.Close();
             }
 
         }
@@ -94,12 +95,19 @@ namespace TrungTamTinHoc.FormsChildAdmin
                 if (bHV.themHocVien(newHV))
                 {
                     MessageBox.Show("Thêm thành công");
+                    this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Thêm thất bại");
+                    this.Close();
                 }
             }
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

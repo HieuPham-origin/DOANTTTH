@@ -89,7 +89,7 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.btn_Trolai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Trolai.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btn_Trolai.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Trolai.IconChar = FontAwesome.Sharp.IconChar.StickerMule;
+            this.btn_Trolai.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
             this.btn_Trolai.IconColor = System.Drawing.Color.White;
             this.btn_Trolai.IconSize = 16;
             this.btn_Trolai.Location = new System.Drawing.Point(251, 362);
@@ -100,6 +100,7 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.btn_Trolai.Text = "Hủy";
             this.btn_Trolai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Trolai.UseVisualStyleBackColor = true;
+            this.btn_Trolai.Click += new System.EventHandler(this.btn_Trolai_Click);
             // 
             // txt_phone
             // 

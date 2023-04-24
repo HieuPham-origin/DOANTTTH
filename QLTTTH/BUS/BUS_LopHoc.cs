@@ -70,5 +70,15 @@ namespace BUS
         {
             dLH.bindGridViewbySearch(gridView, name);
         }
+
+        public void getLopHocGV(DataGridView dataGridView, string name)
+        {
+            dLH.getLopHocGV(dataGridView, name);
+        }
+
+        public void bindLHComboBox(ComboBox cbx)
+        {
+            dLH.bindLHComboBox(cbx);
+        }
     }
 }

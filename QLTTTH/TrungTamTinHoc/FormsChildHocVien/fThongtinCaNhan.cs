@@ -16,5 +16,10 @@ namespace TrungTamTinHoc.FormsChildHocVien
         {
             InitializeComponent();
         }
+
+        private void btn_Trolai_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

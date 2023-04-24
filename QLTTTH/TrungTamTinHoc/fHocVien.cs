@@ -35,6 +35,72 @@ namespace TrungTamTinHoc
 
         public static Color colorActive = Color.RoyalBlue;
 
+        private void btn_Trangchu_Click(object sender, EventArgs e)
+        {
+            if (currChildForm != null)
+            {
+                currChildForm.Hide();
+            }
+            ActivateButton(sender, colorActive);
+            panelInfo.BringToFront();
+        }
+
+        private void btn_Thongtincanhan_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, colorActive);
+            OpenChildForm(new FormsChildHocVien.fThongtinCaNhan());
+            panelInfo.BringToFront();
+            panelInfo.BringToFront();
+
+        }
+
+        private void btn_ThoiKhoaBieu_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, colorActive);
+            OpenChildForm(new FormsChildHocVien.fThoiKhoaBieu());
+            panelInfo.BringToFront();
+
+        }
+
+        private void btn_XemKhoaHoc_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, colorActive);
+            OpenChildForm(new FormsChildHocVien.fXemKhoaHoc());
+            panelInfo.BringToFront();
+        }
+
+        private void btn_DoiMatKhau_Click(object sender, EventArgs e)
+        {
+            fDoiMatKhau dmk = new fDoiMatKhau();
+            dmk.Show();
+        }
+
+        private void btn_Dangxuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            fLogin newLogin = new fLogin();
+            newLogin.Show();
+        }
+
+
+        private void btn_Minimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_Maximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         //methods
         private void ActivateButton(object senderBTN, Color color)
         {
@@ -92,30 +158,16 @@ namespace TrungTamTinHoc
             childForm.Show();
         }
 
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private void btn_Dangxuat_Click(object sender, EventArgs e)
+        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
         {
-            this.Close();
-            fLogin newLogin = new fLogin();
-            newLogin.Show();
-        }
-
-        private void btn_Minimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void btn_Maximize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-                WindowState = FormWindowState.Maximized;
-            else
-                WindowState = FormWindowState.Normal;
-        }
-
-        private void btn_Exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void btn_Caidat_MouseClick(object sender, MouseEventArgs e)
@@ -132,57 +184,5 @@ namespace TrungTamTinHoc
             }
         }
 
-        //Drag Form
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-
-        private void btn_Trangchu_Click(object sender, EventArgs e)
-        {
-            if (currChildForm != null)
-            {
-                currChildForm.Hide();
-            }
-            ActivateButton(sender, colorActive);
-            panelInfo.BringToFront();
-        }
-
-        private void btn_Thongtincanhan_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, colorActive);
-            OpenChildForm(new FormsChildHocVien.fThongtinCaNhan());
-            panelInfo.BringToFront();
-        }
-
-        private void btn_ThoiKhoaBieu_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, colorActive);
-            OpenChildForm(new FormsChildHocVien.fThoiKhoaBieu());
-            panelInfo.BringToFront();
-        }
-
-        private void btn_Result_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btn_XemKhoaHoc_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, colorActive);
-            OpenChildForm(new FormsChildHocVien.fXemKhoaHoc());
-            panelInfo.BringToFront();
-        }
-
-        private void btn_Instruction_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

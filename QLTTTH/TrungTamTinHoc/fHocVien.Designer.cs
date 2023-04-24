@@ -42,13 +42,13 @@ namespace TrungTamTinHoc
             this.btn_Exit = new FontAwesome.Sharp.IconButton();
             this.iconCurrChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelNav = new System.Windows.Forms.Panel();
-            this.btn_Instruction = new FontAwesome.Sharp.IconButton();
             this.btn_XemKhoaHoc = new FontAwesome.Sharp.IconButton();
             this.btn_ThoiKhoaBieu = new FontAwesome.Sharp.IconButton();
             this.btn_Thongtincanhan = new FontAwesome.Sharp.IconButton();
             this.btn_Trangchu = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             btn_Minimize = new FontAwesome.Sharp.IconButton();
             this.panelDesktop.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -58,6 +58,7 @@ namespace TrungTamTinHoc
             this.panelNav.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Minimize
@@ -76,6 +77,7 @@ namespace TrungTamTinHoc
             btn_Minimize.Size = new System.Drawing.Size(24, 40);
             btn_Minimize.TabIndex = 7;
             btn_Minimize.UseVisualStyleBackColor = true;
+            btn_Minimize.Click += new System.EventHandler(this.btn_Minimize_Click);
             // 
             // panelDesktop
             // 
@@ -90,6 +92,7 @@ namespace TrungTamTinHoc
             // 
             this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel2.Controls.Add(this.panelInfo);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -100,9 +103,9 @@ namespace TrungTamTinHoc
             // 
             this.panelInfo.Controls.Add(this.btn_Dangxuat);
             this.panelInfo.Controls.Add(this.btn_DoiMatKhau);
-            this.panelInfo.Location = new System.Drawing.Point(727, 0);
+            this.panelInfo.Location = new System.Drawing.Point(728, 0);
             this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(135, 96);
+            this.panelInfo.Size = new System.Drawing.Size(135, 100);
             this.panelInfo.TabIndex = 11;
             this.panelInfo.Visible = false;
             // 
@@ -127,6 +130,7 @@ namespace TrungTamTinHoc
             this.btn_Dangxuat.Text = "Đăng xuất";
             this.btn_Dangxuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Dangxuat.UseVisualStyleBackColor = false;
+            this.btn_Dangxuat.Click += new System.EventHandler(this.btn_Dangxuat_Click);
             // 
             // btn_DoiMatKhau
             // 
@@ -149,6 +153,7 @@ namespace TrungTamTinHoc
             this.btn_DoiMatKhau.Text = "Đổi mật khẩu";
             this.btn_DoiMatKhau.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_DoiMatKhau.UseVisualStyleBackColor = false;
+            this.btn_DoiMatKhau.Click += new System.EventHandler(this.btn_DoiMatKhau_Click);
             // 
             // panelTitle
             // 
@@ -183,6 +188,7 @@ namespace TrungTamTinHoc
             this.btn_Caidat.Size = new System.Drawing.Size(63, 65);
             this.btn_Caidat.TabIndex = 10;
             this.btn_Caidat.UseVisualStyleBackColor = false;
+            this.btn_Caidat.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_Caidat_MouseClick);
             // 
             // btn_Maximize
             // 
@@ -200,6 +206,7 @@ namespace TrungTamTinHoc
             this.btn_Maximize.Size = new System.Drawing.Size(24, 40);
             this.btn_Maximize.TabIndex = 6;
             this.btn_Maximize.UseVisualStyleBackColor = true;
+            this.btn_Maximize.Click += new System.EventHandler(this.btn_Maximize_Click);
             // 
             // lbTitle
             // 
@@ -228,6 +235,7 @@ namespace TrungTamTinHoc
             this.btn_Exit.Size = new System.Drawing.Size(30, 40);
             this.btn_Exit.TabIndex = 5;
             this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // iconCurrChildForm
             // 
@@ -243,7 +251,6 @@ namespace TrungTamTinHoc
             // panelNav
             // 
             this.panelNav.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panelNav.Controls.Add(this.btn_Instruction);
             this.panelNav.Controls.Add(this.btn_XemKhoaHoc);
             this.panelNav.Controls.Add(this.btn_ThoiKhoaBieu);
             this.panelNav.Controls.Add(this.btn_Thongtincanhan);
@@ -254,28 +261,6 @@ namespace TrungTamTinHoc
             this.panelNav.Name = "panelNav";
             this.panelNav.Size = new System.Drawing.Size(187, 560);
             this.panelNav.TabIndex = 6;
-            // 
-            // btn_Instruction
-            // 
-            this.btn_Instruction.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_Instruction.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Instruction.FlatAppearance.BorderSize = 0;
-            this.btn_Instruction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Instruction.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Instruction.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Instruction.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Instruction.IconChar = FontAwesome.Sharp.IconChar.Info;
-            this.btn_Instruction.IconColor = System.Drawing.Color.White;
-            this.btn_Instruction.IconSize = 20;
-            this.btn_Instruction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Instruction.Location = new System.Drawing.Point(0, 360);
-            this.btn_Instruction.Name = "btn_Instruction";
-            this.btn_Instruction.Rotation = 0D;
-            this.btn_Instruction.Size = new System.Drawing.Size(187, 50);
-            this.btn_Instruction.TabIndex = 9;
-            this.btn_Instruction.Text = "Hướng dẫn sử dụng";
-            this.btn_Instruction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Instruction.UseVisualStyleBackColor = true;
             // 
             // btn_XemKhoaHoc
             // 
@@ -298,6 +283,7 @@ namespace TrungTamTinHoc
             this.btn_XemKhoaHoc.Text = "Xem khóa học";
             this.btn_XemKhoaHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_XemKhoaHoc.UseVisualStyleBackColor = true;
+            this.btn_XemKhoaHoc.Click += new System.EventHandler(this.btn_XemKhoaHoc_Click);
             // 
             // btn_ThoiKhoaBieu
             // 
@@ -320,6 +306,7 @@ namespace TrungTamTinHoc
             this.btn_ThoiKhoaBieu.Text = "Thời khóa biểu";
             this.btn_ThoiKhoaBieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ThoiKhoaBieu.UseVisualStyleBackColor = true;
+            this.btn_ThoiKhoaBieu.Click += new System.EventHandler(this.btn_ThoiKhoaBieu_Click);
             // 
             // btn_Thongtincanhan
             // 
@@ -342,6 +329,7 @@ namespace TrungTamTinHoc
             this.btn_Thongtincanhan.Text = "Thông tin cá nhân";
             this.btn_Thongtincanhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Thongtincanhan.UseVisualStyleBackColor = true;
+            this.btn_Thongtincanhan.Click += new System.EventHandler(this.btn_Thongtincanhan_Click);
             // 
             // btn_Trangchu
             // 
@@ -364,6 +352,7 @@ namespace TrungTamTinHoc
             this.btn_Trangchu.Text = "Trang chủ";
             this.btn_Trangchu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Trangchu.UseVisualStyleBackColor = true;
+            this.btn_Trangchu.Click += new System.EventHandler(this.btn_Trangchu_Click);
             // 
             // panel1
             // 
@@ -384,6 +373,17 @@ namespace TrungTamTinHoc
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::TrungTamTinHoc.Properties.Resources.menu;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(863, 446);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // fHocVien
             // 
@@ -406,6 +406,7 @@ namespace TrungTamTinHoc
             this.panelNav.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -424,12 +425,12 @@ namespace TrungTamTinHoc
         private FontAwesome.Sharp.IconButton btn_Exit;
         private FontAwesome.Sharp.IconPictureBox iconCurrChildForm;
         private System.Windows.Forms.Panel panelNav;
-        private FontAwesome.Sharp.IconButton btn_Instruction;
         private FontAwesome.Sharp.IconButton btn_XemKhoaHoc;
         private FontAwesome.Sharp.IconButton btn_ThoiKhoaBieu;
         private FontAwesome.Sharp.IconButton btn_Thongtincanhan;
         private FontAwesome.Sharp.IconButton btn_Trangchu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

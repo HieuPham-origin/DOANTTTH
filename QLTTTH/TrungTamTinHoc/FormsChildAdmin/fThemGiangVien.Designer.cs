@@ -30,6 +30,9 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lb_quequan = new System.Windows.Forms.Label();
+            this.lb_tengv = new System.Windows.Forms.Label();
+            this.lb_sdt = new System.Windows.Forms.Label();
             this.date_dob = new ToolsBox.RJControls.HPDateTimePicker();
             this.txt_home = new ToolsBox.RJControls.HPTextBox();
             this.txt_phone = new ToolsBox.RJControls.HPTextBox();
@@ -40,9 +43,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Huy = new TTTH.RJControls.HPButton();
             this.btn_Them = new TTTH.RJControls.HPButton();
-            this.lb_quequan = new System.Windows.Forms.Label();
-            this.lb_tengv = new System.Windows.Forms.Label();
-            this.lb_sdt = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,42 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin giảng viên";
+            // 
+            // lb_quequan
+            // 
+            this.lb_quequan.AutoSize = true;
+            this.lb_quequan.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_quequan.ForeColor = System.Drawing.Color.Red;
+            this.lb_quequan.Location = new System.Drawing.Point(157, 299);
+            this.lb_quequan.Name = "lb_quequan";
+            this.lb_quequan.Size = new System.Drawing.Size(138, 19);
+            this.lb_quequan.TabIndex = 29;
+            this.lb_quequan.Text = "Chưa nhập quê quán";
+            this.lb_quequan.Visible = false;
+            // 
+            // lb_tengv
+            // 
+            this.lb_tengv.AutoSize = true;
+            this.lb_tengv.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tengv.ForeColor = System.Drawing.Color.Red;
+            this.lb_tengv.Location = new System.Drawing.Point(157, 85);
+            this.lb_tengv.Name = "lb_tengv";
+            this.lb_tengv.Size = new System.Drawing.Size(167, 19);
+            this.lb_tengv.TabIndex = 28;
+            this.lb_tengv.Text = "Chưa nhập tên giảng viên";
+            this.lb_tengv.Visible = false;
+            // 
+            // lb_sdt
+            // 
+            this.lb_sdt.AutoSize = true;
+            this.lb_sdt.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_sdt.ForeColor = System.Drawing.Color.Red;
+            this.lb_sdt.Location = new System.Drawing.Point(157, 219);
+            this.lb_sdt.Name = "lb_sdt";
+            this.lb_sdt.Size = new System.Drawing.Size(253, 19);
+            this.lb_sdt.TabIndex = 27;
+            this.lb_sdt.Text = "Số điện thoại đã tồn tại hoặc chưa nhập";
+            this.lb_sdt.Visible = false;
             // 
             // date_dob
             // 
@@ -202,6 +238,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Huy.Text = "Hủy";
             this.btn_Huy.TextColor = System.Drawing.Color.White;
             this.btn_Huy.UseVisualStyleBackColor = false;
+            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
             // btn_Them
             // 
@@ -223,42 +260,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Them.TextColor = System.Drawing.Color.White;
             this.btn_Them.UseVisualStyleBackColor = false;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
-            // 
-            // lb_quequan
-            // 
-            this.lb_quequan.AutoSize = true;
-            this.lb_quequan.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_quequan.ForeColor = System.Drawing.Color.Red;
-            this.lb_quequan.Location = new System.Drawing.Point(157, 299);
-            this.lb_quequan.Name = "lb_quequan";
-            this.lb_quequan.Size = new System.Drawing.Size(138, 19);
-            this.lb_quequan.TabIndex = 29;
-            this.lb_quequan.Text = "Chưa nhập quê quán";
-            this.lb_quequan.Visible = false;
-            // 
-            // lb_tengv
-            // 
-            this.lb_tengv.AutoSize = true;
-            this.lb_tengv.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tengv.ForeColor = System.Drawing.Color.Red;
-            this.lb_tengv.Location = new System.Drawing.Point(157, 85);
-            this.lb_tengv.Name = "lb_tengv";
-            this.lb_tengv.Size = new System.Drawing.Size(167, 19);
-            this.lb_tengv.TabIndex = 28;
-            this.lb_tengv.Text = "Chưa nhập tên giảng viên";
-            this.lb_tengv.Visible = false;
-            // 
-            // lb_sdt
-            // 
-            this.lb_sdt.AutoSize = true;
-            this.lb_sdt.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_sdt.ForeColor = System.Drawing.Color.Red;
-            this.lb_sdt.Location = new System.Drawing.Point(157, 219);
-            this.lb_sdt.Name = "lb_sdt";
-            this.lb_sdt.Size = new System.Drawing.Size(253, 19);
-            this.lb_sdt.TabIndex = 27;
-            this.lb_sdt.Text = "Số điện thoại đã tồn tại hoặc chưa nhập";
-            this.lb_sdt.Visible = false;
             // 
             // fThemGiangVien
             // 

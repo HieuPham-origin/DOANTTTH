@@ -233,5 +233,36 @@ namespace DAL
             dataGridView.DataSource = dt;
             conn.Close();
         }
+
+        public void getLopHocGV(DataGridView dataGridView, string name)
+        {
+            conn.Open();
+            string query = "SELECT * FROM Lop_hoc where Ma_GV LIKE @maGV";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@maGV", name);
+            SqlDataAdapter dv = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dv.Fill(dt);
+            dataGridView.DataSource = dt;
+            conn.Close();
+        }
+
+        public void bindLHComboBox(ComboBox cbx)
+        {
+            conn.Open();
+            SqlCommand command = new SqlCommand("SELECT Ma_GV, Ten_LH FROM Lop_hoc where ", conn);
+            SqlDataReader reader = command.ExecuteReader();
+            Dictionary<string, string> items = new Dictionary<string, string>();
+            while (reader.Read())
+            {
+                string maGV = reader.GetString(0);
+                string tenLH = reader.GetString(1);
+                items.Add(maGV, tenLH);
+            }
+            cbx.DataSource = new BindingSource(items, null);
+            cbx.DisplayMember = "Value";
+            cbx.ValueMember = "Key";
+            conn.Close();
+        }
     }
 }

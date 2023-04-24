@@ -36,8 +36,8 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Timkiem = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_Timkiem = new ToolsBox.RJControls.HPTextBox();
             this.lb_Search = new System.Windows.Forms.Label();
+            this.cbx_LH = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_LopHoc)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -88,9 +88,9 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Controls.Add(this.cbx_LH);
             this.panel1.Controls.Add(this.btn_Timkiem);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txt_Timkiem);
             this.panel1.Controls.Add(this.lb_Search);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -106,12 +106,13 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.btn_Timkiem.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btn_Timkiem.IconColor = System.Drawing.Color.White;
             this.btn_Timkiem.IconSize = 27;
-            this.btn_Timkiem.Location = new System.Drawing.Point(581, 106);
+            this.btn_Timkiem.Location = new System.Drawing.Point(547, 106);
             this.btn_Timkiem.Name = "btn_Timkiem";
             this.btn_Timkiem.Rotation = 0D;
             this.btn_Timkiem.Size = new System.Drawing.Size(40, 37);
             this.btn_Timkiem.TabIndex = 4;
             this.btn_Timkiem.UseVisualStyleBackColor = true;
+            this.btn_Timkiem.Click += new System.EventHandler(this.btn_Timkiem_Click);
             // 
             // label2
             // 
@@ -125,26 +126,6 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.label2.Text = "DANH SÁCH LỚP HỌC";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txt_Timkiem
-            // 
-            this.txt_Timkiem.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txt_Timkiem.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txt_Timkiem.BorderRadius = 0;
-            this.txt_Timkiem.BorderSize = 2;
-            this.txt_Timkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Timkiem.Location = new System.Drawing.Point(262, 103);
-            this.txt_Timkiem.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Timkiem.Multiline = false;
-            this.txt_Timkiem.Name = "txt_Timkiem";
-            this.txt_Timkiem.Padding = new System.Windows.Forms.Padding(7);
-            this.txt_Timkiem.PasswordChar = false;
-            this.txt_Timkiem.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_Timkiem.PlaceholderText = "";
-            this.txt_Timkiem.Size = new System.Drawing.Size(312, 39);
-            this.txt_Timkiem.TabIndex = 2;
-            this.txt_Timkiem.Texts = "";
-            this.txt_Timkiem.UnderlinedStyle = true;
-            // 
             // lb_Search
             // 
             this.lb_Search.AutoSize = true;
@@ -156,6 +137,14 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.lb_Search.TabIndex = 3;
             this.lb_Search.Text = "Tìm kiếm";
             // 
+            // cbx_LH
+            // 
+            this.cbx_LH.FormattingEnabled = true;
+            this.cbx_LH.Location = new System.Drawing.Point(288, 113);
+            this.cbx_LH.Name = "cbx_LH";
+            this.cbx_LH.Size = new System.Drawing.Size(230, 24);
+            this.cbx_LH.TabIndex = 5;
+            // 
             // fLopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -165,6 +154,7 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.Controls.Add(this.panel1);
             this.Name = "fLopHoc";
             this.Text = "fLopHoc";
+            this.Load += new System.EventHandler(this.fLopHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_LopHoc)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -178,7 +168,7 @@ namespace TrungTamTinHoc.FormsChildGiangVien
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btn_Timkiem;
         private System.Windows.Forms.Label label2;
-        private ToolsBox.RJControls.HPTextBox txt_Timkiem;
         private System.Windows.Forms.Label lb_Search;
+        private System.Windows.Forms.ComboBox cbx_LH;
     }
 }

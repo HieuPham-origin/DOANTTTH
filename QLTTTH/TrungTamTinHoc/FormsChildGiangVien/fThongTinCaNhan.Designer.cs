@@ -120,6 +120,7 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             // 
             // txt_home
             // 
+            this.txt_home.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txt_home.BorderColor = System.Drawing.Color.RoyalBlue;
             this.txt_home.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_home.BorderRadius = 0;
@@ -140,6 +141,7 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             // 
             // txt_phone
             // 
+            this.txt_phone.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txt_phone.BorderColor = System.Drawing.Color.RoyalBlue;
             this.txt_phone.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_phone.BorderRadius = 0;
@@ -160,6 +162,7 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             // 
             // txt_name
             // 
+            this.txt_name.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txt_name.BorderColor = System.Drawing.Color.RoyalBlue;
             this.txt_name.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_name.BorderRadius = 0;

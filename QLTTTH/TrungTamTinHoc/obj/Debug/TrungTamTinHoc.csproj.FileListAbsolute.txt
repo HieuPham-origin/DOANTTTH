@@ -253,7 +253,6 @@ D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debu
 D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLHoaDon.resources
 D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLKhoaHoc.resources
 D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fThemGiangVien.resources
-D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fChonKhoaHoc.resources
 D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fBaoCao.resources
 D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fHoaDon.resources
 D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLGiangVien.resources
@@ -272,3 +271,4 @@ D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debu
 D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.exe
 D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.pdb
 D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.fDoiMatKhau.resources
+D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildHocVien.fThoiKhoaBieu.resources
