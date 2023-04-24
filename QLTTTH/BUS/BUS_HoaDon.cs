@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 using DAL;
 using DTO;
 
@@ -40,6 +41,16 @@ namespace BUS
         public void bindGridViewById(DataGridView dataGridView, int id)
         {
             dHoaDon.bindGridViewById(dataGridView,id);
+        }
+
+        public void bindGridViewbySearch(DataGridView gridView, string name)
+        {
+            dHoaDon.bindGridViewbySearch(gridView, name);
+        }
+
+        public DataTable getDoanhThu(DateTime dateStart, DateTime dateEnd)
+        {
+            return dHoaDon.getDoanhThu(dateStart, dateEnd);
         }
     }
 }

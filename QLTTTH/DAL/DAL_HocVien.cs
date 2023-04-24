@@ -157,6 +157,30 @@ namespace DAL
 
             return latestMaHV;
         }
+        public bool checkSDTTonTai(string phone)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * from Hoc_vien where sdt = @phone", conn);
+            cmd.Parameters.AddWithValue("@phone", phone);
+            DTO_HocVien hv = null;
+            SqlDataReader reader = cmd.ExecuteReader();
 
+            if (reader.Read())
+            {
+                hv = new DTO_HocVien();
+                hv.Ma_HV = (string)reader["Ma_hv"];
+                hv.Ten_HV = (string)reader["Ten_HV"];
+                hv.Nam_sinh = (DateTime)reader["Nam_sinh"];
+                hv.Dia_chi = (string)reader["Dia_chi"];
+                hv.Sdt = (string)reader["sdt"];
+            }
+            reader.Close();
+            conn.Close();
+            if (hv == null)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

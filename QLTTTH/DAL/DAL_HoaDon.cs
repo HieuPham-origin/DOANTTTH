@@ -115,7 +115,32 @@ namespace DAL
             dataGridView.DataSource = dt;
             conn.Close();
         }
+        public void bindGridViewbySearch(DataGridView dataGridView, string name)
+        {
+            conn.Open();
+            string query = "SELECT * from Hoa_don where Ma_hd LIKE '%' + @name + '%' or Nguoi_dong_tien LIKE '%' + @name + '%' or Ngay_lap LIKE '%' + @name + '%'";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@name", name);
+            SqlDataAdapter dv = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dv.Fill(dt);
+            dataGridView.DataSource = dt;
+            conn.Close();
+        }
 
-
+        public DataTable getDoanhThu(DateTime dateStart, DateTime dateEnd)
+        {
+            conn.Open();
+            string sql = "SELECT CAST(Ngay_lap AS DATE) AS ngaylap, SUM(Tong_tien) AS doanhthu" +
+                " FROM Hoa_don WHERE Ngay_lap BETWEEN @startDate AND @endDate GROUP BY CAST(Ngay_lap AS DATE)";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@startDate", dateStart);
+            cmd.Parameters.AddWithValue("@endDate", dateEnd);
+            SqlDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            conn.Close();
+            return dt;
+        }
     }
 }

@@ -113,6 +113,32 @@ namespace DAL
             dataGridView.DataSource = dt;
             conn.Close();
         }
+
+        public bool checkSDTTonTai(string phone)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * from Giang_vien where sdt = @phone", conn);
+            cmd.Parameters.AddWithValue("@phone", phone);
+            DTO_GiangVien gv = null;
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                gv = new DTO_GiangVien();
+                gv.Ma_GV = (string)reader["Ma_GV"];
+                gv.Ten_GV = (string)reader["Ten_GV"];
+                gv.Nam_sinh = (DateTime)reader["Nam_sinh"];
+                gv.Sdt = (string)reader["sdt"];
+                gv.Que_quan = (string)reader["Que_quan"];
+            }
+            reader.Close();
+            conn.Close();
+            if (gv == null)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 
 }

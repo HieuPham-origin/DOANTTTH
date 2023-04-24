@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using Microsoft.Office.Interop.Excel;
+using Application = Microsoft.Office.Interop.Excel.Application;
 namespace TrungTamTinHoc.FormsChildAdmin
 {
     public partial class fQLGiangVien : Form
@@ -116,6 +118,48 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
             bGV.bindGridViewbySearch(dgv_GiangVien, txt_TimKiem.Texts);
+        }
+
+        private void btn_InGV_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            excel.Visible = true;
+            Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
+            Worksheet worksheet = (Worksheet)workbook.Sheets[1];
+
+            if (dgv_GiangVien.Rows.Count > 0)
+            {
+                // Add header
+                worksheet.Cells[1, 1] = "Mã Giảng Viên";
+                worksheet.Cells[1, 2] = "Họ và tên";
+                worksheet.Cells[1, 3] = "Ngày sinh";
+                worksheet.Cells[1, 4] = "Số điện thoại";
+                worksheet.Cells[1, 5] = "Quê quán";
+
+                // Add data 
+                for (int i = 0; i < dgv_GiangVien.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dgv_GiangVien.Columns.Count; j++)
+                    {
+                        if (dgv_GiangVien.Rows[i].Cells[j].Value != null)
+                        {
+                            worksheet.Cells[i + 2, j + 1] = dgv_GiangVien.Rows[i].Cells[j].Value.ToString();
+                        }
+                        else
+                        {
+                            worksheet.Cells[i + 2, j + 1] = "";
+                        }
+                    }
+                }
+
+
+                // Autofit columns
+                worksheet.Columns.AutoFit();
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu để xuất");
+            }
         }
     }
 }

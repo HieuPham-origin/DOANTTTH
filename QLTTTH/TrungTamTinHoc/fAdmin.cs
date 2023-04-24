@@ -200,11 +200,17 @@ namespace TrungTamTinHoc
             nForm.Show();
         }
 
-        private void btn_Thoat_Click(object sender, EventArgs e)
+        private void btn_Lophoc_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
             OpenChildForm(new FormsChildAdmin.fQLLopHoc());
             panelInfo.BringToFront();
+        }
+
+        private void btn_Doimatkhau_Click(object sender, EventArgs e)
+        {
+            fDoiMatKhau dmk = new fDoiMatKhau();
+            dmk.Show();
         }
         //Structs
 

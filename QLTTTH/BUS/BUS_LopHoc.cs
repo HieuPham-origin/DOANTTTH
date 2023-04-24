@@ -65,5 +65,10 @@ namespace BUS
         {
             dLH.bindGridView(dataGridView);
         }
+
+        public void bindGridViewbySearch(DataGridView gridView, string name)
+        {
+            dLH.bindGridViewbySearch(gridView, name);
+        }
     }
 }

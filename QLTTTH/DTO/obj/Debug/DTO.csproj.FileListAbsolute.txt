@@ -34,3 +34,9 @@ D:\Student\soft\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
 D:\Student\soft\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Student\soft\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.dll
 D:\Student\soft\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.pdb
+D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\DTO\bin\Debug\DTO.dll
+D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\DTO\bin\Debug\DTO.pdb
+D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.dll
+D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\DTO\obj\Debug\DTO.pdb

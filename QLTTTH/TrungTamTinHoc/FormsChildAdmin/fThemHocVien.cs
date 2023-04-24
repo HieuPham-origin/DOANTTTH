@@ -64,17 +64,41 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void btn_addHV_Click(object sender, EventArgs e)
         {
+            lb_sdt.Visible = false;
+            lb_tenhv.Visible = false;
+            lb_diachi.Visible = false;
             DTO_HocVien newHV = new DTO_HocVien(null, txt_name.Texts, date_dob.Value, txt_home.Texts, txt_phone.Texts);
-
-            if (bHV.themHocVien(newHV))
+            if (bHV.checkSDTTonTai(txt_phone.Texts) || txt_phone.Texts == "")
             {
-
-                MessageBox.Show("Thêm thành công");
-            
+                lb_sdt.Visible = true;
+                lb_tenhv.Visible = false;
+                lb_diachi.Visible = false;
+                return;
+            }
+            else if (txt_name.Texts == "")
+            {
+                lb_tenhv.Visible = true;
+                lb_sdt.Visible = false;
+                lb_diachi.Visible = false;
+                return;
+            }
+            else if (txt_home.Texts == "")
+            {
+                lb_diachi.Visible = true;
+                lb_sdt.Visible = false;
+                lb_tenhv.Visible = false;
+                return;
             }
             else
             {
-                MessageBox.Show("Thêm thất bại");
+                if (bHV.themHocVien(newHV))
+                {
+                    MessageBox.Show("Thêm thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại");
+                }
             }
         }
     }

@@ -221,6 +221,17 @@ namespace DAL
             return name;
         }
 
-
+        public void bindGridViewbySearch(DataGridView dataGridView, string name)
+        {
+            conn.Open();
+            string query = "SELECT * from Lop_hoc where Ma_KH LIKE '%' + @name + '%' or Ten_LH LIKE '%' + @name + '%'";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@name", name);
+            SqlDataAdapter dv = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dv.Fill(dt);
+            dataGridView.DataSource = dt;
+            conn.Close();
+        }
     }
 }

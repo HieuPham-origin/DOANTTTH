@@ -38,5 +38,10 @@ namespace BUS
         {
             dGiangVien.bindGridViewbySearch(gridView, name);
         }
+
+        public bool checkSDTTonTai(string phone)
+        {
+            return dGiangVien.checkSDTTonTai(phone);
+        }
     }
 }

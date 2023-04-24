@@ -32,7 +32,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
         {
 
             if (cbx_CaHoc == null || cbx_GiangVien == null || cbx_KhoaHoc == null || cbx_PhongHoc == null
-                || txt_name.Text == "" || nr_SoBuoi == null)
+                || txt_name.Texts == "" || nr_SoBuoi == null)
             {
                 MessageBox.Show("Chưa nhập đủ thông tin lớp học");
             }
@@ -42,7 +42,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
                 int ma_PH = ((KeyValuePair<int, string>)cbx_PhongHoc.SelectedItem).Key;
                 int ma_KH = ((KeyValuePair<int, string>)cbx_KhoaHoc.SelectedItem).Key;
                 string ma_GV = cbx_GiangVien.SelectedValue.ToString();
-                DTO_LopHoc dto_lh = new DTO_LopHoc(0, txt_name.Text, ma_KH,
+                DTO_LopHoc dto_lh = new DTO_LopHoc(0, txt_name.Texts, ma_KH,
                     ma_PH, Convert.ToInt32(cbx_CaHoc.SelectedItem), 
                     ma_GV, date_BatDau.Value, date_KetThuc.Value, 1,
                     Convert.ToInt32(nr_SoBuoi.Value),0);

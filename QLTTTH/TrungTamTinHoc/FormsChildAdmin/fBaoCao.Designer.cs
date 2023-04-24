@@ -29,204 +29,124 @@ namespace TrungTamTinHoc.FormsChildAdmin
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Ghidanh = new FontAwesome.Sharp.IconButton();
-            this.btn_XoaHV = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.hpComboBox1 = new ToolsBox.RJControls.HPComboBox();
-            this.hpTextBox1 = new ToolsBox.RJControls.HPTextBox();
-            this.hpDateTimePicker1 = new ToolsBox.RJControls.HPDateTimePicker();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.date_batdau = new ToolsBox.RJControls.HPDateTimePicker();
+            this.date_ketthuc = new ToolsBox.RJControls.HPDateTimePicker();
+            this.btn_ThongKe = new TTTH.RJControls.HPButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cht_Doanhthu = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cht_Doanhthu)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_Ghidanh
+            // date_batdau
             // 
-            this.btn_Ghidanh.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Ghidanh.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btn_Ghidanh.IconColor = System.Drawing.Color.Black;
-            this.btn_Ghidanh.IconSize = 16;
-            this.btn_Ghidanh.Location = new System.Drawing.Point(15, 26);
-            this.btn_Ghidanh.Name = "btn_Ghidanh";
-            this.btn_Ghidanh.Rotation = 0D;
-            this.btn_Ghidanh.Size = new System.Drawing.Size(126, 48);
-            this.btn_Ghidanh.TabIndex = 0;
-            this.btn_Ghidanh.Text = "Ghi danh";
-            this.btn_Ghidanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Ghidanh.UseVisualStyleBackColor = true;
+            this.date_batdau.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.date_batdau.BorderSize = 0;
+            this.date_batdau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.date_batdau.Location = new System.Drawing.Point(103, 34);
+            this.date_batdau.MinimumSize = new System.Drawing.Size(0, 35);
+            this.date_batdau.Name = "date_batdau";
+            this.date_batdau.Size = new System.Drawing.Size(236, 35);
+            this.date_batdau.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.date_batdau.TabIndex = 15;
+            this.date_batdau.TextColor = System.Drawing.Color.White;
             // 
-            // btn_XoaHV
+            // date_ketthuc
             // 
-            this.btn_XoaHV.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_XoaHV.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btn_XoaHV.IconColor = System.Drawing.Color.Black;
-            this.btn_XoaHV.IconSize = 16;
-            this.btn_XoaHV.Location = new System.Drawing.Point(157, 26);
-            this.btn_XoaHV.Name = "btn_XoaHV";
-            this.btn_XoaHV.Rotation = 0D;
-            this.btn_XoaHV.Size = new System.Drawing.Size(126, 48);
-            this.btn_XoaHV.TabIndex = 1;
-            this.btn_XoaHV.Text = "Xóa học viên";
-            this.btn_XoaHV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_XoaHV.UseVisualStyleBackColor = true;
+            this.date_ketthuc.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.date_ketthuc.BorderSize = 0;
+            this.date_ketthuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.date_ketthuc.Location = new System.Drawing.Point(462, 34);
+            this.date_ketthuc.MinimumSize = new System.Drawing.Size(0, 35);
+            this.date_ketthuc.Name = "date_ketthuc";
+            this.date_ketthuc.Size = new System.Drawing.Size(236, 35);
+            this.date_ketthuc.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.date_ketthuc.TabIndex = 16;
+            this.date_ketthuc.TextColor = System.Drawing.Color.White;
             // 
-            // iconButton1
+            // btn_ThongKe
             // 
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconSize = 16;
-            this.iconButton1.Location = new System.Drawing.Point(299, 26);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(126, 48);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.Text = "Chỉnh sửa";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btn_ThongKe.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_ThongKe.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_ThongKe.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ThongKe.BorderRadius = 40;
+            this.btn_ThongKe.BorderSize = 0;
+            this.btn_ThongKe.FlatAppearance.BorderSize = 0;
+            this.btn_ThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThongKe.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongKe.Location = new System.Drawing.Point(730, 29);
+            this.btn_ThongKe.Name = "btn_ThongKe";
+            this.btn_ThongKe.Size = new System.Drawing.Size(150, 40);
+            this.btn_ThongKe.TabIndex = 17;
+            this.btn_ThongKe.Text = "Thống kê";
+            this.btn_ThongKe.TextColor = System.Drawing.Color.White;
+            this.btn_ThongKe.UseVisualStyleBackColor = false;
+            this.btn_ThongKe.Click += new System.EventHandler(this.btn_ThongKe_Click);
             // 
-            // iconButton2
+            // panel1
             // 
-            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconSize = 16;
-            this.iconButton2.Location = new System.Drawing.Point(442, 26);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(126, 48);
-            this.iconButton2.TabIndex = 3;
-            this.iconButton2.Text = "Lưu";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(903, 83);
+            this.panel1.TabIndex = 18;
             // 
-            // iconButton3
+            // panel2
             // 
-            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconSize = 16;
-            this.iconButton3.Location = new System.Drawing.Point(586, 26);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Rotation = 0D;
-            this.iconButton3.Size = new System.Drawing.Size(126, 48);
-            this.iconButton3.TabIndex = 4;
-            this.iconButton3.Text = "Hủy";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.btn_ThongKe);
+            this.panel2.Controls.Add(this.date_batdau);
+            this.panel2.Controls.Add(this.date_ketthuc);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 83);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(903, 94);
+            this.panel2.TabIndex = 19;
             // 
-            // iconButton4
+            // cht_Doanhthu
             // 
-            this.iconButton4.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton4.IconColor = System.Drawing.Color.Black;
-            this.iconButton4.IconSize = 16;
-            this.iconButton4.Location = new System.Drawing.Point(730, 26);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Rotation = 0D;
-            this.iconButton4.Size = new System.Drawing.Size(126, 48);
-            this.iconButton4.TabIndex = 4;
-            this.iconButton4.Text = "In danh sách";
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = true;
-            // 
-            // hpComboBox1
-            // 
-            this.hpComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.hpComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.hpComboBox1.BorderSize = 1;
-            this.hpComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.hpComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.hpComboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.hpComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.hpComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.hpComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.hpComboBox1.Location = new System.Drawing.Point(213, 414);
-            this.hpComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.hpComboBox1.Name = "hpComboBox1";
-            this.hpComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.hpComboBox1.Size = new System.Drawing.Size(200, 30);
-            this.hpComboBox1.TabIndex = 4;
-            this.hpComboBox1.Texts = "";
-            // 
-            // hpTextBox1
-            // 
-            this.hpTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.hpTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.hpTextBox1.BorderRadius = 0;
-            this.hpTextBox1.BorderSize = 2;
-            this.hpTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hpTextBox1.Location = new System.Drawing.Point(508, 430);
-            this.hpTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.hpTextBox1.Multiline = false;
-            this.hpTextBox1.Name = "hpTextBox1";
-            this.hpTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.hpTextBox1.PasswordChar = false;
-            this.hpTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.hpTextBox1.PlaceholderText = "";
-            this.hpTextBox1.Size = new System.Drawing.Size(250, 35);
-            this.hpTextBox1.TabIndex = 5;
-            this.hpTextBox1.Texts = "";
-            this.hpTextBox1.UnderlinedStyle = false;
-            // 
-            // hpDateTimePicker1
-            // 
-            this.hpDateTimePicker1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.hpDateTimePicker1.BorderSize = 0;
-            this.hpDateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.hpDateTimePicker1.Location = new System.Drawing.Point(508, 374);
-            this.hpDateTimePicker1.MinimumSize = new System.Drawing.Size(0, 35);
-            this.hpDateTimePicker1.Name = "hpDateTimePicker1";
-            this.hpDateTimePicker1.Size = new System.Drawing.Size(246, 35);
-            this.hpDateTimePicker1.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.hpDateTimePicker1.TabIndex = 6;
-            this.hpDateTimePicker1.TextColor = System.Drawing.Color.White;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.iconButton4);
-            this.groupBox1.Controls.Add(this.btn_Ghidanh);
-            this.groupBox1.Controls.Add(this.iconButton3);
-            this.groupBox1.Controls.Add(this.btn_XoaHV);
-            this.groupBox1.Controls.Add(this.iconButton2);
-            this.groupBox1.Controls.Add(this.iconButton1);
-            this.groupBox1.Location = new System.Drawing.Point(91, 120);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(870, 89);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chức năng";
+            chartArea1.Name = "ChartArea1";
+            this.cht_Doanhthu.ChartAreas.Add(chartArea1);
+            this.cht_Doanhthu.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.cht_Doanhthu.Legends.Add(legend1);
+            this.cht_Doanhthu.Location = new System.Drawing.Point(0, 177);
+            this.cht_Doanhthu.Name = "cht_Doanhthu";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.cht_Doanhthu.Series.Add(series1);
+            this.cht_Doanhthu.Size = new System.Drawing.Size(903, 355);
+            this.cht_Doanhthu.TabIndex = 0;
+            this.cht_Doanhthu.Text = "Doanh thu";
             // 
             // fBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1085, 598);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.hpDateTimePicker1);
-            this.Controls.Add(this.hpTextBox1);
-            this.Controls.Add(this.hpComboBox1);
+            this.ClientSize = new System.Drawing.Size(903, 532);
+            this.Controls.Add(this.cht_Doanhthu);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "fBaoCao";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "fBaoCao";
-            this.groupBox1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.fBaoCao_Load);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cht_Doanhthu)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton btn_Ghidanh;
-        private FontAwesome.Sharp.IconButton btn_XoaHV;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private ToolsBox.RJControls.HPComboBox hpComboBox1;
-        private ToolsBox.RJControls.HPTextBox hpTextBox1;
-        private ToolsBox.RJControls.HPDateTimePicker hpDateTimePicker1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private ToolsBox.RJControls.HPDateTimePicker date_batdau;
+        private ToolsBox.RJControls.HPDateTimePicker date_ketthuc;
+        private TTTH.RJControls.HPButton btn_ThongKe;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart cht_Doanhthu;
     }
 }

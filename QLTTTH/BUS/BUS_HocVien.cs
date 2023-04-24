@@ -48,5 +48,9 @@ namespace BUS
         {
             return dHocVien.getLatestMaHV();
         }
+        public bool checkSDTTonTai(string phone)
+        {
+            return dHocVien.checkSDTTonTai(phone);
+        }
     }
 }

@@ -22,17 +22,45 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
+            lb_sdt.Visible = false;
+            lb_tengv.Visible = false;
+            lb_quequan.Visible = false;
+
             DTO_GiangVien newGV = new DTO_GiangVien(null, txt_name.Texts, date_dob.Value, txt_phone.Texts, txt_home.Texts);
-            if (bGV.themGiangVien(newGV))
+            if (bGV.checkSDTTonTai(txt_phone.Texts) || txt_phone.Texts == "")
             {
-                MessageBox.Show("Thêm thành công");
-                this.Close(); // close the current form
-                fQLGiangVien reload = new fQLGiangVien();
-                reload.Refresh(); // reload the fQLGiangVien form
+                lb_sdt.Visible = true;
+                lb_tengv.Visible = false;
+                lb_quequan.Visible = false;
+                return;
+            }
+            else if (txt_name.Texts == "")
+            {
+                lb_tengv.Visible = true;
+                lb_sdt.Visible = false;
+                lb_quequan.Visible = false;
+                return;
+            }
+            else if (txt_home.Texts == "")
+            {
+                lb_quequan.Visible = true;
+                lb_sdt.Visible = false;
+                lb_tengv.Visible = false;
+                return;
             }
             else
             {
-                MessageBox.Show("Thêm thất bại");
+                if (bGV.themGiangVien(newGV))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    this.Close(); // close the current form
+                    fQLGiangVien reload = new fQLGiangVien();
+                    reload.Refresh(); // reload the fQLGiangVien form
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại");
+                }
             }
         }
     }

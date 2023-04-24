@@ -137,7 +137,7 @@ namespace TrungTamTinHoc
             this.btn_DoiMatKhau.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btn_DoiMatKhau.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DoiMatKhau.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_DoiMatKhau.IconChar = FontAwesome.Sharp.IconChar.ShareSquare;
+            this.btn_DoiMatKhau.IconChar = FontAwesome.Sharp.IconChar.Key;
             this.btn_DoiMatKhau.IconColor = System.Drawing.Color.White;
             this.btn_DoiMatKhau.IconSize = 20;
             this.btn_DoiMatKhau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -40,11 +40,17 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Huy = new TTTH.RJControls.HPButton();
             this.btn_Them = new TTTH.RJControls.HPButton();
+            this.lb_quequan = new System.Windows.Forms.Label();
+            this.lb_tengv = new System.Windows.Forms.Label();
+            this.lb_sdt = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lb_quequan);
+            this.groupBox1.Controls.Add(this.lb_tengv);
+            this.groupBox1.Controls.Add(this.lb_sdt);
             this.groupBox1.Controls.Add(this.date_dob);
             this.groupBox1.Controls.Add(this.txt_home);
             this.groupBox1.Controls.Add(this.txt_phone);
@@ -69,7 +75,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.date_dob.BorderColor = System.Drawing.Color.RoyalBlue;
             this.date_dob.BorderSize = 0;
             this.date_dob.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_dob.Location = new System.Drawing.Point(161, 100);
+            this.date_dob.Location = new System.Drawing.Point(161, 120);
             this.date_dob.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.date_dob.MinimumSize = new System.Drawing.Size(4, 35);
             this.date_dob.Name = "date_dob";
@@ -80,12 +86,13 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             // txt_home
             // 
+            this.txt_home.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txt_home.BorderColor = System.Drawing.Color.RoyalBlue;
             this.txt_home.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_home.BorderRadius = 0;
             this.txt_home.BorderSize = 2;
             this.txt_home.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_home.Location = new System.Drawing.Point(161, 215);
+            this.txt_home.Location = new System.Drawing.Point(161, 252);
             this.txt_home.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_home.Multiline = false;
             this.txt_home.Name = "txt_home";
@@ -100,12 +107,13 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             // txt_phone
             // 
+            this.txt_phone.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txt_phone.BorderColor = System.Drawing.Color.RoyalBlue;
             this.txt_phone.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_phone.BorderRadius = 0;
             this.txt_phone.BorderSize = 2;
             this.txt_phone.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_phone.Location = new System.Drawing.Point(161, 152);
+            this.txt_phone.Location = new System.Drawing.Point(161, 172);
             this.txt_phone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_phone.Multiline = false;
             this.txt_phone.Name = "txt_phone";
@@ -120,6 +128,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             // txt_name
             // 
+            this.txt_name.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txt_name.BorderColor = System.Drawing.Color.RoyalBlue;
             this.txt_name.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_name.BorderRadius = 0;
@@ -141,7 +150,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 226);
+            this.label4.Location = new System.Drawing.Point(19, 263);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 20);
             this.label4.TabIndex = 3;
@@ -150,7 +159,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 164);
+            this.label3.Location = new System.Drawing.Point(19, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 20);
             this.label3.TabIndex = 2;
@@ -159,7 +168,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 109);
+            this.label2.Location = new System.Drawing.Point(19, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 1;
@@ -215,6 +224,42 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.btn_Them.UseVisualStyleBackColor = false;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
+            // lb_quequan
+            // 
+            this.lb_quequan.AutoSize = true;
+            this.lb_quequan.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_quequan.ForeColor = System.Drawing.Color.Red;
+            this.lb_quequan.Location = new System.Drawing.Point(157, 299);
+            this.lb_quequan.Name = "lb_quequan";
+            this.lb_quequan.Size = new System.Drawing.Size(138, 19);
+            this.lb_quequan.TabIndex = 29;
+            this.lb_quequan.Text = "Chưa nhập quê quán";
+            this.lb_quequan.Visible = false;
+            // 
+            // lb_tengv
+            // 
+            this.lb_tengv.AutoSize = true;
+            this.lb_tengv.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tengv.ForeColor = System.Drawing.Color.Red;
+            this.lb_tengv.Location = new System.Drawing.Point(157, 85);
+            this.lb_tengv.Name = "lb_tengv";
+            this.lb_tengv.Size = new System.Drawing.Size(167, 19);
+            this.lb_tengv.TabIndex = 28;
+            this.lb_tengv.Text = "Chưa nhập tên giảng viên";
+            this.lb_tengv.Visible = false;
+            // 
+            // lb_sdt
+            // 
+            this.lb_sdt.AutoSize = true;
+            this.lb_sdt.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_sdt.ForeColor = System.Drawing.Color.Red;
+            this.lb_sdt.Location = new System.Drawing.Point(157, 219);
+            this.lb_sdt.Name = "lb_sdt";
+            this.lb_sdt.Size = new System.Drawing.Size(253, 19);
+            this.lb_sdt.TabIndex = 27;
+            this.lb_sdt.Text = "Số điện thoại đã tồn tại hoặc chưa nhập";
+            this.lb_sdt.Visible = false;
+            // 
             // fThemGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -248,5 +293,8 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private ToolsBox.RJControls.HPTextBox txt_name;
         private TTTH.RJControls.HPButton btn_Huy;
         private TTTH.RJControls.HPButton btn_Them;
+        private System.Windows.Forms.Label lb_quequan;
+        private System.Windows.Forms.Label lb_tengv;
+        private System.Windows.Forms.Label lb_sdt;
     }
 }

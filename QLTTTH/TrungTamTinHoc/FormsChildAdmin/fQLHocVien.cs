@@ -63,27 +63,56 @@ namespace TrungTamTinHoc.FormsChildAdmin
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgv_HocVien.Rows[e.RowIndex];
-                selectedHV = new DTO_HocVien(
-                row.Cells[0].Value.ToString(),
-                row.Cells[1].Value.ToString(),
-                Convert.ToDateTime(row.Cells[2].Value),
-                row.Cells[3].Value.ToString(),
-                row.Cells[4].Value.ToString());
+
+                // Kiểm tra rỗng sau đó mới truyền data
+                string maHV = "";
+                if (row.Cells[0].Value != null)
+                    maHV = row.Cells[0].Value.ToString();
+
+                string tenHV = "";
+                if (row.Cells[1].Value != null)
+                    tenHV = row.Cells[1].Value.ToString();
+
+                DateTime ngaySinh = DateTime.MinValue;
+                DateTime.TryParse(row.Cells[2].Value.ToString(), out ngaySinh);
+
+                string diaChi = "";
+                if (row.Cells[3].Value != null)
+                    diaChi = row.Cells[3].Value.ToString();
+
+                string sdt = "";
+                if (row.Cells[4].Value != null)
+                    sdt = row.Cells[4].Value.ToString();
+
+                selectedHV = new DTO_HocVien(maHV, tenHV, ngaySinh, diaChi, sdt);
             }
         }
 
         private void dgv_HocVien_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            string maHV = dgv_HocVien.Rows[e.RowIndex].Cells["Ma_HV"].Value.ToString();
-            string tenHV = dgv_HocVien.Rows[e.RowIndex].Cells["Ten_HV"].Value.ToString();
-            DateTime namSinh = Convert.ToDateTime(dgv_HocVien.Rows[e.RowIndex].Cells["Nam_sinh"].Value);
-            string diaChi = dgv_HocVien.Rows[e.RowIndex].Cells["Dia_chi"].Value.ToString();
-            string sdt = dgv_HocVien.Rows[e.RowIndex].Cells["sdt"].Value.ToString();
+            string maHV = "";
+            if (dgv_HocVien.Rows[e.RowIndex].Cells["Ma_HV"].Value != null)
+                maHV = dgv_HocVien.Rows[e.RowIndex].Cells["Ma_HV"].Value.ToString();
 
-            DTO_HocVien newHV = new DTO_HocVien(maHV, tenHV, namSinh, diaChi, sdt);
+            string tenHV = "";
+            if (dgv_HocVien.Rows[e.RowIndex].Cells["Ten_HV"].Value != null)
+                tenHV = dgv_HocVien.Rows[e.RowIndex].Cells["Ten_HV"].Value.ToString();
+
+            DateTime namSinh = DateTime.MinValue;
+            DateTime.TryParse(dgv_HocVien.Rows[e.RowIndex].Cells["Nam_sinh"].Value.ToString(), out namSinh);
+
+            string sdt = "";
+            if (dgv_HocVien.Rows[e.RowIndex].Cells["sdt"].Value != null)
+                sdt = dgv_HocVien.Rows[e.RowIndex].Cells["sdt"].Value.ToString();
+
+            string diaChi = "";
+            if (dgv_HocVien.Rows[e.RowIndex].Cells["Dia_chi"].Value != null)
+                diaChi = dgv_HocVien.Rows[e.RowIndex].Cells["Dia_chi"].Value.ToString();
+
+            DTO_HocVien newHV = new DTO_HocVien(maHV, tenHV, namSinh, sdt, diaChi);
             bHV.suaHocVien(newHV);
 
-            // Refresh the DataGridView to show the updated data
+            // Refresh
             dgv_HocVien.Refresh();
         }
 
