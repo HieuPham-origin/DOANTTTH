@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using Microsoft.Office.Interop.Excel;
+using Application = Microsoft.Office.Interop.Excel.Application;
 
 namespace TrungTamTinHoc.FormsChildAdmin
 {
@@ -42,8 +44,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
         {
             if (selectedHV != null)
             {
+
                 if (bHV.xoaHocVien(selectedHV))
-                {
+                {   
+
                     MessageBox.Show("Xóa thành công");
                     dgv_HocVien.Rows.RemoveAt(dgv_HocVien.CurrentRow.Index);
                 }
@@ -87,5 +91,50 @@ namespace TrungTamTinHoc.FormsChildAdmin
         {
             bHV.bindGridViewbySearch(dgv_HocVien, txt_TimKiem.Texts);
         }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            excel.Visible = true; 
+            Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
+            Worksheet worksheet = (Worksheet)workbook.Sheets[1];
+
+            if (dgv_HocVien.Rows.Count > 0) 
+            {
+                // Add header
+                worksheet.Cells[1, 1] = "Mã Học Viên";
+                worksheet.Cells[1, 2] = "Họ và tên";
+                worksheet.Cells[1, 3] = "Ngày sinh";
+                worksheet.Cells[1, 4] = "Địa chỉ";
+                worksheet.Cells[1, 5] = "Số điện thoại";
+
+                // Add data 
+                for (int i = 0; i < dgv_HocVien.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dgv_HocVien.Columns.Count; j++)
+                    {
+                        if (dgv_HocVien.Rows[i].Cells[j].Value != null)
+                        {
+                            worksheet.Cells[i + 2, j + 1] = dgv_HocVien.Rows[i].Cells[j].Value.ToString();
+                        }
+                        else
+                        {
+                            worksheet.Cells[i + 2, j + 1] = "";
+                        }
+                    }
+                }
+
+
+                // Autofit columns
+                worksheet.Columns.AutoFit();
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu để xuất");
+            }
+        }
+
+
+
     }
 }

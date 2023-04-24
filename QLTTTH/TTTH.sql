@@ -140,7 +140,21 @@ BEGIN
         WHERE Tai_Khoan.loai = 2 AND Tai_Khoan.TaiKhoan = i.Ma_HV
     END
 END
+go
 
+CREATE TRIGGER trg_Hocvien_Delete
+ON Hoc_vien
+INSTEAD OF DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM chi_tiet
+    WHERE Ma_HV IN (SELECT Ma_HV FROM DELETED);
+
+    DELETE FROM Hoc_vien
+    WHERE Ma_HV IN (SELECT Ma_HV FROM DELETED);
+END
 
 
 
@@ -207,6 +221,44 @@ BEGIN
     WHERE TaiKhoan IN (SELECT Ma_HV FROM deleted)
 END
 
+go
+CREATE TRIGGER tr_delete_Giang_vien
+ON Giang_vien
+INSTEAD OF DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM Lop_Hoc
+    WHERE Ma_GV IN (SELECT Ma_GV FROM DELETED);
+
+    DELETE FROM Giang_vien
+    WHERE Ma_GV IN (SELECT Ma_GV FROM DELETED);
+END
+
+go
+
+CREATE TRIGGER tr_Change_Soluong 
+ON chi_tiet 
+AFTER DELETE
+AS
+BEGIN
+    UPDATE Lop_hoc
+    SET Soluong = Soluong - 1
+    FROM Lop_hoc l
+    JOIN deleted d ON l.Ma_LH = d.Ma_LH;
+END
+
+
+
+
+
+
+
+
+
+
+----PROCEDURE
 go
 create function dbo.auto_mHV()
 returns varchar(5)
