@@ -106,6 +106,27 @@ namespace DAL
             return maHVList;
         }
 
+        public bool checkIfChiTietExists(string maHV, int maLH)
+        {
+
+            conn.Open();
+            bool exists = false;
+            string query = "SELECT COUNT(*) FROM chi_tiet WHERE Ma_HV=@maHV AND Ma_LH=@maLH";
+
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@maHV", maHV);
+            command.Parameters.AddWithValue("@maLH", maLH);
+
+            int count = (int)command.ExecuteScalar();
+            if (count > 0)
+            {
+                exists = true;
+            }
+            conn.Close();
+            return exists;
+
+        }
+
 
 
 
