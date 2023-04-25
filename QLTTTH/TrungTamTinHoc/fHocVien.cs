@@ -20,7 +20,8 @@ namespace TrungTamTinHoc
         private Panel leftBorderBtn;
         private Form currChildForm;
         //Constructor
-        public fHocVien()
+        private string id;
+        public fHocVien(string id)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -30,6 +31,7 @@ namespace TrungTamTinHoc
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.id = id;
         }
 
 
@@ -48,7 +50,7 @@ namespace TrungTamTinHoc
         private void btn_Thongtincanhan_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
-            OpenChildForm(new FormsChildHocVien.fThongtinCaNhan());
+            OpenChildForm(new FormsChildHocVien.fThongtinCaNhan(this.id));
             panelInfo.BringToFront();
             panelInfo.BringToFront();
 
@@ -57,7 +59,7 @@ namespace TrungTamTinHoc
         private void btn_ThoiKhoaBieu_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
-            OpenChildForm(new FormsChildHocVien.fThoiKhoaBieu());
+            OpenChildForm(new FormsChildHocVien.fThoiKhoaBieu(this.id));
             panelInfo.BringToFront();
 
         }
@@ -71,7 +73,7 @@ namespace TrungTamTinHoc
 
         private void btn_DoiMatKhau_Click(object sender, EventArgs e)
         {
-            fDoiMatKhau dmk = new fDoiMatKhau();
+            FormsChildHocVien.fDoiMatKhau dmk = new FormsChildHocVien.fDoiMatKhau(this.id);
             dmk.Show();
         }
 

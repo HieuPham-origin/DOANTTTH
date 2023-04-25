@@ -43,5 +43,10 @@ namespace BUS
         {
             return dGiangVien.checkSDTTonTai(phone);
         }
+
+        public DTO_GiangVien getGiangVienById(string maGV)
+        {
+            return dGiangVien.getGiangVienById(maGV);
+        }
     }
 }

@@ -19,9 +19,9 @@ namespace TrungTamTinHoc
         private IconButton currBtn;
         private Panel leftBorderBtn;
         private Form currChildForm = null;
-
+        private string id;
         //Constructor
-        public fAdmin()
+        public fAdmin(string id)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -33,6 +33,7 @@ namespace TrungTamTinHoc
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.id = id;
         }
 
     
@@ -209,7 +210,7 @@ namespace TrungTamTinHoc
 
         private void btn_Doimatkhau_Click(object sender, EventArgs e)
         {
-            fDoiMatKhau dmk = new fDoiMatKhau();
+            FormsChildAdmin.fDoiMatKhau dmk = new FormsChildAdmin.fDoiMatKhau(this.id);
             dmk.Show();
         }
         //Structs

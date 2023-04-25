@@ -139,6 +139,26 @@ namespace DAL
             }
             return true;
         }
+
+        public DTO_GiangVien getGiangVienById(string maGV)
+        {
+            DTO_GiangVien giangVien = null;
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Giang_vien WHERE Ma_GV = @Ma_GV", conn);
+            cmd.Parameters.AddWithValue("@Ma_GV", maGV);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                giangVien = new DTO_GiangVien();
+                giangVien.Ma_GV = reader.GetString(0);
+                giangVien.Ten_GV = reader.GetString(1);
+                giangVien.Nam_sinh = reader.GetDateTime(2);
+                giangVien.Sdt = reader.GetString(3);
+                giangVien.Que_quan = reader.GetString(4);
+            }
+            conn.Close();
+            return giangVien;
+        }
     }
 
 }

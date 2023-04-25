@@ -18,6 +18,8 @@ namespace TrungTamTinHoc.FormsChildAdmin
         BUS_KhoaHoc bKH = new BUS_KhoaHoc();
         BUS_ChiTietDangKy bCTDK = new BUS_ChiTietDangKy();
         BUS_LopHoc bLH = new BUS_LopHoc();
+        private DTO_ChiTietDangKy dto_CTDK;
+        private string previousSelectedValue = "";
         public fThemHocVien()
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private void fThemHocVien_Load(object sender, EventArgs e)
         {
             bKH.bindComboBox(cbx_KhoaHoc);
+            btn_Add.Enabled = false;
         }
 
         private void cbx_KhoaHoc_SelectedIndexChanged(object sender, EventArgs e)
@@ -39,6 +42,13 @@ namespace TrungTamTinHoc.FormsChildAdmin
         {
 
             string selectedValue = cbx_LopHoc.SelectedItem.ToString();
+            if (selectedValue.Equals(previousSelectedValue))
+            {
+                MessageBox.Show("Bạn đã chọn lớp học này rồi.");
+                return;
+            }
+            previousSelectedValue = selectedValue;
+
             string[] parts = selectedValue.Split(new[] { ',', ']' }, StringSplitOptions.RemoveEmptyEntries);
             string tenLH = parts[1].Trim();
 
@@ -90,7 +100,8 @@ namespace TrungTamTinHoc.FormsChildAdmin
             {
                 if (bHV.themHocVien(newHV))
                 {
-                    MessageBox.Show("Thêm thành công");
+                    MessageBox.Show("Thêm học viên thành công");
+                    btn_Add.Enabled = true;
                     //this.Close();
                 }
                 else
@@ -104,6 +115,36 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgv_ChiTiet_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgv_ChiTiet.Rows[e.RowIndex];
+                if (row.Cells["col_ngayDK"].Value != null && row.Cells["col_MaHV"].Value != null && row.Cells["col_tenLH"].Value != null)
+                {
+                    dto_CTDK = new DTO_ChiTietDangKy(
+                        Convert.ToDateTime(row.Cells["col_ngayDK"].Value),
+                        row.Cells["col_MaHV"].Value.ToString(),
+                        bLH.getMaLHFromTenLH(row.Cells["col_tenLH"].Value.ToString()));
+                }
+            }
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            if (dto_CTDK != null)
+            {
+                if (bCTDK.xoaChiTietDangKy(dto_CTDK))
+                {
+                    dgv_ChiTiet.Rows.RemoveAt(dgv_ChiTiet.CurrentRow.Index);
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại");
+                }
+            }
         }
     }
 }

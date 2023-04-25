@@ -47,6 +47,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
                     row.Cells["col_hocPhi"].Value = bKH.getFeeById(cthd.Ma_KH);
                     tongTien += bKH.getFeeById(cthd.Ma_KH);
                     txt_TongTien.Texts = tongTien.ToString();
+                    cbx_KhoaHoc.Items.Remove(cbx_KhoaHoc.SelectedItem);
                 }
                 else
                 {

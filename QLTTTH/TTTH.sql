@@ -253,11 +253,6 @@ END
 
 
 
-
-
-
-
-
 ----PROCEDURE
 go
 create function dbo.auto_mHV()
@@ -492,8 +487,8 @@ CREATE PROCEDURE dbo.LopHoc_CRUD
 	END
 	ELSE IF (@StatementType = 'DELETE')
 	BEGIN
-		DELETE FROM dbo.Khoa_hoc
-		WHERE Ma_KH = @Ma_KH
+		DELETE FROM dbo.Lop_hoc
+		WHERE Ma_LH = @Ma_LH
 	END
 END
 
@@ -593,8 +588,7 @@ CREATE PROCEDURE dbo.ChiTiet_CRUD
 		WHERE Ma_HV = @Ma_HV AND Ma_LH = @Ma_LH
 	END
 END
-
+go
 
 --exec dbo.HocVien_CRUD 'INSERT', NULL, 'Phu', '2003/5/7', 'HCM', '1234567'
 
-insert into Tai_Khoan values('admin', '123', 0)

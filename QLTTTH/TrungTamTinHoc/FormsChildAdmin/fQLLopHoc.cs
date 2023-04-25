@@ -164,5 +164,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // Refresh
             dgv_LopHoc.Refresh();
         }
+
+        private void btn_ThemHV_Click(object sender, EventArgs e)
+        {
+            fThemHVVaoLH hv = new fThemHVVaoLH();
+            hv.Show();
+        }
     }
 }

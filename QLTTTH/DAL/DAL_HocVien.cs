@@ -182,5 +182,39 @@ namespace DAL
             }
             return true;
         }
+
+        public DTO_HocVien getHocVienById(string maHV)
+        {
+            DTO_HocVien hocVien = null;
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Hoc_vien WHERE Ma_HV = @Ma_HV", conn);
+            cmd.Parameters.AddWithValue("@Ma_HV", maHV);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                hocVien = new DTO_HocVien();
+                hocVien.Ma_HV = reader.GetString(0);
+                hocVien.Ten_HV = reader.GetString(1);
+                hocVien.Nam_sinh = reader.GetDateTime(2);
+                hocVien.Dia_chi = reader.GetString(3);
+                hocVien.Sdt = reader.GetString(4);
+            }
+            conn.Close();
+            return hocVien;
+        }
+
+        public string getSDTByID(string id)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT sdt FROM Hoc_vien WHERE Ma_HV=@id", conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            string sdt = cmd.ExecuteScalar()?.ToString();
+            conn.Close();
+            return sdt;
+        }
+
+
+
+
     }
 }

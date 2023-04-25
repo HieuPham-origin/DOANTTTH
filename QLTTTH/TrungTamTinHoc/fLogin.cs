@@ -80,19 +80,20 @@ namespace TrungTamTinHoc
 
             if (tk.checkLogin(txtUser.Text, txtPassword.Text, 0))
             {
-                fAdmin admin = new fAdmin();
+                fAdmin admin = new fAdmin(txtUser.Text);
                 admin.Show();
                 this.Hide();
             }
             else if(tk.checkLogin(txtUser.Text, txtPassword.Text, 1))
             {
-                fGiangVien gv = new fGiangVien();
+                fGiangVien gv = new fGiangVien(txtUser.Text);
                 gv.Show();
                 this.Hide();
             }
             else if(tk.checkLogin(txtUser.Text, txtPassword.Text, 2))
             {
-                fHocVien hv = new fHocVien();
+                
+                fHocVien hv = new fHocVien(txtUser.Text);
                 hv.Show();
                 this.Hide();
             }

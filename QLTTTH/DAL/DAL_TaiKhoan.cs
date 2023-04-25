@@ -36,8 +36,32 @@ namespace DAL
             }
 
             return false;
-            
-
         }
+
+        public string getMKByTaiKhoan(string username)
+        {
+            conn.Open();
+            string query = "SELECT pass FROM Tai_Khoan WHERE TaiKhoan=@username";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@username", username);
+            string password = cmd.ExecuteScalar().ToString();
+            conn.Close();
+            return password;
+        }
+
+        public bool updateMatKhau(string username, string newPass)
+        {
+            conn.Open();
+            string query = "UPDATE Tai_Khoan SET pass=@newPass WHERE TaiKhoan=@username";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@newPass", newPass);
+            cmd.Parameters.AddWithValue("@username", username);
+            int result = cmd.ExecuteNonQuery();
+            conn.Close();
+            return (result > 0);
+        }
+
+
+
     }
 }

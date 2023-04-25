@@ -101,15 +101,15 @@ namespace TrungTamTinHoc.FormsChildAdmin
             DateTime namSinh = DateTime.MinValue;
             DateTime.TryParse(dgv_HocVien.Rows[e.RowIndex].Cells["Nam_sinh"].Value.ToString(), out namSinh);
 
-            string sdt = "";
-            if (dgv_HocVien.Rows[e.RowIndex].Cells["sdt"].Value != null)
-                sdt = dgv_HocVien.Rows[e.RowIndex].Cells["sdt"].Value.ToString();
-
             string diaChi = "";
             if (dgv_HocVien.Rows[e.RowIndex].Cells["Dia_chi"].Value != null)
                 diaChi = dgv_HocVien.Rows[e.RowIndex].Cells["Dia_chi"].Value.ToString();
 
-            DTO_HocVien newHV = new DTO_HocVien(maHV, tenHV, namSinh, sdt, diaChi);
+            string sdt = "";
+            if (dgv_HocVien.Rows[e.RowIndex].Cells["sdt"].Value != null)
+                sdt = dgv_HocVien.Rows[e.RowIndex].Cells["sdt"].Value.ToString();
+
+            DTO_HocVien newHV = new DTO_HocVien(maHV, tenHV, namSinh, diaChi, sdt);
             bHV.suaHocVien(newHV);
 
             // Refresh

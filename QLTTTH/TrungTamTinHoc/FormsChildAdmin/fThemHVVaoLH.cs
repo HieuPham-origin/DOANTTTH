@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TrungTamTinHoc
+namespace TrungTamTinHoc.FormsChildAdmin
 {
-    public partial class fDoiMatKhau : Form
+    public partial class fThemHVVaoLH : Form
     {
-        public fDoiMatKhau()
+        public fThemHVVaoLH()
         {
             InitializeComponent();
-        }
-
-        private void btn_Huy_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

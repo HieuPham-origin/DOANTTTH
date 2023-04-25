@@ -60,10 +60,10 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(914, 549);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox1.Size = new System.Drawing.Size(1028, 686);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin giảng viên";
@@ -78,9 +78,10 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.btn_Xacnhan.FlatAppearance.BorderSize = 0;
             this.btn_Xacnhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xacnhan.ForeColor = System.Drawing.Color.White;
-            this.btn_Xacnhan.Location = new System.Drawing.Point(472, 427);
+            this.btn_Xacnhan.Location = new System.Drawing.Point(531, 534);
+            this.btn_Xacnhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Xacnhan.Name = "btn_Xacnhan";
-            this.btn_Xacnhan.Size = new System.Drawing.Size(207, 49);
+            this.btn_Xacnhan.Size = new System.Drawing.Size(233, 61);
             this.btn_Xacnhan.TabIndex = 11;
             this.btn_Xacnhan.Text = "Xác nhận";
             this.btn_Xacnhan.TextColor = System.Drawing.Color.White;
@@ -96,9 +97,10 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.btn_TroLai.FlatAppearance.BorderSize = 0;
             this.btn_TroLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TroLai.ForeColor = System.Drawing.Color.White;
-            this.btn_TroLai.Location = new System.Drawing.Point(231, 427);
+            this.btn_TroLai.Location = new System.Drawing.Point(260, 534);
+            this.btn_TroLai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_TroLai.Name = "btn_TroLai";
-            this.btn_TroLai.Size = new System.Drawing.Size(207, 49);
+            this.btn_TroLai.Size = new System.Drawing.Size(233, 61);
             this.btn_TroLai.TabIndex = 10;
             this.btn_TroLai.Text = "Trở lại";
             this.btn_TroLai.TextColor = System.Drawing.Color.White;
@@ -109,11 +111,11 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.date_dob.BorderColor = System.Drawing.Color.RoyalBlue;
             this.date_dob.BorderSize = 0;
             this.date_dob.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_dob.Location = new System.Drawing.Point(363, 184);
-            this.date_dob.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.date_dob.Location = new System.Drawing.Point(408, 230);
+            this.date_dob.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.date_dob.MinimumSize = new System.Drawing.Size(4, 35);
             this.date_dob.Name = "date_dob";
-            this.date_dob.Size = new System.Drawing.Size(341, 35);
+            this.date_dob.Size = new System.Drawing.Size(383, 35);
             this.date_dob.SkinColor = System.Drawing.Color.RoyalBlue;
             this.date_dob.TabIndex = 9;
             this.date_dob.TextColor = System.Drawing.Color.White;
@@ -126,15 +128,15 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.txt_home.BorderRadius = 0;
             this.txt_home.BorderSize = 2;
             this.txt_home.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_home.Location = new System.Drawing.Point(362, 321);
-            this.txt_home.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_home.Location = new System.Drawing.Point(407, 401);
+            this.txt_home.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txt_home.Multiline = false;
             this.txt_home.Name = "txt_home";
-            this.txt_home.Padding = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.txt_home.Padding = new System.Windows.Forms.Padding(8, 11, 8, 11);
             this.txt_home.PasswordChar = false;
             this.txt_home.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_home.PlaceholderText = "";
-            this.txt_home.Size = new System.Drawing.Size(341, 44);
+            this.txt_home.Size = new System.Drawing.Size(384, 53);
             this.txt_home.TabIndex = 7;
             this.txt_home.Texts = "";
             this.txt_home.UnderlinedStyle = false;
@@ -147,15 +149,15 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.txt_phone.BorderRadius = 0;
             this.txt_phone.BorderSize = 2;
             this.txt_phone.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_phone.Location = new System.Drawing.Point(362, 249);
-            this.txt_phone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_phone.Location = new System.Drawing.Point(407, 311);
+            this.txt_phone.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txt_phone.Multiline = false;
             this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Padding = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.txt_phone.Padding = new System.Windows.Forms.Padding(8, 11, 8, 11);
             this.txt_phone.PasswordChar = false;
             this.txt_phone.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_phone.PlaceholderText = "";
-            this.txt_phone.Size = new System.Drawing.Size(341, 44);
+            this.txt_phone.Size = new System.Drawing.Size(384, 53);
             this.txt_phone.TabIndex = 6;
             this.txt_phone.Texts = "";
             this.txt_phone.UnderlinedStyle = false;
@@ -168,15 +170,15 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.txt_name.BorderRadius = 0;
             this.txt_name.BorderSize = 2;
             this.txt_name.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name.Location = new System.Drawing.Point(362, 118);
-            this.txt_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_name.Location = new System.Drawing.Point(407, 148);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txt_name.Multiline = false;
             this.txt_name.Name = "txt_name";
-            this.txt_name.Padding = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.txt_name.Padding = new System.Windows.Forms.Padding(8, 11, 8, 11);
             this.txt_name.PasswordChar = false;
             this.txt_name.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_name.PlaceholderText = "";
-            this.txt_name.Size = new System.Drawing.Size(341, 42);
+            this.txt_name.Size = new System.Drawing.Size(384, 53);
             this.txt_name.TabIndex = 5;
             this.txt_name.Texts = "";
             this.txt_name.UnderlinedStyle = false;
@@ -185,9 +187,9 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(184, 330);
+            this.label4.Location = new System.Drawing.Point(207, 412);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 25);
+            this.label4.Size = new System.Drawing.Size(111, 30);
             this.label4.TabIndex = 3;
             this.label4.Text = "Quê quán";
             // 
@@ -195,9 +197,9 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(184, 259);
+            this.label3.Location = new System.Drawing.Point(207, 324);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 25);
+            this.label3.Size = new System.Drawing.Size(145, 30);
             this.label3.TabIndex = 2;
             this.label3.Text = "Số điện thoại";
             // 
@@ -205,9 +207,9 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(184, 190);
+            this.label2.Location = new System.Drawing.Point(207, 238);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 25);
+            this.label2.Size = new System.Drawing.Size(112, 30);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ngày sinh";
             // 
@@ -215,20 +217,22 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(184, 118);
+            this.label1.Location = new System.Drawing.Point(207, 148);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.Size = new System.Drawing.Size(81, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Họ tên";
             // 
             // fThongTinCaNhan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 549);
+            this.ClientSize = new System.Drawing.Size(1028, 686);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fThongTinCaNhan";
             this.Text = "fThongTinCaNhan";
+            this.Load += new System.EventHandler(this.fThongTinCaNhan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

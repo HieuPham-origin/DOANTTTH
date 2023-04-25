@@ -119,3 +119,5 @@ VALUES (N'HCSDL2', 4, 2, 8, 'GV018', '2023/05/01', '2023/06/30', 1, 24, 0);
 
 INSERT INTO Lop_hoc (Ten_LH, Ma_KH, Ma_PH, Ma_ca, Ma_GV, Ngay_bat_dau, Ngay_ket_thuc, Dang_mo, So_buoi, Soluong)
 VALUES (N'ML2', 5, 2, 9, 'GV019', '2023/05/01', '2023/06/30', 1, 24, 0);
+
+insert into Tai_Khoan values('admin', '123', 0)

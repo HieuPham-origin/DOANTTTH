@@ -26,5 +26,11 @@ namespace BUS
         {
             return dCTDK.suaChiTietDangKy(ctdk);
         }
+
+        public List<int> getMaLHByMaHV(string Ma_HV)
+        {
+            return dCTDK.getMaLHByMaHV(Ma_HV);
+        }
+
     }
 }

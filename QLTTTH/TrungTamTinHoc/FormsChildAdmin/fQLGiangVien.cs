@@ -73,15 +73,15 @@ namespace TrungTamTinHoc.FormsChildAdmin
                 DateTime ngaySinh = DateTime.MinValue;
                 DateTime.TryParse(row.Cells[2].Value.ToString(), out ngaySinh);
 
-                string gioiTinh = "";
+                string sdt = "";
                 if (row.Cells[3].Value != null)
-                    gioiTinh = row.Cells[3].Value.ToString();
+                    sdt = row.Cells[3].Value.ToString();
 
-                string diaChi = "";
+                string queQuan = "";
                 if (row.Cells[4].Value != null)
-                    diaChi = row.Cells[4].Value.ToString();
+                    queQuan = row.Cells[4].Value.ToString();
 
-                selectedGV = new DTO_GiangVien(maGV, tenGV, ngaySinh, gioiTinh, diaChi);
+                selectedGV = new DTO_GiangVien(maGV, tenGV, ngaySinh, sdt, queQuan);
             }
         }
 

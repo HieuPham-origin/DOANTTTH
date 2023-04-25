@@ -18,7 +18,8 @@ namespace TrungTamTinHoc
         private IconButton currBtn;
         private Panel leftBorderBtn;
         private Form currChildForm = null;
-        public fGiangVien()
+        private string id;
+        public fGiangVien(string id)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -30,6 +31,7 @@ namespace TrungTamTinHoc
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.id = id;
         }
 
         public static Color colorActive = Color.DodgerBlue;
@@ -144,7 +146,7 @@ namespace TrungTamTinHoc
         private void btn_Thongtincanhan_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
-            OpenChildForm(new FormsChildGiangVien.fThongTinCaNhan());
+            OpenChildForm(new FormsChildGiangVien.fThongTinCaNhan(this.id));
             panelInfo.BringToFront();
         }
 
@@ -164,7 +166,7 @@ namespace TrungTamTinHoc
 
         private void btn_DoiMatKhau_Click(object sender, EventArgs e)
         {
-            fDoiMatKhau dmk = new fDoiMatKhau();
+            FormsChildGiangVien.fDoiMatKhau dmk = new FormsChildGiangVien.fDoiMatKhau(this.id);
             dmk.Show();
         }
     }

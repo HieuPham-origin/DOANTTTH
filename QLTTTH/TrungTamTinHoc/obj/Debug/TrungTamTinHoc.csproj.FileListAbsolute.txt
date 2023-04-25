@@ -142,7 +142,6 @@ C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamT
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLHoaDon.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLKhoaHoc.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fThemGiangVien.resources
-C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fChonKhoaHoc.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fBaoCao.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fHoaDon.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLGiangVien.resources
@@ -272,3 +271,8 @@ D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debu
 D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.pdb
 D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.fDoiMatKhau.resources
 D:\Student\HK4\Software_Techniques\final\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildHocVien.fThoiKhoaBieu.resources
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildHocVien.fThoiKhoaBieu.resources
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildHocVien.fDoiMatKhau.resources
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fDoiMatKhau.resources
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fThemHVVaoLH.resources
+C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildGiangVien.fDoiMatKhau.resources

@@ -21,6 +21,28 @@ namespace DAL
         }
 
 
+        public Tuple<int, int> getMaPHMaCa(int maLH)
+        {
+            conn.Open();
+            SqlCommand command = new SqlCommand("SELECT Ma_PH, Ma_ca FROM Lop_hoc WHERE Ma_LH=@Ma_LH", conn);
+            command.Parameters.AddWithValue("@Ma_LH", maLH);
+            SqlDataReader reader = command.ExecuteReader();
+
+            int maPH = -1;
+            int maCa = -1;
+
+            if (reader.Read())
+            {
+                maPH = reader.GetInt32(0);
+                maCa = reader.GetInt32(1);
+            }
+
+            conn.Close();
+            return Tuple.Create(maPH, maCa);
+        }
+
+
+
         public void bindGridView(DataGridView dataGridView)
         {
             conn.Open();

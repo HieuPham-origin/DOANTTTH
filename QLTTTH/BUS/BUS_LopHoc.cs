@@ -80,5 +80,11 @@ namespace BUS
         {
             dLH.bindLHComboBox(cbx);
         }
+
+        public Tuple<int, int> getMaPHMaCa(int maLH)
+        {
+            return dLH.getMaPHMaCa(maLH);
+        }
+
     }
 }

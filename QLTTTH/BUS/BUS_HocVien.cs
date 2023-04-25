@@ -52,5 +52,17 @@ namespace BUS
         {
             return dHocVien.checkSDTTonTai(phone);
         }
+
+        public DTO_HocVien getHocVienById(string maHV)
+        {
+            return dHocVien.getHocVienById(maHV);
+        }
+
+        public string getSDTByID(string id)
+        {
+            return dHocVien.getSDTByID(id);
+        }
+
+
     }
 }
