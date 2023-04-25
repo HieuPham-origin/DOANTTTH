@@ -36,12 +36,15 @@ namespace BUS
         {
             return dCTDK.getMaHVByMaLH(Ma_LH);
         }
-
         public bool checkIfChiTietExists(string maHV, int maLH)
         {
             return dCTDK.checkIfChiTietExists(maHV, maLH);
         }
 
+        public bool checkIfMaLHExists(int maLH)
+        {
+            return dCTDK.checkIfMaLHExists(maLH);
+        }
     }   
 
 

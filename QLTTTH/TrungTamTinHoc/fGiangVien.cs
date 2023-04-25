@@ -23,7 +23,7 @@ namespace TrungTamTinHoc
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 60);
+            leftBorderBtn.Size = new Size(7, 50);
             currBtn = null;
             panelMenu.Controls.Add(leftBorderBtn);
             ActivateButton(currBtn, colorActive);
@@ -34,7 +34,7 @@ namespace TrungTamTinHoc
             this.id = id;
         }
 
-        public static Color colorActive = Color.DodgerBlue;
+        public static Color colorActive = Color.CornflowerBlue;
 
         //methods
         private void ActivateButton(object senderBTN, Color color)
@@ -160,7 +160,7 @@ namespace TrungTamTinHoc
         private void btn_LichDay_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
-            OpenChildForm(new FormsChildGiangVien.fLichDay());
+            OpenChildForm(new FormsChildGiangVien.fLichDay(this.id));
             panelInfo.BringToFront();
         }
 
@@ -168,6 +168,16 @@ namespace TrungTamTinHoc
         {
             FormsChildGiangVien.fDoiMatKhau dmk = new FormsChildGiangVien.fDoiMatKhau(this.id);
             dmk.Show();
+        }
+
+        private void btn_Home_Click(object sender, EventArgs e)
+        {
+            if (currChildForm != null)
+            {
+                currChildForm.Hide();
+            }
+            ActivateButton(sender, colorActive);
+            panelInfo.BringToFront();
         }
     }
 }

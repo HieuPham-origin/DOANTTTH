@@ -16,6 +16,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
     {
         private DTO_LopHoc selectedLH;
         BUS_LopHoc bLH = new BUS_LopHoc();
+        BUS_ChiTietDangKy bCTDK = new BUS_ChiTietDangKy();
         public fQLLopHoc()
         {
             InitializeComponent();
@@ -50,12 +51,12 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void btn_XoaHV_Click(object sender, EventArgs e)
         {
-            if (selectedLH != null)
+            
+            if (selectedLH != null && !bCTDK.checkIfMaLHExists(selectedLH.Ma_LH))
             {
 
                 if (bLH.xoaLopHoc(selectedLH))
                 {
-
                     MessageBox.Show("Xóa thành công");
                     dgv_LopHoc.Rows.RemoveAt(dgv_LopHoc.CurrentRow.Index);
                 }
@@ -63,6 +64,10 @@ namespace TrungTamTinHoc.FormsChildAdmin
                 {
                     MessageBox.Show("Xóa thất bại");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Không thể xóa lớp học này!");
             }
         }
 

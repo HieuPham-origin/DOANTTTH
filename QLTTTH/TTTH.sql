@@ -248,9 +248,20 @@ BEGIN
     FROM Lop_hoc l
     JOIN deleted d ON l.Ma_LH = d.Ma_LH;
 END
+go
+CREATE TRIGGER tr_delete_KhoaHoc
+ON Khoa_hoc
+INSTEAD OF DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
 
+    DELETE FROM Lop_Hoc
+    WHERE Ma_KH IN (SELECT Ma_KH FROM DELETED);
 
-
+    DELETE FROM Khoa_hoc
+    WHERE Ma_KH IN (SELECT Ma_KH FROM DELETED);
+END
 
 
 ----PROCEDURE

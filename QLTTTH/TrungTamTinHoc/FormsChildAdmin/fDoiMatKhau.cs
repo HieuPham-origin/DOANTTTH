@@ -15,6 +15,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
     public partial class fDoiMatKhau : Form
     {
         private string id;
+        bool visible = false;
         BUS_TaiKhoan bTK = new BUS_TaiKhoan();
         public fDoiMatKhau(string id)
         {
@@ -55,6 +56,38 @@ namespace TrungTamTinHoc.FormsChildAdmin
                     MessageBox.Show("Đổi mật khẩu thất bại");
                 }
             }
+        }
+
+        private void btn_ShowPass_Click(object sender, EventArgs e)
+        {
+            if (!visible)
+            {
+                txt_mkcu.PasswordChar = false;
+                txt_mkmoi.PasswordChar = false;
+                txt_nhaplaimkmoi.PasswordChar = false;
+                btn_ShowPass.Visible = false;
+                btn_HidePass.Visible = true;
+                visible = true;
+            }
+        }
+
+        private void btn_HidePass_Click(object sender, EventArgs e)
+        {
+            if (visible)
+            {
+                txt_mkcu.PasswordChar = true;
+                txt_mkmoi.PasswordChar = true;
+                txt_nhaplaimkmoi.PasswordChar = true;
+                btn_ShowPass.Visible = true;
+                btn_HidePass.Visible = false;
+                visible = false;
+            }
+
+        }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

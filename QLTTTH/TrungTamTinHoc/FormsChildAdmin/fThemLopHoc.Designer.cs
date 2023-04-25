@@ -243,7 +243,8 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             // txt_name
             // 
-            this.txt_name.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_name.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txt_name.BorderColor = System.Drawing.Color.RoyalBlue;
             this.txt_name.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_name.BorderRadius = 0;
             this.txt_name.BorderSize = 2;
@@ -270,7 +271,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.date_BatDau.MinimumSize = new System.Drawing.Size(4, 35);
             this.date_BatDau.Name = "date_BatDau";
             this.date_BatDau.Size = new System.Drawing.Size(285, 35);
-            this.date_BatDau.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.date_BatDau.SkinColor = System.Drawing.Color.RoyalBlue;
             this.date_BatDau.TabIndex = 32;
             this.date_BatDau.TextColor = System.Drawing.Color.White;
             // 
@@ -284,7 +285,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.date_KetThuc.MinimumSize = new System.Drawing.Size(4, 35);
             this.date_KetThuc.Name = "date_KetThuc";
             this.date_KetThuc.Size = new System.Drawing.Size(285, 35);
-            this.date_KetThuc.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.date_KetThuc.SkinColor = System.Drawing.Color.RoyalBlue;
             this.date_KetThuc.TabIndex = 33;
             this.date_KetThuc.TextColor = System.Drawing.Color.White;
             // 

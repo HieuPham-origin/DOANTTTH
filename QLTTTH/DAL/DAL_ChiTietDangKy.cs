@@ -127,8 +127,22 @@ namespace DAL
 
         }
 
+        public bool checkIfMaLHExists(int maLH)
+        {
+            conn.Open();
+            bool exists = false;
+            string query = "SELECT COUNT(*) FROM chi_tiet WHERE Ma_LH=@maLH";
 
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@maLH", maLH);
 
-
+            int count = (int)command.ExecuteScalar();
+            if (count > 0)
+            {
+                exists = true;
+            }
+            conn.Close();
+            return exists;
+        }
     }
 }

@@ -21,7 +21,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
         private int hdID;
         private string ndt = "";
         private int tongTien = 0;
-
         public fHoaDon()
         {
             InitializeComponent();
@@ -73,21 +72,22 @@ namespace TrungTamTinHoc.FormsChildAdmin
             Ndt = txt_TenKhach.Texts;
             MessageBox.Show("Tạo hóa đơn thành công");
 
-            // Tạo bill
+            // Generate the bill
             StringBuilder bill = new StringBuilder();
             bill.AppendLine("Hoa don");
-            bill.AppendLine("Mã Khóa Học  |        Tên Khóa Học        | Học phí");
+            bill.AppendLine("Ma KH | Ten KH | Hoc phi");
             foreach (DataGridViewRow row in dgv_KhoaHoc.Rows)
             {
                 int maKH = Convert.ToInt32(row.Cells["col_MaKH"].Value);
                 string tenKH = row.Cells["col_tenKH"].Value == null ? "" : row.Cells["col_tenKH"].Value.ToString();
                 string hocPhi = row.Cells["col_hocPhi"].Value == null ? "" : row.Cells["col_hocPhi"].Value.ToString();
-                bill.AppendLine($"{maKH}       | {tenKH}                | {hocPhi}");
+                bill.AppendLine($"{maKH} | {tenKH} | {hocPhi}");
             }
 
 
-            bill.AppendLine($"Tổng tiền: {tongTien}");
+            bill.AppendLine($"Tong tien: {tongTien}");
 
+            // Print the bill
             PrintDocument pd = new PrintDocument();
             pd.PrintPage += (s, ev) =>
             {
@@ -107,7 +107,18 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            
+            foreach (DataGridViewRow row in dgv_KhoaHoc.Rows)
+            {
+
+                string test = row.Cells["col_tenKH"].Value.ToString();
+                MessageBox.Show(test);
+
+            }
+        }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -227,6 +227,32 @@ namespace DAL
             return maLH;
         }
 
+        public DTO_LopHoc getLopHocFromTenLH(string tenLH)
+        {
+            DTO_LopHoc dto_LH = null;
+            conn.Open();
+            SqlCommand command = new SqlCommand("SELECT * FROM Lop_hoc WHERE Ten_LH = @TenLH", conn);
+            command.Parameters.AddWithValue("@TenLH", tenLH);
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                dto_LH = new DTO_LopHoc();
+                dto_LH.Ma_LH = reader.GetInt32(0);
+                dto_LH.Ten_LH = reader.GetString(1);
+                dto_LH.Ma_KH = reader.GetInt32(2);
+                dto_LH.Ma_PH = reader.GetInt32(3);
+                dto_LH.Ma_ca = reader.GetInt32(4);
+                dto_LH.Ma_GV = reader.GetString(5);
+                dto_LH.Ngay_bat_dau = reader.GetDateTime(6);
+                dto_LH.Ngay_ket_thuc = reader.GetDateTime(7);
+                dto_LH.Dang_Mo = reader.GetBoolean(8);
+                dto_LH.So_buoi = reader.GetInt32(9);
+                dto_LH.Soluong = reader.GetInt32(10);
+            }
+            conn.Close();
+            return dto_LH;
+        }
+
 
         public string getNameById(int id)
         {
@@ -300,6 +326,20 @@ namespace DAL
             cbx.ValueMember = "Key";
             conn.Close();
         }
-
+        public List<int> getMaLHbyMaGV(string maGV)
+        {
+            List<int> Ma_LHs = new List<int>();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Ma_LH FROM Lop_hoc WHERE Ma_GV = @Ma_GV", conn);
+            cmd.Parameters.AddWithValue("@Ma_GV", maGV);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                int Ma_LH = reader.GetInt32(0);
+                Ma_LHs.Add(Ma_LH);
+            }
+            conn.Close();
+            return Ma_LHs;
+        }
     }
 }

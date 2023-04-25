@@ -61,6 +61,8 @@ namespace TrungTamTinHoc
             this.lblClose.TabIndex = 1;
             this.lblClose.Text = "X";
             this.lblClose.Click += new System.EventHandler(this.lblClose_Click_1);
+            this.lblClose.MouseLeave += new System.EventHandler(this.lblClose_MouseLeave);
+            this.lblClose.MouseHover += new System.EventHandler(this.lblClose_MouseHover);
             // 
             // label2
             // 
@@ -72,6 +74,7 @@ namespace TrungTamTinHoc
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.btn_ShowPass);
             this.panel1.Controls.Add(this.btn_HidePass);
             this.panel1.Controls.Add(this.btn_Dangnhap);
@@ -94,7 +97,7 @@ namespace TrungTamTinHoc
             // 
             // btn_ShowPass
             // 
-            this.btn_ShowPass.BackColor = System.Drawing.Color.Indigo;
+            this.btn_ShowPass.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_ShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_ShowPass.FlatAppearance.BorderSize = 0;
             this.btn_ShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -103,7 +106,7 @@ namespace TrungTamTinHoc
             this.btn_ShowPass.IconChar = FontAwesome.Sharp.IconChar.Eye;
             this.btn_ShowPass.IconColor = System.Drawing.Color.White;
             this.btn_ShowPass.IconSize = 20;
-            this.btn_ShowPass.Location = new System.Drawing.Point(318, 218);
+            this.btn_ShowPass.Location = new System.Drawing.Point(318, 214);
             this.btn_ShowPass.Margin = new System.Windows.Forms.Padding(0);
             this.btn_ShowPass.Name = "btn_ShowPass";
             this.btn_ShowPass.Rotation = 0D;
@@ -114,7 +117,7 @@ namespace TrungTamTinHoc
             // 
             // btn_HidePass
             // 
-            this.btn_HidePass.BackColor = System.Drawing.Color.Indigo;
+            this.btn_HidePass.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_HidePass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_HidePass.FlatAppearance.BorderSize = 0;
             this.btn_HidePass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -134,7 +137,7 @@ namespace TrungTamTinHoc
             // 
             // btn_Dangnhap
             // 
-            this.btn_Dangnhap.BackColor = System.Drawing.Color.Indigo;
+            this.btn_Dangnhap.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_Dangnhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Dangnhap.ForeColor = System.Drawing.Color.White;
             this.btn_Dangnhap.Location = new System.Drawing.Point(128, 320);
@@ -169,7 +172,7 @@ namespace TrungTamTinHoc
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.Indigo;
+            this.txtPassword.BackColor = System.Drawing.Color.RoyalBlue;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.Silver;
@@ -194,7 +197,7 @@ namespace TrungTamTinHoc
             // 
             // txtUser
             // 
-            this.txtUser.BackColor = System.Drawing.Color.Indigo;
+            this.txtUser.BackColor = System.Drawing.Color.RoyalBlue;
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.Color.Silver;

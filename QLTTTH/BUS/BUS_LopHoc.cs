@@ -91,6 +91,14 @@ namespace BUS
             dLH.bindOpenLHComboBox(cbx);
         }
 
+        public List<int> getMaLHbyMaGV(string maGV)
+        {
+            return dLH.getMaLHbyMaGV(maGV);
+        }
 
+        public DTO_LopHoc getLopHocFromTenLH(string tenLH)
+        {
+            return dLH.getLopHocFromTenLH(tenLH);
+        }
     }
 }

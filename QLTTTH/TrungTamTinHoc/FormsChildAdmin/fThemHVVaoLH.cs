@@ -35,14 +35,14 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void dgv_HocVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgv_HocVien.Rows[e.RowIndex];
                 DTO_HocVien selectedHV = new DTO_HocVien();
 
                 selectedHV.Ma_HV = row.Cells[0].Value.ToString();
                 selectedHV.Ten_HV = row.Cells[1].Value.ToString();
-                selectedHV.Nam_sinh= (DateTime)row.Cells[2].Value;
+                selectedHV.Nam_sinh = (DateTime)row.Cells[2].Value;
                 selectedHV.Dia_chi = row.Cells[3].Value.ToString();
                 selectedHV.Sdt = row.Cells[4].Value.ToString();
 
@@ -68,6 +68,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
             {
                 MessageBox.Show("Thêm học viên thành công");
             }
+        }
+
+        private void btn_Confirm_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

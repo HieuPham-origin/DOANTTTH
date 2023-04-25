@@ -34,10 +34,7 @@ namespace TrungTamTinHoc.FormsChildHocVien
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_tkb = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_Search = new FontAwesome.Sharp.IconButton();
             this.tkb = new System.Windows.Forms.Label();
-            this.txt_Search = new ToolsBox.RJControls.HPTextBox();
-            this.lb_Search = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tkb)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,8 +59,7 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.dgv_tkb.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_tkb.EnableHeadersVisualStyles = false;
             this.dgv_tkb.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgv_tkb.Location = new System.Drawing.Point(0, 188);
-            this.dgv_tkb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgv_tkb.Location = new System.Drawing.Point(0, 150);
             this.dgv_tkb.Name = "dgv_tkb";
             this.dgv_tkb.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -83,90 +79,38 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.dgv_tkb.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_tkb.RowTemplate.Height = 24;
             this.dgv_tkb.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_tkb.Size = new System.Drawing.Size(900, 374);
+            this.dgv_tkb.Size = new System.Drawing.Size(800, 300);
             this.dgv_tkb.TabIndex = 36;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel1.Controls.Add(this.btn_Search);
             this.panel1.Controls.Add(this.tkb);
-            this.panel1.Controls.Add(this.txt_Search);
-            this.panel1.Controls.Add(this.lb_Search);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(900, 188);
+            this.panel1.Size = new System.Drawing.Size(800, 150);
             this.panel1.TabIndex = 35;
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.FlatAppearance.BorderSize = 0;
-            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_Search.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btn_Search.IconColor = System.Drawing.Color.White;
-            this.btn_Search.IconSize = 27;
-            this.btn_Search.Location = new System.Drawing.Point(547, 119);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Rotation = 0D;
-            this.btn_Search.Size = new System.Drawing.Size(45, 46);
-            this.btn_Search.TabIndex = 4;
-            this.btn_Search.UseVisualStyleBackColor = true;
             // 
             // tkb
             // 
             this.tkb.AutoSize = true;
             this.tkb.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tkb.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tkb.Location = new System.Drawing.Point(266, 48);
+            this.tkb.Location = new System.Drawing.Point(295, 50);
             this.tkb.Name = "tkb";
-            this.tkb.Size = new System.Drawing.Size(261, 41);
+            this.tkb.Size = new System.Drawing.Size(217, 35);
             this.tkb.TabIndex = 0;
             this.tkb.Text = "THỜI KHÓA BIỂU";
             this.tkb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txt_Search
-            // 
-            this.txt_Search.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txt_Search.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txt_Search.BorderRadius = 0;
-            this.txt_Search.BorderSize = 2;
-            this.txt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Search.Location = new System.Drawing.Point(182, 119);
-            this.txt_Search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_Search.Multiline = false;
-            this.txt_Search.Name = "txt_Search";
-            this.txt_Search.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.txt_Search.PasswordChar = false;
-            this.txt_Search.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_Search.PlaceholderText = "";
-            this.txt_Search.Size = new System.Drawing.Size(357, 45);
-            this.txt_Search.TabIndex = 2;
-            this.txt_Search.Texts = "";
-            this.txt_Search.UnderlinedStyle = true;
-            // 
-            // lb_Search
-            // 
-            this.lb_Search.AutoSize = true;
-            this.lb_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Search.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_Search.Location = new System.Drawing.Point(84, 129);
-            this.lb_Search.Name = "lb_Search";
-            this.lb_Search.Size = new System.Drawing.Size(101, 30);
-            this.lb_Search.TabIndex = 3;
-            this.lb_Search.Text = "Tìm kiếm";
-            // 
             // fThoiKhoaBieu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgv_tkb);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fThoiKhoaBieu";
             this.Text = "fThoiKhoaBieu";
             this.Load += new System.EventHandler(this.fThoiKhoaBieu_Load);
@@ -181,9 +125,6 @@ namespace TrungTamTinHoc.FormsChildHocVien
 
         private System.Windows.Forms.DataGridView dgv_tkb;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton btn_Search;
         private System.Windows.Forms.Label tkb;
-        private ToolsBox.RJControls.HPTextBox txt_Search;
-        private System.Windows.Forms.Label lb_Search;
     }
 }

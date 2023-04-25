@@ -41,6 +41,8 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_dodaimk = new System.Windows.Forms.Label();
+            this.btn_ShowPass = new FontAwesome.Sharp.IconButton();
+            this.btn_HidePass = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // label4
@@ -48,9 +50,9 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(288, 23);
+            this.label4.Location = new System.Drawing.Point(256, 18);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(257, 45);
+            this.label4.Size = new System.Drawing.Size(219, 38);
             this.label4.TabIndex = 45;
             this.label4.Text = "ĐỔI MẬT KHẨU";
             // 
@@ -59,9 +61,9 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.lb_saixacnhan.AutoSize = true;
             this.lb_saixacnhan.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_saixacnhan.ForeColor = System.Drawing.Color.Red;
-            this.lb_saixacnhan.Location = new System.Drawing.Point(292, 329);
+            this.lb_saixacnhan.Location = new System.Drawing.Point(260, 263);
             this.lb_saixacnhan.Name = "lb_saixacnhan";
-            this.lb_saixacnhan.Size = new System.Drawing.Size(245, 21);
+            this.lb_saixacnhan.Size = new System.Drawing.Size(215, 19);
             this.lb_saixacnhan.TabIndex = 44;
             this.lb_saixacnhan.Text = "Không trùng khớp mật khẩu mới";
             this.lb_saixacnhan.Visible = false;
@@ -71,9 +73,9 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.lb_saimkcu.AutoSize = true;
             this.lb_saimkcu.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_saimkcu.ForeColor = System.Drawing.Color.Red;
-            this.lb_saimkcu.Location = new System.Drawing.Point(291, 163);
+            this.lb_saimkcu.Location = new System.Drawing.Point(259, 130);
             this.lb_saimkcu.Name = "lb_saimkcu";
-            this.lb_saimkcu.Size = new System.Drawing.Size(190, 21);
+            this.lb_saimkcu.Size = new System.Drawing.Size(167, 19);
             this.lb_saimkcu.TabIndex = 42;
             this.lb_saimkcu.Text = "Mật khẩu cũ không đúng";
             this.lb_saimkcu.Visible = false;
@@ -89,10 +91,9 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.btn_Xacnhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xacnhan.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xacnhan.ForeColor = System.Drawing.Color.White;
-            this.btn_Xacnhan.Location = new System.Drawing.Point(429, 377);
-            this.btn_Xacnhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Xacnhan.Location = new System.Drawing.Point(381, 302);
             this.btn_Xacnhan.Name = "btn_Xacnhan";
-            this.btn_Xacnhan.Size = new System.Drawing.Size(169, 50);
+            this.btn_Xacnhan.Size = new System.Drawing.Size(150, 40);
             this.btn_Xacnhan.TabIndex = 41;
             this.btn_Xacnhan.Text = "Xác nhận";
             this.btn_Xacnhan.TextColor = System.Drawing.Color.White;
@@ -110,14 +111,14 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.btn_Huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Huy.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Huy.ForeColor = System.Drawing.Color.White;
-            this.btn_Huy.Location = new System.Drawing.Point(213, 377);
-            this.btn_Huy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Huy.Location = new System.Drawing.Point(189, 302);
             this.btn_Huy.Name = "btn_Huy";
-            this.btn_Huy.Size = new System.Drawing.Size(169, 50);
+            this.btn_Huy.Size = new System.Drawing.Size(150, 40);
             this.btn_Huy.TabIndex = 40;
             this.btn_Huy.Text = "Hủy";
             this.btn_Huy.TextColor = System.Drawing.Color.White;
             this.btn_Huy.UseVisualStyleBackColor = false;
+            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
             // txt_nhaplaimkmoi
             // 
@@ -126,15 +127,15 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.txt_nhaplaimkmoi.BorderRadius = 0;
             this.txt_nhaplaimkmoi.BorderSize = 2;
             this.txt_nhaplaimkmoi.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nhaplaimkmoi.Location = new System.Drawing.Point(290, 275);
-            this.txt_nhaplaimkmoi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_nhaplaimkmoi.Location = new System.Drawing.Point(258, 220);
+            this.txt_nhaplaimkmoi.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nhaplaimkmoi.Multiline = false;
             this.txt_nhaplaimkmoi.Name = "txt_nhaplaimkmoi";
-            this.txt_nhaplaimkmoi.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.txt_nhaplaimkmoi.PasswordChar = false;
+            this.txt_nhaplaimkmoi.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_nhaplaimkmoi.PasswordChar = true;
             this.txt_nhaplaimkmoi.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_nhaplaimkmoi.PlaceholderText = "";
-            this.txt_nhaplaimkmoi.Size = new System.Drawing.Size(416, 49);
+            this.txt_nhaplaimkmoi.Size = new System.Drawing.Size(370, 38);
             this.txt_nhaplaimkmoi.TabIndex = 39;
             this.txt_nhaplaimkmoi.Texts = "";
             this.txt_nhaplaimkmoi.UnderlinedStyle = false;
@@ -146,15 +147,15 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.txt_mkmoi.BorderRadius = 0;
             this.txt_mkmoi.BorderSize = 2;
             this.txt_mkmoi.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mkmoi.Location = new System.Drawing.Point(290, 195);
-            this.txt_mkmoi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_mkmoi.Location = new System.Drawing.Point(258, 156);
+            this.txt_mkmoi.Margin = new System.Windows.Forms.Padding(4);
             this.txt_mkmoi.Multiline = false;
             this.txt_mkmoi.Name = "txt_mkmoi";
-            this.txt_mkmoi.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.txt_mkmoi.PasswordChar = false;
+            this.txt_mkmoi.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_mkmoi.PasswordChar = true;
             this.txt_mkmoi.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_mkmoi.PlaceholderText = "";
-            this.txt_mkmoi.Size = new System.Drawing.Size(416, 49);
+            this.txt_mkmoi.Size = new System.Drawing.Size(370, 38);
             this.txt_mkmoi.TabIndex = 38;
             this.txt_mkmoi.Texts = "";
             this.txt_mkmoi.UnderlinedStyle = false;
@@ -166,15 +167,15 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.txt_mkcu.BorderRadius = 0;
             this.txt_mkcu.BorderSize = 2;
             this.txt_mkcu.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mkcu.Location = new System.Drawing.Point(290, 114);
-            this.txt_mkcu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_mkcu.Location = new System.Drawing.Point(258, 91);
+            this.txt_mkcu.Margin = new System.Windows.Forms.Padding(4);
             this.txt_mkcu.Multiline = false;
             this.txt_mkcu.Name = "txt_mkcu";
-            this.txt_mkcu.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.txt_mkcu.PasswordChar = false;
+            this.txt_mkcu.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_mkcu.PasswordChar = true;
             this.txt_mkcu.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_mkcu.PlaceholderText = "";
-            this.txt_mkcu.Size = new System.Drawing.Size(416, 49);
+            this.txt_mkcu.Size = new System.Drawing.Size(370, 38);
             this.txt_mkcu.TabIndex = 37;
             this.txt_mkcu.Texts = "";
             this.txt_mkcu.UnderlinedStyle = false;
@@ -184,9 +185,9 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(94, 287);
+            this.label3.Location = new System.Drawing.Point(84, 230);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 30);
+            this.label3.Size = new System.Drawing.Size(160, 23);
             this.label3.TabIndex = 36;
             this.label3.Text = "Xác nhận mật khẩu";
             // 
@@ -195,9 +196,9 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(94, 207);
+            this.label2.Location = new System.Drawing.Point(84, 166);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 30);
+            this.label2.Size = new System.Drawing.Size(118, 23);
             this.label2.TabIndex = 35;
             this.label2.Text = "Mật khẩu mới";
             // 
@@ -206,9 +207,9 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(94, 125);
+            this.label1.Location = new System.Drawing.Point(84, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 30);
+            this.label1.Size = new System.Drawing.Size(107, 23);
             this.label1.TabIndex = 34;
             this.label1.Text = "Mật khẩu cũ";
             // 
@@ -217,19 +218,61 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.lb_dodaimk.AutoSize = true;
             this.lb_dodaimk.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_dodaimk.ForeColor = System.Drawing.Color.Red;
-            this.lb_dodaimk.Location = new System.Drawing.Point(292, 249);
+            this.lb_dodaimk.Location = new System.Drawing.Point(260, 199);
             this.lb_dodaimk.Name = "lb_dodaimk";
-            this.lb_dodaimk.Size = new System.Drawing.Size(254, 21);
+            this.lb_dodaimk.Size = new System.Drawing.Size(227, 19);
             this.lb_dodaimk.TabIndex = 46;
             this.lb_dodaimk.Text = "Mật khẩu phải chứa ít nhất 8 ký tự";
             this.lb_dodaimk.Visible = false;
             // 
+            // btn_ShowPass
+            // 
+            this.btn_ShowPass.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_ShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_ShowPass.FlatAppearance.BorderSize = 0;
+            this.btn_ShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ShowPass.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_ShowPass.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_ShowPass.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btn_ShowPass.IconColor = System.Drawing.Color.White;
+            this.btn_ShowPass.IconSize = 20;
+            this.btn_ShowPass.Location = new System.Drawing.Point(643, 94);
+            this.btn_ShowPass.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_ShowPass.Name = "btn_ShowPass";
+            this.btn_ShowPass.Rotation = 0D;
+            this.btn_ShowPass.Size = new System.Drawing.Size(34, 34);
+            this.btn_ShowPass.TabIndex = 48;
+            this.btn_ShowPass.UseVisualStyleBackColor = false;
+            this.btn_ShowPass.Click += new System.EventHandler(this.btn_ShowPass_Click);
+            // 
+            // btn_HidePass
+            // 
+            this.btn_HidePass.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_HidePass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_HidePass.FlatAppearance.BorderSize = 0;
+            this.btn_HidePass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HidePass.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_HidePass.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_HidePass.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            this.btn_HidePass.IconColor = System.Drawing.Color.White;
+            this.btn_HidePass.IconSize = 20;
+            this.btn_HidePass.Location = new System.Drawing.Point(643, 94);
+            this.btn_HidePass.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_HidePass.Name = "btn_HidePass";
+            this.btn_HidePass.Rotation = 0D;
+            this.btn_HidePass.Size = new System.Drawing.Size(34, 34);
+            this.btn_HidePass.TabIndex = 47;
+            this.btn_HidePass.UseVisualStyleBackColor = false;
+            this.btn_HidePass.Click += new System.EventHandler(this.btn_HidePass_Click);
+            // 
             // fDoiMatKhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(820, 459);
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(729, 367);
+            this.Controls.Add(this.btn_ShowPass);
+            this.Controls.Add(this.btn_HidePass);
             this.Controls.Add(this.lb_dodaimk);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lb_saixacnhan);
@@ -242,6 +285,8 @@ namespace TrungTamTinHoc.FormsChildHocVien
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fDoiMatKhau";
             this.Text = "fDoiMatKhau";
             this.ResumeLayout(false);
@@ -263,5 +308,7 @@ namespace TrungTamTinHoc.FormsChildHocVien
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_dodaimk;
+        private FontAwesome.Sharp.IconButton btn_ShowPass;
+        private FontAwesome.Sharp.IconButton btn_HidePass;
     }
 }

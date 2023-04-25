@@ -35,6 +35,7 @@ namespace TrungTamTinHoc
             this.panelInfo = new System.Windows.Forms.Panel();
             this.btn_Dangxuat = new FontAwesome.Sharp.IconButton();
             this.btn_DoiMatKhau = new FontAwesome.Sharp.IconButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.btn_Caidat = new FontAwesome.Sharp.IconButton();
             this.btn_Maximize = new FontAwesome.Sharp.IconButton();
@@ -48,17 +49,16 @@ namespace TrungTamTinHoc
             this.btn_Trangchu = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             btn_Minimize = new FontAwesome.Sharp.IconButton();
             this.panelDesktop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).BeginInit();
             this.panelNav.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Minimize
@@ -70,7 +70,7 @@ namespace TrungTamTinHoc
             btn_Minimize.IconChar = FontAwesome.Sharp.IconChar.MinusSquare;
             btn_Minimize.IconColor = System.Drawing.Color.White;
             btn_Minimize.IconSize = 30;
-            btn_Minimize.Location = new System.Drawing.Point(762, 10);
+            btn_Minimize.Location = new System.Drawing.Point(761, 10);
             btn_Minimize.Margin = new System.Windows.Forms.Padding(0);
             btn_Minimize.Name = "btn_Minimize";
             btn_Minimize.Rotation = 0D;
@@ -85,7 +85,7 @@ namespace TrungTamTinHoc
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(187, 114);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(863, 446);
+            this.panelDesktop.Size = new System.Drawing.Size(862, 458);
             this.panelDesktop.TabIndex = 8;
             // 
             // panel2
@@ -96,7 +96,7 @@ namespace TrungTamTinHoc
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(863, 446);
+            this.panel2.Size = new System.Drawing.Size(862, 458);
             this.panel2.TabIndex = 0;
             // 
             // panelInfo
@@ -155,6 +155,17 @@ namespace TrungTamTinHoc
             this.btn_DoiMatKhau.UseVisualStyleBackColor = false;
             this.btn_DoiMatKhau.Click += new System.EventHandler(this.btn_DoiMatKhau_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::TrungTamTinHoc.Properties.Resources.menu;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(862, 458);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
             // panelTitle
             // 
             this.panelTitle.BackColor = System.Drawing.Color.RoyalBlue;
@@ -168,7 +179,7 @@ namespace TrungTamTinHoc
             this.panelTitle.ForeColor = System.Drawing.Color.White;
             this.panelTitle.Location = new System.Drawing.Point(187, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(863, 114);
+            this.panelTitle.Size = new System.Drawing.Size(862, 114);
             this.panelTitle.TabIndex = 7;
             // 
             // btn_Caidat
@@ -181,7 +192,7 @@ namespace TrungTamTinHoc
             this.btn_Caidat.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
             this.btn_Caidat.IconColor = System.Drawing.Color.White;
             this.btn_Caidat.IconSize = 50;
-            this.btn_Caidat.Location = new System.Drawing.Point(800, 50);
+            this.btn_Caidat.Location = new System.Drawing.Point(799, 50);
             this.btn_Caidat.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Caidat.Name = "btn_Caidat";
             this.btn_Caidat.Rotation = 0D;
@@ -199,7 +210,7 @@ namespace TrungTamTinHoc
             this.btn_Maximize.IconChar = FontAwesome.Sharp.IconChar.Expand;
             this.btn_Maximize.IconColor = System.Drawing.Color.White;
             this.btn_Maximize.IconSize = 30;
-            this.btn_Maximize.Location = new System.Drawing.Point(800, 10);
+            this.btn_Maximize.Location = new System.Drawing.Point(799, 10);
             this.btn_Maximize.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Maximize.Name = "btn_Maximize";
             this.btn_Maximize.Rotation = 0D;
@@ -228,7 +239,7 @@ namespace TrungTamTinHoc
             this.btn_Exit.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.btn_Exit.IconColor = System.Drawing.Color.White;
             this.btn_Exit.IconSize = 30;
-            this.btn_Exit.Location = new System.Drawing.Point(833, 10);
+            this.btn_Exit.Location = new System.Drawing.Point(832, 10);
             this.btn_Exit.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Rotation = 0D;
@@ -259,7 +270,7 @@ namespace TrungTamTinHoc
             this.panelNav.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelNav.Location = new System.Drawing.Point(0, 0);
             this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(187, 560);
+            this.panelNav.Size = new System.Drawing.Size(187, 572);
             this.panelNav.TabIndex = 6;
             // 
             // btn_XemKhoaHoc
@@ -374,23 +385,12 @@ namespace TrungTamTinHoc
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::TrungTamTinHoc.Properties.Resources.menu;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(863, 446);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            // 
             // fHocVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(1050, 560);
+            this.ClientSize = new System.Drawing.Size(1049, 572);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelNav);
@@ -400,13 +400,13 @@ namespace TrungTamTinHoc
             this.panelDesktop.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panelInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).EndInit();
             this.panelNav.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

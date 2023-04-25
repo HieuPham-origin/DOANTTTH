@@ -34,6 +34,7 @@ namespace TrungTamTinHoc
             this.panelInfo = new System.Windows.Forms.Panel();
             this.btn_Dangxuat = new FontAwesome.Sharp.IconButton();
             this.btn_DoiMatKhau = new FontAwesome.Sharp.IconButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.btn_Maximize = new FontAwesome.Sharp.IconButton();
             this.btn_Caidat = new FontAwesome.Sharp.IconButton();
@@ -41,7 +42,7 @@ namespace TrungTamTinHoc
             this.btn_Exit = new FontAwesome.Sharp.IconButton();
             this.iconCurrChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btn_HuongDanSD = new FontAwesome.Sharp.IconButton();
+            this.btn_Home = new FontAwesome.Sharp.IconButton();
             this.btn_LichDay = new FontAwesome.Sharp.IconButton();
             this.btn_LopHoc = new FontAwesome.Sharp.IconButton();
             this.btn_Thongtincanhan = new FontAwesome.Sharp.IconButton();
@@ -50,6 +51,7 @@ namespace TrungTamTinHoc
             btn_Minimize = new FontAwesome.Sharp.IconButton();
             this.panelDesktop.SuspendLayout();
             this.panelInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -65,12 +67,12 @@ namespace TrungTamTinHoc
             btn_Minimize.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             btn_Minimize.IconChar = FontAwesome.Sharp.IconChar.MinusSquare;
             btn_Minimize.IconColor = System.Drawing.Color.White;
-            btn_Minimize.IconSize = 30;
-            btn_Minimize.Location = new System.Drawing.Point(801, 9);
+            btn_Minimize.IconSize = 15;
+            btn_Minimize.Location = new System.Drawing.Point(815, 9);
             btn_Minimize.Margin = new System.Windows.Forms.Padding(0);
             btn_Minimize.Name = "btn_Minimize";
             btn_Minimize.Rotation = 0D;
-            btn_Minimize.Size = new System.Drawing.Size(24, 23);
+            btn_Minimize.Size = new System.Drawing.Size(10, 13);
             btn_Minimize.TabIndex = 7;
             btn_Minimize.UseVisualStyleBackColor = true;
             btn_Minimize.Click += new System.EventHandler(this.btn_Minimize_Click);
@@ -79,10 +81,11 @@ namespace TrungTamTinHoc
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.RoyalBlue;
             this.panelDesktop.Controls.Add(this.panelInfo);
+            this.panelDesktop.Controls.Add(this.pictureBox2);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(183, 142);
+            this.panelDesktop.Location = new System.Drawing.Point(183, 84);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(891, 446);
+            this.panelDesktop.Size = new System.Drawing.Size(891, 504);
             this.panelDesktop.TabIndex = 9;
             // 
             // panelInfo
@@ -141,6 +144,17 @@ namespace TrungTamTinHoc
             this.btn_DoiMatKhau.UseVisualStyleBackColor = false;
             this.btn_DoiMatKhau.Click += new System.EventHandler(this.btn_DoiMatKhau_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::TrungTamTinHoc.Properties.Resources.menu;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(891, 504);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
             // panelTitle
             // 
             this.panelTitle.BackColor = System.Drawing.Color.RoyalBlue;
@@ -154,7 +168,7 @@ namespace TrungTamTinHoc
             this.panelTitle.ForeColor = System.Drawing.Color.White;
             this.panelTitle.Location = new System.Drawing.Point(183, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(891, 142);
+            this.panelTitle.Size = new System.Drawing.Size(891, 84);
             this.panelTitle.TabIndex = 8;
             // 
             // btn_Maximize
@@ -165,12 +179,12 @@ namespace TrungTamTinHoc
             this.btn_Maximize.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btn_Maximize.IconChar = FontAwesome.Sharp.IconChar.Expand;
             this.btn_Maximize.IconColor = System.Drawing.Color.White;
-            this.btn_Maximize.IconSize = 30;
-            this.btn_Maximize.Location = new System.Drawing.Point(825, 4);
+            this.btn_Maximize.IconSize = 15;
+            this.btn_Maximize.Location = new System.Drawing.Point(842, 4);
             this.btn_Maximize.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Maximize.Name = "btn_Maximize";
             this.btn_Maximize.Rotation = 0D;
-            this.btn_Maximize.Size = new System.Drawing.Size(32, 32);
+            this.btn_Maximize.Size = new System.Drawing.Size(15, 22);
             this.btn_Maximize.TabIndex = 6;
             this.btn_Maximize.UseVisualStyleBackColor = true;
             this.btn_Maximize.Click += new System.EventHandler(this.btn_Maximize_Click);
@@ -184,12 +198,12 @@ namespace TrungTamTinHoc
             this.btn_Caidat.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btn_Caidat.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
             this.btn_Caidat.IconColor = System.Drawing.Color.White;
-            this.btn_Caidat.IconSize = 50;
-            this.btn_Caidat.Location = new System.Drawing.Point(756, 36);
+            this.btn_Caidat.IconSize = 40;
+            this.btn_Caidat.Location = new System.Drawing.Point(832, 26);
             this.btn_Caidat.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Caidat.Name = "btn_Caidat";
             this.btn_Caidat.Rotation = 0D;
-            this.btn_Caidat.Size = new System.Drawing.Size(135, 106);
+            this.btn_Caidat.Size = new System.Drawing.Size(59, 56);
             this.btn_Caidat.TabIndex = 8;
             this.btn_Caidat.UseVisualStyleBackColor = false;
             this.btn_Caidat.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_Caidat_MouseClick);
@@ -198,7 +212,7 @@ namespace TrungTamTinHoc
             // 
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(82, 64);
+            this.lbTitle.Location = new System.Drawing.Point(81, 26);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(141, 38);
             this.lbTitle.TabIndex = 4;
@@ -213,12 +227,12 @@ namespace TrungTamTinHoc
             this.btn_Exit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btn_Exit.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.btn_Exit.IconColor = System.Drawing.Color.White;
-            this.btn_Exit.IconSize = 30;
-            this.btn_Exit.Location = new System.Drawing.Point(857, 9);
+            this.btn_Exit.IconSize = 15;
+            this.btn_Exit.Location = new System.Drawing.Point(871, 9);
             this.btn_Exit.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Rotation = 0D;
-            this.btn_Exit.Size = new System.Drawing.Size(24, 23);
+            this.btn_Exit.Size = new System.Drawing.Size(10, 13);
             this.btn_Exit.TabIndex = 5;
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
@@ -229,7 +243,7 @@ namespace TrungTamTinHoc
             this.iconCurrChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconCurrChildForm.IconColor = System.Drawing.Color.White;
             this.iconCurrChildForm.IconSize = 45;
-            this.iconCurrChildForm.Location = new System.Drawing.Point(29, 64);
+            this.iconCurrChildForm.Location = new System.Drawing.Point(28, 26);
             this.iconCurrChildForm.Name = "iconCurrChildForm";
             this.iconCurrChildForm.Size = new System.Drawing.Size(47, 45);
             this.iconCurrChildForm.TabIndex = 3;
@@ -238,7 +252,7 @@ namespace TrungTamTinHoc
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panelMenu.Controls.Add(this.btn_HuongDanSD);
+            this.panelMenu.Controls.Add(this.btn_Home);
             this.panelMenu.Controls.Add(this.btn_LichDay);
             this.panelMenu.Controls.Add(this.btn_LopHoc);
             this.panelMenu.Controls.Add(this.btn_Thongtincanhan);
@@ -249,27 +263,28 @@ namespace TrungTamTinHoc
             this.panelMenu.Size = new System.Drawing.Size(183, 588);
             this.panelMenu.TabIndex = 7;
             // 
-            // btn_HuongDanSD
+            // btn_Home
             // 
-            this.btn_HuongDanSD.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_HuongDanSD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_HuongDanSD.FlatAppearance.BorderSize = 0;
-            this.btn_HuongDanSD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HuongDanSD.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_HuongDanSD.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HuongDanSD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_HuongDanSD.IconChar = FontAwesome.Sharp.IconChar.Info;
-            this.btn_HuongDanSD.IconColor = System.Drawing.Color.White;
-            this.btn_HuongDanSD.IconSize = 20;
-            this.btn_HuongDanSD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_HuongDanSD.Location = new System.Drawing.Point(0, 292);
-            this.btn_HuongDanSD.Name = "btn_HuongDanSD";
-            this.btn_HuongDanSD.Rotation = 0D;
-            this.btn_HuongDanSD.Size = new System.Drawing.Size(183, 50);
-            this.btn_HuongDanSD.TabIndex = 7;
-            this.btn_HuongDanSD.Text = "Hướng dẫn sử dụng";
-            this.btn_HuongDanSD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_HuongDanSD.UseVisualStyleBackColor = false;
+            this.btn_Home.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_Home.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Home.FlatAppearance.BorderSize = 0;
+            this.btn_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Home.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_Home.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Home.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Home.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.btn_Home.IconColor = System.Drawing.Color.White;
+            this.btn_Home.IconSize = 20;
+            this.btn_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Home.Location = new System.Drawing.Point(0, 292);
+            this.btn_Home.Name = "btn_Home";
+            this.btn_Home.Rotation = 0D;
+            this.btn_Home.Size = new System.Drawing.Size(183, 50);
+            this.btn_Home.TabIndex = 5;
+            this.btn_Home.Text = "Trang chủ";
+            this.btn_Home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Home.UseVisualStyleBackColor = false;
+            this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
             // 
             // btn_LichDay
             // 
@@ -355,7 +370,7 @@ namespace TrungTamTinHoc
             this.pictureBox1.Image = global::TrungTamTinHoc.Properties.Resources.TTTH_logo;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 142);
+            this.pictureBox1.Size = new System.Drawing.Size(183, 154);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -373,6 +388,7 @@ namespace TrungTamTinHoc
             this.Text = "fGiangVien";
             this.panelDesktop.ResumeLayout(false);
             this.panelInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).EndInit();
@@ -396,11 +412,12 @@ namespace TrungTamTinHoc
         private FontAwesome.Sharp.IconButton btn_Exit;
         private FontAwesome.Sharp.IconPictureBox iconCurrChildForm;
         private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton btn_HuongDanSD;
         private FontAwesome.Sharp.IconButton btn_LichDay;
         private FontAwesome.Sharp.IconButton btn_LopHoc;
         private FontAwesome.Sharp.IconButton btn_Thongtincanhan;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private FontAwesome.Sharp.IconButton btn_Home;
     }
 }

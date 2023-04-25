@@ -33,16 +33,17 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_LopHoc = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cbx_LH = new System.Windows.Forms.ComboBox();
-            this.btn_Timkiem = new FontAwesome.Sharp.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lb_Search = new System.Windows.Forms.Label();
             this.col_maHV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_tenHV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_namSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbx_LH = new System.Windows.Forms.ComboBox();
+            this.btn_Timkiem = new FontAwesome.Sharp.IconButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lb_Search = new System.Windows.Forms.Label();
+            this.btn_Print = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_LopHoc)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -73,8 +74,8 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.dgv_LopHoc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_LopHoc.EnableHeadersVisualStyles = false;
             this.dgv_LopHoc.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgv_LopHoc.Location = new System.Drawing.Point(0, 128);
-            this.dgv_LopHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_LopHoc.Location = new System.Drawing.Point(0, 158);
+            this.dgv_LopHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_LopHoc.Name = "dgv_LopHoc";
             this.dgv_LopHoc.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -94,30 +95,61 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.dgv_LopHoc.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_LopHoc.RowTemplate.Height = 24;
             this.dgv_LopHoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_LopHoc.Size = new System.Drawing.Size(600, 238);
+            this.dgv_LopHoc.Size = new System.Drawing.Size(800, 292);
             this.dgv_LopHoc.TabIndex = 36;
+            // 
+            // col_maHV
+            // 
+            this.col_maHV.HeaderText = "Mã học viên";
+            this.col_maHV.MinimumWidth = 6;
+            this.col_maHV.Name = "col_maHV";
+            // 
+            // col_tenHV
+            // 
+            this.col_tenHV.HeaderText = "Tên";
+            this.col_tenHV.MinimumWidth = 6;
+            this.col_tenHV.Name = "col_tenHV";
+            // 
+            // col_namSinh
+            // 
+            this.col_namSinh.HeaderText = "Ngày sinh";
+            this.col_namSinh.MinimumWidth = 6;
+            this.col_namSinh.Name = "col_namSinh";
+            // 
+            // col_diaChi
+            // 
+            this.col_diaChi.HeaderText = "Địa chỉ";
+            this.col_diaChi.MinimumWidth = 6;
+            this.col_diaChi.Name = "col_diaChi";
+            // 
+            // col_sdt
+            // 
+            this.col_sdt.HeaderText = "Số điện thoại";
+            this.col_sdt.MinimumWidth = 6;
+            this.col_sdt.Name = "col_sdt";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Controls.Add(this.btn_Print);
             this.panel1.Controls.Add(this.cbx_LH);
             this.panel1.Controls.Add(this.btn_Timkiem);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lb_Search);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 128);
+            this.panel1.Size = new System.Drawing.Size(800, 158);
             this.panel1.TabIndex = 35;
             // 
             // cbx_LH
             // 
             this.cbx_LH.FormattingEnabled = true;
-            this.cbx_LH.Location = new System.Drawing.Point(216, 92);
-            this.cbx_LH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbx_LH.Location = new System.Drawing.Point(288, 113);
+            this.cbx_LH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbx_LH.Name = "cbx_LH";
-            this.cbx_LH.Size = new System.Drawing.Size(174, 21);
+            this.cbx_LH.Size = new System.Drawing.Size(231, 24);
             this.cbx_LH.TabIndex = 5;
             // 
             // btn_Timkiem
@@ -128,11 +160,11 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.btn_Timkiem.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btn_Timkiem.IconColor = System.Drawing.Color.White;
             this.btn_Timkiem.IconSize = 27;
-            this.btn_Timkiem.Location = new System.Drawing.Point(410, 86);
-            this.btn_Timkiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Timkiem.Location = new System.Drawing.Point(547, 106);
+            this.btn_Timkiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Timkiem.Name = "btn_Timkiem";
             this.btn_Timkiem.Rotation = 0D;
-            this.btn_Timkiem.Size = new System.Drawing.Size(30, 30);
+            this.btn_Timkiem.Size = new System.Drawing.Size(40, 37);
             this.btn_Timkiem.TabIndex = 4;
             this.btn_Timkiem.UseVisualStyleBackColor = true;
             this.btn_Timkiem.Click += new System.EventHandler(this.btn_Timkiem_Click);
@@ -142,10 +174,9 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(199, 29);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(265, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 28);
+            this.label2.Size = new System.Drawing.Size(279, 35);
             this.label2.TabIndex = 0;
             this.label2.Text = "DANH SÁCH LỚP HỌC";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -155,46 +186,40 @@ namespace TrungTamTinHoc.FormsChildGiangVien
             this.lb_Search.AutoSize = true;
             this.lb_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Search.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_Search.Location = new System.Drawing.Point(131, 90);
-            this.lb_Search.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_Search.Location = new System.Drawing.Point(175, 111);
             this.lb_Search.Name = "lb_Search";
-            this.lb_Search.Size = new System.Drawing.Size(67, 19);
+            this.lb_Search.Size = new System.Drawing.Size(80, 23);
             this.lb_Search.TabIndex = 3;
             this.lb_Search.Text = "Tìm kiếm";
             // 
-            // col_maHV
+            // btn_Print
             // 
-            this.col_maHV.HeaderText = "Mã học viên";
-            this.col_maHV.Name = "col_maHV";
-            // 
-            // col_tenHV
-            // 
-            this.col_tenHV.HeaderText = "Tên";
-            this.col_tenHV.Name = "col_tenHV";
-            // 
-            // col_namSinh
-            // 
-            this.col_namSinh.HeaderText = "Ngày sinh";
-            this.col_namSinh.Name = "col_namSinh";
-            // 
-            // col_diaChi
-            // 
-            this.col_diaChi.HeaderText = "Địa chỉ";
-            this.col_diaChi.Name = "col_diaChi";
-            // 
-            // col_sdt
-            // 
-            this.col_sdt.HeaderText = "Số điện thoại";
-            this.col_sdt.Name = "col_sdt";
+            this.btn_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Print.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_Print.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Print.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Print.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btn_Print.IconColor = System.Drawing.Color.White;
+            this.btn_Print.IconSize = 16;
+            this.btn_Print.Location = new System.Drawing.Point(626, 99);
+            this.btn_Print.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Print.Name = "btn_Print";
+            this.btn_Print.Rotation = 0D;
+            this.btn_Print.Size = new System.Drawing.Size(125, 48);
+            this.btn_Print.TabIndex = 6;
+            this.btn_Print.Text = "In danh sách";
+            this.btn_Print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Print.UseVisualStyleBackColor = true;
+            this.btn_Print.Click += new System.EventHandler(this.btn_Print_Click);
             // 
             // fLopHoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgv_LopHoc);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fLopHoc";
             this.Text = "fLopHoc";
             this.Load += new System.EventHandler(this.fLopHoc_Load);
@@ -218,5 +243,6 @@ namespace TrungTamTinHoc.FormsChildGiangVien
         private System.Windows.Forms.DataGridViewTextBoxColumn col_namSinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_diaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_sdt;
+        private FontAwesome.Sharp.IconButton btn_Print;
     }
 }

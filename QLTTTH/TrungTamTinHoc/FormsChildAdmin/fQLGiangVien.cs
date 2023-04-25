@@ -18,6 +18,8 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private DTO_GiangVien selectedGV;
         BUS_GiangVien bGV = new BUS_GiangVien();
+        BUS_ChiTietDangKy bCTDK = new BUS_ChiTietDangKy();
+        BUS_LopHoc bLH = new BUS_LopHoc();
         public fQLGiangVien()
         {
             InitializeComponent();
@@ -41,8 +43,18 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void btn_XoaGV_Click(object sender, EventArgs e)
         {
+            List<int> ma_LH = bLH.getMaLHbyMaGV(selectedGV.Ma_GV);
+            //int exist;
+            foreach(int maLH in ma_LH)
+            {
+                if (bCTDK.checkIfMaLHExists(maLH)) {
+                    MessageBox.Show("Không thể xóa giảng viên này");
+                    return;
+                }
+            }
             if (selectedGV != null)
             {
+
                 if (bGV.xoaGiangVien(selectedGV))
                 {
                     MessageBox.Show("Xóa thành công");

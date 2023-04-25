@@ -35,7 +35,7 @@ namespace TrungTamTinHoc
         }
 
 
-        public static Color colorActive = Color.RoyalBlue;
+        public static Color colorActive = Color.CornflowerBlue;
 
         private void btn_Trangchu_Click(object sender, EventArgs e)
         {

@@ -130,5 +130,16 @@ namespace TrungTamTinHoc
         {
             this.Close();
         }
+
+        private void lblClose_MouseHover(object sender, EventArgs e)
+        {
+            lblClose.BackColor = Color.CornflowerBlue;
+        }
+
+        private void lblClose_MouseLeave(object sender, EventArgs e)
+        {
+            lblClose.BackColor = Color.RoyalBlue;
+
+        }
     }
 }

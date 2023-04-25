@@ -19,6 +19,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
         BUS_ChiTietDangKy bCTDK = new BUS_ChiTietDangKy();
         BUS_LopHoc bLH = new BUS_LopHoc();
         private DTO_ChiTietDangKy dto_CTDK;
+        private DTO_LopHoc dto_LH;
         private string previousSelectedValue = "";
         public fThemHocVien()
         {
@@ -36,6 +37,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
         {
             string ten_kh = cbx_KhoaHoc.SelectedItem.ToString();
             bHV.bindLHComboBoxByKH(cbx_LopHoc, ten_kh);
+            
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -48,10 +50,14 @@ namespace TrungTamTinHoc.FormsChildAdmin
                 return;
             }
             previousSelectedValue = selectedValue;
-
+            
             string[] parts = selectedValue.Split(new[] { ',', ']' }, StringSplitOptions.RemoveEmptyEntries);
             string tenLH = parts[1].Trim();
-
+            if (!bLH.getLopHocFromTenLH(tenLH).Dang_Mo)
+            {
+                MessageBox.Show("Lớp học chưa mở");
+                return;
+            }
             DTO_ChiTietDangKy newCTDK = new DTO_ChiTietDangKy(DateTime.Today, bHV.getLatestMaHV(), bLH.getMaLHFromTenLH(tenLH));
 
             if (bCTDK.themChiTietDangKy(newCTDK))
@@ -145,6 +151,11 @@ namespace TrungTamTinHoc.FormsChildAdmin
                     MessageBox.Show("Xóa thất bại");
                 }
             }
+        }
+
+        private void btn_Confirm_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
