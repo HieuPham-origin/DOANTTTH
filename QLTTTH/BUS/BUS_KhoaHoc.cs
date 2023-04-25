@@ -62,5 +62,9 @@ namespace BUS
         {
             dKhoaHoc.bindComboBox(cbx);
         }
+        public bool checkIfMaLHExists(int maLH)
+        {
+            return dKhoaHoc.checkIfMaLHExists(maLH);
+        }
     }
 }

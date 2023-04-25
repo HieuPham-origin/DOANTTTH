@@ -400,7 +400,7 @@ namespace TrungTamTinHoc
             this.btn_Logout.Location = new System.Drawing.Point(0, 46);
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Rotation = 0D;
-            this.btn_Logout.Size = new System.Drawing.Size(133, 46);
+            this.btn_Logout.Size = new System.Drawing.Size(133, 47);
             this.btn_Logout.TabIndex = 2;
             this.btn_Logout.Text = "Đăng xuất";
             this.btn_Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

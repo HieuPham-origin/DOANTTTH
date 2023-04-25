@@ -97,3 +97,14 @@ D:\Student\HK4\BaoCao\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CoreCompileInputs
 D:\Student\HK4\BaoCao\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\Student\HK4\BaoCao\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.dll
 D:\Student\HK4\BaoCao\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.pdb
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\BUS\bin\Debug\BUS.dll
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\BUS\bin\Debug\BUS.pdb
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\BUS\bin\Debug\DAL.dll
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\BUS\bin\Debug\DTO.dll
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\BUS\bin\Debug\DAL.pdb
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\BUS\bin\Debug\DTO.pdb
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.dll
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\BUS\obj\Debug\BUS.pdb

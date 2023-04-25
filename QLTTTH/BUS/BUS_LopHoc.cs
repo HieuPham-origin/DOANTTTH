@@ -100,5 +100,9 @@ namespace BUS
         {
             return dLH.getLopHocFromTenLH(tenLH);
         }
+        public List<int> getMaLHbyMaKH(int maKH)
+        {
+            return dLH.getMaLHbyMaKH(maKH);
+        }
     }
 }

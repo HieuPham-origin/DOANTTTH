@@ -79,3 +79,12 @@ D:\Student\HK4\BaoCao\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.csproj.CoreCompileInputs
 D:\Student\HK4\BaoCao\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Student\HK4\BaoCao\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.dll
 D:\Student\HK4\BaoCao\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.pdb
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\DAL\bin\Debug\DAL.dll
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\DAL\bin\Debug\DAL.pdb
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\DAL\bin\Debug\DTO.dll
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\DAL\bin\Debug\DTO.pdb
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.dll
+D:\Student\HK4\duphong2\DOANTTTH\QLTTTH\DAL\obj\Debug\DAL.pdb

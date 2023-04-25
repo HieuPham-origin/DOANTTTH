@@ -101,6 +101,7 @@ namespace TrungTamTinHoc
             // 
             // panelInfo
             // 
+            this.panelInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelInfo.Controls.Add(this.btn_Dangxuat);
             this.panelInfo.Controls.Add(this.btn_DoiMatKhau);
             this.panelInfo.Location = new System.Drawing.Point(728, 0);

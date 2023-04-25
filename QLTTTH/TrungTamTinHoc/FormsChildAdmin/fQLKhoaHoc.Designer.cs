@@ -169,7 +169,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             // btn_Xoa
             // 
-            this.btn_Xoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Xoa.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_Xoa.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Xoa.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -192,7 +191,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             // btn_Them
             // 
-            this.btn_Them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Them.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_Them.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

@@ -15,6 +15,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
     {
         private DTO_KhoaHoc selectedKH;
         BUS_KhoaHoc bKH = new BUS_KhoaHoc();
+        BUS_LopHoc bLH = new BUS_LopHoc();
 
         public fQLKhoaHoc()
         {
@@ -109,6 +110,16 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
+            List<int> ma_LH = bLH.getMaLHbyMaKH(selectedKH.Ma_KH);
+            //int exist;
+            foreach (int maLH in ma_LH)
+            {
+                if (bKH.checkIfMaLHExists(maLH))
+                {
+                    MessageBox.Show("Không thể xóa khóa học này");
+                    return;
+                }
+            }
             if (selectedKH != null)
             {
                 if (bKH.xoaKhoaHoc(selectedKH))

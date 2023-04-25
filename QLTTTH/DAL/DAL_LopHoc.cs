@@ -341,5 +341,39 @@ namespace DAL
             conn.Close();
             return Ma_LHs;
         }
+
+        public bool checkIfMaLHExists(int maLH)
+        {
+            conn.Open();
+            bool exists = false;
+            string query = "SELECT COUNT(*) FROM chi_tiet WHERE Ma_LH=@maLH";
+
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@maLH", maLH);
+
+            int count = (int)command.ExecuteScalar();
+            if (count > 0)
+            {
+                exists = true;
+            }
+            conn.Close();
+            return exists;
+        }
+
+        public List<int> getMaLHbyMaKH(int maKH)
+        {
+            List<int> Ma_LHs = new List<int>();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Ma_LH FROM Lop_hoc WHERE Ma_KH = @Ma_KH", conn);
+            cmd.Parameters.AddWithValue("@Ma_KH", maKH);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                int Ma_LH = reader.GetInt32(0);
+                Ma_LHs.Add(Ma_LH);
+            }
+            conn.Close();
+            return Ma_LHs;
+        }
     }
 }

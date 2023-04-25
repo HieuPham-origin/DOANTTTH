@@ -114,6 +114,8 @@ namespace TrungTamTinHoc
 
         private void btn_Dangxuat_Click(object sender, EventArgs e)
         {
+            fLogin login = new fLogin();
+            login.Show();
             this.Close();
         }
 
