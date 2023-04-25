@@ -88,6 +88,8 @@ namespace TrungTamTinHoc.FormsChildAdmin
 
         private void dgv_GiangVien_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
+
+            // Kiểm tra rỗng sau đó mới truyền data
             string maGV = "";
             if (dgv_GiangVien.Rows[e.RowIndex].Cells["Ma_GV"].Value != null)
                 maGV = dgv_GiangVien.Rows[e.RowIndex].Cells["Ma_GV"].Value.ToString();

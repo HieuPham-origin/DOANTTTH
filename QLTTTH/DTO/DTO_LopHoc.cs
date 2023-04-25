@@ -16,7 +16,7 @@ namespace DTO
         private string ma_GV;
         private DateTime ngay_bat_dau;
         private DateTime ngay_ket_thuc;
-        private int dang_Mo;
+        private bool dang_Mo;
         private int so_buoi;
         private int soluong;
         public DTO_LopHoc()
@@ -24,7 +24,7 @@ namespace DTO
 
         }
 
-        public DTO_LopHoc(int ma_LH, string ten_LH, int ma_KH, int ma_PH, int ma_ca, string ma_GV, DateTime ngay_bat_dau, DateTime ngay_ket_thuc, int dang_Mo, int so_buoi, int soluong)
+        public DTO_LopHoc(int ma_LH, string ten_LH, int ma_KH, int ma_PH, int ma_ca, string ma_GV, DateTime ngay_bat_dau, DateTime ngay_ket_thuc, bool dang_Mo, int so_buoi, int soluong)
         {
             this.ma_LH = ma_LH;
             this.ten_LH = ten_LH;
@@ -47,7 +47,7 @@ namespace DTO
         public string Ma_GV { get => ma_GV; set => ma_GV = value; }
         public DateTime Ngay_bat_dau { get => ngay_bat_dau; set => ngay_bat_dau = value; }
         public DateTime Ngay_ket_thuc { get => ngay_ket_thuc; set => ngay_ket_thuc = value; }
-        public int Dang_Mo { get => dang_Mo; set => dang_Mo = value; }
+        public bool Dang_Mo { get => dang_Mo; set => dang_Mo = value; }
         public int So_buoi { get => so_buoi; set => so_buoi = value; }
         public int Soluong { get => soluong; set => soluong = value; }
     }

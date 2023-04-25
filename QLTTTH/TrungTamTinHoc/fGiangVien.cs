@@ -153,7 +153,7 @@ namespace TrungTamTinHoc
         private void btn_LopHoc_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, colorActive);
-            OpenChildForm(new FormsChildGiangVien.fLopHoc());
+            OpenChildForm(new FormsChildGiangVien.fLopHoc(this.id));
             panelInfo.BringToFront();
         }
 

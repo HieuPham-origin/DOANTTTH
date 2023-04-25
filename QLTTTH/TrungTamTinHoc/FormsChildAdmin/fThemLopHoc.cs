@@ -44,7 +44,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
                 string ma_GV = cbx_GiangVien.SelectedValue.ToString();
                 DTO_LopHoc dto_lh = new DTO_LopHoc(0, txt_name.Texts, ma_KH,
                     ma_PH, Convert.ToInt32(cbx_CaHoc.SelectedItem), 
-                    ma_GV, date_BatDau.Value, date_KetThuc.Value, 1,
+                    ma_GV, date_BatDau.Value, date_KetThuc.Value, true,
                     Convert.ToInt32(nr_SoBuoi.Value),0);
 
                 if (bLH.themLopHoc(dto_lh))

@@ -99,8 +99,8 @@ namespace TrungTamTinHoc.FormsChildAdmin
                 DateTime ngay_ket_thuc = DateTime.MinValue;
                 DateTime.TryParse(row.Cells[7].Value.ToString(), out ngay_ket_thuc);
 
-                int dang_mo = 0;
-                int.TryParse(row.Cells[8].Value.ToString(), out dang_mo);
+                bool dang_mo = false;
+                bool.TryParse(row.Cells[8].Value.ToString(), out dang_mo);
 
                 int so_buoi = 0;
                 int.TryParse(row.Cells[9].Value.ToString(), out so_buoi);
@@ -145,9 +145,9 @@ namespace TrungTamTinHoc.FormsChildAdmin
             DateTime ngay_ket_thuc = DateTime.MinValue;
             DateTime.TryParse(dgv_LopHoc.Rows[e.RowIndex].Cells["Ngay_ket_thuc"].Value.ToString(), out ngay_ket_thuc);
 
-            int dang_mo = 0;
+            bool dangMo = false;
             if (dgv_LopHoc.Rows[e.RowIndex].Cells["Dang_mo"].Value != null)
-                int.TryParse(dgv_LopHoc.Rows[e.RowIndex].Cells["Dang_mo"].Value.ToString(), out dang_mo);
+                dangMo = (bool)dgv_LopHoc.Rows[e.RowIndex].Cells["Dang_mo"].Value;
 
             int so_buoi = 0;
             if (dgv_LopHoc.Rows[e.RowIndex].Cells["So_buoi"].Value != null)
@@ -158,7 +158,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
                 int.TryParse(dgv_LopHoc.Rows[e.RowIndex].Cells["Soluong"].Value.ToString(), out soLuong);
 
             DTO_LopHoc newLH = new DTO_LopHoc(maLH, tenLH, maKH, maPH, ma_ca, maGV,
-                    ngay_bat_dau, ngay_ket_thuc, dang_mo, so_buoi, soLuong);
+                    ngay_bat_dau, ngay_ket_thuc, dangMo, so_buoi, soLuong);
             bLH.suaLopHoc(newLH);
 
             // Refresh

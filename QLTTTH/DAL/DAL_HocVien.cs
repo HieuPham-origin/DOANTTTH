@@ -114,15 +114,29 @@ namespace DAL
         }
 
 
+        public void bindGridViewByMaHV(DataGridView dataGridView, string maHV)
+        {
+            conn.Open();
+            string query = "SELECT * FROM Hoc_vien WHERE Ma_HV = @maHV";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@maHV", maHV);
+            SqlDataAdapter dv = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dv.Fill(dt);
+            dataGridView.DataSource = dt;
+            conn.Close();
+        }
+
+
+
         public void bindLHComboBoxByKH(ComboBox cbx, string ten_kh)
         {
             conn.Open();
-            // Get the Ma_KH based on the name of the Khoa Hoc
             SqlCommand command1 = new SqlCommand("SELECT Ma_KH FROM Khoa_hoc WHERE Ten_KH=@ten_kh", conn);
             command1.Parameters.AddWithValue("@ten_kh", ten_kh);
             int ma_kh = (int)command1.ExecuteScalar();
 
-            // Query the Lop_hoc table based on the retrieved Ma_KH
+            
             SqlCommand command2 = new SqlCommand("SELECT Ma_LH, Ten_LH FROM Lop_hoc WHERE Ma_KH=@ma_kh", conn);
             command2.Parameters.AddWithValue("@ma_kh", ma_kh);
             SqlDataReader reader = command2.ExecuteReader();
@@ -157,6 +171,9 @@ namespace DAL
 
             return latestMaHV;
         }
+
+
+
         public bool checkSDTTonTai(string phone)
         {
             conn.Open();
@@ -182,6 +199,24 @@ namespace DAL
             }
             return true;
         }
+
+
+        public DataTable getDataTableByMaHV(string maHV)
+        {
+            conn.Open();
+            DataTable dt = new DataTable();
+            string query = "SELECT * FROM Hoc_vien WHERE Ma_HV = @MaHV";
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@MaHV", maHV);
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(dt);
+
+            conn.Close();
+            return dt;
+        }
+
+
 
         public DTO_HocVien getHocVienById(string maHV)
         {

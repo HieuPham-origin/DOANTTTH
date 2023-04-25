@@ -32,5 +32,12 @@ namespace BUS
             return dCTDK.getMaLHByMaHV(Ma_HV);
         }
 
-    }
+        public List<string> getMaHVByMaLH(int Ma_LH)
+        {
+            return dCTDK.getMaHVByMaLH(Ma_LH);
+        }
+
+    }   
+
+
 }

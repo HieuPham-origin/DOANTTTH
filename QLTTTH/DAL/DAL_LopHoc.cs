@@ -269,22 +269,37 @@ namespace DAL
             conn.Close();
         }
 
-        public void bindLHComboBox(ComboBox cbx)
+        public void bindLHComboBoxByGV(ComboBox cbx, string maGV)
         {
             conn.Open();
-            SqlCommand command = new SqlCommand("SELECT Ma_GV, Ten_LH FROM Lop_hoc where ", conn);
+            SqlCommand command = new SqlCommand("SELECT Ten_LH FROM Lop_Hoc where Ma_GV like @maGV", conn);
+            command.Parameters.AddWithValue("@maGV", maGV);
             SqlDataReader reader = command.ExecuteReader();
-            Dictionary<string, string> items = new Dictionary<string, string>();
+           
             while (reader.Read())
             {
-                string maGV = reader.GetString(0);
+                cbx.Items.Add(reader["Ten_LH"].ToString());
+            }
+            conn.Close();
+        }
+
+        public void bindOpenLHComboBox(ComboBox cbx)
+        {
+            conn.Open();
+            SqlCommand command = new SqlCommand("SELECT Ma_LH, Ten_LH FROM Lop_hoc where Dang_mo = 1", conn);
+            SqlDataReader reader = command.ExecuteReader();
+            Dictionary<int, string> items = new Dictionary<int, string>();
+            while (reader.Read())
+            {
+                int maLH = reader.GetInt32(0);
                 string tenLH = reader.GetString(1);
-                items.Add(maGV, tenLH);
+                items.Add(maLH, tenLH);
             }
             cbx.DataSource = new BindingSource(items, null);
             cbx.DisplayMember = "Value";
             cbx.ValueMember = "Key";
             conn.Close();
         }
+
     }
 }

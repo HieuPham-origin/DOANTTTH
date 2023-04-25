@@ -76,15 +76,21 @@ namespace BUS
             dLH.getLopHocGV(dataGridView, name);
         }
 
-        public void bindLHComboBox(ComboBox cbx)
+        public void bindLHComboBoxByGV(ComboBox cbx, string maGV)
         {
-            dLH.bindLHComboBox(cbx);
+            dLH.bindLHComboBoxByGV(cbx, maGV);
         }
 
         public Tuple<int, int> getMaPHMaCa(int maLH)
         {
             return dLH.getMaPHMaCa(maLH);
         }
+
+        public void bindOpenLHComboBox(ComboBox cbx)
+        {
+            dLH.bindOpenLHComboBox(cbx);
+        }
+
 
     }
 }

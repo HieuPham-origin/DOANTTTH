@@ -211,7 +211,6 @@ C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTin
 C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLHoaDon.resources
 C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLKhoaHoc.resources
 C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fThemGiangVien.resources
-C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fChonKhoaHoc.resources
 C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fBaoCao.resources
 C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fHoaDon.resources
 C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fQLGiangVien.resources
@@ -276,3 +275,8 @@ C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamT
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fDoiMatKhau.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fThemHVVaoLH.resources
 C:\Programming\C#\DoAn\CuoiKy\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildGiangVien.fDoiMatKhau.resources
+C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fDoiMatKhau.resources
+C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildAdmin.fThemHVVaoLH.resources
+C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildGiangVien.fDoiMatKhau.resources
+C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildHocVien.fDoiMatKhau.resources
+C:\Programming\C#\SoftwareEngineering\TrungTamTinHoc\DOANTTTH\QLTTTH\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.FormsChildHocVien.fThoiKhoaBieu.resources

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,6 +64,16 @@ namespace BUS
             return dHocVien.getSDTByID(id);
         }
 
+        public void bindGridViewByMaHV(DataGridView dataGridView, string maHV)
+        {
+            dHocVien.bindGridViewByMaHV(dataGridView, maHV);
+        }
+
+
+        public DataTable getDataTableByMaHV(string maHV)
+        {
+            return dHocVien.getDataTableByMaHV(maHV);
+        }
 
     }
 }

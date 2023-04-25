@@ -90,6 +90,24 @@ namespace DAL
         }
 
 
+        public List<string> getMaHVByMaLH(int Ma_LH)
+        {
+            List<string> maHVList = new List<string>();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Ma_HV FROM chi_tiet WHERE Ma_LH = @Ma_LH", conn);
+            cmd.Parameters.AddWithValue("@Ma_LH", Ma_LH);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                string Ma_HV = reader.GetString(0);
+                maHVList.Add(Ma_HV);
+            }
+            conn.Close();
+            return maHVList;
+        }
+
+
+
 
     }
 }

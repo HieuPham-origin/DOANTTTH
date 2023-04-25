@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
+using System.Drawing.Printing;
+
 namespace TrungTamTinHoc.FormsChildAdmin
 {
     public partial class fHoaDon : Form
@@ -47,7 +49,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
                     row.Cells["col_hocPhi"].Value = bKH.getFeeById(cthd.Ma_KH);
                     tongTien += bKH.getFeeById(cthd.Ma_KH);
                     txt_TongTien.Texts = tongTien.ToString();
-                    cbx_KhoaHoc.Items.Remove(cbx_KhoaHoc.SelectedItem);
+                    /*cbx_KhoaHoc.Items.Remove(cbx_KhoaHoc.SelectedItem);*/
                 }
                 else
                 {
@@ -69,12 +71,49 @@ namespace TrungTamTinHoc.FormsChildAdmin
         {
             Ndt = txt_TenKhach.Texts;
             MessageBox.Show("Tạo hóa đơn thành công");
+
+            // Generate the bill
+            StringBuilder bill = new StringBuilder();
+            bill.AppendLine("Hoa don");
+            bill.AppendLine("Ma KH | Ten KH | Hoc phi");
+            foreach (DataGridViewRow row in dgv_KhoaHoc.Rows)
+            {
+                int maKH = Convert.ToInt32(row.Cells["col_MaKH"].Value);
+                string tenKH = row.Cells["col_tenKH"].Value == null ? "" : row.Cells["col_tenKH"].Value.ToString();
+                string hocPhi = row.Cells["col_hocPhi"].Value == null ? "" : row.Cells["col_hocPhi"].Value.ToString();
+                bill.AppendLine($"{maKH} | {tenKH} | {hocPhi}");
+            }
+
+
+            bill.AppendLine($"Tong tien: {tongTien}");
+
+            // Print the bill
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += (s, ev) =>
+            {
+                Font font = new Font("Arial", 12);
+                ev.Graphics.DrawString(bill.ToString(), font, Brushes.Black, ev.MarginBounds.Left, ev.MarginBounds.Top, new StringFormat());
+            };
+            PrintDialog pdi = new PrintDialog();
+            pdi.Document = pd;
+            if (pdi.ShowDialog() == DialogResult.OK)
+            {
+                pd.Print();
+            }
+
             this.Close();
         }
 
+
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
+            foreach (DataGridViewRow row in dgv_KhoaHoc.Rows)
+            {
 
+                string test = row.Cells["col_tenKH"].Value.ToString();
+                MessageBox.Show(test);
+
+            }
         }
     }
 }
