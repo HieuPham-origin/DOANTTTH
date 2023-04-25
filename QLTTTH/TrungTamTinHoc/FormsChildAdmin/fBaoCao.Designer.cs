@@ -48,7 +48,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.date_batdau.BorderSize = 0;
             this.date_batdau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.date_batdau.Location = new System.Drawing.Point(103, 34);
-            this.date_batdau.MinimumSize = new System.Drawing.Size(0, 35);
+            this.date_batdau.MinimumSize = new System.Drawing.Size(4, 35);
             this.date_batdau.Name = "date_batdau";
             this.date_batdau.Size = new System.Drawing.Size(236, 35);
             this.date_batdau.SkinColor = System.Drawing.Color.MediumSlateBlue;
@@ -61,7 +61,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             this.date_ketthuc.BorderSize = 0;
             this.date_ketthuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.date_ketthuc.Location = new System.Drawing.Point(462, 34);
-            this.date_ketthuc.MinimumSize = new System.Drawing.Size(0, 35);
+            this.date_ketthuc.MinimumSize = new System.Drawing.Size(4, 35);
             this.date_ketthuc.Name = "date_ketthuc";
             this.date_ketthuc.Size = new System.Drawing.Size(236, 35);
             this.date_ketthuc.SkinColor = System.Drawing.Color.MediumSlateBlue;
@@ -110,7 +110,7 @@ namespace TrungTamTinHoc.FormsChildAdmin
             // 
             chartArea1.Name = "ChartArea1";
             this.cht_Doanhthu.ChartAreas.Add(chartArea1);
-            this.cht_Doanhthu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cht_Doanhthu.Dock = System.Windows.Forms.DockStyle.Top;
             legend1.Name = "Legend1";
             this.cht_Doanhthu.Legends.Add(legend1);
             this.cht_Doanhthu.Location = new System.Drawing.Point(0, 177);

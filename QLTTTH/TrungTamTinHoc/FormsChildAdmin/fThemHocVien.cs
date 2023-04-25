@@ -23,10 +23,6 @@ namespace TrungTamTinHoc.FormsChildAdmin
             InitializeComponent();
         }
 
-        private void btn_Confirm_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void fThemHocVien_Load(object sender, EventArgs e)
         {
@@ -95,12 +91,12 @@ namespace TrungTamTinHoc.FormsChildAdmin
                 if (bHV.themHocVien(newHV))
                 {
                     MessageBox.Show("Thêm thành công");
-                    this.Close();
+                    //this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Thêm thất bại");
-                    this.Close();
+                    //this.Close();
                 }
             }
         }
